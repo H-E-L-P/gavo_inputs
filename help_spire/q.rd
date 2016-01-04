@@ -55,6 +55,7 @@
     </stc>
 
     <index columns="F_SPIRE250" />
+    <index columns="Field" />
 
     <column name="Field" type="text" ucd="meta.id;obs.field"
         tablehead="Field" verbLevel="30"
@@ -113,6 +114,7 @@
     </stc>
 
     <index columns="F_SPIRE350" />
+    <index columns="Field" />
 
     <column name="Field" type="text" ucd="meta.id;obs.field"
         tablehead="Field" verbLevel="30"
@@ -171,6 +173,7 @@
     </stc>
 
     <index columns="F_SPIRE500" />
+    <index columns="Field" />
 
     <column name="Field" type="text" ucd="meta.id;obs.field"
         tablehead="Field" verbLevel="30"
@@ -231,6 +234,7 @@
     <index columns="F_SPIRE250" />
     <index columns="F_SPIRE350" />
     <index columns="F_SPIRE500" />
+    <index columns="Field" />
 
     <column name="Field" type="text" ucd="meta.id;obs.field"
         tablehead="Field" verbLevel="30"
@@ -437,6 +441,7 @@
     <dbCore queriedTable="scat250">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="F_SPIRE250" />
+      <condDesc buildFrom="Field" />
       <condDesc>
         <inputKey original="IAU_name" required="False"/>
       </condDesc>
@@ -463,6 +468,7 @@
     <dbCore queriedTable="scat350">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="F_SPIRE350" />
+      <condDesc buildFrom="Field" />
       <condDesc>
         <inputKey original="IAU_name" required="False"/>
       </condDesc>
@@ -489,6 +495,7 @@
     <dbCore queriedTable="scat500">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="F_SPIRE500" />
+      <condDesc buildFrom="Field" />
       <condDesc>
         <inputKey original="IAU_name" required="False"/>
       </condDesc>
@@ -517,6 +524,7 @@
       <condDesc buildFrom="F_SPIRE250" />
       <condDesc buildFrom="F_SPIRE350" />
       <condDesc buildFrom="F_SPIRE500" />
+      <condDesc buildFrom="Field" />
       <condDesc>
         <inputKey original="IAU_name" required="False"/>
       </condDesc>
