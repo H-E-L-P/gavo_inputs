@@ -422,8 +422,8 @@
   </data>
 
   <service id="cone_scat250" allowed="scs.xml,form,static">
-    <meta name="title">Cone search in SCAT250</meta>
-    <meta name="shortName">Cone search in SCAT250</meta>
+    <meta name="title">HerMES SCAT250 (blind SPIRE 250µm extraction)</meta>
+    <meta name="shortName">HerMES SCAT250</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
@@ -448,8 +448,8 @@
   </service>
 
   <service id="cone_scat350" allowed="scs.xml,form,static">
-    <meta name="title">Cone search in SCAT350</meta>
-    <meta name="shortName">Cone search in SCAT350</meta>
+    <meta name="title">HerMES SCAT350 (blind SPIRE 350µm extraction)</meta>
+    <meta name="shortName">HerMES SCAT350</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
@@ -474,8 +474,8 @@
   </service>
 
   <service id="cone_scat500" allowed="scs.xml,form,static">
-    <meta name="title">Cone search in SCAT500</meta>
-    <meta name="shortName">Cone search in SCAT500</meta>
+    <meta name="title">HerMES SCAT500 (blind SPIRE 500µm extraction)</meta>
+    <meta name="shortName">HerMES SCAT500</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
@@ -500,8 +500,8 @@
   </service>
 
   <service id="cone_xid250" allowed="scs.xml,form,static">
-    <meta name="title">Cone search in xID250</meta>
-    <meta name="shortName">Cone search in xID250</meta>
+    <meta name="title">HerMES xID250 (SPIRE fluxes at SPIRE 250µm positions)</meta>
+    <meta name="shortName">HerMES xID250</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
