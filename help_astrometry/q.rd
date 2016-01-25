@@ -63,7 +63,7 @@
   ]]> </meta>
 
   <table id="2mass_astref" onDisk="True" adql="True" mixin="//scs#q3cindex"
-      primary="2MASS">
+      primary="ID2MASS">
     <stc>
       Position ICRS Epoch J2000.0 "RAJ2000" "DEJ2000"
     </stc>
@@ -72,7 +72,7 @@
 
     <column name="Field" type="text" ucd="meta.id;obs.field" verbLevel="30"
         description="Name of the field in the HerMES survey" />
-    <column name="2MASS" type="text" ucd="meta.id;meta.main"
+    <column name="ID2MASS" type="text" ucd="meta.id;meta.main"
         description="Source designation" required="True" note="2mass_note"/>
     <column name="RAJ2000" type="double precision" ucd="pos.eq.ra;meta.main"
         unit="deg" description="Right Ascension (J2000)" required="True"/>
@@ -306,11 +306,11 @@
   <data id="import_2mass">
     <sources>data/2MASS_HELP.csv</sources>
     <csvGrammar />
-    <make table="2MASS">
+    <make table="2mass_astref">
       <rowmaker idmaps="*">
           <simplemaps>
             Field:Field,
-            2MASS:2MASS,
+            ID2MASS:2MASS,
             RAJ2000:RAJ2000,
             DEJ2000:DEJ2000,
             errMaj:errHalfMaj,
@@ -343,11 +343,11 @@
     whether or not you want this -->
     <property name="staticData">data</property>
 
-    <dbCore queriedTable="2mass">
+    <dbCore queriedTable="2mass_astref">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="Field" />
       <condDesc>
-        <inputKey original="2MASS" required="False"/>
+        <inputKey original="ID2MASS" required="False"/>
       </condDesc>
     </dbCore>
 
