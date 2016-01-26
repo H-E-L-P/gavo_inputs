@@ -397,6 +397,139 @@
       (http://www.sdss.org/DR7/algorithms/fluxcal.html)
     ]]></meta>
   </table>
+  <table id="cosmosvla_astref" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_idx">
+    <stc>
+      Position ICRS Epoch J2000.0 "RA" "DEC"
+    </stc>
+
+    <index columns="Name_VLA1400" />
+
+    <column name="RA" type="double precision" ucd="pos.eq.ra;meta.main"
+      unit="deg" description="Right Ascension (J2000)" required="True"/>
+    <column name="Dec" type="double precision" ucd="pos.eq.dec;meta.main"
+      unit="deg" description="Declination (J2000)" required="True"/>
+    <column name="Name_VLA1400" type="text" ucd="meta.id"
+      description="Source name (JHHMMSS.ss+DDMMSS.s)" />
+    <column name="COSMOSVLA" type="text" ucd="meta.id"
+      description="Former name in VLA_COSMOS Large project catalogue if exists" />
+    <column name="RA_VLA1400" type="double precision" ucd="pos.eq.ra" unit="deg"
+      description="1.4 GHz source position RA (J2000)" />
+    <column name="Dec_VLA1400" type="double precision" ucd="pos.eq.dec" unit="deg"
+      description="1.4 GHz source position Dec (J2000)" />
+    <column name="Sp_VLA1400" type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz" unit="mJy"
+      description="Peak 1.4GHz flux density" />
+    <column name="eSp_VLA1400" type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz" unit="mJy"
+      description="RMS uncertainty on peak 1.4 GHz flux density" />
+    <column name="Spc_VLA1400" type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz" unit="mJy"
+      description="Peak surface brightness corrected for bandwidth smearing" />
+    <column name="Si_VLA1400" type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz" unit="mJy"
+      description="Integrated 1.4 GHz flux density" />
+    <column name="eSi_VLA1400" type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz" unit="mJy"
+      description="RMS uncertainty in integrated 1.4 GHz flux density" />
+    <column name="bg_RMS_VLA1400" type="real" ucd="stat.error;em.radio.750-1500MHz"
+      unit="mJy" description="Measured local RMS at radio source position" />
+    <column name="Bmaj_VLA1400" type="real" ucd="phys.angSize" unit="arcsec"
+      description="Deconvolved source major axis size in arcsec" />
+    <column name="Bmin_VLA1400" type="real" ucd="phys.angSize" unit="arcsec"
+      description="Deconvolved source minor axis size in arcsec" />
+    <column name="PA_VLA1400" type="real" ucd="pos.posAng" unit="deg"
+      description="Position angle in deg" />
+    <column name="Rflag_VLA1400" type="smallint" ucd="meta.code" note="R_note"
+      description="Resolved source flag" />
+    <column name="Mflag_VLA1400" type="smallint" ucd="meta.code" note="M_note"
+      description="Multicomponent source flag" />
+    <column name="Cflag_VLA1400" type="smallint" ucd="meta.code" note="Cat_note"
+      description="Catalog membership flag" />
+    <column name="Dflag_VLA1400" type="smallint" ucd="meta.code" note="Det_note"
+      description="Flag indicating the resolution at which a source detected at
+      S/N>=5" />
+    <column name="Name_VLA324" type="text" ucd="meta.id"
+      description="Source name at 324 MHz" />
+    <column name="RA_VLA324" type="real" ucd="pos.eq.ra" unit="deg"
+      description="324 MHz source position right ascension (J2000)" />
+    <column name="Dec_VLA324" type="real" ucd="pos.eq.dec" unit="deg"
+      description="324 MHz source position declination (J2000)" />
+    <column name="e_RA_VLA324" type="real" ucd="stat.error;pos.eq.ra"
+      unit="arcsec" description="Uncertainty on RA_VLA324" />
+    <column name="e_Dec_VLA324" type="real" ucd="stat.error;pos.eq.dec"
+      unit="arcsec" description="Uncertainty on Dec_VLA324" />
+    <column name="Sp_VLA324" type="real" ucd="phot.flux.density;em.radio.200-400MHz"
+      unit="mJy" description="Peak 324 MHz surface brightness of source" />
+    <column name="eSp_VLA324" type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz" unit="mJy"
+      description="RMS uncertainty on 324 MHz peak flux density" />
+    <column name="Si_VLA324" type="float"
+      ucd="phot.flux.density;em.radio.200-400MHz" unit="mJy"
+      description="Integrated 324 MHz source flux density" />
+    <column name="eSi_VLA324" type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz" unit="mJy"
+      description="RMS uncertainty on integrated 324 MHz flux density" />
+    <column name="bg_RMS_VLA324" type="float"
+      ucd="stat.error;em.radio.200-400MHz" unit="mJy"
+      description="Measured local RMS at the radio source position" />
+    <column name="Bmaj_VLA324" type="real" ucd="phys.angSize" unit="arcsec"
+      description="Deconvolved source size - major axis (0.0 for unresolved
+      source) in arcsec" />
+    <column name="Bmin_VLA324" type="real" ucd="phys.angSize" unit="arcsec"
+      description="Deconvolved source size - minor axis (0.0 for unresolved
+      source) in arcsec" />
+    <column name="PA_VLA324" type="real" ucd="pos.posAng" unit="deg"
+      description="Position angle (-99 for multi-component source; 0.0 for
+      unresolved source)" />
+    <column name="Rflag_VLA324" type="integer" ucd="meta.code" note="R2_note"
+      description="Flag for resolved source" />
+    <column name="Mflag_VLA324" type="integer" ucd="meta.code" note="M2_note"
+      description="Flag for multi-component source" />
+    <column name="internal_idx" type="bigint" ucd="meta.id"
+      description="Internal unique identifier" />
+    <meta name="note" tag="R_note"><![CDATA[
+      Rflag_VLA1400 (Resolved source flag at 1.4 GHz) column:
+         -2 classified as unresolved only in VLA-COSMOS Deep image
+         -1 classified as resolved only in VLA-COSMOS Large image
+          0 classified as unresolved in both VLA-COSMOS Large & Deep images
+          1 classified as resolved in both VLA-COSMOS Large & Deep images
+          2 classified as resolved source only in VLA-Deep
+    ]]></meta>
+    <meta name="note" tag="M_note"><![CDATA[
+      Mflag_VLA1400 (Multicomponent source flag at 1.4 GHz) column:
+          0 no multi-component source
+          1 multi-component source identified in VLA-COSMOS Large image
+          2 multi-component source identified in VLA-COSMOS Deep image
+    ]]></meta>
+    <meta name="note" tag="Cat_note"><![CDATA[
+      Cflag_VLA1400 (Catalog membership flag at 1.4 GHz) column:
+         -1 only detected in the VLA-COSMOS Large image
+          0 detected in both the VLA-COSMOS Large & Deep image
+          1 only detected in the VLA-COSMOS Deep image
+    ]]></meta>
+    <meta name="note" tag="Det_note"><![CDATA[
+      Dflag_VLA1400 (Flag indicating the resolution at which a source detected
+      at S/N>=5 at 1.4 GHz) column:
+         -1 S/N≥5 is only satisfied at a resolution of 1.5"
+          0 S/N≥5 is only satisfied at both 1.5" & 2.5" resolution
+          1 S/N≥5 is only satisfied at a resolution of 2.5", but in both the large
+            and small scale (105" and 17.5" box size, respectively) rms map
+          2 at a resolution of 2.5", S/N≥5 is only satisfied in the small scale
+            (17.5" box size) rms map
+        -99 multi-component source.
+    ]]></meta>
+    <meta name="note" tag="R2_note"><![CDATA[
+      Rflag_VLA324 (Flag for resolved source at 324 MHz) column:
+          0 classified as unresolved
+          1 classified as resolved
+    ]]></meta>
+    <meta name="note" tag="M2_note"><![CDATA[
+      Mflag_VLA324 (Multicomponent source flag at 324 MHz) column:
+          0 no multi-component source
+          1 multi-component sources
+    ]]></meta>
+  </table>
   <data id="import_2mass">
     <sources>data/2MASS_HELP.csv</sources>
     <csvGrammar />
@@ -454,6 +587,51 @@
       </rowmaker>
     </make>
   </data>
+  <data id="import_cosmosvla">
+    <sources>data/COSMOS_VLA.csv</sources>
+    <csvGrammar />
+    <make table="cosmosvla_astref">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          RA:RA,
+          Dec:Dec,
+          Name_VLA1400:NAME_VLA_1400,
+          COSMOSVLA:COSMOSVLA,
+          RA_VLA1400:RA_14,
+          Dec_VLA1400:Dec_14,
+          Sp_VLA1400:Fmjypeak_VLA_1400,
+          eSp_VLA1400:Ferrmjypeak_VLA_1400,
+          Spc_VLA1400:Fpeakcorrmjy_VLA_1400,
+          Si_VLA1400:Fmjy_VLA_1400,
+          eSi_VLA1400:Ferrmjy_VLA_1400,
+          bg_RMS_VLA1400:RMSBG,
+          Bmaj_VLA1400:BMAJ_14,
+          Bmin_VLA1400:BMIN_14,
+          PA_VLA1400:PA_14,
+          Rflag_VLA1400:R,
+          Mflag_VLA1400:M,
+          Cflag_VLA1400:CAT,
+          Dflag_VLA1400:DET,
+          Name_VLA324:NAME_VLA_324,
+          RA_VLA324:RAJ2000_324,
+          Dec_VLA324:DEJ2000_324,
+          e_RA_VLA324:ER_RE,
+          e_Dec_VLA324:ER_DEC,
+          Sp_VLA324:FP,
+          eSp_VLA324:FPERR,
+          Si_VLA324:Fmjy_VLA_324,
+          eSi_VLA324:Ferrmy_VLA_324,
+          bg_RMS_VLA324:RMS_BG,
+          Bmaj_VLA324:BMAJ_324,
+          Bmin_VLA324:BMIN_324,
+          PA_VLA324:PA_324,
+          Rflag_VLA324:RES,
+          Mflag_VLA324:MULT,
+          internal_idx:internal_idx
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
 
   <service id="cone_2mass" allowed="scs.xml,form,static">
     <meta name="title">2MASS (astrometric reference)</meta>
@@ -505,6 +683,29 @@
     <outputTable verbLevel="20"/>
   </service>
 
+  <service id="cone_cosmosvla" allowed="scs.xml,form,static">
+    <meta name="title">COSMOS-VLA (astrometric reference)</meta>
+    <meta name="shortName">COSMOS-VLA</meta>
+    <meta name="testQuery">
+      <meta name="ra">150.1</meta>
+      <meta name="dec">2.218</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data</property>
+
+    <dbCore queriedTable="cosmosvla_astref">
+      <FEED source="//scs#coreDescs"/>
+      <condDesc buildFrom="Field" />
+      <condDesc buildFrom="Name_VLA1400" />
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
 
 </resource>
 
