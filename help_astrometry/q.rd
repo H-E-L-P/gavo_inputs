@@ -424,7 +424,7 @@
     </make>
   </data>
   <data id="import_sdss">
-    <sources>data/SDSS9_HELP.csv</source>
+    <sources>data/SDSS9_HELP.csv</sources>
     <csvGrammar />
     <make table="sdss_astref">
       <rowmaker idmaps="*">
