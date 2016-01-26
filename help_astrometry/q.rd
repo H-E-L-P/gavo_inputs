@@ -16,17 +16,17 @@
 
   <meta name="_longdoc" format="rst"> <![CDATA[
       The astrometric reference catalogues for HELP are 2MASS, SDSS and
-      VLA-COSMOS according to the catalogue:
+      COSMOS-VLA according to the catalogue:
 
-        * VLA-COSMOS for COSMOS
+        * COSMOS-VLA for COSMOS
         * SDSS for GAMA-09, GAMA-12, GAMA-15, and Herschel-Stripe-82
         * 2MASS for the other fields.
 
-      VLA-COSMOS data
+      COSMOS-VLA data
       ---------------
 
-      The VLA-COSMOS catalogue was provided by the work package 2. It's readme
-      is there:
+      The COSMOS-VLA catalogue was adapted from the catalogue provided by work
+      package 2. It's readme is there:
       http://hedam.lam.fr/HELP/data/P1/WP2/COSMOS/WP2-COSMOS-VLA-v1.readme
 
       2MASS data
