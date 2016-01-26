@@ -1,4 +1,4 @@
-<resource schema="help_spire">
+<resource schema="help_astrometry">
   <meta name="title">HELP SPIRE catalogues</meta>
   <meta name="creationDate">2016-01-21T16:32:51+0100</meta>
   <meta name="description">
