@@ -62,7 +62,7 @@
     .. _TAP: /tap
   ]]> </meta>
 
-  <table id="2mass_astref" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="twomass_astref" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="ID2MASS">
     <stc>
       Position ICRS Epoch J2000.0 "RAJ2000" "DEJ2000"
@@ -83,7 +83,9 @@
     <column name="errMin" type="double precision" ucd="stat.error"
         unit="arcsec" description="Semi-minor axis of position error ellipse"/>
     <column name="errPA" type="integer" ucd="stat.error" unit="deg"
-        description="Position angle of error ellipse major axis (E of N)"/>
+      description="Position angle of error ellipse major axis (E of N)">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Jmag" type="double precision" ucd="phot.mag;em.IR.J"
         unit="mag" description="J selected default magnitude" note="mag_note"/>
     <column name="e_Jmag" type="double precision"
@@ -103,8 +105,10 @@
         Photometric quality flag" note="qflg_note"/>
     <column name="Rflg" type="text" ucd="meta.ref" description="Source of JHK
         default mag" note="rflg_note"/>
-    <column name="Xflg" type="small integer" ucd="meta.code"
-        description="Extended source contamination" note="xflg_note"/>
+    <column name="Xflg" type="smallint" ucd="meta.code"
+      description="Extended source contamination" note="xflg_note">
+      <values nullLiteral="-9999" />
+    </column>
 
     <meta name="note" tag="2mass_note">
         Sexagesimal, equatorial position-based source name in the form:
@@ -400,7 +404,7 @@
   <table id="cosmosvla_astref" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="internal_idx">
     <stc>
-      Position ICRS Epoch J2000.0 "RA" "DEC"
+      Position ICRS Epoch J2000.0 "RA" "Dec"
     </stc>
 
     <index columns="Name_VLA1400" />
@@ -441,14 +445,22 @@
     <column name="PA_VLA1400" type="real" ucd="pos.posAng" unit="deg"
       description="Position angle in deg" />
     <column name="Rflag_VLA1400" type="smallint" ucd="meta.code" note="R_note"
-      description="Resolved source flag" />
+      description="Resolved source flag">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Mflag_VLA1400" type="smallint" ucd="meta.code" note="M_note"
-      description="Multicomponent source flag" />
+      description="Multicomponent source flag">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Cflag_VLA1400" type="smallint" ucd="meta.code" note="Cat_note"
-      description="Catalog membership flag" />
+      description="Catalog membership flag">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Dflag_VLA1400" type="smallint" ucd="meta.code" note="Det_note"
       description="Flag indicating the resolution at which a source detected at
-      S/N>=5" />
+      S/N>=5">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Name_VLA324" type="text" ucd="meta.id"
       description="Source name at 324 MHz" />
     <column name="RA_VLA324" type="real" ucd="pos.eq.ra" unit="deg"
@@ -464,13 +476,13 @@
     <column name="eSp_VLA324" type="real"
       ucd="stat.error;phot.flux.density;em.radio.200-400MHz" unit="mJy"
       description="RMS uncertainty on 324 MHz peak flux density" />
-    <column name="Si_VLA324" type="float"
+    <column name="Si_VLA324" type="real"
       ucd="phot.flux.density;em.radio.200-400MHz" unit="mJy"
       description="Integrated 324 MHz source flux density" />
     <column name="eSi_VLA324" type="real"
       ucd="stat.error;phot.flux.density;em.radio.200-400MHz" unit="mJy"
       description="RMS uncertainty on integrated 324 MHz flux density" />
-    <column name="bg_RMS_VLA324" type="float"
+    <column name="bg_RMS_VLA324" type="real"
       ucd="stat.error;em.radio.200-400MHz" unit="mJy"
       description="Measured local RMS at the radio source position" />
     <column name="Bmaj_VLA324" type="real" ucd="phys.angSize" unit="arcsec"
@@ -483,11 +495,15 @@
       description="Position angle (-99 for multi-component source; 0.0 for
       unresolved source)" />
     <column name="Rflag_VLA324" type="integer" ucd="meta.code" note="R2_note"
-      description="Flag for resolved source" />
+      description="Flag for resolved source">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="Mflag_VLA324" type="integer" ucd="meta.code" note="M2_note"
-      description="Flag for multi-component source" />
+      description="Flag for multi-component source">
+      <values nullLiteral="-9999" />
+    </column>
     <column name="internal_idx" type="bigint" ucd="meta.id"
-      description="Internal unique identifier" />
+      description="Internal unique identifier" required="True" />
     <meta name="note" tag="R_note"><![CDATA[
       Rflag_VLA1400 (Resolved source flag at 1.4 GHz) column:
          -2 classified as unresolved only in VLA-COSMOS Deep image
@@ -533,11 +549,11 @@
   <data id="import_2mass">
     <sources>data/2MASS_HELP.csv</sources>
     <csvGrammar />
-    <make table="2mass_astref">
+    <make table="twomass_astref">
       <rowmaker idmaps="*">
           <simplemaps>
             Field:Field,
-            ID2MASS:2MASS,
+            ID2MASS:ID2MASS,
             RAJ2000:RAJ2000,
             DEJ2000:DEJ2000,
             errMaj:errHalfMaj,
@@ -646,7 +662,7 @@
     whether or not you want this -->
     <property name="staticData">data</property>
 
-    <dbCore queriedTable="2mass_astref">
+    <dbCore queriedTable="twomass_astref">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="Field" />
       <condDesc>
@@ -698,7 +714,6 @@
 
     <dbCore queriedTable="cosmosvla_astref">
       <FEED source="//scs#coreDescs"/>
-      <condDesc buildFrom="Field" />
       <condDesc buildFrom="Name_VLA1400" />
     </dbCore>
 
