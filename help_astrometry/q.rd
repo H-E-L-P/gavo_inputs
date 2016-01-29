@@ -167,7 +167,7 @@
 
     <index columns="Field" />
 
-    <column name="Field" type="text" ucd="meta.id;obs.field" verbLevel="30"
+    <column name="Field" type="text" ucd="meta.id;obs.field"
         description="Name of the field in HELP survey" />
     <column name="ID2MASS" type="text" ucd="meta.id;meta.main"
         description="Source designation" required="True" note="1"/>
@@ -452,7 +452,7 @@
         unit="mag" description="Mean error on zmag" />
     <column name="zsp" type="double precision" ucd="src.redshift"
         description="Spectrometric redshift" />
-    <column name="Field" type="text" ucd="meta.id;obs.field" verbLevel="30"
+    <column name="Field" type="text" ucd="meta.id;obs.field"
         description="Name of the field in HELP survey" />
     <column name="internal_idx" type="bigint" ucd="meta.id"
         description="Internal unique identifier" required="True" />
