@@ -8,11 +8,14 @@
   <meta name="creator.name">Roehlly, Y.; et al</meta>
 
   <meta name="subject">Catalogs</meta>
+  <meta name="subject">Astrometry</meta>
   <meta name="subject">Galaxies</meta>
 
   <meta name="coverage">
     <meta name="profile">AllSky ICRS</meta>
     <meta name="waveband">Optical</meta>
+    <meta name="waveband">Infrared</meta>
+    <meta name="waveband">Radio</meta>
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
