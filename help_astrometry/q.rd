@@ -146,7 +146,15 @@
     | XMM-LSS            |    639,200 |
     +--------------------+------------+
 
+    RAW data
+    --------
 
+    You may also download raw catalogues and MOC coverages for 2MASS_, SDSS_,
+    and COSMOS-VLA_.
+
+    .. _2MASS: /help_astrometry/q/cone_2mass/static
+    .. _SDSS: /help_astrometry/q/cone_sdss/static
+    .. _COSMOS-VLA: /help_astrometry/q/cone_cosmosvla/static
   ]]></meta>
 
   <meta name="source"></meta>
@@ -766,7 +774,7 @@
 
     <!-- this is to allow access to the raw data.  Decide for yourself
     whether or not you want this -->
-    <property name="staticData">data</property>
+    <property name="staticData">data/2MASS</property>
 
     <dbCore queriedTable="twomass_astref">
       <FEED source="//scs#coreDescs"/>
@@ -792,7 +800,7 @@
 
     <!-- this is to allow access to the raw data.  Decide for yourself
     whether or not you want this -->
-    <property name="staticData">data</property>
+    <property name="staticData">data/SDSS</property>
 
     <dbCore queriedTable="sdss_astref">
       <FEED source="//scs#coreDescs"/>
@@ -816,7 +824,7 @@
 
     <!-- this is to allow access to the raw data.  Decide for yourself
     whether or not you want this -->
-    <property name="staticData">data</property>
+    <property name="staticData">data/COSMOS-VLA</property>
 
     <dbCore queriedTable="cosmosvla_astref">
       <FEED source="//scs#coreDescs"/>
