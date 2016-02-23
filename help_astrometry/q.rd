@@ -102,7 +102,7 @@
 
     The SDSS data was extracted from Vizier SDSS9 catalogue and matched against
     HELP MOC (v0.9) coverage. The documentation is available there:
-    http://cdsarc.u-strasbg.fr/viz-bin/Cat?II/306
+    http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/139
 
     A ``Field`` column was added containing the name of HELP field associated
     with each source to allow easy filtering. Also, an ``internal_idx`` column
