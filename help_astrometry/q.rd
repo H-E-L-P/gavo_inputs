@@ -465,7 +465,7 @@
         description="Spectrometric redshift" />
     <column name="Field" type="text" ucd="meta.id;obs.field"
         description="Name of the field in HELP survey" />
-    <column name="internal_idx" type="bigint" ucd="meta.id"
+    <column name="internal_idx" type="bigint" ucd="meta.id;meta.main"
         description="Internal unique identifier" required="True" />
     <meta name="note" tag="1"><![CDATA[
       The type (class) is numbered as follows:
@@ -601,7 +601,7 @@
       description="Flag for multi-component source">
       <values nullLiteral="-9999" />
     </column>
-    <column name="internal_idx" type="bigint" ucd="meta.id"
+    <column name="internal_idx" type="bigint" ucd="meta.id;meta.main"
       description="Internal unique identifier" required="True" />
     <meta name="note" tag="1"><![CDATA[
       Rflag_VLA1400 (Resolved source flag at 1.4 GHz) column:
