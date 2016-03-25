@@ -84,9 +84,9 @@
     RAW data
     --------
 
-    You may also download raw catalogues and MOC coverages for PSC_.
+    You may also download `raw catalogues and MOC coverage`__.
 
-    .. _PSC: /twomass_psc/q/cone_psc/static
+    __ /twomass_psc/q/cone/static
   ]]></meta>
 
   <meta name="source">2006AJ....131.1163S</meta>
@@ -360,8 +360,8 @@
     </make>
   </data>
 
-  <service id="cone_psc" allowed="scs.xml,form,static">
-    <meta name="title">2MASS catalogue of point sources</meta>
+  <service id="cone" allowed="scs.xml,form,static">
+    <meta name="title">2MASS Catalogue of Point Sources</meta>
     <meta name="shortName">PSC</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>

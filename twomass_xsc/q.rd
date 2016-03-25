@@ -16,7 +16,7 @@
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
-    This resource contains the 2MASS Extended sources catalogue (IPAC/UMass, 
+    This resource contains the 2MASS Extended Sources Catalogue (IPAC/UMass, 
     2003-2006). It was downloaded from Vizier and limited to HELP coverage.
     Its full documentation is available there:
     http://cdsarc.u-strasbg.fr/viz-bin/Cat?VII/233
@@ -78,9 +78,9 @@
     RAW data
     --------
 
-    You may also download raw catalogues and MOC coverages for XSC_.
+    You may also download `raw catalogues and MOC coverage`__.
 
-    .. _XSC: /twomass_xsc/q/cone_xsc/static
+    __ /twomass_xsc/q/cone/static
   ]]></meta>
 
   <meta name="source">2003yCat.2246....0C</meta>
@@ -257,8 +257,8 @@
     </make>
   </data>
 
-  <service id="cone_xsc" allowed="scs.xml,form,static">
-    <meta name="title">2MASS Extended source catalogue</meta>
+  <service id="cone" allowed="scs.xml,form,static">
+    <meta name="title">2MASS Etended Source Catalogue</meta>
     <meta name="shortName">XSC</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
