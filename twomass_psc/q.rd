@@ -99,7 +99,7 @@
     .. _TAP: /tap
   ]]> </meta>
 
-  <table id="psc" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="ID2MASS">
     <stc>
       Position ICRS Epoch J2000.0 "RAJ2000" "DEJ2000"
@@ -333,10 +333,10 @@
 
   </table>
 
-  <data id="import_psc">
+  <data id="import">
     <sources>data/2MASS_PSC.csv</sources>
     <csvGrammar />
-    <make table="psc">
+    <make table="main">
       <rowmaker idmaps="*">
           <simplemaps>
             Field:Field,
@@ -373,7 +373,7 @@
     whether or not you want this -->
     <property name="staticData">data</property>
 
-    <dbCore queriedTable="psc">
+    <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="Field" />
       <condDesc>

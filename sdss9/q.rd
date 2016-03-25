@@ -89,7 +89,7 @@
     .. _TAP: /tap
   ]]> </meta>
 
-  <table id="sdss9" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="internal_idx">
     <stc>
       Position ICRS Epoch J2000.0 "RAJ2000" "DEJ2000"
@@ -185,10 +185,10 @@
       (http://www.sdss.org/DR7/algorithms/fluxcal.html)
     ]]></meta>
   </table>
-  <data id="import_sdss9">
+  <data id="import">
     <sources>data/SDSS9_HELP.csv</sources>
     <csvGrammar />
-    <make table="sdss9">
+    <make table="main">
       <rowmaker idmaps="*">
         <simplemaps>
           mode:mode,
@@ -230,7 +230,7 @@
     whether or not you want this -->
     <property name="staticData">data/SDSS</property>
 
-    <dbCore queriedTable="sdss9">
+    <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="Field" />
       <condDesc buildFrom="SDSS9" />
