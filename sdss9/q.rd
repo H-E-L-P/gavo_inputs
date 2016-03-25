@@ -2,7 +2,7 @@
   <meta name="title">SDSS DR9</meta>
   <meta name="creationDate">2016-01-21T16:32:51+0100</meta>
   <meta name="description">
-    The SDSS Photometric Catalogue, Release 9 (Adelman-McCarthy+, 2009)
+    The SDSS Photometric Catalogue, Release 9 (Adelman-McCarthy+, 2012)
   </meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>
 
@@ -17,11 +17,11 @@
 
   <meta name="_longdoc" format="rst"> <![CDATA[
     This resource contains the 9th release of the SDSS Photometric Catalogues
-    (Adelman-McCarthy+, 2009) downloaded from Vizier and limited to HELP 
+    (Adelman-McCarthy+, 2012) downloaded from Vizier and limited to HELP 
     coverage.
 
     The full documentation is available at:
-    http://cdsarc.u-strasbg.fr/viz-bin/Cat?II/294
+    http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/139
 
     A ``Field`` column was added containing the name of HELP field associated
     with each source to allow easy filtering. Also, an ``internal_idx`` column
