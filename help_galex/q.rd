@@ -3,8 +3,7 @@
   <meta name="creationDate">2016-03-03T13:17:38+0100</meta>
   <meta name="description">
     This catalogue is the GALEX Medium Imaging Survey Catalogue (GMSC) that was
-    limited to the HELP coverage. The “Field” column was added and contains the
-    name of the HELP field each source falls in.
+    limited to the HELP coverage.
   </meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>
 
