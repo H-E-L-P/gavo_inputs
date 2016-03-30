@@ -843,18 +843,14 @@
       description="RMS residual of proper motion fit in Dec"
       ucd="stat.fit.residual"
       verbLevel="30" />
-    <column name="match"
-      tablehead="match"
-      type="smallint"
-      description="Number of USNO-B objects matched within 1 arcsec."
-      ucd="meta.number"
-      verbLevel="30" />
     <column name="nfit"
       tablehead="nFit"
       type="smallint"
       description="Number of detections used in the pm fit, including SDSS."
       ucd="meta.number"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="g_O"
       tablehead="g(O)"
       type="real"
@@ -1162,7 +1158,6 @@
           e_pmDec:e_pmDE,
           sigRA:sigRA,
           sigDec:sigDE,
-          match:M,
           nfit:N,
           g_O:g_O,
           r_E:r_E,
