@@ -118,7 +118,7 @@
       ucd="phys.density" />
     <column name="r_K20e" tablehead="r.K20e" type="double precision" unit="arcsec"
       description="Semi-major axis of fiducial ellipse at isophote
-      K=20mag/arcsec²" ucd="phys.angSize;src" />
+      K=20mag/arcsec^2" ucd="phys.angSize;src" />
     <column name="J_K20e" tablehead="J.K20e" type="double precision" unit="mag"
       description="J magnitude in K20e ellipse" ucd="phot.mag;em.IR.J" />
     <column name="e_J_K20e" tablehead="e_J.K20e" type="double precision" unit="mag"
