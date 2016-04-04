@@ -20,6 +20,9 @@
     (Adelman-McCarthy+, 2012) downloaded from Vizier and limited to HELP 
     coverage.
 
+    WARNING: Because of a bug in CDS TAP access to SDSS9 data, all sources with
+    a declination over 65 degrees are missing.
+
     The full documentation is available at:
     http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/139
 
