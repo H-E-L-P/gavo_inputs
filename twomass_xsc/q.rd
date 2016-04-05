@@ -113,7 +113,7 @@
       description="Super-coadd centroid RA (J2000)" ucd="pos.eq.ra" />
     <column name="supDEdeg" tablehead="supDEdeg" type="double precision" unit="deg"
       description="Super-coadd centroid Dec (J2000)" ucd="pos.eq.dec" />
-    <column name="density" tablehead="density" type="double precision" unit="[---]"
+    <column name="density" tablehead="density" type="double precision"
       description="Coadd log(density) of stars with k&lt;14mag"
       ucd="phys.density" />
     <column name="r_K20e" tablehead="r.K20e" type="double precision" unit="arcsec"
