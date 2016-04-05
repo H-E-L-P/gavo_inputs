@@ -173,7 +173,7 @@
       description="K magnitude in r.ext" ucd="phot.mag;em.IR.K" />
     <column name="e_K_ext" tablehead="e_K.ext" type="double precision" unit="mag"
       description="1 sigma uncertainty on K.ext" ucd="stat.error" />
-    <column name="cc" tablehead="cc" type="char"
+    <column name="cc" tablehead="cc" type="text"
       description="Contamination or confusion flag" ucd="meta.code"
       note="2">
       <values nullLiteral="-9999" />
