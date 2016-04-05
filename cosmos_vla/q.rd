@@ -39,24 +39,34 @@
     with the position given above as the centre of the field was surveyed for
     275 hours.  The observations of the large project were performed at 1.4 GHz
     (20 cm), using the VLA in its A- and C-configuration between September 2004
-    and September 2005. The final combined survey has reached a sensitivity of 
+    and September 2005. The final combined survey has reached a sensitivity of
     an rms of uJy/beam in the central 30' at a resolution of 2.5"x2.5".
 
     The key characteristics of these data:
 
-     Configuration:          VLA A-array & C-array
-     Dates of observations:  September, 2004 - January, 2005   (A-array)
-                             August, 2005    - September, 2005 (C-array)
-                             February/March, 2006 (A-array: central 7 pointings)
-     Observing time:         250 hours (A-array)
-                             25 hours (C-array)
-                             62 hours (A-array: central 7 pointings)
-     Frequency:              1.4 GHz ( = L band, 20cm)
-     Bandwidth:              75 MHz (Multi-channel continuum mode)
-     Pointings:              23 (hexagonal pattern)
-     Area:                   2 sq degs (box used for source extraction)
-     Resolution:             2.5" x 2.5"
-     Sensitivity:            10-40 uJy/beam (inner to outermost regions)
+    +-----------------------+-----------------------------------------------------+
+    | Configuration         | VLA A-array & C-array                               |
+    +-----------------------+-----------------------------------------------------+
+    | Dates of observations | September, 2004 - January, 2005   (A-array)         |
+    |                       | August, 2005    - September, 2005 (C-array)         |
+    |                       | February/March, 2006 (A-array: central 7 pointings) |
+    +-----------------------+-----------------------------------------------------+
+    | Observing time        | 250 hours (A-array)                                 |
+    |                       | 25 hours (C-array)                                  |
+    |                       | 62 hours (A-array: central 7 pointings)             |
+    +-----------------------+-----------------------------------------------------+
+    | Frequency             | 1.4 GHz ( = L band, 20cm)                           |
+    +-----------------------+-----------------------------------------------------+
+    | Bandwidth             | 75 MHz (Multi-channel continuum mode)               |
+    +-----------------------+-----------------------------------------------------+
+    | Pointings             | 23 (hexagonal pattern)                              |
+    +-----------------------+-----------------------------------------------------+
+    | Area                  | 2 sq degs (box used for source extraction)          |
+    +-----------------------+-----------------------------------------------------+
+    | Resolution            | 2.5" x 2.5"                                         |
+    +-----------------------+-----------------------------------------------------+
+    | Sensitivity           | 10-40 uJy/beam (inner to outermost regions)         |
+    +-----------------------+-----------------------------------------------------+
 
     The data products available here include:
 
@@ -86,15 +96,25 @@
 
     The key characteristics of these data:
 
-     Configuration:                VLA A-array
-     Dates of observations:        November, 2008
-     Observing time:               7.3h
-     Frequency:                    326 MHz ( P band, 90cm)
-     Bandwidth:                    75 MHz (Multi-channel continuum mode)
-     Pointings:                    1
-     Area:                         3.1 square degrees
-     Resolution:                   6.3"
-     Sensitivity:                  0.56 mJy/beam
+    +-----------------------+---------------------------------------+
+    | Configuration         | VLA A-array                           |
+    +-----------------------+---------------------------------------+
+    | Dates of observations | November, 2008                        |
+    +-----------------------+---------------------------------------+
+    | Observing time        | 7.3h                                  |
+    +-----------------------+---------------------------------------+
+    | Frequency             | 326 MHz ( P band, 90cm)               |
+    +-----------------------+---------------------------------------+
+    | Bandwidth             | 75 MHz (Multi-channel continuum mode) |
+    +-----------------------+---------------------------------------+
+    | Pointings             | 1                                     |
+    +-----------------------+---------------------------------------+
+    | Area                  | 3.1 square degrees                    |
+    +-----------------------+---------------------------------------+
+    | Resolution            | 6.3"                                  |
+    +-----------------------+---------------------------------------+
+    | Sensitivity           | 0.56 mJy/beam                         |
+    +-----------------------+---------------------------------------+
 
     Any paper using these data should includ: Vernesa Smolcic
     <vs@astro.uni-bonn.de> Send any questions to: Vernesa Smolcic
@@ -116,7 +136,7 @@
     RAW data
     --------
 
-    You may also download `raw catalogues and MOC coverages`.
+    You may also download `raw catalogues and MOC coverages`__.
 
     __ /cosmos_vla/q/cone/static
   ]]></meta>
