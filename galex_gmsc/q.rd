@@ -1,4 +1,4 @@
-<resource schema="help_galex">
+<resource schema="galex_gmsc">
   <meta name="title">GALEX GMSC catalogue on HELP fields</meta>
   <meta name="creationDate">2016-03-03T13:17:38+0100</meta>
   <meta name="description">
