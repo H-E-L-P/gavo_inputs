@@ -346,7 +346,7 @@
 
     <!-- this is to allow access to the raw data.  Decide for yourself
     whether or not you want this -->
-    <property name="staticData">data/COSMOS-VLA</property>
+    <property name="staticData">data</property>
 
     <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
