@@ -78,6 +78,13 @@
 
     - 20160303: Catalogue retrieved from STSCI GALEX CasJobs and ingested.
 
+    RAW data
+    --------
+
+    You may also `download raw catalogues and MOC coverage`__.
+
+    __ /help_galex/q/cone_gmsc/static
+
   </meta>
 
   <meta name="source"></meta>
