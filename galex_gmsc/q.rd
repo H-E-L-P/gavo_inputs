@@ -83,7 +83,7 @@
 
     You may also `download raw catalogues and MOC coverage`__.
 
-    __ /help_galex/q/cone_gmsc/static
+    __ /galex_gmsc/q/cone/static
 
   </meta>
 
@@ -97,7 +97,7 @@
     .. _TAP: /tap
     ]]> </meta>
 
-  <table id="gmsc" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
     primary="Name">
     <stc>
       Position ICRS Epoch J2000.0 "RA" "Dec"
@@ -1093,10 +1093,10 @@
     </meta>
   </table>
 
-  <data id="import_gmsc">
+  <data id="import">
     <sources>data/galex_gmsc.csv</sources>
     <csvGrammar />
-    <make table="gmsc">
+    <make table="main">
       <rowmaker idmaps="*">
         <simplemaps>
           Field:Field,
@@ -1226,7 +1226,7 @@
     </make>
   </data>
 
-  <service id="cone_gmsc" allowed="scs.xml,form,static">
+  <service id="cone" allowed="scs.xml,form,static">
     <meta name="title">GALEX Medium Imaging Survey Catalogue</meta>
     <meta name="shortName">GMSC</meta>
     <meta name="testQuery">
@@ -1239,7 +1239,7 @@
     whether or not you want this -->
     <property name="staticData">data/files</property>
 
-    <dbCore queriedTable="gmsc">
+    <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="F_GALEX_NUV" />
       <condDesc buildFrom="F_GALEX_FUV" />
