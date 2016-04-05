@@ -108,6 +108,11 @@
 
     Further details can be found in Smolcic et al. 2014, MNRAS, 443, 2590.
 
+    History
+    -------
+
+    - 20160121: Ingestion of WP2 catalogue.
+
     RAW data
     --------
 

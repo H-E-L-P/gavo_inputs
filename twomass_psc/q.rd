@@ -81,6 +81,11 @@
     ELAIS-N1, ELAIS-N2, ELAIS-S1, HDF-N, Lockman-SWIRE, NGP, SA13, SGP,
     SPIRE-NEP, SSDF, xFLS, XMM-13hr, and XMM-LSS.
 
+    History
+    -------
+
+    - 20160323: Catalogue retrieved from Vizier.
+
     RAW data
     --------
 

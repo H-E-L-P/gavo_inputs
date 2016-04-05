@@ -68,6 +68,11 @@
     | XMM-LSS            |      1,222 |
     +--------------------+------------+
 
+    History
+    -------
+
+    - 20160325: Catalogue retrieved from Vizier.
+
     RAW data
     --------
 

@@ -74,6 +74,11 @@
     Within HELP, the SDSS 9 catalogue is used as astrometric reference for the
     fields GAMA-09, GAMA-12, GAMA-15, and Herschel-Stripe-82.
 
+    History
+    -------
+
+    - 20160121: Catalogue retrieved from Vizier.
+
     RAW data
     --------
 
