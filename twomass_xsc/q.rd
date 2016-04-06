@@ -2,7 +2,7 @@
   <meta name="title">2MASS Extended Source Catalogue</meta>
   <meta name="creationDate">2016-03-23T16:09:36+0100</meta>
   <meta name="description">
-    2MASS all-sky catalogue of extended sources (XSC, IPAC/UMass, 2003-2006) 
+    2MASS all-sky catalogue of extended sources (XSC, IPAC/UMass, 2003-2006)
     limited to HELP coverage.
   </meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>
@@ -16,7 +16,7 @@
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
-    This resource contains the 2MASS Extended Sources Catalogue (IPAC/UMass, 
+    This resource contains the 2MASS Extended Sources Catalogue (IPAC/UMass,
     2003-2006). It was downloaded from Vizier and limited to HELP coverage.
     Its full documentation is available there:
     http://cdsarc.u-strasbg.fr/viz-bin/Cat?VII/233
@@ -74,6 +74,12 @@
     +---------------------+-----------+
     | XMM-LSS             |      1146 |
     +---------------------+-----------+
+
+    History
+    -------
+
+    - 20160323: Catalogue retrieved from Vizier.
+
 
     RAW data
     --------
@@ -193,7 +199,7 @@
       7 aperture contained pixels within bright galaxy mask
       9 integrated flux is negativeendTABULAR If the integrated flux is
         negative, a mag value is calculated using
-        BFMag = 99.0 - [ZERO_CAL - 2.5 log10(abs(flux))]; the resulting mag 
+        BFMag = 99.0 - [ZERO_CAL - 2.5 log10(abs(flux))]; the resulting mag
         range is between ~ 75 and 99.
       = ========================================================================
     </meta>
