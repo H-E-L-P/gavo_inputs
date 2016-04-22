@@ -52,7 +52,7 @@
 
     You may also `download raw catalogues and MOC coverage`__.
 
-    __ /cfhtls/q/cone/static
+    __ /cfhtls/q/cone_wide/static
   ]]></meta>
 
   <meta name="source"></meta>
