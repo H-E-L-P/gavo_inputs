@@ -44,6 +44,7 @@
     History
     -------
 
+    - 20160422: Catalogue downloaded again with missing a,b,pa columns.
     - 20160420: Catalogue downloaded from Vizier.
 
     RAW data
@@ -190,29 +191,29 @@
         description="Object position along y"
         ucd="pos.cartesian.y;instr.det"
         verbLevel="30" />
-      <!-- <column name="a" -->
-      <!--   tablehead="a" -->
-      <!--   type="double precision" -->
-      <!--   unit="arcsec" -->
-      <!--   description="Profile RMS along major axis" -->
-      <!--   ucd="phys.angSize.smajAxis" -->
-      <!--   verbLevel="30" /> -->
-      <!-- <column name="b" -->
-      <!--   tablehead="b" -->
-      <!--   type="real" -->
-      <!--   unit="arcsec" -->
-      <!--   description="Profile RMS along minor axis" -->
-      <!--   ucd="phys.angSize.sminAxis" -->
-      <!--   verbLevel="30" /> -->
-      <!-- <column name="pa" -->
-      <!--   tablehead="pa" -->
-      <!--   type="smallint" -->
-      <!--   unit="deg" -->
-      <!--   description="Position angle" -->
-      <!--   ucd="pos.posAng" -->
-      <!--   verbLevel="30"> -->
-      <!--     <values nullLiteral="&#45;32768"/> -->
-      <!-- </column> -->
+      <column name="a"
+        tablehead="a"
+        type="double precision"
+        unit="arcsec"
+        description="Profile RMS along major axis"
+        ucd="phys.angSize.smajAxis"
+        verbLevel="30" />
+      <column name="b"
+        tablehead="b"
+        type="real"
+        unit="arcsec"
+        description="Profile RMS along minor axis"
+        ucd="phys.angSize.sminAxis"
+        verbLevel="30" />
+      <column name="pa"
+        tablehead="pa"
+        type="smallint"
+        unit="deg"
+        description="Position angle"
+        ucd="pos.posAng"
+        verbLevel="30">
+          <values nullLiteral="-32768"/>
+      </column>
       <column name="Sfl"
         tablehead="Sfl"
         type="smallint"
@@ -713,29 +714,29 @@
         description="Object position along y"
         ucd="pos.cartesian.y;instr.det"
         verbLevel="30" />
-      <!-- <column name="a" -->
-      <!--   tablehead="a" -->
-      <!--   type="double precision" -->
-      <!--   unit="arcsec" -->
-      <!--   description="Profile RMS along major axis" -->
-      <!--   ucd="phys.angSize.smajAxis" -->
-      <!--   verbLevel="30" /> -->
-      <!-- <column name="b" -->
-      <!--   tablehead="b" -->
-      <!--   type="real" -->
-      <!--   unit="arcsec" -->
-      <!--   description="Profile RMS along minor axis" -->
-      <!--   ucd="phys.angSize.sminAxis" -->
-      <!--   verbLevel="30" /> -->
-      <!-- <column name="pa" -->
-      <!--   tablehead="pa" -->
-      <!--   type="smallint" -->
-      <!--   unit="deg" -->
-      <!--   description="Position angle" -->
-      <!--   ucd="pos.posAng" -->
-      <!--   verbLevel="30"> -->
-      <!--     <values nullLiteral="&#45;32768"/> -->
-      <!-- </column> -->
+      <column name="a"
+        tablehead="a"
+        type="double precision"
+        unit="arcsec"
+        description="Profile RMS along major axis"
+        ucd="phys.angSize.smajAxis"
+        verbLevel="30" />
+      <column name="b"
+        tablehead="b"
+        type="real"
+        unit="arcsec"
+        description="Profile RMS along minor axis"
+        ucd="phys.angSize.sminAxis"
+        verbLevel="30" />
+      <column name="pa"
+        tablehead="pa"
+        type="smallint"
+        unit="deg"
+        description="Position angle"
+        ucd="pos.posAng"
+        verbLevel="30">
+          <values nullLiteral="-32768"/>
+      </column>
       <column name="Sfl"
         tablehead="Sfl"
         type="smallint"
