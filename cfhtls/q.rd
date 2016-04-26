@@ -43,9 +43,10 @@
 
     History
     -------
-
-    - 20160422: Catalogue downloaded again with missing a,b,pa columns.
-    - 20160420: Catalogue downloaded from Vizier.
+    ======== =========================================================
+    20160422 Catalogue downloaded again with missing a,b,pa columns.
+    20160420 Catalogue downloaded from Vizier.
+    ======== =========================================================
 
     RAW data
     --------

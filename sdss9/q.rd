@@ -75,9 +75,11 @@
     History
     -------
 
-    - 20160411: Catalogue redownloaded from Vizier with missing sources and all
-      the columns.
-    - 20160121: Catalogue retrieved from Vizier.
+    ======== =================================================================
+    20160411 Catalogue redownloaded from Vizier with missing sources and all
+             the columns.
+    20160121 Catalogue retrieved from Vizier.
+    ======== =================================================================
 
     RAW data
     --------

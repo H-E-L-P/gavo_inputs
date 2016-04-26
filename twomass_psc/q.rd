@@ -2,7 +2,7 @@
   <meta name="title">2MASS Point Source Catalogue</meta>
   <meta name="creationDate">2016-03-23T16:09:36+0100</meta>
   <meta name="description">
-    2MASS all-sky catalogue of point sources (PSC, Cutri+ 2003) limited to HELP 
+    2MASS all-sky catalogue of point sources (PSC, Cutri+ 2003) limited to HELP
     coverage.
   </meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>
@@ -84,7 +84,10 @@
     History
     -------
 
-    - 20160323: Catalogue retrieved from Vizier.
+    ======== =====================================
+    20160323 Catalogue retrieved from Vizier.
+    ======== =====================================
+
 
     RAW data
     --------

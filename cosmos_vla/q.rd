@@ -131,7 +131,9 @@
     History
     -------
 
-    - 20160121: Ingestion of WP2 catalogue.
+    ======== ============================
+    20160121 Ingestion of WP2 catalogue.
+    ======== ============================
 
     RAW data
     --------

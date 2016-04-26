@@ -28,7 +28,9 @@
     History
     -------
 
-    - 20160412: Ingestion of XMM-LSS master list.
+    ======== =====================================
+    20160412 Ingestion of XMM-LSS master list.
+    ======== =====================================
 
     RAW data
     --------
@@ -60,7 +62,7 @@
       tablehead="Field"
       type="text"
       ucd="meta.id;obs.field"
-      description="Name of the field in HELP survey" 
+      description="Name of the field in HELP survey"
       required="True"
       verbLevel="1" />
     <column name="help_id"

@@ -76,7 +76,9 @@
     History
     -------
 
-    - 20160303: Catalogue retrieved from STSCI GALEX CasJobs and ingested.
+    ======== ============================================================
+    20160303 Catalogue retrieved from STSCI GALEX CasJobs and ingested.
+    ======== ============================================================
 
     RAW data
     --------

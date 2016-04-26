@@ -78,8 +78,9 @@
     History
     -------
 
-    - 20160323: Catalogue retrieved from Vizier.
-
+    ======== =====================================
+    20160323 Catalogue retrieved from Vizier.
+    ======== =====================================
 
     RAW data
     --------
