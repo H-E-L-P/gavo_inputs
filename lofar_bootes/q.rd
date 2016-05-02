@@ -31,6 +31,20 @@
     Resolution           5 arcsec
     Field                Bootes
     ==================== =======================================================
+
+    History
+    -------
+    ======== ================================================
+    20160502 Ingestion of catalogue provided by Aayush Saxena
+    ======== =====================================:==========
+
+    RAW data
+    --------
+
+    You may also `download raw catalogues and MOC coverage`__.
+
+    __ /lofar_bootes/q/cone/static
+
   ]]> </meta>
 
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
