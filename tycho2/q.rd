@@ -93,7 +93,7 @@
 
   ]]> </meta>
 
-  <table id="tycho2" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="tycho_id">
     <stc>
       Position ICRS Epoch J2000.0 "RA" "Dec"
@@ -501,7 +501,7 @@
       <pattern>data/tycho2_help.csv</pattern>
     </sources>
     <csvGrammar />
-    <make table="tycho2">
+    <make table="main">
       <rowmaker idmaps="*">
         <simplemaps>
           BTmag:BTmag,
@@ -559,7 +559,7 @@
     whether or not you want this -->
     <property name="staticData">data/files</property>
 
-    <dbCore queriedTable="tycho2">
+    <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
     </dbCore>
