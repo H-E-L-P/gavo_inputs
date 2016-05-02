@@ -497,9 +497,7 @@
     ]]></meta>
   </table>
   <data id="import">
-    <sources>
-      <pattern>data/tycho2_help.csv</pattern>
-    </sources>
+    <sources>data/tycho2_help.csv</sources>
     <csvGrammar />
     <make table="main">
       <rowmaker idmaps="*">

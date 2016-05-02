@@ -146,9 +146,7 @@
       verbLevel="1" />
   </table>
   <data id="import">
-    <sources>
-      <pattern>data/lofar_bootes.csv</pattern>
-    </sources>
+    <sources>data/lofar_bootes.csv</sources>
     <csvGrammar />
     <make table="main">
       <rowmaker idmaps="*">
