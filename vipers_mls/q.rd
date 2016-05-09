@@ -27,6 +27,11 @@
 
     All the sources of the catalogue falls in the XMM-LSS field.
 
+    Note that even if this catalogue is base on the CFHTLS T0007 release, it is
+    a little different from the CFHTLS catalogues as Moutard et al. worked on
+    the individual tile catalogues and merged them in a slightly different way
+    compared to the CFHTLS release.
+
     History
     -------
 
@@ -42,6 +47,8 @@
     __ /vipers_mls/q/cone/static
 
     ]]> </meta>
+
+  <meta name="source">2016arXiv160205915M</meta>
 
   <table id="w1" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="ident">
