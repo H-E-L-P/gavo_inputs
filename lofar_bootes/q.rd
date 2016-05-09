@@ -47,6 +47,8 @@
 
   ]]> </meta>
 
+  <meta name="source">2016arXiv160501531W</meta>
+
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="source_name">
     <stc>
@@ -65,7 +67,7 @@
       type="double precision"
       ucd="pos.eq.ra;meta.main"
       unit="deg"
-      description="Right Ascension (J2000)"
+      description="Flux-weighted right ascension (J2000)"
       required="True"
       verbLevel="1" />
     <column name="e_RA"
@@ -73,14 +75,14 @@
       type="double precision"
       ucd="stat.error;pos.eq.ra"
       unit="deg"
-      description="Error on Right Ascension"
+      description="Uncertainty on right ascension"
       verbLevel="1" />
     <column name="Dec"
       tablehead="Dec"
       type="double precision"
       ucd="pos.eq.dec;meta.main"
       unit="deg"
-      description="Declination (J2000)"
+      description="Flux weighted declination (J2000)"
       required="True"
       verbLevel="1" />
     <column name="e_Dec"
@@ -88,53 +90,53 @@
       type="double precision"
       ucd="stat.error;pos.eq.dec"
       unit="deg"
-      description="Error on Declination"
+      description="Uncertainty on declination"
       verbLevel="1" />
     <column name="S_int"
       tablehead="S_int"
       type="double precision"
       ucd="phot.flux;em.radio.100-200MHz"
       unit="mJy"
-      description="Integrated flux"
+      description="Integrated source flux density"
       verbLevel="1" />
     <column name="e_S_int"
       tablehead="e_S_int"
       type="double precision"
       ucd="stat.error;phot.flux;em.radio.100-200MHz"
-      description="Error on integrated flux"
+      description="Uncertainty on integrated source flux density"
       verbLevel="1" />
     <column name="S_peak"
       tablehead="S_peak"
       type="double precision"
       ucd="phot.flux;em.radio.100-200MHz"
       unit="mJy"
-      description="Peak flux"
+      description="Peak flux density"
       verbLevel="1" />
     <column name="e_S_peak"
       tablehead="e_S_peak"
       type="double precision"
       ucd="stat.error;phot.flux;em.radio.100-200MHz"
-      description="Error on peak flux"
+      description="Uncertainty on peak flux density"
       verbLevel="1" />
     <column name="F_smear"
       tablehead="F_smear"
       type="real"
       ucd="arith.factor;phot.flux;em.radio.100-200MHz"
-      description="Estimated correction to peak fluxes for bandwidth and time
-      smearing"
+      description="Approximate correction factor to the peak flux density to
+      account for bandwidth- and time-smearing"
       verbLevel="1" />
     <column name="rms"
       tablehead="rms"
       type="real"
       ucd="stat.stdev;phot.flux;em.radio.100-200MHz"
       unit="mJy"
-      description="Local rms noise around the source"
+      description="Local rms noise used for the source detection"
       verbLevel="1" />
     <column name="NGaus"
       tablehead="NGaus"
       type="smallint"
       ucd="meta.number;stat.fit.param"
-      description="Number of Gaussians fit to the source"
+      description="Number of Gaussians components"
       verbLevel="30">
         <values nullLiteral="-99"/>
     </column>
