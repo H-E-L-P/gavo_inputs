@@ -27,7 +27,7 @@
 
     All the sources of the catalogue falls in the XMM-LSS field.
 
-    Note that even if this catalogue is base on the CFHTLS T0007 release, it is
+    Note that even if this catalogue is based on the CFHTLS T0007 release, it is
     a little different from the CFHTLS catalogues as Moutard et al. worked on
     the individual tile catalogues and merged them in a slightly different way
     compared to the CFHTLS release.
