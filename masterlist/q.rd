@@ -28,9 +28,10 @@
     History
     -------
 
-    ======== =====================================
+    ======== ======================================
     20160412 Ingestion of XMM-LSS master list.
-    ======== =====================================
+    20160516 Addition of the detection_flag column.
+    ======== ======================================
 
     RAW data
     --------
@@ -88,6 +89,30 @@
       description="Declination (J2000)"
       required="True"
       verbLevel="1" />
+    <column name="detection_flag"
+      tablehead="Detection flag"
+      type="text"
+      ucd="meta.code"
+      description="Multiple band detection flag."
+      note="1"
+      verbLevel="1" />
+    <meta name="note" tag="1"><![CDATA[
+      The multiple band detection flag encodes the detection in multiple
+      optical and near IR bands as a list of 0 (no detection) and
+      1 (detection). The list of bands depends on the field:
+
+      +---------+-------------------------------------------------------------------+
+      | Field   | Bands                                                             |
+      +---------+-------------------------------------------------------------------+
+      | XMM-LSS | CFHTLSW_U, CFHTLSW_G, CFHTLSW_R, CFHTLSW_I, CFHTLSW_Z,            |
+      |         | VISTA-VIDEO_Ks, VISTA-VIDEO_H, VISTA-VIDEO_J, VISTA-VIDEO_Y,      |
+      |         | VISTA-VIDEO_Z, VISTA-VIKING_Z, VISTA-VIKING_Y,                    |
+      |         | VISTA-VIKING_J, VISTA-VIKING_H, VISTA-VIKING_K, UKIDSS-DXS_J,     |
+      |         | UKIDSS-DXS_H, UKIDSS-DXS_K, VISTA-VHS_J, VISTA-VHS_H, VISTA-VHS-K |
+      +---------+-------------------------------------------------------------------+
+
+
+      ]]></meta>
   </table>
   <data id="import">
     <sources>
@@ -96,12 +121,7 @@
     <csvGrammar />
     <make table="main">
       <rowmaker idmaps="*">
-        <simplemaps>
-          field:field,
-          help_id:help_id,
-          ra:ra,
-          dec:dec
-        </simplemaps>
+        <simplemaps></simplemaps>
       </rowmaker>
     </make>
   </data>
