@@ -20,6 +20,21 @@
     adding a 'field' column, removing the few sources out of HELP coverage and adding a unique
     identifier to each source based on the location.
 
+    Number of redsfhits per field
+    -----------------------------
+
+    +----------+--------+
+    | Field    | Count  |
+    +----------+--------+
+    | ELAIS-N1 |  4,683 |
+    +----------+--------+
+    | GAMA-09  | 75,968 |
+    +----------+--------+
+    | GAMA-15  | 91,845 |
+    +----------+--------+
+    | XMM-LSS  | 40,822 |
+    +----------+--------+
+
     Survey used
     -----------
 
@@ -877,6 +892,7 @@
     -------
     ======== ==================================================================
     20160518 Ingestion of ELAIS-N1, GAMA-09, GAMA-15 and XMM-LSS WP6 catalogues
+    20160519 Updated XMM-LSS data.
     ======== ==================================================================
 
     RAW data
@@ -896,6 +912,7 @@
     </stc>
 
     <index columns="field" />
+    <index columns="z_qual" />
 
     <column name="field"
       tablehead="Field"
@@ -1272,7 +1289,7 @@
     <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
-      <condDesc buildFrom="specz_id" />
+      <condDesc buildFrom="z_qual" />
     </dbCore>
 
     <publish render="scs.xml" sets="ivo_managed"/>
