@@ -1085,12 +1085,10 @@
     </column>
     <column name="m1_dflag"
       tablehead="M1_DFlag"
-      type="integer"
+      type="text"
       ucd="meta.code;em.IR.15-30um"
       description="MIPS channel 1 deblending flag"
-      verbLevel="30">
-        <values nullLiteral="-99" />
-    </column>
+      verbLevel="30" />
     <column name="m1_sflag"
       tablehead="M1_SFlag"
       type="integer"
