@@ -679,8 +679,9 @@
       type="bigint"
       ucd="meta.id"
       description="ID number, 3.6 microns"
-      required="True"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-9999"/>
+    </column>
     <column name="ra_1"
       tablehead="RA_1"
       type="double precision"
@@ -901,8 +902,9 @@
       type="bigint"
       ucd="meta.id"
       description="ID number, 4.5 microns"
-      required="True"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-9999"/>
+    </column>
     <column name="ra_2"
       tablehead="RA_2"
       type="double precision"
