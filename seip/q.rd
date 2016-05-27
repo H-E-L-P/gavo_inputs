@@ -55,6 +55,20 @@
 
     To identify uniquely a source (e.g. when crossmatching) use the `cntr` column.
 
+    History
+    -------
+
+    ======== ==========================================
+    20160526 Catalogue retrieved from IRSA and ingested
+    ======== ==========================================
+
+    RAW data
+    --------
+
+    You may also download `raw catalogues and MOC coverages`__.
+
+    __ /seip/q/cone/static
+
   ]]> </meta>
 
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
