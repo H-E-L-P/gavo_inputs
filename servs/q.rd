@@ -44,6 +44,20 @@
 
     More information about SERVS is available at http://www.cv.nrao.edu/~mlacy/servs.html
 
+    History
+    -------
+
+    ======== ==========================================
+    20160527 Catalogue retrieved from IRSA and ingested
+    ======== ==========================================
+
+    RAW data
+    --------
+
+    You may also download `raw catalogues and MOC coverages`__.
+
+    __ /servs/q/cone_i1/static
+
   ]]> </meta>
 
   <table id="i1" onDisk="True" adql="True" mixin="//scs#q3cindex"
