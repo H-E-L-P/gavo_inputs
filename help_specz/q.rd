@@ -1098,6 +1098,7 @@
     20160518 Ingestion of ELAIS-N1, GAMA-09, GAMA-15 and XMM-LSS WP6 catalogues
     20160519 Update to XMM-LSS data from WP6.
     20160520 Update to XMM-LSS data from WP6.
+    20160602 Add Herschel-Stripe-82 data.
     ======== ==================================================================
 
     RAW data
