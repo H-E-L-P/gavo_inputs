@@ -19,11 +19,13 @@
     a unique HELP_Id that must be used in all catalogues derived from the
     master list.
 
-    +--------------------+--------------+
-    | Field              | Count        |
-    +====================+==============+
-    | XMM-LSS            |    4,374,168 |
-    +--------------------+--------------+
+    +---------+--------------+
+    | Field   | Count        |
+    +=========+==============+
+    | COSMOS  |      694,478 |
+    +=========+==============+
+    | XMM-LSS |    4,374,168 |
+    +---------+--------------+
 
     History
     -------
@@ -31,6 +33,7 @@
     ======== ======================================
     20160412 Ingestion of XMM-LSS master list.
     20160516 Addition of the detection_flag column.
+    20160617 Addition of the COSMOS master list.
     ======== ======================================
 
     RAW data
