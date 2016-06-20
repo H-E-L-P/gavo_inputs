@@ -18,9 +18,7 @@
   <meta name="_longdoc" format="rst"> <![CDATA[
     This catalogue contains sources extracted from the fourth version of the
     Bootes field imaged by LOFAR at a central observing frequency of 150 MHz.
-    The accompanying paper with the catalogue is currently in preparation
-    (Williams et al. 2016) and the catalogue remains private until the
-    publication of the paper.
+    It is described in Williams et al, 2016.
 
     ==================== =======================================================
     Observers            Wendy Williams for the LOFAR Surveys Key Science
@@ -30,7 +28,10 @@
     Observing Frequency  150 MHz
     Resolution           5 arcsec
     Field                Bootes
+    Reference            Williams et al. 2016 (`2016MNRAS.tmp..926W`__)
     ==================== =======================================================
+
+    __ http://adsabs.harvard.edu/abs/2016MNRAS.tmp..926W
 
     History
     -------
