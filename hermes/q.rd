@@ -29,6 +29,19 @@
 
     .. _here: http://hedam.lam.fr/HerMES/data/DR3/documentation/HerMES_DR3-readme.txt
 
+    History
+    -------
+    ======== =========================================================
+    20160704 Initial ingestion with HerMES DR4 catalogues
+    ======== =========================================================
+
+    RAW data
+    --------
+
+    You may also `download raw catalogues and MOC coverage`__.
+
+    __ /hermes/q/cone_xid250/static
+
   </meta>
 
   <meta name="source"></meta>
