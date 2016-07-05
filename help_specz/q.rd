@@ -28,6 +28,12 @@
     +--------------------+---------+
     | ELAIS-N1           |   4,683 |
     +--------------------+---------+
+    | GAMA-09            |  34,729 |
+    +--------------------+---------+
+    | GAMA-12            |  17,832 |
+    +--------------------+---------+
+    | GAMA-15            |  58,627 |
+    +--------------------+---------+
     | Herschel-Stripe-82 | 127,619 |
     +--------------------+---------+
     | NGP                |  44,547 |
@@ -1106,11 +1112,12 @@
     History
     -------
     ======== ==================================================================
-    20160518 Ingestion of ELAIS-N1, GAMA-09, GAMA-15 and XMM-LSS WP6 catalogues
-    20160519 Update to XMM-LSS data from WP6.
-    20160520 Update to XMM-LSS data from WP6.
-    20160602 Add Herschel-Stripe-82 data.
+    20160705 Add GAMA public data
     20160621 Remove GAMA data as some are not yet public.
+    20160602 Add Herschel-Stripe-82 data.
+    20160520 Update to XMM-LSS data from WP6.
+    20160519 Update to XMM-LSS data from WP6.
+    20160518 Ingestion of ELAIS-N1, GAMA-09, GAMA-15 and XMM-LSS WP6 catalogues
     ======== ==================================================================
 
     RAW data
