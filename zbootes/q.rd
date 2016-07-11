@@ -695,7 +695,9 @@
       ucd="meta.number"
       description="Mean number of observations"
       note="1"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-9999"/>
+    </column>
     <column name="err_1"
       tablehead="Err_1"
       type="real"
@@ -766,7 +768,9 @@
       ucd="meta.code.multip"
       description="Duplicate flag"
       note="6"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-9"/>
+    </column>
     <column name="ndwfs_name"
       tablehead="NDWFS_Name"
       type="text"
