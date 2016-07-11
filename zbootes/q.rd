@@ -702,7 +702,7 @@
       tablehead="Err_1"
       type="real"
       ucd="stat.error;phot.count;em.opt.I"
-      unit="counts"
+      unit="count"
       description="Photometric error in 1 arcsec diameter aperture"
       note="2"
       verbLevel="1" />
@@ -710,7 +710,7 @@
       tablehead="Err_3"
       type="real"
       ucd="stat.error;phot.count;em.opt.I"
-      unit="counts"
+      unit="count"
       description="Photometric error in 3 arcsec diameter aperture"
       note="2"
       verbLevel="1" />
@@ -718,7 +718,7 @@
       tablehead="Err_5"
       type="real"
       ucd="stat.error;phot.count;em.opt.I"
-      unit="counts"
+      unit="count"
       description="Photometric error in 5 arcsec diameter aperture"
       note="2"
       verbLevel="1" />
@@ -726,7 +726,7 @@
       tablehead="Err_7"
       type="real"
       ucd="stat.error;phot.count;em.opt.I"
-      unit="counts"
+      unit="count"
       description="Photometric error in 7 arcsec diameter aperture"
       note="2"
       verbLevel="1" />
