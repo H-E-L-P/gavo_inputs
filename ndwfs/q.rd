@@ -77,7 +77,7 @@
 
     You may also download `raw catalogues and MOC coverages`__.
 
-    __ /TEMPLATE/q/cone/static
+    __ /ndwfs/q/cone/static
 
   ]]> </meta>
 
