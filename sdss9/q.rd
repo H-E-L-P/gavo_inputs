@@ -622,7 +622,7 @@
       type="real"
       unit="mag"
       description="PSF magnitude in r band"
-      ucd="phot.mag;em.phot.R"
+      ucd="phot.mag;em.opt.R"
       verbLevel="30" />
     <column name="psfmagerr_r"
       tablehead="psfMagErr_r"
@@ -636,7 +636,7 @@
       type="real"
       unit="mag"
       description="Petrosian magnitude in r band"
-      ucd="phot.mag;em.phot.R"
+      ucd="phot.mag;em.opt.R"
       verbLevel="30" />
     <column name="petromagerr_r"
       tablehead="petroMagErr_r"
@@ -731,7 +731,7 @@
       type="real"
       unit="mag"
       description="PSF magnitude in i band"
-      ucd="phot.mag;em.phot.I"
+      ucd="phot.mag;em.opt.I"
       verbLevel="30" />
     <column name="psfmagerr_i"
       tablehead="psfMagErr_i"
@@ -745,7 +745,7 @@
       type="real"
       unit="mag"
       description="Petrosian magnitude in i band"
-      ucd="phot.mag;em.phot.I"
+      ucd="phot.mag;em.opt.I"
       verbLevel="30" />
     <column name="petromagerr_i"
       tablehead="petroMagErr_i"
@@ -840,7 +840,7 @@
       type="real"
       unit="mag"
       description="PSF magnitude in z band"
-      ucd="phot.mag;em.phot.I"
+      ucd="phot.mag;em.opt.I"
       verbLevel="30" />
     <column name="psfmagerr_z"
       tablehead="psfMagErr_z"
@@ -854,7 +854,7 @@
       type="real"
       unit="mag"
       description="Petrosian magnitude in z band"
-      ucd="phot.mag;em.phot.I"
+      ucd="phot.mag;em.opt.I"
       verbLevel="30" />
     <column name="petromagerr_z"
       tablehead="petroMagErr_z"
