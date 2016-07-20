@@ -176,7 +176,9 @@
       ucd="meta.number"
       unit="pixel"
       description="Number of flagged pixels entering J_ImaFlags_ISO"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="j_fwhm_image"
       tablehead="J_FWHM_image"
       type="real"
@@ -1446,7 +1448,9 @@
       type="bigint"
       ucd="meta.id"
       description="Source identifier in each subfield"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
     <meta name="note" tag="1"><![CDATA[
       SExtractor flags:
 
