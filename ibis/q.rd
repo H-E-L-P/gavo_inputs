@@ -1672,7 +1672,7 @@
   </data>
 
   <service id="cone" allowed="scs.xml,form,static">
-    <meta name="title">Infrated Bootes Imaging Survey catalogue</meta>
+    <meta name="title">Infrared Bootes Imaging Survey catalogue</meta>
     <meta name="shortName">IBIS</meta>
     <meta name="testQuery">
       <meta name="ra">218.2</meta>
