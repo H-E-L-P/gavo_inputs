@@ -92,7 +92,7 @@
 
     You may also download `raw catalogues and MOC coverages`__.
 
-    __ /TEMPLATE/q/cone/static
+    __ /ibis/q/cone/static
 
   ]]> </meta>
 
