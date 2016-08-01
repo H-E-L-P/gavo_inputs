@@ -102,7 +102,9 @@
       ucd="meta.code;obs.field"
       description="Binary coverage flag"
       note="1"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-9999" />
+    </column>
     <meta name="note" tag="1"><![CDATA[
       During the creation of the master list, the coverage of each survey
       / catalogue is byte encoded. Each source position is then flagged
