@@ -22,6 +22,8 @@
     +---------+--------------+
     | Field   | Count        |
     +=========+==============+
+    | Bootes  |    2,973,539 |
+    +---------+--------------+
     | COSMOS  |      694,478 |
     +---------+--------------+
     | XMM-LSS |    4,374,168 |
@@ -30,11 +32,13 @@
     History
     -------
 
-    ======== ======================================
-    20160412 Ingestion of XMM-LSS master list.
-    20160516 Addition of the detection_flag column.
+    ======== ================================================================
+    20160801 Ingestion of Bootes master list. Use of coverage flag instead of
+             detection flag.
     20160617 Addition of the COSMOS master list.
-    ======== ======================================
+    20160516 Addition of the detection_flag column.
+    20160412 Ingestion of XMM-LSS master list.
+    ======== ================================================================
 
     RAW data
     --------
@@ -92,28 +96,55 @@
       description="Declination (J2000)"
       required="True"
       verbLevel="1" />
-    <column name="detection_flag"
-      tablehead="Detection flag"
-      type="text"
-      ucd="meta.code"
-      description="Multiple band detection flag."
+    <column name="coverage"
+      tablehead="Coverage"
+      type="bigint"
+      ucd="meta.code;obs.field"
+      description="Binary coverage flag"
       note="1"
       verbLevel="1" />
     <meta name="note" tag="1"><![CDATA[
-      The multiple band detection flag encodes the detection in multiple
-      optical and near IR bands as a list of 0 (no detection) and
-      1 (detection). The list of bands depends on the field:
+      During the creation of the master list, the coverage of each survey
+      / catalogue is byte encoded. Each source position is then flagged
+      according to its belonging to the various coverages, whether the source
+      was detected or not.
 
-      +---------+-------------------------------------------------------------------+
-      | Field   | Bands                                                             |
-      +---------+-------------------------------------------------------------------+
-      | XMM-LSS | CFHTLSW_U, CFHTLSW_G, CFHTLSW_R, CFHTLSW_I, CFHTLSW_Z,            |
-      |         | VISTA-VIDEO_Ks, VISTA-VIDEO_H, VISTA-VIDEO_J, VISTA-VIDEO_Y,      |
-      |         | VISTA-VIDEO_Z, VISTA-VIKING_Z, VISTA-VIKING_Y,                    |
-      |         | VISTA-VIKING_J, VISTA-VIKING_H, VISTA-VIKING_K, UKIDSS-DXS_J,     |
-      |         | UKIDSS-DXS_H, UKIDSS-DXS_K, VISTA-VHS_J, VISTA-VHS_H, VISTA-VHS-K |
-      +---------+-------------------------------------------------------------------+
+      The byte encoding depends on the field and is done according to the
+      following tables.
 
+      For Boötes:
+
+      +--------+---------+
+      | Number | Survey  |
+      +--------+---------+
+      | 1      | NDWFS   |
+      +--------+---------+
+      | 2      | IBIS    |
+      +--------+---------+
+      | 4      | zBootes |
+      +--------+---------+
+      | 8      | SDWFS   |
+      +--------+---------+
+
+      For XMM-LSS:
+
+      +--------+--------+
+      | Number | Survey |
+      +--------+--------+
+      | 1      | VIDEO  |
+      +--------+--------+
+      | 2      | VIKING |
+      +--------+--------+
+      | 4      | DXS    |
+      +--------+--------+
+      | 8      | VHS    |
+      +--------+--------+
+      | 16     | SERVS  |
+      +--------+--------+
+      | 32     | SWIRE  |
+      +--------+--------+
+      | 64     | CFHTLS |
+      +--------+--------+
 
       ]]></meta>
   </table>
