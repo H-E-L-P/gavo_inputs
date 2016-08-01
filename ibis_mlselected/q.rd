@@ -1,6 +1,6 @@
 <resource schema="ibis_mlselected">
   <meta name="title">Infrared Bootes Imaging Survey (masterlist selected)</meta>
-  <meta name="creationDate">2016-07-20T16:48:21+0200</meta>
+  <meta name="creationDate">2016-08-01T20:32:40+0200</meta>
   <meta name="description">The Infrared Bootes Imaging Survey (IBIS) is
   a near-infrared imaging survey covering the entire Spitzer Deep Wide-Field
   Survey (SDWFS) region, which corresponds to the Boötes field of the NOAO Deep

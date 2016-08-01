@@ -1,6 +1,6 @@
 <resource schema="sdwfs_mlselect">
   <meta name="title">SDWFS (masterlist selected)</meta>
-  <meta name="creationDate">2016-05-31T16:49:29+0200</meta>
+  <meta name="creationDate">2016-08-01T20:33:19+0200</meta>
   <meta name="description">
     Spitzer Deep, Wide-Field Survey (SDWFS). Updated First Data Release (DR1.1).
     This is the masterlist selected catalogue.
