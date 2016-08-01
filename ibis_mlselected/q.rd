@@ -1646,7 +1646,7 @@
           k_isoarea_image:k_isoarea_image,
           k_class_star:k_class_star,
           subfield:subfield,
-          internal_id:internal,
+          internal_id:internal_id,
           help_id:help_id
         </simplemaps>
       </rowmaker>
