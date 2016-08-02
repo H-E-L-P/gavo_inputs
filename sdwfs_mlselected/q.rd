@@ -1,4 +1,4 @@
-<resource schema="sdwfs_mlselect">
+<resource schema="sdwfs_mlselected">
   <meta name="title">SDWFS (masterlist selected)</meta>
   <meta name="creationDate">2016-08-01T20:33:19+0200</meta>
   <meta name="description">

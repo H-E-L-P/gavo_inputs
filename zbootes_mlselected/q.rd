@@ -1,4 +1,4 @@
-<resource schema="zbootes_mlselect">
+<resource schema="zbootes_mlselected">
   <meta name="title">zBootes (masterlist selected)</meta>
   <meta name="creationDate">2016-08-01T20:33:51+0200</meta>
   <meta name="description">
