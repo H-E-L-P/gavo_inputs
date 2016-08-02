@@ -96,6 +96,13 @@
       description="Declination (J2000)"
       required="True"
       verbLevel="1" />
+    <column name="ebv"
+        tablehead="EBV"
+        type="double precision"
+        ucd="phot.color.excess"
+        description="Galactic extinction (Schlegel et al. 1998) at the object
+        position"
+        verbLevel="1" />
     <column name="coverage"
       tablehead="Coverage"
       type="bigint"
