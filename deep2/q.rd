@@ -195,7 +195,9 @@
       description="Nonzero if source may have missing data or be contaminated
       (see note)"
       note="2"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-9" />
+    </column>
     <meta name="note" tag="1"><![CDATA[
     pGal values
     -----------
