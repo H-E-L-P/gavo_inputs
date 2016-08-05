@@ -26,6 +26,16 @@
     HELP coverage and added a `field` column containing the name of the HELP
     field.
 
+    Within HELP, the DEEP2 sources are on EGS and Herschel-Stripe-82 fields with
+    these counts:
+
+    +--------------------+--------------+
+    | Field              | Source count |
+    +--------------------+--------------+
+    | EGS                |      208,517 |
+    +--------------------+--------------+
+    | Herschel-Stripe-82 |      156,017 |
+    +--------------------+--------------+
 
     Survey identification
     ---------------------
