@@ -1,8 +1,8 @@
 <resource schema="df_spitzer">
-  <meta name="title">Spitzer Datafusion Catalogues</meta>
+  <meta name="title">Spitzer Data Fusion Catalogues</meta>
   <meta name="creationDate">2016-08-04T15:55:15+0200</meta>
   <meta name="description">
-    Spitzer selected catalogues originating from Vaccari et al. “datafusion”
+    Spitzer selected catalogues originating from Vaccari et al. “Data Fusion”
     work.
   </meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>
@@ -18,7 +18,7 @@
   <meta name="_longdoc" format="rst"> <![CDATA[
 
     This resource contains Spitzer catalogues originating from Vaccari *et al.*
-    “datafusion” work and described in:
+    “Data Fusion” work and described in:
 
     Vaccari et al. 2010, A&A, 518, L20 and Vaccari 2015, PoS, 267, 27
     (http://www.mattiavaccari.net/df)
@@ -92,7 +92,7 @@
     ---------------------------------
 
     The `df_spitzer.bootes_xfls` contains Spitzer fluxes on the Boötes and xFLS
-    field obtained by the datafusion team's own extraction, described as:
+    field obtained by the Data Fusion team's own extraction, described as:
 
         Bootes-xFLS Spitzer Imaging:
         IRAC-1234 - Vaccari/Marchetti/Gonzalez-Solares (priv comm)
@@ -142,7 +142,7 @@
       tablehead="Orig_Field"
       type="text"
       ucd="meta.id;obs.field"
-      description="Name of the field in datafusion table file"
+      description="Name of the field in Data Fusion table file"
       verbLevel="30" />
     <column name="id_12"
       tablehead="ID_12"
@@ -701,7 +701,7 @@
       tablehead="Orig_Field"
       type="text"
       ucd="meta.id;obs.field"
-      description="Name of the field in datafusion table file"
+      description="Name of the field in Data Fusion table file"
       verbLevel="30" />
     <column name="index_spitzer"
       tablehead="Index_Spitzer"
@@ -1741,7 +1741,7 @@
       tablehead="Orig_Field"
       type="text"
       ucd="meta.id;obs.field"
-      description="Name of the field in datafusion table file"
+      description="Name of the field in Data Fusion table file"
       verbLevel="30" />
     <column name="index_spitzer"
       tablehead="Index_Spitzer"
@@ -3356,7 +3356,7 @@
     </make>
   </data>
   <service id="cone_servs" allowed="scs.xml,form,static">
-    <meta name="title">Datafusion SERVS catalogue</meta>
+    <meta name="title">Spitzer Data Fusion SERVS catalogue</meta>
     <meta name="shortName">DF_SERVS</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
@@ -3378,7 +3378,7 @@
     <outputTable verbLevel="20"/>
   </service>
   <service id="cone_swire" allowed="scs.xml,form,static">
-    <meta name="title">Datafusion SWIRE catalogue</meta>
+    <meta name="title">Spitzer Data Fusion SWIRE catalogue</meta>
     <meta name="shortName">DF_SWIRE</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
@@ -3400,7 +3400,7 @@
     <outputTable verbLevel="20"/>
   </service>
   <service id="cone_bootes_xfls" allowed="scs.xml,form,static">
-    <meta name="title">Datafusion Spitzer Boötes and xFLS extraction</meta>
+    <meta name="title">Spitzer Data Fusion Spitzer Boötes and xFLS extraction</meta>
     <meta name="shortName">DF_Bootes-xFLS</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
