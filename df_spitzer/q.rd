@@ -34,25 +34,25 @@
     Here are the counts of sources per field:
 
 
-    +---------------+-------------+-------------+--------------+
-    | Field         | SERVS count | SWIRE count | NewExt count |
-    +---------------+-------------+-------------+--------------+
-    | Bootes        |             |             |    1,142,840 |
-    +---------------+-------------+-------------+--------------+
-    | CDFS-SWIRE    |     829,191 |     464,084 |              |
-    +---------------+-------------+-------------+--------------+
-    | ELAIS-N1      |     395,243 |     573,843 |              |
-    +---------------+-------------+-------------+--------------+
-    | ELAIS-N2      |             |     273,650 |              |
-    +---------------+-------------+-------------+--------------+
-    | ELAIS-S1      |     605,425 |     368,900 |              |
-    +---------------+-------------+-------------+--------------+
-    | Lockman-SWIRE |     951,102 |     659,974 |              |
-    +---------------+-------------+-------------+--------------+
-    | XMM-LSS       |     958,421 |     497,404 |              |
-    +---------------+-------------+-------------+--------------+
-    | xFLS          |             |             |      228,354 |
-    +---------------+-------------+-------------+--------------+
+    +---------------+-------------+-------------+-------------------+
+    | Field         | SERVS count | SWIRE count | Bootes-xFLS count |
+    +---------------+-------------+-------------+-------------------+
+    | Bootes        |             |             |    1,142,840      |
+    +---------------+-------------+-------------+-------------------+
+    | CDFS-SWIRE    |     829,191 |     464,084 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | ELAIS-N1      |     395,243 |     573,843 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | ELAIS-N2      |             |     273,650 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | ELAIS-S1      |     605,425 |     368,900 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | Lockman-SWIRE |     951,102 |     659,974 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | XMM-LSS       |     958,421 |     497,404 |                   |
+    +---------------+-------------+-------------+-------------------+
+    | xFLS          |             |             |      228,354      |
+    +---------------+-------------+-------------+-------------------+
 
     SERVS Band-Merged Catalogue
     ---------------------------
@@ -91,8 +91,8 @@
     Spitzer Boötes and xFLS Catalogue
     ---------------------------------
 
-    The `df_spitzer.newext` contains Spitzer fluxes on the Boötes and xFLS field
-    obtained by the datafusion team's own extraction, described as:
+    The `df_spitzer.bootes_xfls` contains Spitzer fluxes on the Boötes and xFLS
+    field obtained by the datafusion team's own extraction, described as:
 
         Bootes-xFLS Spitzer Imaging:
         IRAC-1234 - Vaccari/Marchetti/Gonzalez-Solares (priv comm)
@@ -1715,7 +1715,7 @@
     ]]> </meta>
   </table>
 
-  <table id="newext" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="bootes_xfls" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="internal_id">
     <stc>
       Position ICRS Epoch J2000.0 "ra_spitzer" "dec_spitzer"
@@ -3173,10 +3173,10 @@
       </rowmaker>
     </make>
   </data>
-  <data id="import_newext">
+  <data id="import_bootes_xfls">
     <sources>data/datafusion_spitzer_bootes_xfls_help.csv</sources>
     <csvGrammar />
-    <make table="newext">
+    <make table="bootes_xfls">
       <rowmaker idmaps="*">
         <simplemaps>
           index_spitzer:index_spitzer,
@@ -3399,9 +3399,9 @@
     <publish render="form" sets="ivo_managed,local"/>
     <outputTable verbLevel="20"/>
   </service>
-  <service id="cone_newext" allowed="scs.xml,form,static">
+  <service id="cone_bootes_xfls" allowed="scs.xml,form,static">
     <meta name="title">Datafusion Spitzer Boötes and xFLS extraction</meta>
-    <meta name="shortName">DF_NEWEXT</meta>
+    <meta name="shortName">DF_Bootes-xFLS</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
@@ -3412,7 +3412,7 @@
     whether or not you want this -->
     <property name="staticData">data/files</property>
 
-    <dbCore queriedTable="newext">
+    <dbCore queriedTable="bootes_xfls">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
     </dbCore>
