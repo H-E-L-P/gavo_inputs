@@ -65,6 +65,20 @@
     | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml             |
     +------------+--------------------------------------------------------------+
 
+    +------------+---------------------------------------------------+
+    | Survey     | ATLAS                                             |
+    +------------+---------------------------------------------------+
+    | Telescope  | ATCA                                              |
+    +------------+---------------------------------------------------+
+    | Instrument | ATCA                                              |
+    +------------+---------------------------------------------------+
+    | Filters    | ATCA_1400                                         |
+    +------------+---------------------------------------------------+
+    | Reference  | 2015arXiv150803150F                               |
+    +------------+---------------------------------------------------+
+    | URL        | http://www.atnf.csiro.au/research/deep/index.html |
+    +------------+---------------------------------------------------+
+
     +------------+----------------------------------+
     | Survey     | FIRST (via Kimball et al. 2014)' |
     +------------+----------------------------------+
@@ -134,15 +148,17 @@
     Survey used
     -----------
 
-    - AKARI-NEP: VLA North Ecliptic Pole survey, WSRT survey of the AKARI-NEP,
+    - AKARI-NEP (table `wp2.akari_nep`): VLA North Ecliptic Pole survey, WSRT
+      survey of the AKARI-NEP, NVSS (via Kimball et al. 2014), 4.85 GHz
+      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
+      Kimball et al. 2014).
+
+    - Bootes (table `wp2.bootes`): 153 MHz catalogue (Williams et al. 2013), 1.4
+      GHz catalogue (de Vries et al. 2002), FIRST (via Kimball et al. 2014),
       NVSS (via Kimball et al. 2014), 4.85 GHz catalogue from Green Bank (via
       Kimball et al. 2014), and VLSSr (via Kimball et al. 2014).
 
-    - Bootes: 153 MHz catalogue (Williams et al. 2013), 1.4 GHz catalogue (de
-      Vries et al. 2002), FIRST (via Kimball et al. 2014), NVSS (via Kimball et
-      al. 2014), 4.85 GHz catalogue from Green Bank (via Kimball et al. 2014),
-      and VLSSr (via Kimball et al. 2014).
-
+    - CDFS-SWIRE (table `wp2.cdfs_swire`): ATLAS, NVSS (via Kimball et al. 2014)
 
     History
     -------
@@ -837,6 +853,11 @@
   <!-- Bootes -->
   <table id="bootes" onDisk="True" adql="True" mixin="//scs#q3cindex"
     primary="internal_id">
+
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
     <column name="ra"
       tablehead="RA"
       type="double precision"
@@ -1752,6 +1773,448 @@
     <outputTable verbLevel="20"/>
   </service>
 
+  <!-- CDFS-SWIRE -->
+  <table id="cdfs_swire" onDisk="True" adql="True" mixin="//scs#q3cindex"
+    primary="internal_id">
+
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="ATCA RA if present NVSS if not"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="ATCA Declination if present NVSS if not"
+      required="True"
+      verbLevel="1" />
+    <column name="uniq_id"
+      tablehead="UNIQ_ID"
+      type="integer"
+      ucd="meta.id"
+      description="Unique catalog row identifier in the Kimball et al. catalogue"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchflag_vla_1400__first"
+      tablehead="MATCHFLAG_vla_1400__FIRST"
+      type="integer"
+      ucd="meta.code"
+      description="= 1 if a FIRST match exists = 0 if no FIRST match"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchflag_vla_1400__nvss"
+      tablehead="MATCHFLAG_vla_1400__NVSS"
+      type="integer"
+      ucd="meta.code"
+      description="= -1 as NVSS is the primary catalogue"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="distance_nvss_first"
+      tablehead="Distance_NVSS_FIRST"
+      type="real"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="distance between NVSS and FIRST source in arcsec"
+      verbLevel="30" />
+    <column name="id_vla_1400__nvss"
+      tablehead="ID_vla_1400__NVSS"
+      type="integer"
+      ucd="meta.id"
+      description="unique NVSS identifier"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_1400__nvss"
+      tablehead="RA_vla_1400__NVSS"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_vla_1400__nvss"
+      tablehead="DEC_vla_1400__NVSS"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="declination in deg"
+      verbLevel="30" />
+    <column name="peak_vla_1400__nvss"
+      tablehead="PEAK_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="peak intensity at 20cm (Stokes I) in mJy/bm"
+      verbLevel="1" />
+    <column name="f_vla_1400__nvss"
+      tablehead="F_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="integrated flux density at 20cm (Stokes I) in mJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__nvss"
+      tablehead="FErr_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="error on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="major_vla_1400__nvss"
+      tablehead="MAJOR_vla_1400__NVSS"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM major axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="major_err_vla_1400__nvss"
+      tablehead="MAJOR_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on major axis in arcsec"
+      verbLevel="30" />
+    <column name="minor_vla_1400__nvss"
+      tablehead="MINOR_vla_1400__NVSS"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM minor axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="minor_err_vla_1400__nvss"
+      tablehead="MINOR_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="posangle_vla_1400__nvss"
+      tablehead="POSANGLE_vla_1400__NVSS"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="position angle east of north in deg"
+      verbLevel="30" />
+    <column name="posangle_err_vla_1400__nvss"
+      tablehead="POSANGLE_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="error on polarization angle in deg"
+      verbLevel="30" />
+    <column name="q_vla_1400__nvss"
+      tablehead="Q_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="interpolated Stokes Q value at position of I peak in mJy/bm"
+      verbLevel="1" />
+    <column name="u_vla_1400__nvss"
+      tablehead="U_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="interpolated Stokes U value at position of I peak in mJy/bm"
+      verbLevel="1" />
+    <column name="pol_flux_vla_1400__nvss"
+      tablehead="POL_FLUX_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="integrated linear polarized flux in mJy"
+      verbLevel="1" />
+    <column name="pol_flux_err_vla_1400__nvss"
+      tablehead="POL_FLUX_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="error on polarized flux in mJy"
+      verbLevel="1" />
+    <column name="pol_angle_vla_1400__nvss"
+      tablehead="POL_ANGLE_vla_1400__NVSS"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="polarization angle in deg"
+      verbLevel="30" />
+    <column name="pol_angle_err_vla_1400__nvss"
+      tablehead="POL_ANGLE_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="error on polarization angle in deg"
+      verbLevel="30" />
+    <column name="detection_vla_1400__nvss"
+      tablehead="DETECTION_vla_1400__NVSS"
+      type="integer"
+      ucd="meta.code"
+      description="Detection flag for NVSS"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="id_atca_1400"
+      tablehead="ID_atca_1400"
+      type="text"
+      ucd="meta.id"
+      description="Component number"
+      verbLevel="1" />
+    <column name="name_atca_1400"
+      tablehead="Name_atca_1400"
+      type="text"
+      ucd="meta.id"
+      description="Source name"
+      verbLevel="1" />
+    <column name="ra_atca_1400"
+      tablehead="RA_atca_1400"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension in deg"
+      verbLevel="30" />
+    <column name="dec_atca_1400"
+      tablehead="Dec_atca_1400"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination in deg"
+      verbLevel="30" />
+    <column name="ra_err_atca_1400"
+      tablehead="RA_err_atca_1400"
+      type="double precision"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Error on right ascension in deg"
+      verbLevel="30" />
+    <column name="dec_err_atca_1400"
+      tablehead="Dec_err_atca_1400"
+      type="double precision"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Error on declination in deg"
+      verbLevel="30" />
+    <column name="rms_atca_1400"
+      tablehead="rms_atca_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="Local rms in uJy"
+      verbLevel="1" />
+    <column name="bws_atca_1400"
+      tablehead="BWS_atca_1400"
+      type="real"
+      ucd="stat.value"
+      description="local bandwidth smearing value"
+      verbLevel="1" />
+    <column name="obs_freq_atca_1400"
+      tablehead="OBS_FREQ_atca_1400"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="MHz"
+      description="Frequency at which Fp_mjy and F_mjy was measured in MHz"
+      verbLevel="1" />
+    <column name="fp"
+      tablehead="Fp"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Fitted source peak measured at OBS_FREQ_atca_1400 in mJy/beam"
+      verbLevel="1" />
+    <column name="fperr"
+      tablehead="FPerr"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Error in fitted source peak in mJy/beam"
+      verbLevel="1" />
+    <column name="f"
+      tablehead="F"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated flux density measured at OBS_FREQ_atca_1400 in mJy"
+      verbLevel="1" />
+    <column name="ferr"
+      tablehead="Ferr"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Error in integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="fp_atca_1400"
+      tablehead="FP_atca_1400"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Peak 20 cm flux density in mJy/beam"
+      verbLevel="1" />
+    <column name="fperr_atca_1400"
+      tablehead="FPerr_atca_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="RMS error in peak 20 cm flux density in mJy/beam"
+      verbLevel="1" />
+    <column name="f_atca_1400"
+      tablehead="F_atca_1400"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated 20 cm flux density in mJy"
+      verbLevel="1" />
+    <column name="ferr_atca_1400"
+      tablehead="FErr_atca_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="RMS error in integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="deconv_atca_1400"
+      tablehead="DECONV_atca_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Deconvolved angular size in arcsec"
+      verbLevel="30" />
+    <column name="deconv_err_atca_1400"
+      tablehead="DECONV_ERR_atca_1400"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="Error in deconvolved angular size in arcsec"
+      verbLevel="30" />
+    <column name="class_atca_1400"
+      tablehead="CLASS_atca_1400"
+      type="text"
+      ucd="meta.code"
+      description="P = Point-Like Source or E = Extended Source"
+      verbLevel="1" />
+    <column name="sindex_atca_1400"
+      tablehead="SINDEX_atca_1400"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index of source between 1400 and 1710 MHz"
+      verbLevel="30" />
+    <column name="sindex_err_atca_1400"
+      tablehead="SINDEX_ERR_atca_1400"
+      type="real"
+      ucd="stat.error;spect.index"
+      description="Error on spectral index"
+      verbLevel="30" />
+    <column name="detection_atca_1400"
+      tablehead="Detection_atca_1400"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="separation"
+      tablehead="Separation"
+      type="double precision"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="Separation between NVSS and ATLAS positions in arcsec"
+      verbLevel="30" />
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="text"
+      ucd="meta.id;meta.main"
+      description="Internal unique identifier"
+      required="True"
+      verbLevel="1" />
+  </table>
+  <data id="import_cdfs_swire">
+    <sources>data/wp2_cdfs-swire.csv</sources>
+    <csvGrammar />
+    <make table="cdfs_swire">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          ra:ra,
+          dec:dec,
+          uniq_id:uniq_id,
+          matchflag_vla_1400__first:matchflag_vla_1400__first,
+          matchflag_vla_1400__nvss:matchflag_vla_1400__nvss,
+          distance_nvss_first:distance,
+          id_vla_1400__nvss:id_vla_1400__nvss,
+          ra_vla_1400__nvss:ra_vla_1400__nvss,
+          dec_vla_1400__nvss:dec_vla_1400__nvss,
+          peak_vla_1400__nvss:peak_vla_1400__nvss,
+          f_vla_1400__nvss:fmjy_vla_1400__nvss,
+          ferr_vla_1400__nvss:ferr_mjy_vla_1400__nvss,
+          major_vla_1400__nvss:major_vla_1400__nvss,
+          major_err_vla_1400__nvss:major_err_vla_1400__nvss,
+          minor_vla_1400__nvss:minor_vla_1400__nvss,
+          minor_err_vla_1400__nvss:minor_err_vla_1400__nvss,
+          posangle_vla_1400__nvss:posangle_vla_1400__nvss,
+          posangle_err_vla_1400__nvss:posangle_err_vla_1400__nvss,
+          q_vla_1400__nvss:q_vla_1400__nvss,
+          u_vla_1400__nvss:u_vla_1400__nvss,
+          pol_flux_vla_1400__nvss:pol_flux_vla_1400__nvss,
+          pol_flux_err_vla_1400__nvss:pol_flux_err_vla_1400__nvss,
+          pol_angle_vla_1400__nvss:pol_angle_vla_1400__nvss,
+          pol_angle_err_vla_1400__nvss:pol_angle_err_vla_1400__nvss,
+          detection_vla_1400__nvss:detection_vla_1400__nvss,
+          id_atca_1400:id_atca_1400,
+          name_atca_1400:name_atca_1400,
+          ra_atca_1400:ra_atca_1400,
+          dec_atca_1400:dec_atca_1400,
+          ra_err_atca_1400:ra_err_atca_1400,
+          dec_err_atca_1400:dec_err_atca_1400,
+          rms_atca_1400:rms_atca_1400,
+          bws_atca_1400:bws_atca_1400,
+          obs_freq_atca_1400:obs_freq_atca_1400,
+          fp:fpmjy,
+          fperr:fperrmjy,
+          f:fmjy,
+          ferr:ferrmjy,
+          fp_atca_1400:fpmjy_atca_1400,
+          fperr_atca_1400:fperrmjy_atca_1400,
+          f_atca_1400:fmjy_atca_1400,
+          ferr_atca_1400:ferrmjy_atca_1400,
+          deconv_atca_1400:deconv_atca_1400,
+          deconv_err_atca_1400:deconv_err_atca_1400,
+          class_atca_1400:class_atca_1400,
+          sindex_atca_1400:sindex_atca_1400,
+          sindex_err_atca_1400:sindex_err_atca_1400,
+          detection_atca_1400:detection_atca_1400,
+          separation:separation,
+          internal_id:help_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_cds" allowed="scs.xml,form,static">
+    <meta name="title">WP2 CDFS-SWIRE Radio Catalogue</meta>
+    <meta name="shortName">WP2 CDFS-SWIRE</meta>
+    <meta name="testQuery">
+      <meta name="ra">53.1</meta>
+      <meta name="dec">-28.235</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="cdfs_swire">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
 </resource>
 
 <!--
