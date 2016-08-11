@@ -51,6 +51,18 @@
     | Reference  | 2013A&A...549A..55W                      |
     +------------+------------------------------------------+
 
+    +------------+--------------------------------------+
+    | Survey     | 2.3 GHz catalogue (Zinn et al. 2012) |
+    +------------+--------------------------------------+
+    | Telescope  | ATCA                                 |
+    +------------+--------------------------------------+
+    | Instrument | ATCA                                 |
+    +------------+--------------------------------------+
+    | Filters    | ATCA_2300                            |
+    +------------+--------------------------------------+
+    | Reference  | 2012A&A...544A..38Z                  |
+    +------------+--------------------------------------+
+
     +------------+--------------------------------------------------------------+
     | Survey     | 4.85 GHz catalogue from Green Bank (via Kimball et al. 2014) |
     +------------+--------------------------------------------------------------+
@@ -234,6 +246,9 @@
       (via Kimball et al. 2014), NVSS (via Kimball et al. 2014), 4.85 GHz
       catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
       Kimball et al. 2014).
+
+    - ELAIS-S1 (table `wp2.es1`): ATLAS, and 2.3 GHz catalogue (Zinn et al.
+      2012)
 
     History
     -------
@@ -4668,6 +4683,405 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="en2">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+  <!-- ELAIS-S1 -->
+  <table id="es1" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="Right Ascension (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="Declination (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="id_atca_1400"
+      tablehead="ID_ATCA_1400"
+      type="text"
+      ucd="meta.id"
+      description="Component number"
+      verbLevel="30" />
+    <column name="name_atca_1400"
+      tablehead="NAME_ATCA_1400"
+      type="text"
+      ucd="meta.id"
+      description="Source name"
+      verbLevel="1" />
+    <column name="ra_atca_1400"
+      tablehead="RA_ATCA_1400"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension in deg"
+      verbLevel="30" />
+    <column name="dec_atca_1400"
+      tablehead="DEC_ATCA_1400"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination in deg"
+      verbLevel="30" />
+    <column name="ra_err_atca_1400"
+      tablehead="RA_ERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Error on right ascension in deg"
+      verbLevel="30" />
+    <column name="dec_err_atca_1400"
+      tablehead="DEC_ERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Error on declination in deg"
+      verbLevel="30" />
+    <column name="rms_atca_1400"
+      tablehead="RMS_ATCA_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="Local rms in uJy"
+      verbLevel="1" />
+    <column name="bws_atca_1400"
+      tablehead="BWS_ATCA_1400"
+      type="real"
+      ucd="stat.value"
+      description="local bandwidth smearing value"
+      verbLevel="1" />
+    <column name="obs_freq_atca_1400"
+      tablehead="OBS_FREQ_ATCA_1400"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="MHz"
+      description="Frequency at which Fp_mjy and F_mjy was measured in MHz"
+      verbLevel="1" />
+    <column name="fp"
+      tablehead="FP"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Fitted source peak, measured at OBS_FREQ_atca_1400, in mJy/beam"
+      verbLevel="1" />
+    <column name="fperr"
+      tablehead="FPERR"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Error in fitted source peak in mJy/beam"
+      verbLevel="1" />
+    <column name="f"
+      tablehead="F"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated flux density, measured at OBS_FREQ_atca_1400, in mJy"
+      verbLevel="1" />
+    <column name="ferr"
+      tablehead="FERR"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Error in integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="fp_atca_1400"
+      tablehead="FP_ATCA_1400"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Peak 20 cm flux density in mJy/beam"
+      verbLevel="1" />
+    <column name="fperr_atca_1400"
+      tablehead="FPERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="RMS error in peak 20 cm flux density in mJy/beam"
+      verbLevel="1" />
+    <column name="f_atca_1400"
+      tablehead="F_ATCA_1400"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated 20 cm flux density in mJy"
+      verbLevel="1" />
+    <column name="ferr_atca_1400"
+      tablehead="FERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="RMS error in integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="deconv_atca_1400"
+      tablehead="DECONV_ATCA_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Deconvolved angular size in arcsec"
+      verbLevel="30" />
+    <column name="deconv_err_atca_1400"
+      tablehead="DECONV_ERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="Error in deconvolved angular size in arcsec"
+      verbLevel="30" />
+    <column name="class_atca_1400"
+      tablehead="CLASS_ATCA_1400"
+      type="text"
+      ucd="meta.code"
+      description="P = Point-Like Source or E = Extended Source"
+      verbLevel="1" />
+    <column name="sindex_atca_1400"
+      tablehead="SINDEX_ATCA_1400"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index of source between 1400 and 1710 MHz"
+      verbLevel="30" />
+    <column name="sindex_err_atca_1400"
+      tablehead="SINDEX_ERR_ATCA_1400"
+      type="real"
+      ucd="stat.error;spect.index"
+      description="Error on spectral index"
+      verbLevel="30" />
+    <column name="detection_atca_1400"
+      tablehead="DETECTION_ATCA_1400"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="fld"
+      tablehead="FLD"
+      type="text"
+      ucd="obs.field"
+      description="[CE] Field: C for CDF-S or E for ELAIS-S1"
+      verbLevel="30" />
+    <column name="name_atca_2300"
+      tablehead="NAME_ATCA_2300"
+      type="text"
+      ucd="meta.id"
+      description="Source designation, NNNCN, within the field"
+      verbLevel="1" />
+    <column name="ra_atca_2300"
+      tablehead="RA_ATCA_2300"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension in decimal degrees (J2000)"
+      verbLevel="30" />
+    <column name="dec_atca_2300"
+      tablehead="DEC_ATCA_2300"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination in decimal degrees (J2000)"
+      verbLevel="30" />
+    <column name="s1_4hi"
+      tablehead="S1_4HI"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated flux density at 1.4GHz in high resolution map"
+      verbLevel="1" />
+    <column name="e_s1_4hi"
+      tablehead="E_S1_4HI"
+      type="real"
+      ucd="stat.error"
+      unit="mJy"
+      description="Error of integrated flux density at 1.4GHz in high resolution map"
+      verbLevel="1" />
+    <column name="s1_4lo"
+      tablehead="S1_4LO"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated flux density at 1.4GHz in low resolution map"
+      verbLevel="1" />
+    <column name="e_s1_4lo"
+      tablehead="E_S1_4LO"
+      type="real"
+      ucd="stat.error"
+      unit="mJy"
+      description="Error of integrated flux density at 1.4GHz in low resolution map"
+      verbLevel="1" />
+    <column name="rms1_4"
+      tablehead="RMS1_4"
+      type="real"
+      ucd="instr.det.noise"
+      unit="mJy"
+      description="Local rms noise at 1.4GHz in low resolution map"
+      verbLevel="1" />
+    <column name="f_atca_2300"
+      tablehead="F_ATCA_2300"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.1500-3000MHz"
+      unit="mJy"
+      description="Integrated flux density at 2.3GHz"
+      verbLevel="1" />
+    <column name="ferr_atca_2300"
+      tablehead="FERR_ATCA_2300"
+      type="double precision"
+      ucd="stat.error"
+      unit="mJy"
+      description="Error of integrated flux density at 2.3GHz"
+      verbLevel="1" />
+    <column name="rms_atca_2300"
+      tablehead="RMS_ATCA_2300"
+      type="real"
+      ucd="instr.det.noise"
+      unit="mJy"
+      description="Local rms noise at 2.3GHz"
+      verbLevel="1" />
+    <column name="spix"
+      tablehead="SPIX"
+      type="real"
+      ucd="spect.index"
+      description="1.4GHz (low-res) to 2.3GHz spectral index"
+      verbLevel="30" />
+    <column name="e_spix"
+      tablehead="E_SPIX"
+      type="real"
+      ucd="stat.error"
+      description="Error of spectral index"
+      verbLevel="30" />
+    <column name="z"
+      tablehead="Z"
+      type="double precision"
+      ucd="src.redshift"
+      description="Spectroscopic redshift"
+      verbLevel="1" />
+    <column name="class"
+      tablehead="CLASS"
+      type="text"
+      ucd="src.class"
+      description="Spectral classification"
+      note="1"
+      verbLevel="1" />
+    <column name="detection_atca_2300"
+      tablehead="DETECTION_ATCA_2300"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="separation"
+      tablehead="SEPARATION"
+      type="real"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="Distance between matched objects along a great circle"
+      verbLevel="30" />
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="text"
+      ucd="meta.id;meta.main"
+      description="Internal identifier"
+      required="True"
+      verbLevel="1" />
+
+    <meta name="note" tag="1"><![CDATA[
+      Classifications from Mao et al. (2012, MNRAS, accepted):
+      --------------------------------------------------------
+
+      === ======================================================================
+      SF  optical spectrum dominated by star formation activity
+      AGN optical spectrum typical for AGN (e.g. AGNe for and AGN with
+          characteristic emission lines)
+      E   spectrum is that of an early-type galaxy and hence the radio emission
+          must originate from an AGN hosted by it
+      === ======================================================================
+
+      ]]></meta>
+  </table>
+  <data id="import_es1">
+    <sources>data/wp2_elais-s1.csv</sources>
+    <csvGrammar />
+    <make table="es1">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          ra:ra,
+          dec:dec,
+          id_atca_1400:id_atca_1400,
+          name_atca_1400:name_atca_1400,
+          ra_atca_1400:ra_atca_1400,
+          dec_atca_1400:dec_atca_1400,
+          ra_err_atca_1400:ra_err_atca_1400,
+          dec_err_atca_1400:dec_err_atca_1400,
+          rms_atca_1400:rms_atca_1400,
+          bws_atca_1400:bws_atca_1400,
+          obs_freq_atca_1400:obs_freq_atca_1400,
+          fp:fpmjy,
+          fperr:fperrmjy,
+          f:fmjy,
+          ferr:ferrmjy,
+          fp_atca_1400:fpmjy_atca_1400,
+          fperr_atca_1400:fperrmjy_atca_1400,
+          f_atca_1400:fmjy_atca_1400,
+          ferr_atca_1400:ferrmjy_atca_1400,
+          deconv_atca_1400:deconv_atca_1400,
+          deconv_err_atca_1400:deconv_err_atca_1400,
+          class_atca_1400:class_atca_1400,
+          sindex_atca_1400:sindex_atca_1400,
+          sindex_err_atca_1400:sindex_err_atca_1400,
+          detection_atca_1400:detection_atca_1400,
+          fld:fld,
+          name_atca_2300:name_atca_2300,
+          ra_atca_2300:ra_atca_2300,
+          dec_atca_2300:dec_atca_2300,
+          s1_4hi:s1_4hi,
+          e_s1_4hi:e_s1_4hi,
+          s1_4lo:s1_4lo,
+          e_s1_4lo:e_s1_4lo,
+          rms1_4:rms1_4,
+          f_atca_2300:fmjy_atca_2300,
+          ferr_atca_2300:ferrmjy_atca_2300,
+          rms_atca_2300:rms_mjy_atca_2300,
+          spix:spix,
+          e_spix:e_spix,
+          z:z,
+          class:class,
+          detection_atca_2300:detection_atca_2300,
+          separation:separation,
+          internal_id:help_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_es1" allowed="scs.xml,form,static">
+    <meta name="title">WP2 ELAIS-S1 Radio Catalogue</meta>
+    <meta name="shortName">WP2 ELAIS-S1</meta>
+    <meta name="testQuery">
+      <meta name="ra">8.8</meta>
+      <meta name="dec">-43,586</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="es1">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
