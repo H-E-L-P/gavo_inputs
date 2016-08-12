@@ -163,6 +163,12 @@
     Kimball et al. compilation - this is a cross-match between the NVSS and
     FIRST surveys and also includes data at 74 MHz and 4 GHz.
 
+    HATLAS-SGP (table `wp2.hatlas_sgp`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    The Sydney University Molonglo Sky Survey is a wide-field imaging survey of
+    the sourthern sky at 843 MHz. It partially covers the HATLAS-SGP field.
+
     Survey identifications
     ----------------------
 
@@ -335,6 +341,20 @@
     +------------+------------------------------------------------------------+
     | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml           |
     +------------+------------------------------------------------------------+
+
+    +------------+------------------------------------------------+
+    | Survey     | Sydney University Molonglo Sky Survey (SUMSS)  |
+    +------------+------------------------------------------------+
+    | Telescope  | Molonglo Observatory Synthesis Telescope       |
+    +------------+------------------------------------------------+
+    | Instrument | Molonglo Observatory Synthesis Telescope       |
+    +------------+------------------------------------------------+
+    | Filters    | MOST_843                                       |
+    +------------+------------------------------------------------+
+    | Reference  | 2007MNRAS.382..382M                            |
+    +------------+------------------------------------------------+
+    | URL        | http://www.physics.usyd.edu.au/sifa/Main/SUMSS |
+    +------------+------------------------------------------------+
 
     +------------+-------------------------------------------------------+
     | Survey     | VLA North Ecliptic Pole survey                        |
@@ -9763,6 +9783,181 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="hatlas_ngp">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+  <!-- HATLAS-SGP -->
+  <table id="hatlas_sgp" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="Right Ascension (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="Declination (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="raj2000"
+      tablehead="RAJ2000"
+      type="text"
+      ucd="pos.eq.ra"
+      description="Right Ascension J2000 in hms"
+      verbLevel="30" />
+    <column name="e_raj2000"
+      tablehead="e_RAJ2000"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="arcsec"
+      description="The uncertainty in Right Ascension"
+      verbLevel="1" />
+    <column name="dej2000"
+      tablehead="DEJ2000"
+      type="text"
+      ucd="pos.eq.dec"
+      description="Declination J2000 in dms"
+      verbLevel="30" />
+    <column name="e_dej2000"
+      tablehead="e_DEJ2000"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="arcsec"
+      description="The uncertainty in Declination"
+      verbLevel="1" />
+    <column name="fp_most_843"
+      tablehead="Fp_most_843"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Peak brightness at 843MHz (in mJy.beam-1)"
+      verbLevel="1" />
+    <column name="fperr_most_843"
+      tablehead="Fperr_most_843"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Uncertainty on peak brightness"
+      verbLevel="1" />
+    <column name="f_most_843"
+      tablehead="F_most_843"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Total flux density at 843MHz"
+      verbLevel="1" />
+    <column name="ferr_most_843"
+      tablehead="FErr_most_843"
+      type="real"
+      ucd="stat.error"
+      unit="mJy"
+      description="Uncertainty on total flux density"
+      verbLevel="1" />
+    <column name="major_most_843"
+      tablehead="Major_most_843"
+      type="real"
+      ucd="phys.angSize;meta.modelled"
+      unit="arcsec"
+      description="Fitted major axis"
+      verbLevel="30" />
+    <column name="minor_most_843"
+      tablehead="Minor_most_843"
+      type="real"
+      ucd="phys.angSize;meta.modelled"
+      unit="arcsec"
+      description="Fitted minor axis"
+      verbLevel="30" />
+    <column name="pa_most_843"
+      tablehead="PA_most_843"
+      type="real"
+      ucd="pos.posAng;meta.modelled"
+      unit="deg"
+      description="Fitted major axis position angle (N to E)"
+      verbLevel="30" />
+    <column name="mosaic"
+      tablehead="Mosaic"
+      type="text"
+      ucd="obs.image"
+      description="Mosaic name"
+      verbLevel="30" />
+    <column name="nm"
+      tablehead="Nm"
+      type="smallint"
+      ucd="meta.number"
+      description="Number of mosaics with the source"
+      verbLevel="30" />
+    <column name="detection_most_843"
+      tablehead="detection_most_843"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="internal_id"
+      tablehead="internal_id"
+      type="text"
+      ucd="meta.id"
+      description="Internal identifier"
+      required="True"
+      verbLevel="1" />
+  </table>
+  <data id="import_hatlas_sgp">
+    <sources>data/wp2_sgp.csv</sources>
+    <csvGrammar />
+    <make table="hatlas_sgp">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          ra:ra,
+          dec:dec,
+          raj2000:raj2000,
+          e_raj2000:e_raj2000,
+          dej2000:dej2000,
+          e_dej2000:e_dej2000,
+          fp_most_843:fp_mjy_most_843,
+          fperr_most_843:fperr_mjy_most_843,
+          f_most_843:f_mjy_most_843,
+          ferr_most_843:ferr_mjy_most_843,
+          major_most_843:major_most_843,
+          minor_most_843:minor_most_843,
+          pa_most_843:pa_most_843,
+          mosaic:mosaic,
+          nm:nm,
+          detection_most_843:detection_most_843,
+          internal_id:help_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_hatlas_sgp" allowed="scs.xml,form,static">
+    <meta name="title">WP2 HATLAS-SGP Radio Catalogue</meta>
+    <meta name="shortName">WP2 HATLAS-SGP</meta>
+    <meta name="testQuery">
+      <meta name="ra">1.5</meta>
+      <meta name="dec">-32.734</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="hatlas_sgp">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
