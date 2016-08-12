@@ -169,6 +169,16 @@
     The Sydney University Molonglo Sky Survey is a wide-field imaging survey of
     the sourthern sky at 843 MHz. It partially covers the HATLAS-SGP field.
 
+    xFLS (table `wp2.xfls`)
+    ~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the xFLS field. It consists of a GMRT 610
+    MHz survey of the field (Garn et al. 2007) combined with two 1.4 GHz surveys
+    (shallow & wide: Condon et al. 2003 & deep: Morganti et al. 2004). The
+    cross-matching between the GMRT, WSRT and VLA was done using a match radius
+    of 30" and the triple match tool in topcat. All sources from the WSRT, VLA
+    and GMRT catalogues were kept.
+
     Survey identifications
     ----------------------
 
@@ -267,21 +277,23 @@
     |                 | in part by the NSF, NASA, and the STFC.                            |
     +-----------------+--------------------------------------------------------------------+
 
-    +------------+-------------------------------------------------------+
-    | Survey     | 610 MHz catalogue (Garn et al. 2008, ,2009, 2010)     |
-    +------------+-------------------------------------------------------+
-    | Telescope  | GMRT                                                  |
-    +------------+-------------------------------------------------------+
-    | Instrument | GMRT                                                  |
-    +------------+-------------------------------------------------------+
-    | Filters    | GMRT_610                                              |
-    +------------+-------------------------------------------------------+
-    | Reference  | 2008MNRAS.383...75G                                   |
-    |            | 2009MNRAS.397.1101G                                   |
-    |            | 2010BASI...38..103G                                   |
-    +------------+-------------------------------------------------------+
-    | URL        | http://www.mrao.cam.ac.uk/facilities/surveys/gmrt/lh/ |
-    +------------+-------------------------------------------------------+
+    +------------+--------------------------------------------------------+
+    | Survey     | 610 MHz catalogue (Garn et al.)                        |
+    +------------+--------------------------------------------------------+
+    | Telescope  | GMRT                                                   |
+    +------------+--------------------------------------------------------+
+    | Instrument | GMRT                                                   |
+    +------------+--------------------------------------------------------+
+    | Filters    | GMRT_610                                               |
+    +------------+--------------------------------------------------------+
+    | Reference  | 2007MNRAS.376.1251G                                    |
+    |            | 2008MNRAS.383...75G                                    |
+    |            | 2009MNRAS.397.1101G                                    |
+    |            | 2010BASI...38..103G                                    |
+    +------------+--------------------------------------------------------+
+    | URL        | http://www.mrao.cam.ac.uk/facilities/surveys/gmrt/lh/  |
+    |            | http://www.mrao.cam.ac.uk/facilities/surveys/gmrt/fls/ |
+    +------------+--------------------------------------------------------+
 
     +-----------------+--------------------------------------------------------------------+
     | Survey          | AEGIS20                                                            |
@@ -328,33 +340,45 @@
     | Reference  | 2014arXiv1401.1535K              |
     +------------+----------------------------------+
 
-    +------------+------------------------------------------------------------+
-    | Survey     | NVSS (via Kimball et al. 2014)                             |
-    +------------+------------------------------------------------------------+
-    | Telescope  | VLA                                                        |
-    +------------+------------------------------------------------------------+
-    | Instrument | VLA (D-array & DnC-array configurations)                   |
-    +------------+------------------------------------------------------------+
-    | Filters    | VLA_1400                                                   |
-    +------------+------------------------------------------------------------+
-    | Reference  | 2014arXiv1401.1535K                                        |
-    +------------+------------------------------------------------------------+
-    | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml           |
-    +------------+------------------------------------------------------------+
+    +------------+--------------------------------------------------+
+    | Survey     | NVSS (via Kimball et al. 2014)                   |
+    +------------+--------------------------------------------------+
+    | Telescope  | VLA                                              |
+    +------------+--------------------------------------------------+
+    | Instrument | VLA (D-array & DnC-array configurations)         |
+    +------------+--------------------------------------------------+
+    | Filters    | VLA_1400                                         |
+    +------------+--------------------------------------------------+
+    | Reference  | 2014arXiv1401.1535K                              |
+    +------------+--------------------------------------------------+
+    | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml |
+    +------------+--------------------------------------------------+
 
-    +------------+------------------------------------------------+
-    | Survey     | Sydney University Molonglo Sky Survey (SUMSS)  |
-    +------------+------------------------------------------------+
-    | Telescope  | Molonglo Observatory Synthesis Telescope       |
-    +------------+------------------------------------------------+
-    | Instrument | Molonglo Observatory Synthesis Telescope       |
-    +------------+------------------------------------------------+
-    | Filters    | MOST_843                                       |
-    +------------+------------------------------------------------+
-    | Reference  | 2007MNRAS.382..382M                            |
-    +------------+------------------------------------------------+
-    | URL        | http://www.physics.usyd.edu.au/sifa/Main/SUMSS |
-    +------------+------------------------------------------------+
+    +------------+------------------------------------+
+    | Survey     | SIRTIF (Spitzer) first-look survey |
+    +------------+------------------------------------+
+    | Telescope  | VLA                                |
+    +------------+------------------------------------+
+    | Instrument | VLA B configuration                |
+    +------------+------------------------------------+
+    | Filters    | VLA_1400                           |
+    +------------+------------------------------------+
+    | Reference  | 2003AJ....125.2411C                |
+    +------------+------------------------------------+
+
+    +------------+--------------------------------------------------+
+    | Survey     | Sydney University Molonglo Sky Survey (SUMSS)    |
+    +------------+--------------------------------------------------+
+    | Telescope  | Molonglo Observatory Synthesis Telescope         |
+    +------------+--------------------------------------------------+
+    | Instrument | Molonglo Observatory Synthesis Telescope         |
+    +------------+--------------------------------------------------+
+    | Filters    | MOST_843                                         |
+    +------------+--------------------------------------------------+
+    | Reference  | 2007MNRAS.382..382M                              |
+    +------------+--------------------------------------------------+
+    | URL        | http://www.physics.usyd.edu.au/sifa/Main/SUMSS   |
+    +------------+--------------------------------------------------+
 
     +------------+-------------------------------------------------------+
     | Survey     | VLA North Ecliptic Pole survey                        |
@@ -397,6 +421,18 @@
     +------------+------------------------------------------------------------+
     | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml           |
     +------------+------------------------------------------------------------+
+
+    +------------+------------------------+
+    | Survey     | WSRT 1.4 GHz catalogue |
+    +------------+------------------------+
+    | Telescope  | WSRT                   |
+    +------------+------------------------+
+    | Instrument | WSRT                   |
+    +------------+------------------------+
+    | Filters    | WSRT_1400              |
+    +------------+------------------------+
+    | Reference  | 2004A&A...424..371M    |
+    +------------+------------------------+
 
     +------------+------------------------------+
     | Survey     | WSRT survey of the AKARI-NEP |
@@ -9958,6 +9994,340 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="hatlas_sgp">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+
+  <!-- xFLS -->
+  <table id="xfls" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="GMRT RA if present, WSRT or VLA if not (ra_gmrt_610)"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="GMRT Dec if present, WSRT or VLA if not (dec_gmrt_610)"
+      required="True"
+      verbLevel="1" />
+    <column name="ra_gmrt_610"
+      tablehead="RA_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension (J2000.0)"
+      verbLevel="30" />
+    <column name="dec_gmrt_610"
+      tablehead="DEC_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination (J2000.0)"
+      verbLevel="30" />
+    <column name="flsgmrt"
+      tablehead="FLSGMRT"
+      type="text"
+      ucd="meta.id"
+      description="FLSGMRT name (JHHMMSS.s+DDMMSS)"
+      verbLevel="1" />
+    <column name="raj2000_1"
+      tablehead="RAJ2000_1"
+      type="text"
+      ucd="pos.eq.ra"
+      description="Centroid position right ascension (J2000)"
+      verbLevel="30" />
+    <column name="dej2000_1"
+      tablehead="DEJ2000_1"
+      type="text"
+      ucd="pos.eq.dec"
+      description="Centroid position declination (J2000)"
+      verbLevel="30" />
+    <column name="fp_gmrt_610"
+      tablehead="FP_GMRT_610"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Peak pixel brightness at 610MHz (in mJy/beam)"
+      verbLevel="1" />
+    <column name="rms_gmrt_610"
+      tablehead="RMS_GMRT_610"
+      type="real"
+      ucd="stat.stdev;instr.det.noise"
+      unit="uJy"
+      description="Local rms noise (in uJy/beam)"
+      verbLevel="1" />
+    <column name="f_gmrt_610"
+      tablehead="F_GMRT_610"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Integrated flux at 610MHz in mJy"
+      verbLevel="1" />
+    <column name="ferr_gmrt_610"
+      tablehead="FERR_GMRT_610"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Error on integrated flux in mJy"
+      verbLevel="30" />
+    <column name="flags_gmrt_610"
+      tablehead="FLAGS_GMRT_610"
+      type="smallint"
+      ucd="meta.code.multip"
+      description="[0/1] Source Extractor split"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_gmrt_610"
+      tablehead="DETECTION_GMRT_610"
+      type="smallint"
+      ucd="meta.code"
+      description="610 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_wsrt_1400"
+      tablehead="RA_WSRT_1400"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension (J2000.0)"
+      verbLevel="30" />
+    <column name="dec_wsrt_1400"
+      tablehead="DEC_WSRT_1400"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination (J2000.0)"
+      verbLevel="30" />
+    <column name="raj2000_2"
+      tablehead="RAJ2000_2"
+      type="text"
+      ucd="pos.eq.ra"
+      description="Right ascension (J2000.0)"
+      verbLevel="30" />
+    <column name="dej2000_2"
+      tablehead="DEJ2000_2"
+      type="text"
+      ucd="pos.eq.dec"
+      description="Declination (J2000.0)"
+      verbLevel="30" />
+    <column name="f_wsrt_1400"
+      tablehead="F_WSRT_1400"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated 1.4GHz Flux Density in mJy"
+      verbLevel="1" />
+    <column name="ferr_wsrt_1400"
+      tablehead="FERR_WSRT_1400"
+      type="real"
+      ucd="instr.det.noise"
+      unit="mJy"
+      description="Local RMS Noise level in mJy"
+      verbLevel="1" />
+    <column name="major_wsrt_1400"
+      tablehead="MAJOR_WSRT_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Major Axis"
+      verbLevel="30" />
+    <column name="minor_wsrt_1400"
+      tablehead="MINOR_WSRT_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Minor Axis"
+      verbLevel="30" />
+    <column name="pa_wsrt_1400"
+      tablehead="PA_WSRT_1400"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="[-90/90] Position Angle (1)"
+      verbLevel="30" />
+    <column name="detection_wsrt_1400"
+      tablehead="DETECTION_WSRT_1400"
+      type="smallint"
+      ucd="meta.code"
+      description="1.4 GHz detection flag (3)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_1400"
+      tablehead="RA_VLA_1400"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension (J2000.0)"
+      verbLevel="30" />
+    <column name="dec_vla_1400"
+      tablehead="DEC_VLA_1400"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination (J2000.0)"
+      verbLevel="30" />
+    <column name="raj2000_3"
+      tablehead="RAJ2000_3"
+      type="text"
+      ucd="pos.eq.ra"
+      description="Hour of right ascension (J2000)"
+      verbLevel="30" />
+    <column name="dej2000_3"
+      tablehead="DEJ2000_3"
+      type="text"
+      ucd="pos.eq.dec"
+      description="Degrees of declination (J2000)"
+      verbLevel="30" />
+    <column name="f_vla_1400"
+      tablehead="F_VLA_1400"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Integrated 1.4GHz flux density in mJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400"
+      tablehead="FERR_VLA_1400"
+      type="real"
+      ucd="stat.error;phot.flux"
+      unit="mJy"
+      description="RMS uncertainty in Flux in mJy"
+      verbLevel="1" />
+    <column name="l_major_vla_1400"
+      tablehead="L_MAJOR_VLA_1400"
+      type="text"
+      ucd="meta.code.error;phys.angSize"
+      description="Upper limit symbol for MajAxis"
+      verbLevel="30" />
+    <column name="major_vla_1400"
+      tablehead="MAJOR_VLA_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Deconvolved source FWHM major axis"
+      verbLevel="30" />
+    <column name="l_minor_vla_1400"
+      tablehead="L_MINOR_VLA_1400"
+      type="text"
+      ucd="meta.code.error;phys.angSize"
+      description="Upper limit symbol for MinAxis"
+      verbLevel="30" />
+    <column name="minor_vla_1400"
+      tablehead="MINOR_VLA_1400"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Deconvolved source FWHM minor axis"
+      verbLevel="30" />
+    <column name="pa_vla_1400"
+      tablehead="PA_VLA_1400"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Major-axis position angle (east of north)"
+      verbLevel="30" />
+    <column name="group_vla_1400"
+      tablehead="GROUP_VLA_1400"
+      type="text"
+      ucd="meta.id.parent"
+      description="Group label for multicomponent sources"
+      verbLevel="30" />
+    <column name="detection_vla_1400"
+      tablehead="DETECTION_VLA_1400"
+      type="smallint"
+      ucd="meta.code"
+      description="1.4 GHz detection flag (3)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="text"
+      ucd="meta.id;meta.main"
+      description="Internal identifier"
+      required="True"
+      verbLevel="1" />
+
+  </table>
+  <data id="import_xfls">
+    <sources>data/wp2_xfls.csv</sources>
+    <csvGrammar />
+    <make table="xfls">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          ra:ra,
+          dec:dec,
+          ra_gmrt_610:ra_gmrt_610,
+          dec_gmrt_610:dec_gmrt_610,
+          flsgmrt:flsgmrt,
+          raj2000_1:raj2000_1,
+          dej2000_1:dej2000_1,
+          fp_gmrt_610:fp_mjy_gmrt_610,
+          rms_gmrt_610:rms_gmrt_610,
+          f_gmrt_610:f_mjy_gmrt_610,
+          ferr_gmrt_610:ferr_mjy_gmrt_610,
+          flags_gmrt_610:flags_gmrt_610,
+          detection_gmrt_610:detection_gmrt_610,
+          ra_wsrt_1400:ra_wsrt_1400,
+          dec_wsrt_1400:dec_wsrt_1400,
+          raj2000_2:raj2000_2,
+          dej2000_2:dej2000_2,
+          f_wsrt_1400:f_mjy_wsrt_1400,
+          ferr_wsrt_1400:ferr_mjy_wsrt_1400,
+          major_wsrt_1400:major_wsrt_1400,
+          minor_wsrt_1400:minor_wsrt_1400,
+          pa_wsrt_1400:pa_wsrt_1400,
+          detection_wsrt_1400:detection_wsrt_1400,
+          ra_vla_1400:ra_vla_1400,
+          dec_vla_1400:dec_vla_1400,
+          raj2000_3:raj2000_3,
+          dej2000_3:dej2000_3,
+          f_vla_1400:f_mjy_vla_1400,
+          ferr_vla_1400:ferr_mjy_vla_1400,
+          l_major_vla_1400:l_major_vla_1400,
+          major_vla_1400:major_vla_1400,
+          l_minor_vla_1400:l_minor_vla_1400,
+          minor_vla_1400:minor_vla_1400,
+          pa_vla_1400:pa_vla_1400,
+          group_vla_1400:group_vla_1400,
+          detection_vla_1400:detection_vla_1400,
+          internal_id:help_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_xfls" allowed="scs.xml,form,static">
+    <meta name="title">WP2 xFLS Radio Catalogue</meta>
+    <meta name="shortName">WP2 xFLS</meta>
+    <meta name="testQuery">
+      <meta name="ra">259.1</meta>
+      <meta name="dec">59.384</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="xfls">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
