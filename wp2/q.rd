@@ -6236,7 +6236,7 @@
       </rowmaker>
     </make>
   </data>
-  <service id="cone_ g09" allowed="scs.xml,form,static">
+  <service id="cone_g09" allowed="scs.xml,form,static">
     <meta name="title">WP2 GAMA-09 Radio Catalogue</meta>
     <meta name="shortName">WP2 GAMA-09</meta>
     <meta name="testQuery">
@@ -10000,7 +10000,7 @@
       </rowmaker>
     </make>
   </data>
-  <service id="cone_ngp" allowed="scs.xml,form,static">
+  <service id="cone_hatlas_ngp" allowed="scs.xml,form,static">
     <meta name="title">WP2 HATLAS-NGP Radio Catalogue</meta>
     <meta name="shortName">WP2 HATLAS-NGP</meta>
     <meta name="testQuery">
