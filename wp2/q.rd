@@ -4279,7 +4279,9 @@
       type="integer"
       ucd="meta.id"
       description="Unique catalog row identifier in the Kimball et al. catalogue"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="matchflag_vla_1400__first"
       tablehead="MATCHFLAG_vla_1400__FIRST"
       type="smallint"
@@ -4840,7 +4842,9 @@
       ucd="meta.code"
       description="Source SExtractor flags"
       note="1"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="detection_gmrt_610"
       tablehead="Detection_gmrt_610"
       type="smallint"
@@ -8744,7 +8748,9 @@
       type="integer"
       ucd="meta.id"
       description="unique FIRST identifier"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="ra_vla_1400__first"
       tablehead="RA_vla_1400__FIRST"
       type="double precision"
@@ -8812,7 +8818,9 @@
       type="integer"
       ucd="meta.id"
       description="unique NVSS identifier"
-      verbLevel="1" />
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="ra_vla_1400__nvss"
       tablehead="RA_vla_1400__NVSS"
       type="double precision"
@@ -10042,7 +10050,9 @@
       type="smallint"
       ucd="meta.number"
       description="Number of mosaics with the source"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="detection_most_843"
       tablehead="detection_most_843"
       type="smallint"
@@ -10551,7 +10561,9 @@
       ucd="meta.code"
       description="1.4 GHz multi-component flag"
       note="1"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="cnt_gmrt_230"
       tablehead="cnt_GMRT_230"
       type="integer"
@@ -10686,7 +10698,9 @@
       ucd="meta.code"
       description="230 MHz multi-component flag"
       note="1"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="type_gmrt_230"
       tablehead="TYPE_GMRT_230"
       type="text"
@@ -10827,7 +10841,9 @@
       ucd="meta.code"
       description="325 MHz multi-component flag"
       note="1"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="type_vla_325"
       tablehead="TYPE_VLA_325"
       type="text"
@@ -11111,7 +11127,9 @@
       ucd="meta.code"
       description="74 MHz multi-component flag"
       note="1"
-      verbLevel="30" />
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
     <column name="type_vla_74"
       tablehead="TYPE_VLA_74"
       type="text"
