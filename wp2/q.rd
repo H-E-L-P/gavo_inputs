@@ -564,7 +564,7 @@
 
     You may also download `raw catalogues and MOC coverages`__.
 
-    __ /wp2/q/cone/static
+    __ /wp2/q/cone_akn/static
 
   ]]> </meta>
 
