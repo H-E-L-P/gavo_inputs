@@ -143,6 +143,19 @@
     74 MHz and 4 GHz. The cross-matching between Kimball et al. and Hodge et al.
     was done using the FIRST position using a match radius of 30".
 
+    Lockman-SWIRE (table `wp2.lswire`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catlogue for the Lockman-SWIRE field. It consists of (1)
+    a GMRT 610 MHz survey of the field (Garn et al. 2008,2010) and (2) a 15.7
+    GHz survey of the field (Davies et al. 2011) combined with (3) the
+    multi-band catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Davies et al. and Garn et al.
+    was done using a match radius of 30". The resulting catalogue was then
+    cross-matched with  Kimball et al. using the FIRST and GMRT positions, with
+    a match radius of 30".
+
 
     Survey identifications
     ----------------------
@@ -158,6 +171,20 @@
     +------------+------------------------------------------+
     | Reference  | 2002AJ....123.1784D                      |
     +------------+------------------------------------------+
+
+    +------------+--------------------------------------------------+
+    | Survey     | 10C                                              |
+    +------------+--------------------------------------------------+
+    | Telescope  | AMI                                              |
+    +------------+--------------------------------------------------+
+    | Instrument | AMI                                              |
+    +------------+--------------------------------------------------+
+    | Filters    | AMI_15700                                        |
+    +------------+--------------------------------------------------+
+    | Reference  | 2011MNRAS.415.2708A                              |
+    +------------+--------------------------------------------------+
+    | URL        | http://www.mrao.cam.ac.uk/facilities/surveys/10c |
+    +------------+--------------------------------------------------+
 
     +------------+------------------------------------------+
     | Survey     | 153 MHz catalogue (Williams et al. 2013) |
@@ -228,29 +255,21 @@
     |                 | in part by the NSF, NASA, and the STFC.                            |
     +-----------------+--------------------------------------------------------------------+
 
-    +------------+--------------------------------------+
-    | Survey     | 610 MHz catalogue (Garn et al. 2008) |
-    +------------+--------------------------------------+
-    | Telescope  | GMRT                                 |
-    +------------+--------------------------------------+
-    | Instrument | GMRT                                 |
-    +------------+--------------------------------------+
-    | Filters    | GMRT_610                             |
-    +------------+--------------------------------------+
-    | Reference  | 2008MNRAS.383...75G                  |
-    +------------+--------------------------------------+
-
-    +------------+--------------------------------------+
-    | Survey     | 610 MHz catalogue (Garn et al. 2009) |
-    +------------+--------------------------------------+
-    | Telescope  | GMRT                                 |
-    +------------+--------------------------------------+
-    | Instrument | GMRT                                 |
-    +------------+--------------------------------------+
-    | Filters    | GMRT_610                             |
-    +------------+--------------------------------------+
-    | Reference  | 2009MNRAS.397.1101G                  |
-    +------------+--------------------------------------+
+    +------------+-------------------------------------------------------+
+    | Survey     | 610 MHz catalogue (Garn et al. 2008, ,2009, 2010)     |
+    +------------+-------------------------------------------------------+
+    | Telescope  | GMRT                                                  |
+    +------------+-------------------------------------------------------+
+    | Instrument | GMRT                                                  |
+    +------------+-------------------------------------------------------+
+    | Filters    | GMRT_610                                              |
+    +------------+-------------------------------------------------------+
+    | Reference  | 2008MNRAS.383...75G                                   |
+    |            | 2009MNRAS.397.1101G                                   |
+    |            | 2010BASI...38..103G                                   |
+    +------------+-------------------------------------------------------+
+    | URL        | http://www.mrao.cam.ac.uk/facilities/surveys/gmrt/lh/ |
+    +------------+-------------------------------------------------------+
 
     +-----------------+--------------------------------------------------------------------+
     | Survey          | AEGIS20                                                            |
@@ -8300,6 +8319,806 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="h82">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+
+  <!-- Lockman-SWIRE -->
+  <table id="lhswire" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="FIRST RA if present, GMRT if not; AMI if neither GMRT or FIRST; in deg (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="FIRST Declination if present, GMRT if not; AMI if neither GMRT or FIRST; in deg (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="ra_ami_15700"
+      tablehead="RA_AMI_15700"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_ami_15700"
+      tablehead="DEC_AMI_15700"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination (J2000) in deg"
+      verbLevel="30" />
+    <column name="id10c"
+      tablehead="ID10C"
+      type="text"
+      ucd="meta.id"
+      description="ID from 10C catalogue (JHHMMSS+DDMMSS)"
+      verbLevel="1" />
+    <column name="fp_ami_15700"
+      tablehead="FP_AMI_15700"
+      type="real"
+      ucd="phot.flux.density;em.radio.12-30GHz"
+      unit="mJy"
+      description="Peak flux density at 15.7 GHz in mJy"
+      verbLevel="1" />
+    <column name="fperr_ami_15700"
+      tablehead="FPERR_AMI_15700"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.12-30GHz"
+      unit="mJy"
+      description="Error on peak flux density in mJy"
+      verbLevel="1" />
+    <column name="f_ami_15700"
+      tablehead="F_AMI_15700"
+      type="real"
+      ucd="phot.flux.density;em.radio.12-30GHz"
+      unit="mJy"
+      description="Integrated flux density at 15.7 GHz in mJy"
+      verbLevel="1" />
+    <column name="ferr_ami_15700"
+      tablehead="FErr_AMI_15700"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.12-30GHz"
+      unit="mJy"
+      description="Error on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="detection_ami_15700"
+      tablehead="DETECTION_AMI_15700"
+      type="smallint"
+      ucd="meta.code"
+      description="15.7 GHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_gmrt_610"
+      tablehead="RA_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="Right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_gmrt_610"
+      tablehead="DEC_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="Declination (J2000) in deg"
+      verbLevel="30" />
+    <column name="gmrtlh"
+      tablehead="GMRTLH"
+      type="text"
+      ucd="meta.id"
+      description="IAU designation of source (JHHMMSS.s+DDMMSS)"
+      verbLevel="1" />
+    <column name="fp_gmrt_610"
+      tablehead="FP_GMRT_610"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Peak pixel brightness in mJy/bm"
+      verbLevel="1" />
+    <column name="rms_gmrt_610"
+      tablehead="RMS_GMRT_610"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="uJy"
+      description="Local rms noise in uJy/bm"
+      verbLevel="1" />
+    <column name="f_gmrt_610"
+      tablehead="F_GMRT_610"
+      type="double precision"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Integrated flux in mJy"
+      verbLevel="1" />
+    <column name="ferr_gmrt_610"
+      tablehead="FErr_GMRT_610"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Error on integrated flux in mJy"
+      verbLevel="1" />
+    <column name="flag_gmrt_610"
+      tablehead="FLAG_GMRT_610"
+      type="smallint"
+      ucd="meta.code"
+      description="Source SExtractor flags"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_gmrt_610"
+      tablehead="DETECTION_GMRT_610"
+      type="smallint"
+      ucd="meta.code"
+      description="610 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="separation_gmrt_ami"
+      tablehead="SEPARATION_GMRT_AMI"
+      type="double precision"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="Separation between AMI and GMRT source positions in arcsec"
+      verbLevel="30" />
+    <column name="uniq_id"
+      tablehead="UNIQ_ID"
+      type="integer"
+      ucd="meta.id"
+      description="Unique catalog row identifier in the Kimball et al. catalogue"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchflag_vla_1400__first"
+      tablehead="MATCHFLAG_vla_1400__FIRST"
+      type="smallint"
+      ucd="meta.code"
+      description="= -1 as first is the primary catalogue"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchflag_vla_1400__nvss"
+      tablehead="MATCHFLAG_vla_1400__NVSS"
+      type="smallint"
+      ucd="meta.code"
+      description="= 1 if a nvss match exists, = 0 if no nvss match"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="distance_nvss_first"
+      tablehead="Distance_NVSS_FIRST"
+      type="real"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="distance between NVSS and FIRST source in arcsec"
+      verbLevel="30" />
+    <column name="matchtot_5"
+      tablehead="MATCHTOT_5"
+      type="smallint"
+      ucd="meta.number"
+      description="# of NVSS neighbors within 5″ of primary source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchtot_10"
+      tablehead="MATCHTOT_10"
+      type="smallint"
+      ucd="meta.number"
+      description="# of NVSS neighbors within 10″ of primary source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchtot_30"
+      tablehead="MATCHTOT_30"
+      type="smallint"
+      ucd="meta.number"
+      description="# of NVSS neighbors within 30″ of primary source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="matchtot_120"
+      tablehead="MATCHTOT_120"
+      type="smallint"
+      ucd="meta.number"
+      description="# of NVSS neighbors within 120″ of primary source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="gb6_matchtot_120"
+      tablehead="GB6_MATCHTOT_120"
+      type="smallint"
+      ucd="meta.number"
+      description="# of GB6 neighbors within 120″ of primary source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="gb6_distance"
+      tablehead="GB6_DISTANCE"
+      type="real"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="distance to nearest GB6 source within 120″ in arcsec"
+      verbLevel="30" />
+    <column name="vlss_matchtot_120"
+      tablehead="VLSS_MATCHTOT_120"
+      type="smallint"
+      ucd="meta.number"
+      description="# of VLSS neighbors within 120″ of primary source in arcsec"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="vlss_distance"
+      tablehead="VLSS_DISTANCE"
+      type="real"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="distance to nearest VLSS source within 120″"
+      verbLevel="30" />
+    <column name="id_vla_1400__first"
+      tablehead="ID_vla_1400__FIRST"
+      type="integer"
+      ucd="meta.id"
+      description="unique FIRST identifier"
+      verbLevel="1" />
+    <column name="ra_vla_1400__first"
+      tablehead="RA_vla_1400__FIRST"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_vla_1400__first"
+      tablehead="DEC_vla_1400__FIRST"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="declination (J2000) in deg"
+      verbLevel="30" />
+    <column name="sideprob_vla_1400__first"
+      tablehead="SIDEPROB_vla_1400__FIRST"
+      type="real"
+      ucd="stat.probability"
+      description="probability that detection is a sidelobe of nearby bright source"
+      verbLevel="30" />
+    <column name="fp_vla_1400__first"
+      tablehead="FP_vla_1400__FIRST"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="peak flux density at 20cm in mJy/bm"
+      verbLevel="1" />
+    <column name="f_vla_1400__first"
+      tablehead="F_vla_1400__FIRST"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="integrated flux density at 20cm in mJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__first"
+      tablehead="FErr_vla_1400__FIRST"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="local noise estimate at source position in mJy/bm"
+      verbLevel="1" />
+    <column name="major_vla_1400__first"
+      tablehead="MAJOR_vla_1400__FIRST"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM of major axis (after PSF deconvolution) in arcsec"
+      verbLevel="30" />
+    <column name="minor_vla_1400__first"
+      tablehead="MINOR_vla_1400__FIRST"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM of minor axis (after PSF deconvolution) in arcsec"
+      verbLevel="30" />
+    <column name="posang_vla_1400__first"
+      tablehead="POSANG_vla_1400__FIRST"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="position angle east of north (after PSF deconvolution) in deg"
+      verbLevel="30" />
+    <column name="id_vla_1400__nvss"
+      tablehead="ID_vla_1400__NVSS"
+      type="integer"
+      ucd="meta.id"
+      description="unique NVSS identifier"
+      verbLevel="1" />
+    <column name="ra_vla_1400__nvss"
+      tablehead="RA_vla_1400__NVSS"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_vla_1400__nvss"
+      tablehead="DEC_vla_1400__NVSS"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="declination in deg"
+      verbLevel="30" />
+    <column name="peak_vla_1400__nvss"
+      tablehead="PEAK_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="peak intensity at 20cm (Stokes I) in mJy/bm"
+      verbLevel="30" />
+    <column name="f_vla_1400__nvss"
+      tablehead="F_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="integrated flux density at 20cm (Stokes I) in mJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__nvss"
+      tablehead="FErr_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="error on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="major_vla_1400__nvss"
+      tablehead="MAJOR_vla_1400__NVSS"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM major axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="major_err_vla_1400__nvss"
+      tablehead="MAJOR_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on major axis in arcsec"
+      verbLevel="30" />
+    <column name="minor_vla_1400__nvss"
+      tablehead="MINOR_vla_1400__NVSS"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM minor axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="minor_err_vla_1400__nvss"
+      tablehead="MINOR_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="posangle_vla_1400__nvss"
+      tablehead="POSANGLE_vla_1400__NVSS"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="position angle east of north in deg"
+      verbLevel="30" />
+    <column name="posangle_err_vla_1400__nvss"
+      tablehead="POSANGLE_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="error on polarization angle in deg"
+      verbLevel="30" />
+    <column name="q_vla_1400__nvss"
+      tablehead="Q_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="interpolated Stokes Q value at position of I peak in mJy/bm"
+      verbLevel="30" />
+    <column name="u_vla_1400__nvss"
+      tablehead="U_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="interpolated Stokes U value at position of I peak in mJy/bm"
+      verbLevel="30" />
+    <column name="pol_flux_vla_1400__nvss"
+      tablehead="POL_FLUX_vla_1400__NVSS"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="integrated linear polarized flux in mJy"
+      verbLevel="30" />
+    <column name="pol_flux_err_vla_1400__nvss"
+      tablehead="POL_FLUX_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="error on polarized flux in mJy"
+      verbLevel="30" />
+    <column name="pol_angle_vla_1400__nvss"
+      tablehead="POL_ANGLE_vla_1400__NVSS"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="polarization angle in deg"
+      verbLevel="30" />
+    <column name="pol_angle_err_vla_1400__nvss"
+      tablehead="POL_ANGLE_ERR_vla_1400__NVSS"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="error on polarization angle in deg"
+      verbLevel="30" />
+    <column name="id_gb_4850"
+      tablehead="ID_gb_4850"
+      type="integer"
+      ucd="meta.id"
+      description="unique GB6 identifier"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_gb_4850"
+      tablehead="RA_gb_4850"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="ra_err_gb_4850"
+      tablehead="RA_ERR_gb_4850"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="error on right ascension in deg"
+      verbLevel="30" />
+    <column name="dec_gb_4850"
+      tablehead="DEC_gb_4850"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="declination (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_err_gb_4850"
+      tablehead="DEC_ERR_gb_4850"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="error on declination in deg"
+      verbLevel="30" />
+    <column name="f_gb_4850"
+      tablehead="F_gb_4850"
+      type="real"
+      ucd="phot.flux.density;em.radio.3-6GHz"
+      unit="mJy"
+      description="peak flux density at 6cm  in mJy"
+      verbLevel="1" />
+    <column name="ferr_gb_4850"
+      tablehead="FErr_gb_4850"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.3-6GHz"
+      unit="mJy"
+      description="error on peak flux density in mJy"
+      verbLevel="1" />
+    <column name="major_gb_4850"
+      tablehead="MAJOR_gb_4850"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM major axis in arcsec"
+      verbLevel="30" />
+    <column name="minor_gb_4850"
+      tablehead="MINOR_gb_4850"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM minor axis in arcsec"
+      verbLevel="30" />
+    <column name="posangle_gb_4850"
+      tablehead="POSANGLE_gb_4850"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="fitted major axis position east of north in deg"
+      verbLevel="30" />
+    <column name="sky_gb_4850"
+      tablehead="SKY_gb_4850"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.3-6GHz"
+      unit="mJy"
+      description="local sky level in mJy"
+      verbLevel="1" />
+    <column name="eflag_gb_4850"
+      tablehead="EFLAG_gb_4850"
+      type="smallint"
+      ucd="meta.code"
+      description="flag indicating significantly extended source"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="wflag_gb_4850"
+      tablehead="WFLAG_gb_4850"
+      type="smallint"
+      ucd="meta.code"
+      description="warning flag"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="cflag_gb_4850"
+      tablehead="CFLAG_gb_4850"
+      type="smallint"
+      ucd="meta.code"
+      description="flag indicating confusion"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="id_vla_74"
+      tablehead="ID_vla_74"
+      type="integer"
+      ucd="meta.id"
+      description="unique VLSSr identifier"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_74"
+      tablehead="RA_vla_74"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="right ascension (J2000) in deg"
+      verbLevel="30" />
+    <column name="dec_vla_74"
+      tablehead="DEC_vla_74"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="declination (J2000) in deg"
+      verbLevel="30" />
+    <column name="f_vla_74"
+      tablehead="F_vla_74"
+      type="real"
+      ucd="phot.flux.density;em.radio.20-100MHz"
+      unit="mJy"
+      description="integrated flux density at 74 MHz (Stokes I) in mJy"
+      verbLevel="30" />
+    <column name="ferr_vla_74"
+      tablehead="FErr_vla_74"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.20-100MHz"
+      unit="mJy"
+      description="error on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="major_vla_74"
+      tablehead="MAJOR_vla_74"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM major axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="major_err_vla_74"
+      tablehead="MAJOR_ERR_vla_74"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on major axis in arcsec"
+      verbLevel="30" />
+    <column name="minor_vla_74"
+      tablehead="MINOR_vla_74"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="FWHM minor axis after deconvolution in arcsec"
+      verbLevel="30" />
+    <column name="minor_err_vla_74"
+      tablehead="MINOR_ERR_vla_74"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="error on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="posangle_vla_74"
+      tablehead="POSANGLE_vla_74"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="position angle east of north in deg"
+      verbLevel="30" />
+    <column name="posangle_err_vla_74"
+      tablehead="POSANGLE_ERR_vla_74"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="error on position angle in deg"
+      verbLevel="30" />
+    <column name="detection_vla_1400__first"
+      tablehead="DETECTION_vla_1400__FIRST"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag for FIRST"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_vla_1400__nvss"
+      tablehead="DETECTION_vla_1400__NVSS"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag for NVSS"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_gb_4850"
+      tablehead="DETECTION_gb_4850"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag for GB6"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_vla_74"
+      tablehead="DETECTION_vla_74"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag for VLSS"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="separation_gmrt_first"
+      tablehead="Separation_gmrt_first"
+      type="double precision"
+      ucd="pos.angDistance"
+      unit="arcsec"
+      description="Separation between FIRST and GMRT source positions in arcsec"
+      verbLevel="30" />
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="text"
+      ucd="meta.id"
+      description="Internal identifier"
+      required="True"
+      verbLevel="1" />
+
+    <meta name="note" tag="1"><![CDATA[
+      Notes on the Flag_gmrt_610 column:
+      ----------------------------------
+
+      = ========================================================================
+      1 where a nearby bright source may be affecting the calculated flux
+      2 where a source has been deblended into two or more components from a
+        single initial island of flux
+      3 when both 1 and 2 apply
+      = ========================================================================
+
+      ]]></meta>
+  </table>
+  <data id="import_lhswire">
+    <sources>data/wp2_lockman-swire.csv</sources>
+    <csvGrammar />
+    <make table="lhswire">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          ra:ra,
+          dec:dec,
+          ra_ami_15700:ra_ami_15700,
+          dec_ami_15700:dec_ami_15700,
+          id10c:id10c,
+          fp_ami_15700:fp_mjy_ami_15700,
+          fperr_ami_15700:fperr_mjy_ami_15700,
+          f_ami_15700:fmjy_ami_15700,
+          ferr_ami_15700:ferrmjy_ami_15700,
+          detection_ami_15700:detection_ami_15700,
+          ra_gmrt_610:ra_gmrt_610,
+          dec_gmrt_610:dec_gmrt_610,
+          gmrtlh:gmrtlh,
+          fp_gmrt_610:fp_mjy_gmrt_610,
+          rms_gmrt_610:rms_gmrt_610,
+          f_gmrt_610:fmjy_gmrt_610,
+          ferr_gmrt_610:ferrmjy_gmrt_610,
+          flag_gmrt_610:flag_gmrt_610,
+          detection_gmrt_610:detection_gmrt_610,
+          separation_gmrt_ami:separation_gmrt_ami,
+          uniq_id:uniq_id,
+          matchflag_vla_1400__first:matchflag_vla_1400__first,
+          matchflag_vla_1400__nvss:matchflag_vla_1400__nvss,
+          distance_nvss_first:distance,
+          matchtot_5:matchtot_5,
+          matchtot_10:matchtot_10,
+          matchtot_30:matchtot_30,
+          matchtot_120:matchtot_120,
+          gb6_matchtot_120:gb6_matchtot_120,
+          gb6_distance:gb6_distance,
+          vlss_matchtot_120:vlss_matchtot_120,
+          vlss_distance:vlss_distance,
+          id_vla_1400__first:id_vla_1400__first,
+          ra_vla_1400__first:ra_vla_1400__first,
+          dec_vla_1400__first:dec_vla_1400__first,
+          sideprob_vla_1400__first:sideprob_vla_1400__first,
+          fp_vla_1400__first:fp_mjy_vla_1400__first,
+          f_vla_1400__first:fmjy_vla_1400__first,
+          ferr_vla_1400__first:ferrmjy_vla_1400__first,
+          major_vla_1400__first:major_vla_1400__first,
+          minor_vla_1400__first:minor_vla_1400__first,
+          posang_vla_1400__first:posang_vla_1400__first,
+          id_vla_1400__nvss:id_vla_1400__nvss,
+          ra_vla_1400__nvss:ra_vla_1400__nvss,
+          dec_vla_1400__nvss:dec_vla_1400__nvss,
+          peak_vla_1400__nvss:peak_vla_1400__nvss,
+          f_vla_1400__nvss:fmjy_vla_1400__nvss,
+          ferr_vla_1400__nvss:ferrmjy_vla_1400__nvss,
+          major_vla_1400__nvss:major_vla_1400__nvss,
+          major_err_vla_1400__nvss:major_err_vla_1400__nvss,
+          minor_vla_1400__nvss:minor_vla_1400__nvss,
+          minor_err_vla_1400__nvss:minor_err_vla_1400__nvss,
+          posangle_vla_1400__nvss:posangle_vla_1400__nvss,
+          posangle_err_vla_1400__nvss:posangle_err_vla_1400__nvss,
+          q_vla_1400__nvss:q_vla_1400__nvss,
+          u_vla_1400__nvss:u_vla_1400__nvss,
+          pol_flux_vla_1400__nvss:pol_flux_vla_1400__nvss,
+          pol_flux_err_vla_1400__nvss:pol_flux_err_vla_1400__nvss,
+          pol_angle_vla_1400__nvss:pol_angle_vla_1400__nvss,
+          pol_angle_err_vla_1400__nvss:pol_angle_err_vla_1400__nvss,
+          id_gb_4850:id_gb_4850,
+          ra_gb_4850:ra_gb_4850,
+          ra_err_gb_4850:ra_err_gb_4850,
+          dec_gb_4850:dec_gb_4850,
+          dec_err_gb_4850:dec_err_gb_4850,
+          f_gb_4850:fmjy_gb_4850,
+          ferr_gb_4850:ferrmjy_gb_4850,
+          major_gb_4850:major_gb_4850,
+          minor_gb_4850:minor_gb_4850,
+          posangle_gb_4850:posangle_gb_4850,
+          sky_gb_4850:sky_gb_4850,
+          eflag_gb_4850:eflag_gb_4850,
+          wflag_gb_4850:wflag_gb_4850,
+          cflag_gb_4850:cflag_gb_4850,
+          id_vla_74:id_vla_74,
+          ra_vla_74:ra_vla_74,
+          dec_vla_74:dec_vla_74,
+          f_vla_74:fmjy_vla_74,
+          ferr_vla_74:ferrmjy_vla_74,
+          major_vla_74:major_vla_74,
+          major_err_vla_74:major_err_vla_74,
+          minor_vla_74:minor_vla_74,
+          minor_err_vla_74:minor_err_vla_74,
+          posangle_vla_74:posangle_vla_74,
+          posangle_err_vla_74:posangle_err_vla_74,
+          detection_vla_1400__first:detection_vla_1400__first,
+          detection_vla_1400__nvss:detection_vla_1400__nvss,
+          detection_gb_4850:detection_gb_4850,
+          detection_vla_74:detection_vla_74,
+          separation_gmrt_first:separation_gmrt_first,
+          internal_id:help_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_lhswire" allowed="scs.xml,form,static">
+    <meta name="title">WP2 Lockman-SWIRE Radio Catalogue</meta>
+    <meta name="shortName">WP2 Lockman-SWIRE</meta>
+    <meta name="testQuery">
+      <meta name="ra">161.2</meta>
+      <meta name="dec">58.058</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="lhswire">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
