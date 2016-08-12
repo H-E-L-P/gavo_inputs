@@ -24,8 +24,128 @@
     Each catalogue contains an `internal_id` column that uniquely identify each
     source. Please use this column when cross-matching.
 
-    Survey indentifications
-    -----------------------
+    Catalogue descriptions
+    ----------------------
+
+    AKARI-NEP (table `wp2.akari_nep`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the AKARI-NEP field. It consists of a VLA
+    1.4 GHz survey of the field (Kollgaard et al. 1994) and a deeper, narrower
+    1.4 GHz WSRT survey (White et al. 2010), combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Kollgaard et
+    al. & White et al. was done using the NVSS position using a match radius of
+    30". (Note that this field does not fall within the FIRST coverage.)
+
+    Boötes (table `wp2.bootes`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the Bootes field. It consists of (1) a GMRT
+    153 MHz survey of the field (Williams et al. 2013) and (2) a 1.4 GHz survey
+    of the inner region of the field (de Vries et al. 2002) combined with (3)
+    the multi-band catalogue of Kimball et al. 2014. The Kimball et al.
+    catalogue is a cross-match between the NVSS and FIRST surveys and also
+    includes data at 74 MHz and 4 GHz. The cross-matching between GMRT & WSRT
+    was done using a match radius of 30". The resulting catalogue was then
+    cross-matched with  Kimball et al. using the FIRST and GMRT positions, with
+    a match radius of 30".
+
+    CDFS-SWIRE (table `wp2.cdfs_swire`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the CDFS-SWIRE field. It consists of a ATCA
+    1.4 GHz survey of the field (ATLAS, Franzen et al. 2015) combined with the
+    multi-band catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys, but only the NVSS portion
+    falls within the ATCA area. The cross-matching between Kimball et al. and
+    Franzen et al. was done using the NVSS positions using a match radius of
+    30".
+
+    EGS (table `wp2.egs`)
+    ~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the EGS field. It consists of (1) a deep VLA
+    1.4 GHz survey of the field (AEGIS20; Ivison et al. 2007) and (2) a shallow,
+    smaller, 4.8 GHz survey of the field (Willner et al. 2006) combined with (3)
+    the multi-band catalogue of Kimball et al. 2014. The Kimball et al.
+    catalogue is a cross-match between the NVSS and FIRST surveys and also
+    includes data at 74 MHz and 4 GHz. The cross-matching between Ivison et al.
+    and Willner et al. was done using a match radius of 30". The resulting
+    catalogue was then cross-matched with  Kimball et al. using a match radius
+    of 30".
+
+    ELAIS-N1 (table `wp2.en1`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the ELAIS-N1 field. It consists of a GMRT
+    610 MHz survey of the field (Garn et al. 2008) combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Garn et al.
+    was done using the FIRST position using a match radius of 30".
+
+    ELAIS-N2 (table `wp2.en2`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the ELAIS-N2 field. It consists of a GMRT
+    610 MHz survey of the field (Garn et al. 2009) combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Garn et al.
+    was done using the FIRST position using a match radius of 30".
+
+    ELAIS-S1 (table `wp2.es1`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the ELAIS-S1 field. It consists of a ATCA
+    1.4 GHz survey of the field (ATLAS; Franzen et al. 2015) with additional
+    ATCA data at 2.3 GHz for a subset of sources (Zinn et al. 2012).
+
+    GAMA-09 (table `wp2.g09`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the GAMA-9 field. It consists of a GMRT 325
+    MHz survey of the field (Mauch et al. 2013) combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Mauch et al.
+    was done using the FIRST position using a match radius of 30".
+
+    GAMA-12 (table `wp2.g12`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the GAMA-12 field. It consists of a GMRT 325
+    MHz survey of the field (Mauch et al. 2013) combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Mauch et al.
+    was done using the FIRST position using a match radius of 30".
+
+    GAMA-15 (table `wp2.g15`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the GAMA-15 field. It consists of a GMRT 325
+    MHz survey of the field (Mauch et al. 2013) combined with the multi-band
+    catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Mauch et al.
+    was done using the FIRST position using a match radius of 30".
+
+    Herschel-Stripe-82 (table `wp2.h82`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the Herschel-Stripe-82 field. It consists of
+    a VLA 1.4 GHz survey of the field (Hodge et al. 2011) combined with the
+    multi-band catalogue of Kimball et al. 2014. The Kimball et al. catalogue is
+    a cross-match between the NVSS and FIRST surveys and also includes data at
+    74 MHz and 4 GHz. The cross-matching between Kimball et al. and Hodge et al.
+    was done using the FIRST position using a match radius of 30".
+
+
+    Survey identifications
+    ----------------------
 
     +------------+------------------------------------------+
     | Survey     | 1.4 GHz catalogue (de Vries et al. 2002) |
@@ -244,59 +364,6 @@
     +------------+------------------------------+
     | Reference  | 2010A&A...517A..54W          |
     +------------+------------------------------+
-
-    Survey used
-    -----------
-
-    - AKARI-NEP (table `wp2.akari_nep`): VLA North Ecliptic Pole survey, WSRT
-      survey of the AKARI-NEP, NVSS (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - Bootes (table `wp2.bootes`): 153 MHz catalogue (Williams et al. 2013), 1.4
-      GHz catalogue (de Vries et al. 2002), FIRST (via Kimball et al. 2014),
-      NVSS (via Kimball et al. 2014), 4.85 GHz catalogue from Green Bank (via
-      Kimball et al. 2014), and VLSSr (via Kimball et al. 2014).
-
-    - CDFS-SWIRE (table `wp2.cdfs_swire`): ATLAS, NVSS (via Kimball et al. 2014)
-
-    - EGS (table `wp2.egs`): AEGIS20, 6 cm (4.8 GHz) survey of Willner et al.
-      2006, FIRST (via Kimball et al. 2014), NVSS (via Kimball et al. 2014),
-      4.85 GHz catalogue from Green Bank (via Kimball et al. 2014), and
-      VLSSr (via Kimball et al. 2014).
-
-    - ELAIS-N1 (table `wp2.en1`): 610 MHz catalogue (Garn et al. 2008), FIRST
-      (via Kimball et al. 2014), NVSS (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - ELAIS-N2 (table `wp2.en2`): 610 MHz catalogue (Garn et al. 2009), FIRST
-      (via Kimball et al. 2014), NVSS (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - ELAIS-S1 (table `wp2.es1`): ATLAS, and 2.3 GHz catalogue (Zinn et al.
-      2012)
-
-    - GAMA-09 (table `wp2.g09`): 325 MHz catalogue (Mauch et al. 2013), FIRST
-      (via Kimball et al. 2014), VLSSr (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - GAMA-12 (table `wp2.g12`): 325 MHz catalogue (Mauch et al. 2013), FIRST
-      (via Kimball et al. 2014), VLSSr (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - GAMA-15 (table `wp2.g15`): 325 MHz catalogue (Mauch et al. 2013), FIRST
-      (via Kimball et al. 2014), VLSSr (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
-
-    - Herschel-Stripe-82 (table `wp2.h82`): VLA SDSS Stripe 82 Survey, FIRST
-      (via Kimball et al. 2014), NVSS (via Kimball et al. 2014), 4.85 GHz
-      catalogue from Green Bank (via Kimball et al. 2014), and VLSSr (via
-      Kimball et al. 2014).
 
     History
     -------
