@@ -8501,7 +8501,7 @@
 
 
   <!-- Lockman-SWIRE -->
-  <table id="lhswire" onDisk="True" adql="True" mixin="//scs#q3cindex"
+  <table id="lswire" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="internal_id">
     <stc>
       Position ICRS Epoch J2000.0 "ra" "dec"
@@ -9180,10 +9180,10 @@
 
       ]]></meta>
   </table>
-  <data id="import_lhswire">
+  <data id="import_lswire">
     <sources>data/wp2_lockman-swire.csv</sources>
     <csvGrammar />
-    <make table="lhswire">
+    <make table="lswire">
       <rowmaker idmaps="*">
         <simplemaps>
           ra:ra,
@@ -9281,7 +9281,7 @@
       </rowmaker>
     </make>
   </data>
-  <service id="cone_lhswire" allowed="scs.xml,form,static">
+  <service id="cone_lswire" allowed="scs.xml,form,static">
     <meta name="title">WP2 Lockman-SWIRE Radio Catalogue</meta>
     <meta name="shortName">WP2 Lockman-SWIRE</meta>
     <meta name="testQuery">
@@ -9294,7 +9294,7 @@
     whether or not you want this -->
     <property name="staticData">data/files</property>
 
-    <dbCore queriedTable="lhswire">
+    <dbCore queriedTable="lswire">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
