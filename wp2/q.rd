@@ -179,6 +179,16 @@
     of 30" and the triple match tool in topcat. All sources from the WSRT, VLA
     and GMRT catalogues were kept.
 
+    XMM-LSS (table `wp2.xmmlss`)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    This is the radio catalogue for the XMM-LSS field. It consists of the 5 band
+    multi-frequency catalogue of Tasse et al. 2007 combined with the VVDS and
+    UDS catalogues of Bondi et al. 2007 and Simpson et al. 2006 respectively.
+    The VVDS and UDS catalogue were matched to the 5-band catalogue using
+    a match radius of 30", and the 325 MHz positions. The VVDS and UDS each
+    cover a small portion of the Tasse et al. area.
+
     Survey identifications
     ----------------------
 
@@ -233,6 +243,18 @@
     +------------+--------------------------------------+
 
     +------------+---------------------------------------+
+    | Survey     | 230 MHz catalogue (Tasse et al. 2007) |
+    +------------+---------------------------------------+
+    | Telescope  | GMRT                                  |
+    +------------+---------------------------------------+
+    | Instrument | GMRT                                  |
+    +------------+---------------------------------------+
+    | Filters    | GMRT_230                              |
+    +------------+---------------------------------------+
+    | Reference  | 2007A&A...471.1105T                   |
+    +------------+---------------------------------------+
+
+    +------------+---------------------------------------+
     | Survey     | 325 MHz catalogue (Mauch et al. 2013) |
     +------------+---------------------------------------+
     | Telescope  | GMRT                                  |
@@ -244,6 +266,18 @@
     | Reference  | 2013MNRAS.435..650M                   |
     +------------+---------------------------------------+
     | URL        | http://gmrt-gama.extragalactic.info   |
+    +------------+---------------------------------------+
+
+    +------------+---------------------------------------+
+    | Survey     | 325 MHz catalogue (Tasse et al. 2007) |
+    +------------+---------------------------------------+
+    | Telescope  | VLA                                   |
+    +------------+---------------------------------------+
+    | Instrument | VLA                                   |
+    +------------+---------------------------------------+
+    | Filters    | VLA_325                               |
+    +------------+---------------------------------------+
+    | Reference  | 2007A&A...471.1105T                   |
     +------------+---------------------------------------+
 
     +------------+--------------------------------------------------------------+
@@ -295,6 +329,30 @@
     |            | http://www.mrao.cam.ac.uk/facilities/surveys/gmrt/fls/ |
     +------------+--------------------------------------------------------+
 
+    +------------+--------------------------------------+
+    | Survey     | 610MHz catalogue (Tasse et al. 2007) |
+    +------------+--------------------------------------+
+    | Telescope  | GMRT                                 |
+    +------------+--------------------------------------+
+    | Instrument | GMRT                                 |
+    +------------+--------------------------------------+
+    | Filters    | GMRT_610                             |
+    +------------+--------------------------------------+
+    | Reference  | 2007A&A...471.1105T                  |
+    +------------+--------------------------------------+
+
+    +------------+--------------------------------------+
+    | Survey     | 74 MHz catalogue (Tasse et al. 2007) |
+    +------------+--------------------------------------+
+    | Telescope  | VLA                                  |
+    +------------+--------------------------------------+
+    | Instrument | VLA (A configuration)                |
+    +------------+--------------------------------------+
+    | Filters    | VLA_74                               |
+    +------------+--------------------------------------+
+    | Reference  | 2007A&A...471.1105T                  |
+    +------------+--------------------------------------+
+
     +-----------------+--------------------------------------------------------------------+
     | Survey          | AEGIS20                                                            |
     +-----------------+--------------------------------------------------------------------+
@@ -340,6 +398,18 @@
     | Reference  | 2014arXiv1401.1535K              |
     +------------+----------------------------------+
 
+    +------------+------------------------------------------+
+    | Survey     | NVSS                                     |
+    +------------+------------------------------------------+
+    | Telescope  | VLA                                      |
+    +------------+------------------------------------------+
+    | Instrument | VLA (D-array & DnC-array configurations) |
+    +------------+------------------------------------------+
+    | Filters    | VLA_1400                                 |
+    +------------+------------------------------------------+
+    | Reference  | 1998AJ....115.1693C                      |
+    +------------+------------------------------------------+
+
     +------------+--------------------------------------------------+
     | Survey     | NVSS (via Kimball et al. 2014)                   |
     +------------+--------------------------------------------------+
@@ -379,6 +449,18 @@
     +------------+--------------------------------------------------+
     | URL        | http://www.physics.usyd.edu.au/sifa/Main/SUMSS   |
     +------------+--------------------------------------------------+
+
+    +------------+----------------------------+
+    | Survey     | UDS 1.4 GHz                |
+    +------------+----------------------------+
+    | Telescope  | VLA                        |
+    +------------+----------------------------+
+    | Instrument | VLA (B & C configurations) |
+    +------------+----------------------------+
+    | Filters    | VLA_1400                   |
+    +------------+----------------------------+
+    | Reference  | 2006MNRAS.372..741S        |
+    +------------+----------------------------+
 
     +------------+-------------------------------------------------------+
     | Survey     | VLA North Ecliptic Pole survey                        |
@@ -421,6 +503,30 @@
     +------------+------------------------------------------------------------+
     | URL        | http://www.aoc.nrao.edu/~akimball/radiocat.shtml           |
     +------------+------------------------------------------------------------+
+
+    +------------+-----------------------+
+    | Survey     | VVDS 1.4 GHz          |
+    +------------+-----------------------+
+    | Telescope  | VLA                   |
+    +------------+-----------------------+
+    | Instrument | VLA (B configuration) |
+    +------------+-----------------------+
+    | Filters    | VLA_1400              |
+    +------------+-----------------------+
+    | Reference  | 2007A&A...463..519B   |
+    +------------+-----------------------+
+
+    +------------+---------------------+
+    | Survey     | VVDS 610 MHz        |
+    +------------+---------------------+
+    | Telescope  | GMRT                |
+    +------------+---------------------+
+    | Instrument | GMRT                |
+    +------------+---------------------+
+    | Filters    | GMRT_610            |
+    +------------+---------------------+
+    | Reference  | 2007A&A...463..519B |
+    +------------+---------------------+
 
     +------------+------------------------+
     | Survey     | WSRT 1.4 GHz catalogue |
@@ -10328,6 +10434,1148 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="xfls">
+      <FEED source="//scs#coreDescs"/>
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+  <!-- XMM-LSS -->
+  <table id="xmmlss" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "ra" "dec"
+    </stc>
+
+    <column name="ra"
+      tablehead="RA"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="Master right ascension in deg (J2000) (taken from 325 MHz if exists, from other frequency if not)"
+      required="True"
+      verbLevel="1" />
+    <column name="dec"
+      tablehead="Dec"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="Master declination in deg (J2000) (taken from 325 MHz if exists, from other frequency if not)"
+      required="True"
+      verbLevel="1" />
+    <column name="cnt_vla_1400__tasse"
+      tablehead="cnt_VLA_1400__tasse"
+      type="integer"
+      ucd="meta.id"
+      description="1.4 GHz Table index (one entry per component - one source can be made of several components)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="i_vla_1400__tasse"
+      tablehead="I_VLA_1400__tasse"
+      type="integer"
+      ucd="meta.id"
+      description="1.4 GHz Source index (one entry per source)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_1400__tasse"
+      tablehead="RA_VLA_1400__tasse"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="1.4 GHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_ra_vla_1400__tasse"
+      tablehead="ERR_RA_VLA_1400__tasse"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Uncertainty on right ascension"
+      verbLevel="30" />
+    <column name="dec_vla_1400__tasse"
+      tablehead="DEC_VLA_1400__tasse"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="1.4 GHz Declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_dec_vla_1400__tasse"
+      tablehead="ERR_DEC_VLA_1400__tasse"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Uncertainty on declination"
+      verbLevel="30" />
+    <column name="peak_vla_1400__tasse"
+      tablehead="PEAK_VLA_1400__tasse"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="1.4 GHz peak flux density in uJy"
+      verbLevel="1" />
+    <column name="err_peak_vla_1400__tasse"
+      tablehead="ERR_PEAK_VLA_1400__tasse"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="RMS uncertainty on peak flux density in uJy"
+      verbLevel="1" />
+    <column name="f_vla_1400__tasse"
+      tablehead="F_VLA_1400__tasse"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="1.4 GHz integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__tasse"
+      tablehead="FErr_VLA_1400__tasse"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="RMS uncertainty on integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="detection_vla_1400__tasse"
+      tablehead="Detection_VLA_1400__tasse"
+      type="smallint"
+      ucd="meta.code"
+      description="1.4 GHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="flag_vla_1400__tasse"
+      tablehead="Flag_VLA_1400__tasse"
+      type="smallint"
+      ucd="meta.code"
+      description="1.4 GHz multi-component flag"
+      note="1"
+      verbLevel="30" />
+    <column name="cnt_gmrt_230"
+      tablehead="cnt_GMRT_230"
+      type="integer"
+      ucd="meta.id"
+      description="230 MHz Table index (one entry per component - one source can be made of several components)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="i_gmrt_230"
+      tablehead="I_GMRT_230"
+      type="integer"
+      ucd="meta.id"
+      description="230 MHz Source index (one entry per source)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_gmrt_230"
+      tablehead="RA_GMRT_230"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="230 MHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_ra_gmrt_230"
+      tablehead="ERR_RA_GMRT_230"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Uncertainty on right ascension"
+      verbLevel="30" />
+    <column name="dec_gmrt_230"
+      tablehead="DEC_GMRT_230"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="230 MHz Declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_dec_gmrt_230"
+      tablehead="ERR_DEC_GMRT_230"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Uncertainty on declination"
+      verbLevel="30" />
+    <column name="peak_gmrt_230"
+      tablehead="PEAK_GMRT_230"
+      type="real"
+      ucd="phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="230 MHz peak flux density in uJy"
+      verbLevel="1" />
+    <column name="err_peak_gmrt_230"
+      tablehead="ERR_PEAK_GMRT_230"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="RMS uncertainty on peak flux density in uJy"
+      verbLevel="1" />
+    <column name="f_gmrt_230"
+      tablehead="F_GMRT_230"
+      type="real"
+      ucd="phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="230 MHz integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_gmrt_230"
+      tablehead="FErr_GMRT_230"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="RMS uncertainty on integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="maj_gmrt_230"
+      tablehead="MAJ_GMRT_230"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="err_maj_gmrt_230"
+      tablehead="ERR_MAJ_GMRT_230"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_gmrt_230"
+      tablehead="MIN_GMRT_230"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="err_min_gmrt_230"
+      tablehead="ERR_MIN_GMRT_230"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pos_ang_gmrt_230"
+      tablehead="POS_ANG_GMRT_230"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle of major axis in deg"
+      verbLevel="30" />
+    <column name="err_pos_gmrt_230"
+      tablehead="ERR_POS_GMRT_230"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="RMS uncertainty on position angle in deg"
+      verbLevel="30" />
+    <column name="index_gmrt_230"
+      tablehead="INDEX_GMRT_230"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index with respect to NVSS flux density (1.4 GHz)"
+      verbLevel="30" />
+    <column name="detection_gmrt_230"
+      tablehead="Detection_GMRT_230"
+      type="smallint"
+      ucd="meta.code"
+      description="230 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="flag_gmrt_230"
+      tablehead="Flag_GMRT_230"
+      type="smallint"
+      ucd="meta.code"
+      description="230 MHz multi-component flag"
+      note="1"
+      verbLevel="30" />
+    <column name="type_gmrt_230"
+      tablehead="TYPE_GMRT_230"
+      type="text"
+      ucd="meta.code.class"
+      description="Source type: (S)ingle, (M)ultiple or (C)omponent of multiple source"
+      verbLevel="30" />
+    <column name="cnt_vla_325"
+      tablehead="cnt_VLA_325"
+      type="integer"
+      ucd="meta.id"
+      description="325 MHz Table index (one entry per component - one source can be made of several components)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="i_vla_325"
+      tablehead="I_VLA_325"
+      type="integer"
+      ucd="meta.id"
+      description="325 MHz Source index (one entry per source)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_325"
+      tablehead="RA_VLA_325"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="325 MHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_ra_vla_325"
+      tablehead="ERR_RA_VLA_325"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Uncertainty on right ascension"
+      verbLevel="30" />
+    <column name="dec_vla_325"
+      tablehead="DEC_VLA_325"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="325 MHz Declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_dec_vla_325"
+      tablehead="ERR_DEC_VLA_325"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Uncertainty on declination"
+      verbLevel="30" />
+    <column name="peak_vla_325"
+      tablehead="PEAK_VLA_325"
+      type="real"
+      ucd="phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="325 MHz peak flux density in uJy"
+      verbLevel="1" />
+    <column name="err_peak_vla_325"
+      tablehead="ERR_PEAK_VLA_325"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="RMS uncertainty on peak flux density in uJy"
+      verbLevel="1" />
+    <column name="f_vla_325"
+      tablehead="F_VLA_325"
+      type="real"
+      ucd="phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="325 MHz integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_vla_325"
+      tablehead="FErr_VLA_325"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.200-400MHz"
+      unit="uJy"
+      description="RMS uncertainty on integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="maj_vla_325"
+      tablehead="MAJ_VLA_325"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="err_maj_vla_325"
+      tablehead="ERR_MAJ_VLA_325"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_vla_325"
+      tablehead="MIN_VLA_325"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="err_min_vla_325"
+      tablehead="ERR_MIN_VLA_325"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pos_ang_vla_325"
+      tablehead="POS_ANG_VLA_325"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle of major axis in deg"
+      verbLevel="30" />
+    <column name="err_pos_vla_325"
+      tablehead="ERR_POS_VLA_325"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="RMS uncertainty on position angle in deg"
+      verbLevel="30" />
+    <column name="index_vla_325"
+      tablehead="INDEX_VLA_325"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index with respect to NVSS flux density (1.4 GHz)"
+      verbLevel="30" />
+    <column name="detection_vla_325"
+      tablehead="Detection_VLA_325"
+      type="smallint"
+      ucd="meta.code"
+      description="325 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="flag_vla_325"
+      tablehead="Flag_VLA_325"
+      type="smallint"
+      ucd="meta.code"
+      description="325 MHz multi-component flag"
+      note="1"
+      verbLevel="30" />
+    <column name="type_vla_325"
+      tablehead="TYPE_VLA_325"
+      type="text"
+      ucd="meta.code.class"
+      description="Source type: (S)ingle, (M)ultiple or (C)omponent of multiple source"
+      verbLevel="30" />
+    <column name="cnt_gmrt_610"
+      tablehead="cnt_GMRT_610"
+      type="integer"
+      ucd="meta.id"
+      description="610 MHz Table index (one entry per component - one source can be made of several components)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="i_gmrt_610"
+      tablehead="I_GMRT_610"
+      type="integer"
+      ucd="meta.id"
+      description="610 MHz Source index (one entry per source)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_gmrt_610"
+      tablehead="RA_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="610 MHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_ra_gmrt_610"
+      tablehead="ERR_RA_GMRT_610"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Uncertainty on right ascension"
+      verbLevel="30" />
+    <column name="dec_gmrt_610"
+      tablehead="DEC_GMRT_610"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="610 MHz Declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_dec_gmrt_610"
+      tablehead="ERR_DEC_GMRT_610"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Uncertainty on declination"
+      verbLevel="30" />
+    <column name="peak_gmrt_610"
+      tablehead="PEAK_GMRT_610"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="uJy"
+      description="610 MHz peak flux density in uJy"
+      verbLevel="1" />
+    <column name="err_peak_gmrt_610"
+      tablehead="ERR_PEAK_GMRT_610"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="uJy"
+      description="RMS uncertainty on peak flux density in uJy"
+      verbLevel="1" />
+    <column name="f_gmrt_610"
+      tablehead="F_GMRT_610"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="uJy"
+      description="610 MHz integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_gmrt_610"
+      tablehead="FErr_GMRT_610"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="uJy"
+      description="RMS uncertainty on integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="maj_gmrt_610"
+      tablehead="MAJ_GMRT_610"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="err_maj_gmrt_610"
+      tablehead="ERR_MAJ_GMRT_610"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_gmrt_610"
+      tablehead="MIN_GMRT_610"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="err_min_gmrt_610"
+      tablehead="ERR_MIN_GMRT_610"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pos_ang_gmrt_610"
+      tablehead="POS_ANG_GMRT_610"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle of major axis in deg"
+      verbLevel="30" />
+    <column name="err_pos_gmrt_610"
+      tablehead="ERR_POS_GMRT_610"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="RMS uncertainty on position angle in deg"
+      verbLevel="30" />
+    <column name="index_gmrt_610"
+      tablehead="INDEX_GMRT_610"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index with respect to NVSS flux density (1.4 GHz)"
+      verbLevel="30" />
+    <column name="detection_gmrt_610"
+      tablehead="Detection_GMRT_610"
+      type="smallint"
+      ucd="meta.code"
+      description="610 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="flag_gmrt_610"
+      tablehead="Flag_GMRT_610"
+      type="smallint"
+      ucd="meta.code"
+      description="610 MHz multi-component flag"
+      note="1"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="type_gmrt_610"
+      tablehead="TYPE_GMRT_610"
+      type="text"
+      ucd="meta.code.class"
+      description="Source type: (S)ingle, (M)ultiple or (C)omponent of multiple source"
+      verbLevel="30" />
+    <column name="cnt_vla_74"
+      tablehead="cnt_VLA_74"
+      type="integer"
+      ucd="meta.id"
+      description="74 MHz Table index (one entry per component - one source can be made of several components)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="i_vla_74"
+      tablehead="I_VLA_74"
+      type="integer"
+      ucd="meta.id"
+      description="74 MHz Source index (one entry per source)"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="ra_vla_74"
+      tablehead="RA_VLA_74"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="74 MHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_ra_vla_74"
+      tablehead="ERR_RA_VLA_74"
+      type="real"
+      ucd="stat.error;pos.eq.ra"
+      unit="deg"
+      description="Uncertainty on right ascension"
+      verbLevel="30" />
+    <column name="dec_vla_74"
+      tablehead="DEC_VLA_74"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="74 MHz Declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="err_dec_vla_74"
+      tablehead="ERR_DEC_VLA_74"
+      type="real"
+      ucd="stat.error;pos.eq.dec"
+      unit="deg"
+      description="Uncertainty on declination"
+      verbLevel="30" />
+    <column name="peak_vla_74"
+      tablehead="PEAK_VLA_74"
+      type="real"
+      ucd="phot.flux.density;em.radio.20-100MHz"
+      unit="uJy"
+      description="74 MHz peak flux density in uJy"
+      verbLevel="1" />
+    <column name="err_peak_vla_74"
+      tablehead="ERR_PEAK_VLA_74"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.20-100MHz"
+      unit="uJy"
+      description="RMS uncertainty on peak flux density in uJy"
+      verbLevel="1" />
+    <column name="f_vla_74"
+      tablehead="F_VLA_74"
+      type="real"
+      ucd="phot.flux.density;em.radio.20-100MHz"
+      unit="uJy"
+      description="74 MHz integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_vla_74"
+      tablehead="FErr_VLA_74"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.20-100MHz"
+      unit="uJy"
+      description="RMS uncertainty on integrated flux density in uJy"
+      verbLevel="1" />
+    <column name="maj_vla_74"
+      tablehead="MAJ_VLA_74"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="err_maj_vla_74"
+      tablehead="ERR_MAJ_VLA_74"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_vla_74"
+      tablehead="MIN_VLA_74"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="err_min_vla_74"
+      tablehead="ERR_MIN_VLA_74"
+      type="real"
+      ucd="stat.error;phys.angSize"
+      unit="arcsec"
+      description="RMS uncertainty on minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pos_ang_vla_74"
+      tablehead="POS_ANG_VLA_74"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle of major axis in deg"
+      verbLevel="30" />
+    <column name="err_pos_vla_74"
+      tablehead="ERR_POS_VLA_74"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="RMS uncertainty on position angle in deg"
+      verbLevel="30" />
+    <column name="index_vla_74"
+      tablehead="INDEX_VLA_74"
+      type="real"
+      ucd="spect.index"
+      description="Spectral index with respect to NVSS flux density (1.4 GHz)"
+      verbLevel="30" />
+    <column name="detection_vla_74"
+      tablehead="Detection_VLA_74"
+      type="smallint"
+      ucd="meta.code"
+      description="74 MHz detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="flag_vla_74"
+      tablehead="Flag_VLA_74"
+      type="smallint"
+      ucd="meta.code"
+      description="74 MHz multi-component flag"
+      note="1"
+      verbLevel="30" />
+    <column name="type_vla_74"
+      tablehead="TYPE_VLA_74"
+      type="text"
+      ucd="meta.code.class"
+      description="Source type: (S)ingle  (M)ultiple or (C)omponent of multiple source"
+      verbLevel="30" />
+    <column name="name_vla_1400__uds"
+      tablehead="Name_VLA_1400__uds"
+      type="text"
+      ucd="meta.id"
+      description="Source designation radio"
+      verbLevel="1" />
+    <column name="ra_vla_1400__uds"
+      tablehead="RA_VLA_1400__uds"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="UDS 1.4 GHz right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="dec_vla_1400__uds"
+      tablehead="DEC_VLA_1400__uds"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="UDS 1.4 GHz declination in deg (J2000)"
+      verbLevel="30" />
+    <column name="f_vla_1400__uds"
+      tablehead="F_VLA_1400__uds"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="UDS 1.4 GHz flux density in uJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__uds"
+      tablehead="FErr_VLA_1400__uds"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="uJy"
+      description="RMS uncertainty on flux density in uJy"
+      verbLevel="1" />
+    <column name="rel"
+      tablehead="Rel"
+      type="real"
+      ucd="meta.code"
+      description="Reliability of optical identification"
+      verbLevel="30" />
+    <column name="n_rel"
+      tablehead="n_Rel"
+      type="text"
+      ucd="meta.note"
+      description="Note when no reliability value"
+      note="2"
+      verbLevel="30" />
+    <column name="com"
+      tablehead="Com"
+      type="text"
+      ucd="meta.note"
+      description="Comments on identification"
+      verbLevel="30" />
+    <column name="optid"
+      tablehead="optID"
+      type="text"
+      ucd="meta.code"
+      description="Source designation optical"
+      verbLevel="1" />
+    <column name="z"
+      tablehead="z"
+      type="real"
+      ucd="src.redshift"
+      description="Spectroscopic redshift"
+      verbLevel="30" />
+    <column name="u_z"
+      tablehead="u_z"
+      type="text"
+      ucd="meta.code"
+      description="Uncertainty flag on redshift"
+      verbLevel="30" />
+    <column name="bmag"
+      tablehead="Bmag"
+      type="real"
+      ucd="phot.mag;em.opt.B"
+      unit="mag"
+      description="B magnitude (AB)"
+      verbLevel="30" />
+    <column name="vmag"
+      tablehead="Vmag"
+      type="real"
+      ucd="phot.mag;em.opt.V"
+      unit="mag"
+      description="V magnitude (AB)"
+      verbLevel="30" />
+    <column name="rmag"
+      tablehead="Rmag"
+      type="real"
+      ucd="phot.mag;em.opt.R"
+      unit="mag"
+      description="R magnitude (AB)"
+      verbLevel="30" />
+    <column name="i_mag"
+      tablehead="i_mag"
+      type="real"
+      ucd="phot.mag;em.opt.i"
+      unit="mag"
+      description="i' magnitude (AB)"
+      verbLevel="30" />
+    <column name="z_mag"
+      tablehead="z_mag"
+      type="real"
+      ucd="phot.mag;em.opt.z"
+      unit="mag"
+      description="z' magnitude (AB)"
+      verbLevel="30" />
+    <column name="detection_vla_1400__uds"
+      tablehead="Detection_VLA_1400__uds"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="orig_id"
+      tablehead="Orig_ID"
+      type="bigint"
+      ucd="meta.id"
+      description="Source index"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="name_vla_1400__vvds"
+      tablehead="Name_VLA_1400__vvds"
+      type="text"
+      ucd="meta.id"
+      description="Source name"
+      verbLevel="1" />
+    <column name="ra_vla_1400__vvds"
+      tablehead="RA_VLA_1400__vvds"
+      type="double precision"
+      ucd="pos.eq.ra"
+      unit="deg"
+      description="VVDS 1.4 GHz Right ascension in deg (J2000)"
+      verbLevel="30" />
+    <column name="dec_vla_1400__vvds"
+      tablehead="Dec_VLA_1400__vvds"
+      type="double precision"
+      ucd="pos.eq.dec"
+      unit="deg"
+      description="VVDS 1.4 GHz Declination in deg (J200)"
+      verbLevel="30" />
+    <column name="fp_vla_1400__vvds"
+      tablehead="Fp_VLA_1400__vvds"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="VVDS 1.4 GHz peak flux density in mJy/bm"
+      verbLevel="1" />
+    <column name="ep_vla_1400__vvds"
+      tablehead="Ep_VLA_1400__vvds"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Uncertainty on peak flux density in mJy/bm"
+      verbLevel="1" />
+    <column name="f_vla_1400__vvds"
+      tablehead="F_VLA_1400__vvds"
+      type="real"
+      ucd="phot.flux.density;em.radio.750-1500MH"
+      unit="mJy"
+      description="VVDS 1.4 GHz integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="ferr_vla_1400__vvds"
+      tablehead="FErr_VLA_1400__vvds"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.750-1500MHz"
+      unit="mJy"
+      description="Uncertainty on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="maj_vla_1400__vvds"
+      tablehead="MAJ_VLA_1400__vvds"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_vla_1400__vvds"
+      tablehead="MIN_VLA_1400__vvds"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pa_vla_1400__vvds"
+      tablehead="PA_VLA_1400__vvds"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle in deg"
+      verbLevel="30" />
+    <column name="fp_gmrt_610__vvds"
+      tablehead="Fp_GMRT_610__vvds"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="VVDS 610 MHz peak flux in mJy/bm"
+      verbLevel="1" />
+    <column name="ep_gmrt_610__vvds"
+      tablehead="Ep_GMRT_610__vvds"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Uncertainty on peak flux density in mJy/bm"
+      verbLevel="1" />
+    <column name="f_gmrt_610__vvds"
+      tablehead="F_GMRT_610__vvds"
+      type="real"
+      ucd="phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="VVDS 610 MHz integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="ferr_gmrt_610__vvds"
+      tablehead="FErr_GMRT_610__vvds"
+      type="real"
+      ucd="stat.error;phot.flux.density;em.radio.400-750MHz"
+      unit="mJy"
+      description="Uncertainty on integrated flux density in mJy"
+      verbLevel="1" />
+    <column name="maj_gmrt_610__vvds"
+      tablehead="MAJ_GMRT_610__vvds"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source major axis in arcsec"
+      verbLevel="30" />
+    <column name="min_gmrt_610__vvds"
+      tablehead="MIN_GMRT_610__vvds"
+      type="real"
+      ucd="phys.angSize"
+      unit="arcsec"
+      description="Source minor axis in arcsec"
+      verbLevel="30" />
+    <column name="pa_gmrt_610__vvds"
+      tablehead="PA_GMRT_610__vvds"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle in deg"
+      verbLevel="30" />
+    <column name="alpha"
+      tablehead="ALPHA"
+      type="real"
+      ucd="spect.index"
+      description="1.4 GHz / 610 MHz spectral index"
+      verbLevel="30" />
+    <column name="alpha_err"
+      tablehead="ALPHA_ERR"
+      type="real"
+      ucd="stat.error;spect.index"
+      description="Uncertainty on spectral index"
+      verbLevel="30" />
+    <column name="detection_vla_1400__vvds"
+      tablehead="Detection_VLA_1400__vvds"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="detection_gmrt_610__vvds"
+      tablehead="Detection_GMRT_610__vvds"
+      type="smallint"
+      ucd="meta.code"
+      description="Detection flag"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="text"
+      ucd="meta.id;meta.main"
+      description="Internal unique identifier"
+      required="True"
+      verbLevel="1" />
+
+    <meta name="note" tag="1"><![CDATA[
+      Notes on flag columns:
+      ----------------------
+
+      === ======================
+      -99 source not detected
+        1 multi-component source
+        0 single source
+      === ======================
+
+      ]]></meta>
+    <meta name="note" tag="2"><![CDATA[
+      Notes on n_Rel column:
+      ----------------------
+
+      = =========
+      A reliable
+      B probable
+      C plausible
+      = =========
+
+      ]]></meta>
+
+  </table>
+  <data id="import_xmmlss">
+    <sources>data/wp2_xmm-lss.csv</sources>
+    <csvGrammar />
+    <make table="xmmlss">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          internal_id:id,
+          ra:ra,
+          dec:dec,
+          cnt_vla_1400__tasse:cnt_vla_1400__tasse,
+          i_vla_1400__tasse:i_vla_1400__tasse,
+          ra_vla_1400__tasse:ra_vla_1400__tasse,
+          err_ra_vla_1400__tasse:err_ra_vla_1400__tasse,
+          dec_vla_1400__tasse:dec_vla_1400__tasse,
+          err_dec_vla_1400__tasse:err_dec_vla_1400__tasse,
+          peak_vla_1400__tasse:peak_vla_1400__tasse,
+          err_peak_vla_1400__tasse:err_peak_vla_1400__tasse,
+          f_vla_1400__tasse:f_vla_1400__tasse,
+          ferr_vla_1400__tasse:ferr_vla_1400__tasse,
+          detection_vla_1400__tasse:detection_vla_1400__tasse,
+          flag_vla_1400__tasse:flag_vla_1400__tasse,
+          cnt_gmrt_230:cnt_gmrt_230,
+          i_gmrt_230:i_gmrt_230,
+          ra_gmrt_230:ra_gmrt_230,
+          err_ra_gmrt_230:err_ra_gmrt_230,
+          dec_gmrt_230:dec_gmrt_230,
+          err_dec_gmrt_230:err_dec_gmrt_230,
+          peak_gmrt_230:peak_gmrt_230,
+          err_peak_gmrt_230:err_peak_gmrt_230,
+          f_gmrt_230:f_gmrt_230,
+          ferr_gmrt_230:ferr_gmrt_230,
+          maj_gmrt_230:maj_gmrt_230,
+          err_maj_gmrt_230:err_maj_gmrt_230,
+          min_gmrt_230:min_gmrt_230,
+          err_min_gmrt_230:err_min_gmrt_230,
+          pos_ang_gmrt_230:pos_ang_gmrt_230,
+          err_pos_gmrt_230:err_pos_gmrt_230,
+          index_gmrt_230:index_gmrt_230,
+          detection_gmrt_230:detection_gmrt_230,
+          flag_gmrt_230:flag_gmrt_230,
+          type_gmrt_230:type_gmrt_230,
+          cnt_vla_325:cnt_vla_325,
+          i_vla_325:i_vla_325,
+          ra_vla_325:ra_vla_325,
+          err_ra_vla_325:err_ra_vla_325,
+          dec_vla_325:dec_vla_325,
+          err_dec_vla_325:err_dec_vla_325,
+          peak_vla_325:peak_vla_325,
+          err_peak_vla_325:err_peak_vla_325,
+          f_vla_325:f_vla_325,
+          ferr_vla_325:ferr_vla_325,
+          maj_vla_325:maj_vla_325,
+          err_maj_vla_325:err_maj_vla_325,
+          min_vla_325:min_vla_325,
+          err_min_vla_325:err_min_vla_325,
+          pos_ang_vla_325:pos_ang_vla_325,
+          err_pos_vla_325:err_pos_vla_325,
+          index_vla_325:index_vla_325,
+          detection_vla_325:detection_vla_325,
+          flag_vla_325:flag_vla_325,
+          type_vla_325:type_vla_325,
+          cnt_gmrt_610:cnt_gmrt_610,
+          i_gmrt_610:i_gmrt_610,
+          ra_gmrt_610:ra_gmrt_610,
+          err_ra_gmrt_610:err_ra_gmrt_610,
+          dec_gmrt_610:dec_gmrt_610,
+          err_dec_gmrt_610:err_dec_gmrt_610,
+          peak_gmrt_610:peak_gmrt_610,
+          err_peak_gmrt_610:err_peak_gmrt_610,
+          f_gmrt_610:f_gmrt_610,
+          ferr_gmrt_610:ferr_gmrt_610,
+          maj_gmrt_610:maj_gmrt_610,
+          err_maj_gmrt_610:err_maj_gmrt_610,
+          min_gmrt_610:min_gmrt_610,
+          err_min_gmrt_610:err_min_gmrt_610,
+          pos_ang_gmrt_610:pos_ang_gmrt_610,
+          err_pos_gmrt_610:err_pos_gmrt_610,
+          index_gmrt_610:index_gmrt_610,
+          detection_gmrt_610:detection_gmrt_610,
+          flag_gmrt_610:flag_gmrt_610,
+          type_gmrt_610:type_gmrt_610,
+          cnt_vla_74:cnt_vla_74,
+          i_vla_74:i_vla_74,
+          ra_vla_74:ra_vla_74,
+          err_ra_vla_74:err_ra_vla_74,
+          dec_vla_74:dec_vla_74,
+          err_dec_vla_74:err_dec_vla_74,
+          peak_vla_74:peak_vla_74,
+          err_peak_vla_74:err_peak_vla_74,
+          f_vla_74:f_vla_74,
+          ferr_vla_74:ferr_vla_74,
+          maj_vla_74:maj_vla_74,
+          err_maj_vla_74:err_maj_vla_74,
+          min_vla_74:min_vla_74,
+          err_min_vla_74:err_min_vla_74,
+          pos_ang_vla_74:pos_ang_vla_74,
+          err_pos_vla_74:err_pos_vla_74,
+          index_vla_74:index_vla_74,
+          detection_vla_74:detection_vla_74,
+          flag_vla_74:flag_vla_74,
+          type_vla_74:type_vla_74,
+          orig_id:orig_id,
+          name_vla_1400__vvds:name_vla_1400__vvds,
+          ra_vla_1400__vvds:ra_vla_1400__vvds,
+          dec_vla_1400__vvds:dec_vla_1400__vvds,
+          fp_vla_1400__vvds:fp_mjy_vla_1400__vvds,
+          ep_vla_1400__vvds:ep_mjy_vla_1400__vvds,
+          f_vla_1400__vvds:fmjy_vla_1400__vvds,
+          ferr_vla_1400__vvds:ferr_mjy_vla_1400__vvds,
+          maj_vla_1400__vvds:maj_vla_1400__vvds,
+          min_vla_1400__vvds:min_vla_1400__vvds,
+          pa_vla_1400__vvds:pa_vla_1400__vvds,
+          fp_gmrt_610__vvds:fp_mjy_gmrt_610__vvds,
+          ep_gmrt_610__vvds:ep_mjy_gmrt_610__vvds,
+          f_gmrt_610__vvds:fmjy_gmrt_610__vvds,
+          ferr_gmrt_610__vvds:ferr_mjy_gmrt_610__vvds,
+          maj_gmrt_610__vvds:maj_gmrt_610__vvds,
+          min_gmrt_610__vvds:min_gmrt_610__vvds,
+          pa_gmrt_610__vvds:pa_gmrt_610__vvds,
+          alpha:alpha,
+          alpha_err:alpha_err,
+          detection_vla_1400__vvds:detection_vla_1400__vvds,
+          detection_gmrt_610__vvds:detection_gmrt_610__vvds,
+          name_vla_1400__uds:name_vla_1400__uds,
+          ra_vla_1400__uds:ra_vla_1400__uds,
+          dec_vla_1400__uds:dec_vla_1400__uds,
+          f_vla_1400__uds:f_vla_1400__uds,
+          ferr_vla_1400__uds:ferr_vla_1400__uds,
+          rel:rel,
+          n_rel:n_rel,
+          com:com,
+          optid:optid,
+          z:z,
+          u_z:u_z,
+          bmag:bmag,
+          vmag:vmag,
+          rmag:rmag,
+          i_mag:i_mag,
+          z_mag:z_mag,
+          detection_vla_1400__uds:detection_vla_1400__uds
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+  <service id="cone_xmmlss" allowed="scs.xml,form,static">
+    <meta name="title">WP2 XMM-LSS Radio Catalogue</meta>
+    <meta name="shortName">WP2 XMM-LSS</meta>
+    <meta name="testQuery">
+      <meta name="ra">35.1</meta>
+      <meta name="dec">-4.528</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="xmmlss">
       <FEED source="//scs#coreDescs"/>
     </dbCore>
 
