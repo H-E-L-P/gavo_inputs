@@ -2413,7 +2413,7 @@
   </service>
 
   <service id="cone_gasc" allowed="scs.xml,form,static">
-    <meta name="title">GALEX All-sky Survey Catalogue</meta>
+    <meta name="title">GALEX All-Sky Survey Source Catalogue</meta>
     <meta name="shortName">GASC</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
