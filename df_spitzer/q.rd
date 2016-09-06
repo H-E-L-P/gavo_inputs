@@ -23,7 +23,7 @@
     Vaccari et al. 2010, A&A, 518, L20 and Vaccari 2015, PoS, 267, 27
     (http://www.mattiavaccari.net/df)
 
-    All the catalogues were limited to HELP coverage. There are three kind of
+    All the catalogues were limited to HELP coverage. There are four kinds of
     catalogues provided as per field tables. We merged all the tables of
     a particular kind in a single all-sky catalogue and we added a `orig_field`
     column containing the original field as used in the name of the catalogue.
@@ -33,26 +33,25 @@
 
     Here are the counts of sources per field:
 
-
-    +---------------+-------------+-------------+-------------------+
-    | Field         | SERVS count | SWIRE count | Bootes-xFLS count |
-    +---------------+-------------+-------------+-------------------+
-    | Bootes        |             |             |    1,142,840      |
-    +---------------+-------------+-------------+-------------------+
-    | CDFS-SWIRE    |     829,191 |     464,084 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | ELAIS-N1      |     395,243 |     573,843 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | ELAIS-N2      |             |     273,650 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | ELAIS-S1      |     605,425 |     368,900 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | Lockman-SWIRE |     951,102 |     659,974 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | XMM-LSS       |     958,421 |     497,404 |                   |
-    +---------------+-------------+-------------+-------------------+
-    | xFLS          |             |             |      228,354      |
-    +---------------+-------------+-------------+-------------------+
+    +---------------+---------+---------+-------------+---------+
+    | Field         | SERVS   | SWIRE   | Bootes-xFLS | MIPS24  |
+    +---------------+---------+---------+-------------+---------+
+    | Bootes        |         |         |   1,142,840 | 121,118 |
+    +---------------+---------+---------+-------------+---------+
+    | CDFS-SWIRE    | 829,191 | 464,084 |             |  87,550 |
+    +---------------+---------+---------+-------------+---------+
+    | ELAIS-N1      | 395,243 | 573,843 |             | 109,214 |
+    +---------------+---------+---------+-------------+---------+
+    | ELAIS-N2      |         | 273,650 |             |  59,606 |
+    +---------------+---------+---------+-------------+---------+
+    | ELAIS-S1      | 605,425 | 368,900 |             |  53,658 |
+    +---------------+---------+---------+-------------+---------+
+    | Lockman-SWIRE | 951,102 | 659,974 |             | 118,933 |
+    +---------------+---------+---------+-------------+---------+
+    | XMM-LSS       | 958,421 | 497,404 |             |  85,151 |
+    +---------------+---------+---------+-------------+---------+
+    | xFLS          |         |         |     228,354 |  50,196 |
+    +---------------+---------+---------+-------------+---------+
 
     SERVS Band-Merged Catalogue
     ---------------------------
@@ -99,11 +98,16 @@
         MIPS-24 - Shupe/Vaccari (priv comm)
         MIPS-Ge - Seymour/Tugwell (priv comm)
 
+    MIPS24 Catalogue
+    ----------------
+
+    The `df_spitzer.mips24` contains the MIPS24 catalogue.
 
     History
     -------
 
     ======== ============================================
+    20160906 Addition of the MIPS24 catalogue
     20160805 Ingestion of the catalogues
     ======== ============================================
 
@@ -2934,6 +2938,387 @@
 
       ]]></meta>
   </table>
+
+  <table id="mips24" onDisk="True" adql="True" mixin="//scs#q3cindex"
+      primary="internal_id">
+    <stc>
+      Position ICRS Epoch J2000.0 "alpha_sky" "delta_sky"
+    </stc>
+
+    <index columns="field" />
+
+    <column name="field"
+      tablehead="Field"
+      type="text"
+      ucd="meta.id;obs.field"
+      description="Name of the field in HELP survey"
+      required="True"
+      verbLevel="1" />
+    <column name="internal_id"
+      tablehead="Internal_ID"
+      type="bigint"
+      ucd="meta.id;meta.main"
+      description="Internal unique identifier"
+      required="True"
+      verbLevel="1" />
+    <column name="orig_field"
+      tablehead="Orig_Field"
+      type="text"
+      ucd="meta.id;obs.field"
+      description="Name of the field in Data Fusion table file"
+      verbLevel="30" />
+    <column name="number"
+      tablehead="Number"
+      type="bigint"
+      ucd="meta.id"
+      description="Identifier in the Data Fusion table file"
+      required="True"
+      verbLevel="30" />
+    <column name="x_image"
+      tablehead="X_image"
+      type="real"
+      ucd="pos.cartesian.x"
+      unit="pixel"
+      description="X position of the barycentre of the source."
+      verbLevel="30" />
+    <column name="errx2_image"
+      tablehead="errX2_image"
+      type="double precision"
+      ucd="star.variance;pos.cartesian.x;src"
+      unit="pixel**2"
+      description="Variance on x_image"
+      verbLevel="30" />
+    <column name="y_image"
+      tablehead="Y_image"
+      type="real"
+      ucd="pos.cartesian.y"
+      unit="pixel"
+      description="Y position of the barycentre of the source."
+      verbLevel="30" />
+    <column name="erry2_image"
+      tablehead="errY2_image"
+      type="double precision"
+      ucd="star.variance;pos.cartesian.y;src"
+      unit="pixel**2"
+      description="Variance on y_image"
+      verbLevel="30" />
+    <column name="errxy_image"
+      tablehead="errXY_image"
+      type="double precision"
+      ucd="star.variance;pos.cartesian.x;pos.cartesian.y;src"
+      unit="pixel**2"
+      description="Covariance of x_image, y_image"
+      verbLevel="30" />
+    <column name="flux_iso"
+      tablehead="Flux_Iso"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) isophotal flux"
+      verbLevel="1" />
+    <column name="fluxerr_iso"
+      tablehead="FluxErr_Iso"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) isophotal flux error"
+      verbLevel="1" />
+    <column name="flux_isocor"
+      tablehead="Flux_IsoCor"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) isophotal corrected flux"
+      verbLevel="1" />
+    <column name="fluxerr_isocor"
+      tablehead="FluxErr_IsoCor"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) isophotal corrected flux error"
+      verbLevel="1" />
+    <column name="flux_aper_1"
+      tablehead="Flux_Aper_1"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 1 (3.0 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="flux_aper_2"
+      tablehead="Flux_Aper_2"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 2 (5.25 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="flux_aper_3"
+      tablehead="Flux_Aper_3"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 3 (7.5 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="flux_aper_4"
+      tablehead="Flux_Aper_4"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 4 (10.5 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="flux_aper_5"
+      tablehead="Flux_Aper_5"
+      type="double precision"
+      ucd="phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 5 (15.0 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="fluxerr_aper_1"
+      tablehead="FluxErr_Aper_1"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 1 (3.0 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="fluxerr_aper_2"
+      tablehead="FluxErr_Aper_2"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 2 (5.25 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="fluxerr_aper_3"
+      tablehead="FluxErr_Aper_3"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 3 (7.5 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="fluxerr_aper_4"
+      tablehead="FluxErr_Aper_4"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 4 (10.5 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="fluxerr_aper_5"
+      tablehead="FluxErr_Aper_5"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) aperture 5 (15.0 arcsec radius) flux"
+      verbLevel="1" />
+    <column name="flux_auto"
+      tablehead="Flux_Auto"
+      type="double precision"
+      ucd="phot.flux.density;em.ir.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) Kron flux"
+      verbLevel="1" />
+    <column name="fluxerr_auto"
+      tablehead="FluxErr_Auto"
+      type="double precision"
+      ucd="stat.error;phot.flux.density;em.IR.15-30um"
+      unit="uJy"
+      description="MIPS1 (24 micron) Kron flux error"
+      verbLevel="1" />
+    <column name="mag_auto"
+      tablehead="Mag_Auto"
+      type="double precision"
+      ucd="phot.mag;em.ir.15-30um"
+      unit="mag"
+      description="MIPS1 (24 micron) Kron magnitude"
+      verbLevel="30" >
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="kron_radius"
+      tablehead="Kron_Radius"
+      type="real"
+      ucd="phys.angSize;em.IR.15-30um"
+      unit="arcsec"
+      description="MIPS1 (24 micron) Kron radius"
+      verbLevel="1" />
+    <column name="isoarea_image"
+      tablehead="IsoArea_Image"
+      type="integer"
+      ucd="phys.area;instr.sensitivity"
+      unit="pixel**2"
+      description="MIPS1 (24 micron) isophotal area"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="alpha_sky"
+      tablehead="Alpha_Sky"
+      type="double precision"
+      ucd="pos.eq.ra;meta.main"
+      unit="deg"
+      description="Right Ascension (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="delta_sky"
+      tablehead="Delta_Sky"
+      type="double precision"
+      ucd="pos.eq.dec;meta.main"
+      unit="deg"
+      description="Declination (J2000)"
+      required="True"
+      verbLevel="1" />
+    <column name="x2_world"
+      tablehead="X2_world"
+      type="double precision"
+      ucd="stat.variance;pos.eq.ra;src"
+      unit="deg**2"
+      description="Variance along alpha_sky"
+      verbLevel="30" />
+    <column name="y2_world"
+      tablehead="Y2_world"
+      type="double precision"
+      ucd="stat.variance;pos.eq.dec;src"
+      unit="deg**2"
+      description="Variance along delta_sky"
+      verbLevel="30" />
+    <column name="xy_world"
+      tablehead="XY_world"
+      type="double precision"
+      ucd="stat.covariance;pos.eq.ra;pos.eq.dec;src"
+      unit="deg**2"
+      description="Covariance between alpha_sky and delta_sky"
+      verbLevel="30" />
+    <column name="a_world"
+      tablehead="A_world"
+      type="double precision"
+      ucd="stat.stdev"
+      unit="deg"
+      description="Profile RMS along major axis"
+      verbLevel="30" />
+    <column name="b_world"
+      tablehead="B_world"
+      type="double precision"
+      ucd="stat.stdev"
+      unit="deg"
+      description="Profile RMS along minor axis"
+      verbLevel="30" />
+    <column name="theta_image"
+      tablehead="Theta_image"
+      type="real"
+      ucd="pos.posAng"
+      unit="deg"
+      description="Position angle (CCW/x)"
+      verbLevel="30" />
+    <column name="elongation"
+      tablehead="Elongation"
+      type="real"
+      ucd="phys.size.axisRatio"
+      description="Elongation A_image/B_image"
+      verbLevel="30" />
+    <column name="ellipticity"
+      tablehead="Ellipticity"
+      type="real"
+      ucd="src.ellipticity"
+      description="Ellipticity 1 - B_image/A_image"
+      verbLevel="30" />
+
+    <column name="errx2_world"
+      tablehead="ErrX2_world"
+      type="double precision"
+      ucd="stat.error;stat.variance;pos.eq.ra;src"
+      unit="deg**2"
+      description="Error on variance along alpha_sky"
+      verbLevel="30" />
+    <column name="erry2_world"
+      tablehead="ErrY2_world"
+      type="double precision"
+      ucd="stat.error;stat.variance;pos.eq.dec;src"
+      unit="deg**2"
+      description="Error on variance along delta_sky"
+      verbLevel="30" />
+    <column name="errxy_world"
+      tablehead="ErrXY_world"
+      type="double precision"
+      ucd="stat.error;stat.covariance;pos.eq.ra;pos.eq.dec;src"
+      unit="deg**2"
+      description="Error on covariance between alpha_sky and delta_sky"
+      verbLevel="30" />
+    <column name="erra_world"
+      tablehead="ErrA_world"
+      type="double precision"
+      ucd="stat.error;stat.stdev"
+      unit="deg"
+      description="Error on profile RMS along major axis"
+      verbLevel="30" />
+    <column name="errb_world"
+      tablehead="ErrB_world"
+      type="double precision"
+      ucd="stat.error;stat.stdev"
+      unit="deg"
+      description="Error on profile RMS along minor axis"
+      verbLevel="30" />
+    <column name="errtheta_image"
+      tablehead="ErrTheta_image"
+      type="real"
+      ucd="stat.error;pos.posAng"
+      unit="deg"
+      description="Error on position angle (CCW/x)"
+      verbLevel="30" />
+    <column name="fwhm_world"
+      tablehead="FWHM_world"
+      type="real"
+      ucd="phys.angSize"
+      unit="deg"
+      description="FWHM assuming a Gaussian core"
+      verbLevel="30" />
+    <column name="class_star"
+      tablehead="Class_Star"
+      type="real"
+      ucd="src.class.starGalaxy"
+      description="S/G classifier output"
+      verbLevel="1" />
+
+    <column name="flags"
+      tablehead="Flags"
+      type="smallint"
+      ucd="meta.code;em.IR.15-30um"
+      description="Extraction flags"
+      note="1"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="imaflags_iso"
+      tablehead="ImaFlags_ISO"
+      type="integer"
+      ucd="meta.code;em.IR.15-30um"
+      description="FLAG-image flags OR'ed over the isophotal profile"
+      verbLevel="1">
+        <values nullLiteral="-99"/>
+    </column>
+    <column name="nimaflags_iso"
+      tablehead="NImaFlags_ISO"
+      type="smallint"
+      ucd="meta.number"
+      unit="pixel"
+      description="Number of flagged pixels entering ImaFlags_ISO"
+      verbLevel="30">
+        <values nullLiteral="-99"/>
+    </column>
+
+    <meta name="note" tag="1"><![CDATA[
+      SExtractor flags:
+
+      === ===================================================================
+        1 The object has neighbours, bright and close enough to significantly
+          bias the MAG_AUTO photometry, or bad pixels (more than 10% of the
+          integrated area affected),
+        2 The object was originally blended with another one,
+        4 At least one pixel of the object is saturated (or very close to),
+        8 The object is truncated (too close to an image boundary),
+       16 Object's aperture data are incomplete or corrupted,
+       32 Object's isophotal data are incomplete or corrupted,
+       64 A memory overflow occurred during deblending,
+      128 A memory overflow occurred during extraction.
+      === ===================================================================
+
+      ]]></meta>
+  </table>
+
   <data id="import_servs">
     <sources>data/datafusion_servs_help.csv</sources>
     <csvGrammar />
@@ -3355,6 +3740,66 @@
       </rowmaker>
     </make>
   </data>
+  <data id="import_mips24">
+    <sources>data/datafusion_spitzer_mips24_help.csv</sources>
+    <csvGrammar />
+    <make table="mips24">
+      <rowmaker idmaps="*">
+        <simplemaps>
+          number:number,
+          x_image:x_image,
+          errx2_image:errx2_image,
+          y_image:y_image,
+          erry2_image:erry2_image,
+          errxy_image:errxy_image,
+          flux_iso:flux_iso,
+          fluxerr_iso:fluxerr_iso,
+          flux_isocor:flux_isocor,
+          fluxerr_isocor:fluxerr_isocor,
+          flux_aper_1:flux_aper_1,
+          flux_aper_2:flux_aper_2,
+          flux_aper_3:flux_aper_3,
+          flux_aper_4:flux_aper_4,
+          flux_aper_5:flux_aper_5,
+          fluxerr_aper_1:fluxerr_aper_1,
+          fluxerr_aper_2:fluxerr_aper_2,
+          fluxerr_aper_3:fluxerr_aper_3,
+          fluxerr_aper_4:fluxerr_aper_4,
+          fluxerr_aper_5:fluxerr_aper_5,
+          flux_auto:flux_auto,
+          fluxerr_auto:fluxerr_auto,
+          mag_auto:mag_auto,
+          kron_radius:kron_radius,
+          isoarea_image:isoarea_image,
+          alpha_sky:alpha_sky,
+          delta_sky:delta_sky,
+          x2_world:x2_world,
+          y2_world:y2_world,
+          xy_world:xy_world,
+          a_world:a_world,
+          b_world:b_world,
+          theta_image:theta_image,
+          elongation:elongation,
+          ellipticity:ellipticity,
+          errx2_world:errx2_world,
+          erry2_world:erry2_world,
+          errxy_world:errxy_world,
+          erra_world:erra_world,
+          errb_world:errb_world,
+          errtheta_image:errtheta_image,
+          fwhm_world:fwhm_world,
+          class_star:class_star,
+          flags:flags,
+          imaflags_iso:imaflags_iso,
+          nimaflags_iso:nimaflags_iso,
+          orig_field:orig_field,
+          field:field,
+          internal_id:internal_id
+        </simplemaps>
+      </rowmaker>
+    </make>
+  </data>
+
   <service id="cone_servs" allowed="scs.xml,form,static">
     <meta name="title">Spitzer Data Fusion SERVS catalogue</meta>
     <meta name="shortName">DF_SERVS</meta>
@@ -3413,6 +3858,28 @@
     <property name="staticData">data/files</property>
 
     <dbCore queriedTable="bootes_xfls">
+      <FEED source="//scs#coreDescs"/>
+      <condDesc buildFrom="field" />
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+  <service id="cone_mips24" allowed="scs.xml,form,static">
+    <meta name="title">Spitzer Data Fusion MIPS24 catalogue</meta>
+    <meta name="shortName">DF_MIPS24</meta>
+    <meta name="testQuery">
+      <meta name="ra">150.1</meta>
+      <meta name="dec">2.218</meta>
+      <meta name="sr">1.0</meta>
+    </meta>
+
+    <!-- this is to allow access to the raw data.  Decide for yourself
+    whether or not you want this -->
+    <property name="staticData">data/files</property>
+
+    <dbCore queriedTable="mips24">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
     </dbCore>
