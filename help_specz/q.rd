@@ -1114,7 +1114,8 @@
     History
     -------
     ======== ==================================================================
-    20160705 Add GAMA public data
+    20160907 Add Bootes data.
+    20160705 Add GAMA public data.
     20160621 Remove GAMA data as some are not yet public.
     20160602 Add Herschel-Stripe-82 data.
     20160520 Update to XMM-LSS data from WP6.
