@@ -488,7 +488,7 @@
           pacs160_name:pacs160_name,
           coverage_160:coverage_160,
           pacs70_name:pacs70_name,
-          coverage_070:coverage_070,
+          coverage_70:coverage_070,
           ra:ra,
           dec:dec,
           field:field,
