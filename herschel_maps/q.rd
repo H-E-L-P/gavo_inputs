@@ -90,7 +90,6 @@
         <apply procDef="//siap#setMeta">
           <bind name="title">@HTITLE</bind>
           <bind name="instrument">@INSTRUME</bind>
-          <bind name="dateObs">@DATE_OBS</bind>
           <bind name="bandpassId">@HBAND</bind>
         </apply>
       </rowmaker>
