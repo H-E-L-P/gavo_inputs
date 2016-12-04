@@ -81,6 +81,9 @@
       <rowfilter procDef="//products#define">
         <bind key="table">"herschel_maps"</bind>
         <bind key="accref">\inputRelativePath{True}</bind>
+        <bind name="preview_mime">"image/png"</bind>
+        <bind name="preview">\inputRelativePath.replace("data/",
+          "data/previews/").replace(".fits", ".png")</bind>
       </rowfilter>
     </fitsProdGrammar>
 
