@@ -1,6 +1,6 @@
 <resource schema="wp2">
   <meta name="title">HELP WP2 Radio Catalogues</meta>
-  <meta name="creationDate">2016-08-09T16:24:43+02:00</meta>
+  <meta name="creationDate">2016-08-09</meta>
   <meta name="description">
     Radio catalogues collated by work package 2.
   </meta>

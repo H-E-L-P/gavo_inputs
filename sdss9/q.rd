@@ -1,6 +1,6 @@
 <resource schema="sdss9">
   <meta name="title">SDSS DR9</meta>
-  <meta name="creationDate">2016-01-21T16:32:51+01:00</meta>
+  <meta name="creationDate">2016-01-21</meta>
   <meta name="description">
     The SDSS Photometric Catalogue, Release 9 (Adelman-McCarthy+, 2012)
   </meta>

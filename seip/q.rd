@@ -1,6 +1,6 @@
 <resource schema="seip">
   <meta name="title">Spitzer Enhanced Imaging Products</meta>
-  <meta name="creationDate">2016-05-24T16:31:20+02:00</meta>
+  <meta name="creationDate">2016-05-24</meta>
   <meta name="description">
     Spitzer Enhanced Imaging Products Source List catalogue limited to HELP coverage.
   </meta>

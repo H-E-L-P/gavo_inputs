@@ -1,6 +1,6 @@
 <resource schema="gaia">
   <meta name="title">Global Astrometric Interferometer for Astrophysics (GAIA)</meta>
-  <meta name="creationDate">2016-09-19T17:04:50+02:00</meta>
+  <meta name="creationDate">2016-09-19</meta>
   <meta name="description">
     Catalogue of stars from the first data release (DR1) of the Global Astrometric Interferometer
     for Astrophysics (Gaia).

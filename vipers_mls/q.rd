@@ -1,6 +1,6 @@
 <resource schema="vipers_mls">
   <meta name="title">VIPERS Multi-λ Survey</meta>
-  <meta name="creationDate">2016-05-02T18:11:22+02:00</meta>
+  <meta name="creationDate">2016-05-02</meta>
   <meta name="description">
     VIPERS Multi-Lambda Survey on W1 field.
   </meta>

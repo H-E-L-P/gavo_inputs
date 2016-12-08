@@ -1,6 +1,6 @@
 <resource schema="sdss7">
   <meta name="title">SDSS DR7</meta>
-  <meta name="creationDate">2016-03-25T17:50:42+01:00</meta>
+  <meta name="creationDate">2016-03-25</meta>
   <meta name="description">
     The SDSS Photometric Catalogue, Release 7 (Adelman-McCarthy+, 2009)
   </meta>

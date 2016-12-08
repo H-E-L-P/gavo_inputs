@@ -1,6 +1,6 @@
 <resource schema="help_spire">
   <meta name="title">HELP SPIRE catalogues</meta>
-  <meta name="creationDate">2015-12-09T13:45:28+01:00</meta>
+  <meta name="creationDate">2015-12-09</meta>
   <meta name="description">
     SPIRE catalogues from the Herschel Extragalactic Legacy Project.
   </meta>

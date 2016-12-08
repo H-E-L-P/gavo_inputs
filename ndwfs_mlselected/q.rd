@@ -1,6 +1,6 @@
 <resource schema="ndwfs_mlselected">
   <meta name="title">NDWFS (masterlist selected)</meta>
-  <meta name="creationDate">2016-08-01T20:33:01+02:00</meta>
+  <meta name="creationDate">2016-08-01</meta>
   <meta name="description">
     NOAO Deep Wide-Field Survey optical and near-IR catalogue. This is the
     masterlist selected catalogue.

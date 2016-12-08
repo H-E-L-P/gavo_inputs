@@ -1,6 +1,6 @@
 <resource schema="hermes">
   <meta name="title">HerMES DR4 catalogues</meta>
-  <meta name="creationDate">2016-07-04T17:00:14+02:00</meta>
+  <meta name="creationDate">2016-07-04</meta>
   <meta name="description">
     SPIRE catalogues from the Herschel Multi-tiered Extragalactic Survey
     (HerMES).

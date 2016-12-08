@@ -1,6 +1,6 @@
 <resource schema="zbootes_mlselected">
   <meta name="title">zBootes (masterlist selected)</meta>
-  <meta name="creationDate">2016-08-01T20:33:51+02:00</meta>
+  <meta name="creationDate">2016-08-01</meta>
   <meta name="description">
     z-band observations of the NOAO Deep Wide-Field Survey Boötes field. This is
     the masterlist selected catalogue.

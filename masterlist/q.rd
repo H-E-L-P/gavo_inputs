@@ -1,6 +1,6 @@
 <resource schema="masterlist">
   <meta name="title">HELP Master List</meta>
-  <meta name="creationDate">2016-04-12T12:38:22+02:00</meta>
+  <meta name="creationDate">2016-04-12</meta>
   <meta name="description">
     HELP K selected sources used for list-driven works.
   </meta>

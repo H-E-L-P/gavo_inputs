@@ -1,6 +1,6 @@
 <resource schema="servs">
   <meta name="title">Spitzer Extragalactic Representative Volume Survey</meta>
-  <meta name="creationDate">2016-05-27T18:37:30+02:00</meta>
+  <meta name="creationDate">2016-05-27</meta>
   <meta name="description">
     "Spitzer Extragalactic Representative Volume Survey" (SERVS) IRAC
     catalogues.

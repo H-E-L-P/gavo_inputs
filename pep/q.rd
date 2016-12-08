@@ -1,6 +1,6 @@
 <resource schema="pep">
   <meta name="title">PACS Evolutionary Probe</meta>
-  <meta name="creationDate">2016-09-16T16:43:53+02:00</meta>
+  <meta name="creationDate">2016-09-16</meta>
   <meta name="description">
     PACS catalogues from the PACS Evolutionary Probe (PEP) Herschel key
     programme (DR1)

@@ -1,6 +1,6 @@
 <resource schema="allwise">
   <meta name="title">AllWISE</meta>
-  <meta name="creationDate">2016-05-12T13:25:17+02:00</meta>
+  <meta name="creationDate">2016-05-12</meta>
   <meta name="description">AllWISE Data Release (Cutri+ 2013) limited to HELP
     coverage.</meta>
   <meta name="creator.name">Roehlly, Y.; et al</meta>

@@ -1,6 +1,6 @@
 <resource schema="twomass_xsc">
   <meta name="title">2MASS Extended Source Catalogue</meta>
-  <meta name="creationDate">2016-03-23T16:09:36+01:00</meta>
+  <meta name="creationDate">2016-03-23</meta>
   <meta name="description">
     2MASS all-sky catalogue of extended sources (XSC, IPAC/UMass, 2003-2006)
     limited to HELP coverage.

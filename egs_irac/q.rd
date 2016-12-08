@@ -1,6 +1,6 @@
 <resource schema="egs_irac">
   <meta name="title">IRAC EGS catalogue</meta>
-  <meta name="creationDate">2016-08-04T20:38:08+02:00</meta>
+  <meta name="creationDate">2016-08-04</meta>
   <meta name="description">
     IRAC 3.6µm-selected catalogue of the Extended Groth Strip (EGS).
   </meta>

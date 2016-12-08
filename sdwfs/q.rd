@@ -1,6 +1,6 @@
 <resource schema="sdwfs">
   <meta name="title">SDWFS</meta>
-  <meta name="creationDate">2016-05-31T16:49:29+02:00</meta>
+  <meta name="creationDate">2016-05-31</meta>
   <meta name="description">
     Spitzer Deep, Wide-Field Survey (SDWFS). Updated First Data Release (DR1.1)
   </meta>
