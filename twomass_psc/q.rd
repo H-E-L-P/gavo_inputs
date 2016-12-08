@@ -1,6 +1,6 @@
 <resource schema="twomass_psc">
   <meta name="title">2MASS Point Source Catalogue</meta>
-  <meta name="creationDate">2016-03-23T16:09:36+0100</meta>
+  <meta name="creationDate">2016-03-23T16:09:36+01:00</meta>
   <meta name="description">
     2MASS all-sky catalogue of point sources (PSC, Cutri+ 2003) limited to HELP
     coverage.

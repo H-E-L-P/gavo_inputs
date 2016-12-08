@@ -1,6 +1,6 @@
 <resource schema="cosmos_vla">
   <meta name="title">COSMOS VLA Catalogue</meta>
-  <meta name="creationDate">2016-01-21T16:32:51+0100</meta>
+  <meta name="creationDate">2016-01-21T16:32:51+01:00</meta>
   <meta name="description">
     VLA 1.4 GHz and 324 MHz catalogue on COSMOS field.
   </meta>

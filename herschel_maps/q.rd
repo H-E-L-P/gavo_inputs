@@ -1,6 +1,6 @@
 <resource schema="herschel_maps">
   <meta name="title">Herschel maps</meta>
-  <meta name="creationDate">2016-12-02T12:25:24+0100</meta>
+  <meta name="creationDate">2016-12-02T12:25:24+01:00</meta>
   <meta name="description">
     Image maps from the Herschel Space Observatory.
   </meta>
