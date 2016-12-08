@@ -12,7 +12,7 @@
   <meta name="coverage">
     <meta name="profile">AllSky ICRS</meta>
     <meta name="waveband">Optical</meta>
-    <meta name="waveband">Near-Infrared</meta>
+    <meta name="waveband">Infrared</meta>
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
