@@ -962,7 +962,7 @@
 
   <service id="cone" allowed="scs.xml,form,static">
     <meta name="title">zBootes (masterlist selected)</meta>
-    <meta name="shortName">zBootes_MLselected</meta>
+    <meta name="shortName">zBootes_MLselect</meta>
     <meta name="testQuery">
       <meta name="ra">218.2</meta>
       <meta name="dec">34.173</meta>
