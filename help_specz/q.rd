@@ -1,6 +1,6 @@
 <resource schema="help_specz">
   <meta name="title">HELP spectroscopic redshift catalogue</meta>
-  <meta name="creationDate">2016-05-10T17:12:04+0200</meta>
+  <meta name="creationDate">2016-05-10T17:12:04+02:00</meta>
   <meta name="description">
     Compendium of spectroscopic redshifts.
   </meta>

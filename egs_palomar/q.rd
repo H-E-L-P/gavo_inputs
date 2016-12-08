@@ -1,6 +1,6 @@
 <resource schema="egs_palomar">
   <meta name="title">EGS Palomar WIRC Photometry</meta>
-  <meta name="creationDate">2016-08-04T18:29:18+0200</meta>
+  <meta name="creationDate">2016-08-04T18:29:18+02:00</meta>
   <meta name="description">
     AEGIS Release of Palomar WIRC Photometry
   </meta>

@@ -1,6 +1,6 @@
 <resource schema="deep2">
   <meta name="title">DEEP2 Photometric Catalogue</meta>
-  <meta name="creationDate">2016-08-04T19:21:50+0200</meta>
+  <meta name="creationDate">2016-08-04T19:21:50+02:00</meta>
   <meta name="description">
     Combined DEEP2 DR4 Photometric Catalogues limited to HELP coverage.
   </meta>

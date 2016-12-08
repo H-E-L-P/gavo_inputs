@@ -1,6 +1,6 @@
 <resource schema="df_spitzer">
   <meta name="title">Spitzer Data Fusion Catalogues</meta>
-  <meta name="creationDate">2016-08-04T15:55:15+0200</meta>
+  <meta name="creationDate">2016-08-04T15:55:15+02:00</meta>
   <meta name="description">
     Spitzer selected catalogues originating from Vaccari et al. “Data Fusion”
     work.

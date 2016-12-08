@@ -1,6 +1,6 @@
 <resource schema="zbootes">
   <meta name="title">zBootes</meta>
-  <meta name="creationDate">2016-07-11T16:20:35+0200</meta>
+  <meta name="creationDate">2016-07-11T16:20:35+02:00</meta>
   <meta name="description">
     z-band observations of the NOAO Deep Wide-Field Survey Boötes field.
   </meta>

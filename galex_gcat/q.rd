@@ -1,6 +1,6 @@
 <resource schema="galex_gcat">
   <meta name="title">GALEX GCAT catalogues</meta>
-  <meta name="creationDate">2016-04-26T12:59:29+0200</meta>
+  <meta name="creationDate">2016-04-26T12:59:29+02:00</meta>
   <meta name="description">
     GALEX All-Sky Source Catalog (GASC) and GALEX Medium Imaging Survey
     Catalog (GMSC).

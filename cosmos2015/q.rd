@@ -1,6 +1,6 @@
 <resource schema="cosmos2015">
   <meta name="title">COSMOS2015</meta>
-  <meta name="creationDate">2016-06-07T18:26:58+0200</meta>
+  <meta name="creationDate">2016-06-07T18:26:58+02:00</meta>
   <meta name="description">
     COSMOS2015 catalogue from Laigle et al., 2016.
   </meta>

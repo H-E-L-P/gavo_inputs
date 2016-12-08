@@ -1,6 +1,6 @@
 <resource schema="ssdf">
   <meta name="title">Spitzer-South Pole Telescope Deep Field</meta>
-  <meta name="creationDate">2016-05-30T16:26:02+0200</meta>
+  <meta name="creationDate">2016-05-30T16:26:02+02:00</meta>
   <meta name="description">
     Spitzer South Pole Telescope Deep Field IRAC channel 1 and 2 catalogues.
   </meta>

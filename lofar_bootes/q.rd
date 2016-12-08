@@ -1,6 +1,6 @@
 <resource schema="lofar_bootes">
   <meta name="title">LOFAR Bootes 150 MHz</meta>
-  <meta name="creationDate">2016-05-02T16:13:15+0200</meta>
+  <meta name="creationDate">2016-05-02T16:13:15+02:00</meta>
   <meta name="description">
     Sources extracted from the fourth version of the Boötes field imaged by
     LOFAR at central frequency of 150 MHz

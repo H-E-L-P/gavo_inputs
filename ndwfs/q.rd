@@ -1,6 +1,6 @@
 <resource schema="ndwfs">
   <meta name="title">NDWFS</meta>
-  <meta name="creationDate">2016-07-07T15:43:04+0200</meta>
+  <meta name="creationDate">2016-07-07T15:43:04+02:00</meta>
   <meta name="description">
     NOAO Deep Wide-Field Survey optical and near-IR catalogue.
   </meta>

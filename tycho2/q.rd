@@ -1,6 +1,6 @@
 <resource schema="tycho2">
   <meta name="title">Tycho 2</meta>
-  <meta name="creationDate">2016-05-02T12:29:39+0200</meta>
+  <meta name="creationDate">2016-05-02T12:29:39+02:00</meta>
   <meta name="description">
     Tycho-2 astrometric and photometric reference catalogue.
   </meta>

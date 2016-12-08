@@ -1,6 +1,6 @@
 <resource schema="cfhtls">
   <meta name="title">CFHTLS</meta>
-  <meta name="creationDate">2016-04-20T17:58:29+0200</meta>
+  <meta name="creationDate">2016-04-20T17:58:29+02:00</meta>
   <meta name="description">
     The CFHTLS Survey (T0007 release) (Hudelot+ 2012)
   </meta>
