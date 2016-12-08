@@ -5460,7 +5460,7 @@
     <meta name="shortName">WP2 ELAIS-S1</meta>
     <meta name="testQuery">
       <meta name="ra">8.8</meta>
-      <meta name="dec">-43,586</meta>
+      <meta name="dec">-43.586</meta>
       <meta name="sr">1.0</meta>
     </meta>
 
@@ -8560,7 +8560,7 @@
   </data>
   <service id="cone_h82" allowed="scs.xml,form,static">
     <meta name="title">WP2 Herschel-Stripe-82 Radio Catalogue</meta>
-    <meta name="shortName">WP2 Herschel-Stripe-82</meta>
+    <meta name="shortName">WP2 HS82</meta>
     <meta name="testQuery">
       <meta name="ra">14.3</meta>
       <meta name="dec">-0.034</meta>
@@ -9364,7 +9364,7 @@
   </data>
   <service id="cone_lswire" allowed="scs.xml,form,static">
     <meta name="title">WP2 Lockman-SWIRE Radio Catalogue</meta>
-    <meta name="shortName">WP2 Lockman-SWIRE</meta>
+    <meta name="shortName">WP2 L-SWIRE</meta>
     <meta name="testQuery">
       <meta name="ra">161.2</meta>
       <meta name="dec">58.058</meta>
