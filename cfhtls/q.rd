@@ -300,7 +300,7 @@
       <column name="umu"
         tablehead="umu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="u*-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -355,7 +355,7 @@
       <column name="gmu"
         tablehead="gmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="g-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -410,7 +410,7 @@
       <column name="rmu"
         tablehead="rmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="r-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -469,7 +469,7 @@
       <column name="imu"
         tablehead="imu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="i-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30"
@@ -525,7 +525,7 @@
       <column name="zmu"
         tablehead="zmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="z-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -814,7 +814,7 @@
       <column name="umu"
         tablehead="umu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="u*-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -869,7 +869,7 @@
       <column name="gmu"
         tablehead="gmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="g-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -924,7 +924,7 @@
       <column name="rmu"
         tablehead="rmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="r-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -979,7 +979,7 @@
       <column name="imu"
         tablehead="imu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="i-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -1034,7 +1034,7 @@
       <column name="ymu"
         tablehead="ymu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="y-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
@@ -1089,7 +1089,7 @@
       <column name="zmu"
         tablehead="zmu"
         type="real"
-        unit="mag/arcsec2"
+        unit="mag.arcsec**-2"
         description="z-band peak surface brightness"
         ucd="phot.mag.sb"
         verbLevel="30" />
