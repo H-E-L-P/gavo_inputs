@@ -11,7 +11,6 @@
 
   <meta name="coverage">
     <meta name="profile">AllSky ICRS</meta>
-    <meta name="waveband">Redshift</meta>
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
