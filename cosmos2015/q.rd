@@ -11,7 +11,7 @@
 
   <meta name="coverage">
     <meta name="profile">AllSky ICRS</meta>
-    <meta name="waveband">U.V.</meta>
+    <meta name="waveband">UV</meta>
     <meta name="waveband">Optical</meta>
     <meta name="waveband">Infrared</meta>
     <meta name="waveband">X-ray</meta>
