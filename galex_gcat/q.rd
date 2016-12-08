@@ -276,7 +276,7 @@
       ratio of flux_FUV to fluxerr_FUV." />
     <column name="bkgrnd_flux_nuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="instr.background;phot.flux;em.UV.200-300nm"
       tablehead="bkgrnd flux NUV"
       description="The pipeline measured NUV background flux at the position of
@@ -284,7 +284,7 @@
       verbLevel="40" />
     <column name="bkgrnd_flux_fuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="instr.background;phot.flux;em.UV.100-200nm"
       tablehead="bkgrnd flux FUV"
       description="The pipeline measured FUV background flux at the position of
@@ -589,7 +589,7 @@
       verbLevel="30" />
     <column name="flux_max_nuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="phot.flux.sb;em.UV.200-300nm"
       tablehead="Flux max NUV"
       description="Peak NUV flux of the source above the background."
@@ -991,14 +991,14 @@
       required="True"/>
     <column name="bkgrnd_mag_nuv"
       type="real"
-      unit="mag.arcsec-2"
+      unit="mag.arcsec**-2"
       ucd="instr.background;phot.mag;em.UV.200-300nm"
       tablehead="BKGRND MAG NUV"
       description="The NUV background surface brightness at the source position."
       verbLevel="40" />
     <column name="bkgrnd_mag_fuv"
       type="real"
-      unit="mag.arcsec-2"
+      unit="mag.arcsec**-2"
       ucd="instr.background;phot.mag;em.UV.100-200nm"
       tablehead="BKGRND MAG FUV"
       description="The FUV background surface brightness at the source position."
@@ -1274,7 +1274,7 @@
       ratio of flux_FUV to fluxerr_FUV." />
     <column name="bkgrnd_flux_nuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="instr.background;phot.flux;em.UV.200-300nm"
       tablehead="bkgrnd flux NUV"
       description="The pipeline measured NUV background flux at the position of
@@ -1282,7 +1282,7 @@
       verbLevel="40" />
     <column name="bkgrnd_flux_fuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="instr.background;phot.flux;em.UV.100-200nm"
       tablehead="bkgrnd flux FUV"
       description="The pipeline measured FUV background flux at the position of
@@ -1587,7 +1587,7 @@
       verbLevel="30" />
     <column name="flux_max_nuv"
       type="real"
-      unit="uJy.arcsec-2"
+      unit="uJy.arcsec**-2"
       ucd="phot.flux.sb;em.UV.200-300nm"
       tablehead="Flux max NUV"
       description="Peak NUV flux of the source above the background."
@@ -1989,14 +1989,14 @@
       required="True"/>
     <column name="bkgrnd_mag_nuv"
       type="real"
-      unit="mag.arcsec-2"
+      unit="mag.arcsec**-2"
       ucd="instr.background;phot.mag;em.UV.200-300nm"
       tablehead="BKGRND MAG NUV"
       description="The NUV background surface brightness at the source position."
       verbLevel="40" />
     <column name="bkgrnd_mag_fuv"
       type="real"
-      unit="mag.arcsec-2"
+      unit="mag.arcsec**-2"
       ucd="instr.background;phot.mag;em.UV.100-200nm"
       tablehead="BKGRND MAG FUV"
       description="The FUV background surface brightness at the source position."
