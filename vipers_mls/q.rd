@@ -243,7 +243,7 @@
       tablehead="μ max (i-band)"
       type="real"
       ucd="phot.mag.sb;em.opt.I"
-      unit="mag/arcsec^2"
+      unit="mag.arcsec**-2"
       description="i-band maximum surface brightness"
       verbLevel="1" />
     <column name="flag_pls"
