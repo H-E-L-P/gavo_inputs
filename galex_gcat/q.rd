@@ -84,9 +84,9 @@
                         HDF-N            3,321           1,872
            Herschel-Stripe-82        1,318,546         468,385
                 Lockman-SWIRE           97,661          26,865
-                          NGP          185,199         217,288
+                   HATLAS-NGP          185,199         217,288
                          SA13                              401
-                          SGP          265,261         464,442
+                   HATLAS-SGP          265,261         464,442
                     SPIRE-NEP                              346
                          SSDF           94,053         227,424
                          xFLS           36,163          15,790
@@ -99,6 +99,7 @@
     -------
 
     ======== =============================================================
+    20170116 Rename NGP to HATLAS-NGP and SGP to HATLAS-SGP.
     20160426 Addition of the GASC catalogue retrieved from STSCI GALEX
              CasJobs.
     20160303 Catalogue retrieved from STSCI GALEX CasJobs and ingested.
