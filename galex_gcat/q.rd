@@ -320,7 +320,7 @@
           flux_fuv:flux_fuv,
           fluxerr_fuv:fluxerr_fuv,
           name:name,
-          field:Field
+          field:field
         </simplemaps>
       </rowmaker>
     </make>
@@ -338,7 +338,7 @@
           flux_fuv:flux_fuv,
           fluxerr_fuv:fluxerr_fuv,
           name:name,
-          field:Field
+          field:field
         </simplemaps>
       </rowmaker>
     </make>
