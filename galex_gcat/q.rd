@@ -231,6 +231,12 @@
       Users can access the significance of a FUV detection using the
       S2N_FUV column. Sources with either no FUV data or with flux_FUV
       less than -99 are flagged with a value of -99." />
+    <column name="fluxerr_fuv"
+      type="real"
+      unit="uJy"
+      ucd="stat.error;phot.flux;em.UV.100-200nm"
+      tablehead="fluxerr FUV"
+      description="The error on flux_FUV" />
   </table>
 
   <table id="gasc" onDisk="True" adql="True" mixin="//scs#q3cindex"
