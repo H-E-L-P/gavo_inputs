@@ -39,7 +39,7 @@
     +--------------------+---------+
     | GAMA-15            |  63,176 |
     +--------------------+---------+
-    | Herschel-Stripe-82 | 127,619 |
+    | Herschel-Stripe-82 | 149,357 |
     +--------------------+---------+
     | NGP                |  44,547 |
     +--------------------+---------+
@@ -1117,8 +1117,9 @@
     History
     -------
     ======== ==================================================================
-    20170202 Update GAMA-09 and GAMA-15 data.
-    20170202 Add CDFS-SWIRE data and update GAMA-09 and GAMA-15 data.
+    20170206 Update Herschel-Stripe-82 data to v2.1.
+    20170202 Update GAMA-09 and GAMA-15 data to v2.1.
+    20170202 Add CDFS-SWIRE (v2) data and update GAMA-09 and GAMA-15 data to v2.
     20161213 Add COSMOS data (dmu23_COSMOS_v2.5) and update XMM-LSS data
              (dmu23_XMM-LSS_v2.5).
     20160907 Add Bootes data.
