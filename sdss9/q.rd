@@ -20,6 +20,10 @@
     (Adelman-McCarthy+, 2012) downloaded from Vizier and limited to HELP
     coverage.
 
+      BEWARE OF DUPLICATED SOURCES!!!
+      The catalogue on HeDaM contains a lot of duplicated sources with different
+      objID which are in fact the same object (same SDSS9 name).
+
     The full documentation is available at:
     http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/139
 
