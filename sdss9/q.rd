@@ -21,8 +21,9 @@
     coverage.
 
       BEWARE OF DUPLICATED SOURCES!!!
-      The catalogue on HeDaM contains a lot of duplicated sources with different
-      objID which are in fact the same object (same SDSS9 name).
+      This catalogue contains all the SDSS9 sources which means that there are
+      a lot of rows (distinct objIDs) refering to the same object. To get a list
+      of unique sources, you should keep only rows for which ``mode`` is 1.
 
     The full documentation is available at:
     http://cdsarc.u-strasbg.fr/viz-bin/Cat?V/139
