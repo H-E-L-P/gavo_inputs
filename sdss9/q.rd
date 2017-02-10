@@ -121,7 +121,7 @@
       type="text"
       ucd="meta.code.class"
       description="1:primary, 2:secondary"
-      verbLevel="30"/>
+      verbLevel="1"/>
     <column name="q_mode"
       type="text"
       ucd="meta.code.qual;instr.setup"
