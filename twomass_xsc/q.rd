@@ -265,7 +265,7 @@
   </data>
 
   <service id="cone" allowed="scs.xml,form,static">
-    <meta name="title">2MASS Etended Source Catalogue</meta>
+    <meta name="title">2MASS Extended Source Catalogue</meta>
     <meta name="shortName">XSC</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
