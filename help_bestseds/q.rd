@@ -199,7 +199,7 @@
   </service>
 
   <service id="web" defaultRenderer="form">
-    <meta name="shortName">HELP Best Spectra web</meta>
+    <meta name="shortName">HELP Spectra web</meta>
     <meta name="title">HELP sources best fitting spectra from CIGALE.</meta>
 
     <dbCore queriedTable="data">
@@ -225,7 +225,7 @@
   </service>
 
   <service id="ssa" allowed="form,ssap.xml">
-    <meta name="shortName">HELP Best Spectra SSAP</meta>
+    <meta name="shortName">HELP Spectra SSAP</meta>
     <meta name="title">HELP sources best fitting spectra from CIGALE</meta>
     <meta name="ssap.dataSource">artificial</meta>
     <meta name="ssap.testQuery">MAXREC=1</meta>
