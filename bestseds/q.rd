@@ -1,4 +1,4 @@
-<resource schema="help_bestseds">
+<resource schema="bestseds">
 
   <!-- At one time, switch to SSAP with views when there are a lot of spectra -->
   <!-- (http://docs.g-vo.org/DaCHS/tutorial.html#ssap-with-views). -->

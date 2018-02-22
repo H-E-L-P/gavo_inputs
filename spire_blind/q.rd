@@ -1,4 +1,4 @@
-<resource schema="help_spire">
+<resource schema="spire_blind">
   <meta name="title">HELP SPIRE catalogues</meta>
   <meta name="creationDate">2015-12-09</meta>
   <meta name="description">

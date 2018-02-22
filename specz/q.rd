@@ -1,4 +1,4 @@
-<resource schema="help_specz">
+<resource schema="specz">
   <meta name="title">HELP spectroscopic redshift catalogue</meta>
   <meta name="creationDate">2016-05-10</meta>
   <meta name="description">
@@ -1146,7 +1146,7 @@
 
     You may also `download raw catalogues, MOC coverage, and full documentation.`__.
 
-    __ /help_specz/q/cone/static
+    __ /specz/q/cone/static
 
 
   ]]> </meta>
