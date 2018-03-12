@@ -4,7 +4,7 @@
   <meta name="description">
     HELP depth values in various bands associated to HEALPix cells.
   </meta>
-  <meta name="creator.name">Roehlly, Y.; et al</meta>
+  <meta name="creator.name">Roehlly, Y.; Shirley, R.; et al</meta>
 
   <meta name="subject">Catalogs</meta>
   <meta name="subject">Depth</meta>
