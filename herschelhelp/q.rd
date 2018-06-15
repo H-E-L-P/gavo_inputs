@@ -54,6 +54,10 @@
     </stc>
 
     <index columns="field" />
+    <index columns="help_id" />
+    <index columns="ra" />
+    <index columns="dec" />
+    <index columns="hp_idx" />
 
     <column name="field"
       tablehead="Field"

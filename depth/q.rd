@@ -37,9 +37,8 @@
 
   <table id="main" onDisk="True" adql="True">
 
-    <index columns="band" />
-    <index columns="healpix_order" />
-    <index columns="depth" />
+    <index columns="hp_idx_O_13" />
+    <index columns="hp_idx_O_10" />
 
     <column name="hp_idx_O_13"
       tablehead="HEALPix_Npix_O13"
