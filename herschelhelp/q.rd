@@ -1,6 +1,6 @@
 <resource schema="herschelhelp">
   <meta name="title">Herschel Extragalactic Legacy Programme (HELP)</meta>
-  <meta name="creationDate">20180503</meta>
+  <meta name="creationDate">20180619</meta>
   <meta name="description">
     HELP master catalogue.
   </meta>
@@ -54,10 +54,6 @@
     </stc>
 
     <index columns="field" />
-    <index columns="help_id" />
-    <index columns="ra" />
-    <index columns="dec" />
-    <index columns="hp_idx" />
 
     <column name="field"
       tablehead="Field"
@@ -93,8 +89,7 @@
       tablehead="HP_Idx"
       type="bigint"
       ucd="pos.healpix"
-      description="HEALPix index of the source position at order 13 using the
-      nested scheme."
+      description="HEALPix index of the source position at order 13 using the nested scheme."
       required="True"
       verbLevel="30" />
     <column name="ebv"
@@ -166,8 +161,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="ferr_ap_90prime_g"
       tablehead="ferr_ap_90prime_g"
@@ -188,30 +182,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_90prime_g."
+      description="Uncertainty on m_90prime_g."
       verbLevel="1" />
     <column name="m_ap_90prime_g"
       tablehead="m_ap_90prime_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="merr_ap_90prime_g"
       tablehead="merr_ap_90prime_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_90prime_g"
+      description="Uncertainty on m_ap_90prime_g"
       verbLevel="1" />
     <column name="flag_90prime_g"
       tablehead="flag_90prime_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the 90prime_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the 90prime_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -234,8 +226,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="ferr_ap_90prime_r"
       tablehead="ferr_ap_90prime_r"
@@ -256,30 +247,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_90prime_r."
+      description="Uncertainty on m_90prime_r."
       verbLevel="1" />
     <column name="m_ap_90prime_r"
       tablehead="m_ap_90prime_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="merr_ap_90prime_r"
       tablehead="merr_ap_90prime_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_90prime_r"
+      description="Uncertainty on m_ap_90prime_r"
       verbLevel="1" />
     <column name="flag_90prime_r"
       tablehead="flag_90prime_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the 90prime_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the 90prime_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -302,8 +291,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="ferr_ap_90prime_z"
       tablehead="ferr_ap_90prime_z"
@@ -324,30 +312,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_90prime_z."
+      description="Uncertainty on m_90prime_z."
       verbLevel="1" />
     <column name="m_ap_90prime_z"
       tablehead="m_ap_90prime_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The 90-inch prime focus camera (90prime) on The Bok Telescope."
       verbLevel="1" />
     <column name="merr_ap_90prime_z"
       tablehead="merr_ap_90prime_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_90prime_z"
+      description="Uncertainty on m_ap_90prime_z"
       verbLevel="1" />
     <column name="flag_90prime_z"
       tablehead="flag_90prime_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the 90prime_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the 90prime_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -370,8 +356,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_acs_f435w"
       tablehead="ferr_ap_acs_f435w"
@@ -392,30 +377,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_acs_f435w."
+      description="Uncertainty on m_acs_f435w."
       verbLevel="1" />
     <column name="m_ap_acs_f435w"
       tablehead="m_ap_acs_f435w"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_acs_f435w"
       tablehead="merr_ap_acs_f435w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_acs_f435w"
+      description="Uncertainty on m_ap_acs_f435w"
       verbLevel="1" />
     <column name="flag_acs_f435w"
       tablehead="flag_acs_f435w"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the acs_f435w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the acs_f435w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -438,8 +421,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_acs_f606w"
       tablehead="ferr_ap_acs_f606w"
@@ -460,30 +442,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_acs_f606w."
+      description="Uncertainty on m_acs_f606w."
       verbLevel="1" />
     <column name="m_ap_acs_f606w"
       tablehead="m_ap_acs_f606w"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_acs_f606w"
       tablehead="merr_ap_acs_f606w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_acs_f606w"
+      description="Uncertainty on m_ap_acs_f606w"
       verbLevel="1" />
     <column name="flag_acs_f606w"
       tablehead="flag_acs_f606w"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the acs_f606w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the acs_f606w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -506,8 +486,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_acs_f775w"
       tablehead="ferr_ap_acs_f775w"
@@ -528,30 +507,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_acs_f775w."
+      description="Uncertainty on m_acs_f775w."
       verbLevel="1" />
     <column name="m_ap_acs_f775w"
       tablehead="m_ap_acs_f775w"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_acs_f775w"
       tablehead="merr_ap_acs_f775w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_acs_f775w"
+      description="Uncertainty on m_ap_acs_f775w"
       verbLevel="1" />
     <column name="flag_acs_f775w"
       tablehead="flag_acs_f775w"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the acs_f775w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the acs_f775w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -574,8 +551,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_acs_f814w"
       tablehead="ferr_ap_acs_f814w"
@@ -596,30 +572,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_acs_f814w."
+      description="Uncertainty on m_acs_f814w."
       verbLevel="1" />
     <column name="m_ap_acs_f814w"
       tablehead="m_ap_acs_f814w"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_acs_f814w"
       tablehead="merr_ap_acs_f814w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_acs_f814w"
+      description="Uncertainty on m_ap_acs_f814w"
       verbLevel="1" />
     <column name="flag_acs_f814w"
       tablehead="flag_acs_f814w"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the acs_f814w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the acs_f814w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -642,8 +616,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_acs_f850lp"
       tablehead="ferr_ap_acs_f850lp"
@@ -664,30 +637,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_acs_f850lp."
+      description="Uncertainty on m_acs_f850lp."
       verbLevel="1" />
     <column name="m_ap_acs_f850lp"
       tablehead="m_ap_acs_f850lp"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Advanced Camera for Surveys (ACS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_acs_f850lp"
       tablehead="merr_ap_acs_f850lp"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_acs_f850lp"
+      description="Uncertainty on m_ap_acs_f850lp"
       verbLevel="1" />
     <column name="flag_acs_f850lp"
       tablehead="flag_acs_f850lp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the acs_f850lp aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the acs_f850lp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -710,8 +681,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="ferr_ap_bessell_b"
       tablehead="ferr_ap_bessell_b"
@@ -732,30 +702,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_bessell_b."
+      description="Uncertainty on m_bessell_b."
       verbLevel="1" />
     <column name="m_ap_bessell_b"
       tablehead="m_ap_bessell_b"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="merr_ap_bessell_b"
       tablehead="merr_ap_bessell_b"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_bessell_b"
+      description="Uncertainty on m_ap_bessell_b"
       verbLevel="1" />
     <column name="flag_bessell_b"
       tablehead="flag_bessell_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the bessell_b aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the bessell_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -778,8 +746,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="ferr_ap_bessell_i"
       tablehead="ferr_ap_bessell_i"
@@ -800,30 +767,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_bessell_i."
+      description="Uncertainty on m_bessell_i."
       verbLevel="1" />
     <column name="m_ap_bessell_i"
       tablehead="m_ap_bessell_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="merr_ap_bessell_i"
       tablehead="merr_ap_bessell_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_bessell_i"
+      description="Uncertainty on m_ap_bessell_i"
       verbLevel="1" />
     <column name="flag_bessell_i"
       tablehead="flag_bessell_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the bessell_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the bessell_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -846,8 +811,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="ferr_ap_bessell_r"
       tablehead="ferr_ap_bessell_r"
@@ -868,30 +832,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_bessell_r."
+      description="Uncertainty on m_bessell_r."
       verbLevel="1" />
     <column name="m_ap_bessell_r"
       tablehead="m_ap_bessell_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="merr_ap_bessell_r"
       tablehead="merr_ap_bessell_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_bessell_r"
+      description="Uncertainty on m_ap_bessell_r"
       verbLevel="1" />
     <column name="flag_bessell_r"
       tablehead="flag_bessell_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the bessell_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the bessell_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -914,8 +876,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="ferr_ap_bessell_u"
       tablehead="ferr_ap_bessell_u"
@@ -936,30 +897,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_bessell_u."
+      description="Uncertainty on m_bessell_u."
       verbLevel="1" />
     <column name="m_ap_bessell_u"
       tablehead="m_ap_bessell_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="merr_ap_bessell_u"
       tablehead="merr_ap_bessell_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_bessell_u"
+      description="Uncertainty on m_ap_bessell_u"
       verbLevel="1" />
     <column name="flag_bessell_u"
       tablehead="flag_bessell_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the bessell_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the bessell_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -982,8 +941,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="ferr_ap_bessell_v"
       tablehead="ferr_ap_bessell_v"
@@ -1004,30 +962,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_bessell_v."
+      description="Uncertainty on m_bessell_v."
       verbLevel="1" />
     <column name="m_ap_bessell_v"
       tablehead="m_ap_bessell_v"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of Standard camera response (camera unknown) on Standardised telescope response (telescope uknown)."
       verbLevel="1" />
     <column name="merr_ap_bessell_v"
       tablehead="merr_ap_bessell_v"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_bessell_v"
+      description="Uncertainty on m_ap_bessell_v"
       verbLevel="1" />
     <column name="flag_bessell_v"
       tablehead="flag_bessell_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the bessell_v aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the bessell_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1050,8 +1006,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_cfht12k_b"
       tablehead="ferr_ap_cfht12k_b"
@@ -1072,30 +1027,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_cfht12k_b."
+      description="Uncertainty on m_cfht12k_b."
       verbLevel="1" />
     <column name="m_ap_cfht12k_b"
       tablehead="m_ap_cfht12k_b"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_cfht12k_b"
       tablehead="merr_ap_cfht12k_b"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_cfht12k_b"
+      description="Uncertainty on m_ap_cfht12k_b"
       verbLevel="1" />
     <column name="flag_cfht12k_b"
       tablehead="flag_cfht12k_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the cfht12k_b aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the cfht12k_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1118,8 +1071,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_cfht12k_i"
       tablehead="ferr_ap_cfht12k_i"
@@ -1140,30 +1092,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_cfht12k_i."
+      description="Uncertainty on m_cfht12k_i."
       verbLevel="1" />
     <column name="m_ap_cfht12k_i"
       tablehead="m_ap_cfht12k_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_cfht12k_i"
       tablehead="merr_ap_cfht12k_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_cfht12k_i"
+      description="Uncertainty on m_ap_cfht12k_i"
       verbLevel="1" />
     <column name="flag_cfht12k_i"
       tablehead="flag_cfht12k_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the cfht12k_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the cfht12k_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1186,8 +1136,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_cfht12k_r"
       tablehead="ferr_ap_cfht12k_r"
@@ -1208,30 +1157,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_cfht12k_r."
+      description="Uncertainty on m_cfht12k_r."
       verbLevel="1" />
     <column name="m_ap_cfht12k_r"
       tablehead="m_ap_cfht12k_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The CFH12K prime focus 12K camera on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_cfht12k_r"
       tablehead="merr_ap_cfht12k_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_cfht12k_r"
+      description="Uncertainty on m_ap_cfht12k_r"
       verbLevel="1" />
     <column name="flag_cfht12k_r"
       tablehead="flag_cfht12k_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the cfht12k_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the cfht12k_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1254,8 +1201,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="ferr_ap_decam_g"
       tablehead="ferr_ap_decam_g"
@@ -1276,30 +1222,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_decam_g."
+      description="Uncertainty on m_decam_g."
       verbLevel="1" />
     <column name="m_ap_decam_g"
       tablehead="m_ap_decam_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="merr_ap_decam_g"
       tablehead="merr_ap_decam_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_decam_g"
+      description="Uncertainty on m_ap_decam_g"
       verbLevel="1" />
     <column name="flag_decam_g"
       tablehead="flag_decam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the decam_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the decam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1322,8 +1266,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="ferr_ap_decam_i"
       tablehead="ferr_ap_decam_i"
@@ -1344,30 +1287,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_decam_i."
+      description="Uncertainty on m_decam_i."
       verbLevel="1" />
     <column name="m_ap_decam_i"
       tablehead="m_ap_decam_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="merr_ap_decam_i"
       tablehead="merr_ap_decam_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_decam_i"
+      description="Uncertainty on m_ap_decam_i"
       verbLevel="1" />
     <column name="flag_decam_i"
       tablehead="flag_decam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the decam_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the decam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1390,8 +1331,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="ferr_ap_decam_r"
       tablehead="ferr_ap_decam_r"
@@ -1412,30 +1352,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_decam_r."
+      description="Uncertainty on m_decam_r."
       verbLevel="1" />
     <column name="m_ap_decam_r"
       tablehead="m_ap_decam_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="merr_ap_decam_r"
       tablehead="merr_ap_decam_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_decam_r"
+      description="Uncertainty on m_ap_decam_r"
       verbLevel="1" />
     <column name="flag_decam_r"
       tablehead="flag_decam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the decam_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the decam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1458,8 +1396,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="ferr_ap_decam_y"
       tablehead="ferr_ap_decam_y"
@@ -1480,30 +1417,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_decam_y."
+      description="Uncertainty on m_decam_y."
       verbLevel="1" />
     <column name="m_ap_decam_y"
       tablehead="m_ap_decam_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="merr_ap_decam_y"
       tablehead="merr_ap_decam_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_decam_y"
+      description="Uncertainty on m_ap_decam_y"
       verbLevel="1" />
     <column name="flag_decam_y"
       tablehead="flag_decam_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the decam_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the decam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1526,8 +1461,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="ferr_ap_decam_z"
       tablehead="ferr_ap_decam_z"
@@ -1548,30 +1482,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_decam_z."
+      description="Uncertainty on m_decam_z."
       verbLevel="1" />
     <column name="m_ap_decam_z"
       tablehead="m_ap_decam_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Dark Energy Camera (DECam) on Blanco."
       verbLevel="1" />
     <column name="merr_ap_decam_z"
       tablehead="merr_ap_decam_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_decam_z"
+      description="Uncertainty on m_ap_decam_z"
       verbLevel="1" />
     <column name="flag_decam_z"
       tablehead="flag_decam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the decam_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the decam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1594,8 +1526,7 @@
       type="double precision"
       ucd="phot.flux;em.UV.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
       verbLevel="1" />
     <column name="ferr_ap_galex_fuv"
       tablehead="ferr_ap_galex_fuv"
@@ -1616,30 +1547,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.UV.100-200nm"
       unit="mag"
-      description="Mean error on m_galex_fuv."
+      description="Uncertainty on m_galex_fuv."
       verbLevel="1" />
     <column name="m_ap_galex_fuv"
       tablehead="m_ap_galex_fuv"
       type="double precision"
       ucd="phot.mag;em.UV.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
       verbLevel="1" />
     <column name="merr_ap_galex_fuv"
       tablehead="merr_ap_galex_fuv"
       type="double precision"
       ucd="stat.error;phot.mag;em.UV.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_galex_fuv"
+      description="Uncertainty on m_ap_galex_fuv"
       verbLevel="1" />
     <column name="flag_galex_fuv"
       tablehead="flag_galex_fuv"
       type="boolean"
       ucd="meta.code.qual;em.UV.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the galex_fuv aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the galex_fuv aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1662,8 +1591,7 @@
       type="double precision"
       ucd="phot.flux;em.UV.200-300nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 200-300nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 200-300nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
       verbLevel="1" />
     <column name="ferr_ap_galex_nuv"
       tablehead="ferr_ap_galex_nuv"
@@ -1684,30 +1612,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.UV.200-300nm"
       unit="mag"
-      description="Mean error on m_galex_nuv."
+      description="Uncertainty on m_galex_nuv."
       verbLevel="1" />
     <column name="m_ap_galex_nuv"
       tablehead="m_ap_galex_nuv"
       type="double precision"
       ucd="phot.mag;em.UV.200-300nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 200-300nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 200-300nm band of GALEX on The Galaxy Evolution Exporer (GALEX)."
       verbLevel="1" />
     <column name="merr_ap_galex_nuv"
       tablehead="merr_ap_galex_nuv"
       type="double precision"
       ucd="stat.error;phot.mag;em.UV.200-300nm"
       unit="mag"
-      description="Mean error on m_ap_galex_nuv"
+      description="Uncertainty on m_ap_galex_nuv"
       verbLevel="1" />
     <column name="flag_galex_nuv"
       tablehead="flag_galex_nuv"
       type="boolean"
       ucd="meta.code.qual;em.UV.200-300nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the galex_nuv aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the galex_nuv aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1730,8 +1656,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="ferr_ap_gpc1_g"
       tablehead="ferr_ap_gpc1_g"
@@ -1752,30 +1677,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_gpc1_g."
+      description="Uncertainty on m_gpc1_g."
       verbLevel="1" />
     <column name="m_ap_gpc1_g"
       tablehead="m_ap_gpc1_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="merr_ap_gpc1_g"
       tablehead="merr_ap_gpc1_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_gpc1_g"
+      description="Uncertainty on m_ap_gpc1_g"
       verbLevel="1" />
     <column name="flag_gpc1_g"
       tablehead="flag_gpc1_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the gpc1_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the gpc1_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1798,8 +1721,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="ferr_ap_gpc1_i"
       tablehead="ferr_ap_gpc1_i"
@@ -1820,30 +1742,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_gpc1_i."
+      description="Uncertainty on m_gpc1_i."
       verbLevel="1" />
     <column name="m_ap_gpc1_i"
       tablehead="m_ap_gpc1_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="merr_ap_gpc1_i"
       tablehead="merr_ap_gpc1_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_gpc1_i"
+      description="Uncertainty on m_ap_gpc1_i"
       verbLevel="1" />
     <column name="flag_gpc1_i"
       tablehead="flag_gpc1_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the gpc1_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the gpc1_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1866,8 +1786,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="ferr_ap_gpc1_r"
       tablehead="ferr_ap_gpc1_r"
@@ -1888,30 +1807,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_gpc1_r."
+      description="Uncertainty on m_gpc1_r."
       verbLevel="1" />
     <column name="m_ap_gpc1_r"
       tablehead="m_ap_gpc1_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="merr_ap_gpc1_r"
       tablehead="merr_ap_gpc1_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_gpc1_r"
+      description="Uncertainty on m_ap_gpc1_r"
       verbLevel="1" />
     <column name="flag_gpc1_r"
       tablehead="flag_gpc1_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the gpc1_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the gpc1_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -1934,8 +1851,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="ferr_ap_gpc1_y"
       tablehead="ferr_ap_gpc1_y"
@@ -1956,30 +1872,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_gpc1_y."
+      description="Uncertainty on m_gpc1_y."
       verbLevel="1" />
     <column name="m_ap_gpc1_y"
       tablehead="m_ap_gpc1_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="merr_ap_gpc1_y"
       tablehead="merr_ap_gpc1_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_gpc1_y"
+      description="Uncertainty on m_ap_gpc1_y"
       verbLevel="1" />
     <column name="flag_gpc1_y"
       tablehead="flag_gpc1_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the gpc1_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the gpc1_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2002,8 +1916,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="ferr_ap_gpc1_z"
       tablehead="ferr_ap_gpc1_z"
@@ -2024,30 +1937,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_gpc1_z."
+      description="Uncertainty on m_gpc1_z."
       verbLevel="1" />
     <column name="m_ap_gpc1_z"
       tablehead="m_ap_gpc1_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Pan-STARRS Gigapixel Camera on The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS)."
       verbLevel="1" />
     <column name="merr_ap_gpc1_z"
       tablehead="merr_ap_gpc1_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_gpc1_z"
+      description="Uncertainty on m_ap_gpc1_z"
       verbLevel="1" />
     <column name="flag_gpc1_z"
       tablehead="flag_gpc1_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the gpc1_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the gpc1_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2070,8 +1981,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The High Acuity Wide field K-band Imager (HAWK-I) on The Very Large Telescope (VLT) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The High Acuity Wide field K-band Imager (HAWK-I) on The Very Large Telescope (VLT) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_hawki_k"
       tablehead="ferr_ap_hawki_k"
@@ -2092,30 +2002,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_hawki_k."
+      description="Uncertainty on m_hawki_k."
       verbLevel="1" />
     <column name="m_ap_hawki_k"
       tablehead="m_ap_hawki_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The High Acuity Wide field K-band Imager (HAWK-I) on The Very Large Telescope (VLT) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The High Acuity Wide field K-band Imager (HAWK-I) on The Very Large Telescope (VLT) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_hawki_k"
       tablehead="merr_ap_hawki_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_hawki_k"
+      description="Uncertainty on m_ap_hawki_k"
       verbLevel="1" />
     <column name="flag_hawki_k"
       tablehead="flag_hawki_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the hawki_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the hawki_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2138,8 +2046,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.3-4um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 3-4um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 3-4um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_irac_i1"
       tablehead="ferr_ap_irac_i1"
@@ -2160,30 +2067,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.3-4um"
       unit="mag"
-      description="Mean error on m_irac_i1."
+      description="Uncertainty on m_irac_i1."
       verbLevel="1" />
     <column name="m_ap_irac_i1"
       tablehead="m_ap_irac_i1"
       type="double precision"
       ucd="phot.mag;em.IR.3-4um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 3-4um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 3-4um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_irac_i1"
       tablehead="merr_ap_irac_i1"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.3-4um"
       unit="mag"
-      description="Mean error on m_ap_irac_i1"
+      description="Uncertainty on m_ap_irac_i1"
       verbLevel="1" />
     <column name="flag_irac_i1"
       tablehead="flag_irac_i1"
       type="boolean"
       ucd="meta.code.qual;em.IR.3-4um"
       unit="mag"
-      description="Flag set to true for sources for which niether the irac_i1 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the irac_i1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2206,8 +2111,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.4-8um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_irac_i2"
       tablehead="ferr_ap_irac_i2"
@@ -2228,30 +2132,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Mean error on m_irac_i2."
+      description="Uncertainty on m_irac_i2."
       verbLevel="1" />
     <column name="m_ap_irac_i2"
       tablehead="m_ap_irac_i2"
       type="double precision"
       ucd="phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_irac_i2"
       tablehead="merr_ap_irac_i2"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Mean error on m_ap_irac_i2"
+      description="Uncertainty on m_ap_irac_i2"
       verbLevel="1" />
     <column name="flag_irac_i2"
       tablehead="flag_irac_i2"
       type="boolean"
       ucd="meta.code.qual;em.IR.4-8um"
       unit="mag"
-      description="Flag set to true for sources for which niether the irac_i2 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the irac_i2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2274,8 +2176,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.4-8um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_irac_i3"
       tablehead="ferr_ap_irac_i3"
@@ -2296,30 +2197,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Mean error on m_irac_i3."
+      description="Uncertainty on m_irac_i3."
       verbLevel="1" />
     <column name="m_ap_irac_i3"
       tablehead="m_ap_irac_i3"
       type="double precision"
       ucd="phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 4-8um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_irac_i3"
       tablehead="merr_ap_irac_i3"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.4-8um"
       unit="mag"
-      description="Mean error on m_ap_irac_i3"
+      description="Uncertainty on m_ap_irac_i3"
       verbLevel="1" />
     <column name="flag_irac_i3"
       tablehead="flag_irac_i3"
       type="boolean"
       ucd="meta.code.qual;em.IR.4-8um"
       unit="mag"
-      description="Flag set to true for sources for which niether the irac_i3 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the irac_i3 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2342,8 +2241,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.8-15um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 8-15um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 8-15um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_irac_i4"
       tablehead="ferr_ap_irac_i4"
@@ -2364,30 +2262,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.8-15um"
       unit="mag"
-      description="Mean error on m_irac_i4."
+      description="Uncertainty on m_irac_i4."
       verbLevel="1" />
     <column name="m_ap_irac_i4"
       tablehead="m_ap_irac_i4"
       type="double precision"
       ucd="phot.mag;em.IR.8-15um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 8-15um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 8-15um band of The Infrared Array Camera (IRAC) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_irac_i4"
       tablehead="merr_ap_irac_i4"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.8-15um"
       unit="mag"
-      description="Mean error on m_ap_irac_i4"
+      description="Uncertainty on m_ap_irac_i4"
       verbLevel="1" />
     <column name="flag_irac_i4"
       tablehead="flag_irac_i4"
       type="boolean"
       ucd="meta.code.qual;em.IR.8-15um"
       unit="mag"
-      description="Flag set to true for sources for which niether the irac_i4 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the irac_i4 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2410,8 +2306,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Infrared Spectrometer And Array Camera (ISAAC) on The Very Large Telescope (VLT) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Infrared Spectrometer And Array Camera (ISAAC) on The Very Large Telescope (VLT) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_isaac_k"
       tablehead="ferr_ap_isaac_k"
@@ -2432,30 +2327,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_isaac_k."
+      description="Uncertainty on m_isaac_k."
       verbLevel="1" />
     <column name="m_ap_isaac_k"
       tablehead="m_ap_isaac_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Infrared Spectrometer And Array Camera (ISAAC) on The Very Large Telescope (VLT) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Infrared Spectrometer And Array Camera (ISAAC) on The Very Large Telescope (VLT) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_isaac_k"
       tablehead="merr_ap_isaac_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_isaac_k"
+      description="Uncertainty on m_ap_isaac_k"
       verbLevel="1" />
     <column name="flag_isaac_k"
       tablehead="flag_isaac_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the isaac_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the isaac_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2478,8 +2371,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_g"
       tablehead="ferr_ap_megacam_g"
@@ -2500,30 +2392,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_megacam_g."
+      description="Uncertainty on m_megacam_g."
       verbLevel="1" />
     <column name="m_ap_megacam_g"
       tablehead="m_ap_megacam_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_g"
       tablehead="merr_ap_megacam_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_megacam_g"
+      description="Uncertainty on m_ap_megacam_g"
       verbLevel="1" />
     <column name="flag_megacam_g"
       tablehead="flag_megacam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2546,8 +2436,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_i"
       tablehead="ferr_ap_megacam_i"
@@ -2568,30 +2457,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_megacam_i."
+      description="Uncertainty on m_megacam_i."
       verbLevel="1" />
     <column name="m_ap_megacam_i"
       tablehead="m_ap_megacam_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_i"
       tablehead="merr_ap_megacam_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_megacam_i"
+      description="Uncertainty on m_ap_megacam_i"
       verbLevel="1" />
     <column name="flag_megacam_i"
       tablehead="flag_megacam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2614,8 +2501,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_r"
       tablehead="ferr_ap_megacam_r"
@@ -2636,30 +2522,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_megacam_r."
+      description="Uncertainty on m_megacam_r."
       verbLevel="1" />
     <column name="m_ap_megacam_r"
       tablehead="m_ap_megacam_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_r"
       tablehead="merr_ap_megacam_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_megacam_r"
+      description="Uncertainty on m_ap_megacam_r"
       verbLevel="1" />
     <column name="flag_megacam_r"
       tablehead="flag_megacam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2682,8 +2566,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_u"
       tablehead="ferr_ap_megacam_u"
@@ -2704,30 +2587,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_megacam_u."
+      description="Uncertainty on m_megacam_u."
       verbLevel="1" />
     <column name="m_ap_megacam_u"
       tablehead="m_ap_megacam_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_u"
       tablehead="merr_ap_megacam_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_megacam_u"
+      description="Uncertainty on m_ap_megacam_u"
       verbLevel="1" />
     <column name="flag_megacam_u"
       tablehead="flag_megacam_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2750,8 +2631,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_y"
       tablehead="ferr_ap_megacam_y"
@@ -2772,30 +2652,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_megacam_y."
+      description="Uncertainty on m_megacam_y."
       verbLevel="1" />
     <column name="m_ap_megacam_y"
       tablehead="m_ap_megacam_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_y"
       tablehead="merr_ap_megacam_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_megacam_y"
+      description="Uncertainty on m_ap_megacam_y"
       verbLevel="1" />
     <column name="flag_megacam_y"
       tablehead="flag_megacam_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2818,8 +2696,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_megacam_z"
       tablehead="ferr_ap_megacam_z"
@@ -2840,30 +2717,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_megacam_z."
+      description="Uncertainty on m_megacam_z."
       verbLevel="1" />
     <column name="m_ap_megacam_z"
       tablehead="m_ap_megacam_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of MegaPrime/MegaCam on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_megacam_z"
       tablehead="merr_ap_megacam_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_megacam_z"
+      description="Uncertainty on m_ap_megacam_z"
       verbLevel="1" />
     <column name="flag_megacam_z"
       tablehead="flag_megacam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the megacam_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the megacam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2886,8 +2761,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.15-30um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 15-30um band of The Multiband Imaging Photometer (MIPS) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 15-30um band of The Multiband Imaging Photometer (MIPS) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_mips_24"
       tablehead="ferr_ap_mips_24"
@@ -2908,30 +2782,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.15-30um"
       unit="mag"
-      description="Mean error on m_mips_24."
+      description="Uncertainty on m_mips_24."
       verbLevel="1" />
     <column name="m_ap_mips_24"
       tablehead="m_ap_mips_24"
       type="double precision"
       ucd="phot.mag;em.IR.15-30um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 15-30um band of The Multiband Imaging Photometer (MIPS) on The Spitzer Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 15-30um band of The Multiband Imaging Photometer (MIPS) on The Spitzer Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_mips_24"
       tablehead="merr_ap_mips_24"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.15-30um"
       unit="mag"
-      description="Mean error on m_ap_mips_24"
+      description="Uncertainty on m_ap_mips_24"
       verbLevel="1" />
     <column name="flag_mips_24"
       tablehead="flag_mips_24"
       type="boolean"
       ucd="meta.code.qual;em.IR.15-30um"
       unit="mag"
-      description="Flag set to true for sources for which niether the mips_24 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mips_24 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -2954,8 +2826,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mmt_g"
       tablehead="ferr_ap_mmt_g"
@@ -2976,30 +2847,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_mmt_g."
+      description="Uncertainty on m_mmt_g."
       verbLevel="1" />
     <column name="m_ap_mmt_g"
       tablehead="m_ap_mmt_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="merr_ap_mmt_g"
       tablehead="merr_ap_mmt_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_mmt_g"
+      description="Uncertainty on m_ap_mmt_g"
       verbLevel="1" />
     <column name="flag_mmt_g"
       tablehead="flag_mmt_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the mmt_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mmt_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3022,8 +2891,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mmt_i"
       tablehead="ferr_ap_mmt_i"
@@ -3044,30 +2912,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_mmt_i."
+      description="Uncertainty on m_mmt_i."
       verbLevel="1" />
     <column name="m_ap_mmt_i"
       tablehead="m_ap_mmt_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="merr_ap_mmt_i"
       tablehead="merr_ap_mmt_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_mmt_i"
+      description="Uncertainty on m_ap_mmt_i"
       verbLevel="1" />
     <column name="flag_mmt_i"
       tablehead="flag_mmt_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the mmt_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mmt_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3090,8 +2956,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mmt_r"
       tablehead="ferr_ap_mmt_r"
@@ -3112,30 +2977,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_mmt_r."
+      description="Uncertainty on m_mmt_r."
       verbLevel="1" />
     <column name="m_ap_mmt_r"
       tablehead="m_ap_mmt_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="merr_ap_mmt_r"
       tablehead="merr_ap_mmt_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_mmt_r"
+      description="Uncertainty on m_ap_mmt_r"
       verbLevel="1" />
     <column name="flag_mmt_r"
       tablehead="flag_mmt_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the mmt_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mmt_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3158,8 +3021,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mmt_u"
       tablehead="ferr_ap_mmt_u"
@@ -3180,30 +3042,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_mmt_u."
+      description="Uncertainty on m_mmt_u."
       verbLevel="1" />
     <column name="m_ap_mmt_u"
       tablehead="m_ap_mmt_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="merr_ap_mmt_u"
       tablehead="merr_ap_mmt_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_mmt_u"
+      description="Uncertainty on m_ap_mmt_u"
       verbLevel="1" />
     <column name="flag_mmt_u"
       tablehead="flag_mmt_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the mmt_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mmt_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3226,8 +3086,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mmt_z"
       tablehead="ferr_ap_mmt_z"
@@ -3248,30 +3107,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_mmt_z."
+      description="Uncertainty on m_mmt_z."
       verbLevel="1" />
     <column name="m_ap_mmt_z"
       tablehead="m_ap_mmt_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of MegaCam on The Multiple Mirror Telescope (MMT) Observatory."
       verbLevel="1" />
     <column name="merr_ap_mmt_z"
       tablehead="merr_ap_mmt_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_mmt_z"
+      description="Uncertainty on m_ap_mmt_z"
       verbLevel="1" />
     <column name="flag_mmt_z"
       tablehead="flag_mmt_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the mmt_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mmt_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3294,8 +3151,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_moircs_k"
       tablehead="ferr_ap_moircs_k"
@@ -3316,30 +3172,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_moircs_k."
+      description="Uncertainty on m_moircs_k."
       verbLevel="1" />
     <column name="m_ap_moircs_k"
       tablehead="m_ap_moircs_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_moircs_k"
       tablehead="merr_ap_moircs_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_moircs_k"
+      description="Uncertainty on m_ap_moircs_k"
       verbLevel="1" />
     <column name="flag_moircs_k"
       tablehead="flag_moircs_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the moircs_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the moircs_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3362,8 +3216,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_moircs_ks"
       tablehead="ferr_ap_moircs_ks"
@@ -3384,30 +3237,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_moircs_ks."
+      description="Uncertainty on m_moircs_ks."
       verbLevel="1" />
     <column name="m_ap_moircs_ks"
       tablehead="m_ap_moircs_ks"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Multi Object Infrared Camera and Spectrograph (MOIRCS) on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_moircs_ks"
       tablehead="merr_ap_moircs_ks"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_moircs_ks"
+      description="Uncertainty on m_ap_moircs_ks"
       verbLevel="1" />
     <column name="flag_moircs_ks"
       tablehead="flag_moircs_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the moircs_ks aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the moircs_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3430,8 +3281,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mosaic_b"
       tablehead="ferr_ap_mosaic_b"
@@ -3452,30 +3302,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_mosaic_b."
+      description="Uncertainty on m_mosaic_b."
       verbLevel="1" />
     <column name="m_ap_mosaic_b"
       tablehead="m_ap_mosaic_b"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="merr_ap_mosaic_b"
       tablehead="merr_ap_mosaic_b"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_mosaic_b"
+      description="Uncertainty on m_ap_mosaic_b"
       verbLevel="1" />
     <column name="flag_mosaic_b"
       tablehead="flag_mosaic_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the mosaic_b aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mosaic_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3498,8 +3346,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mosaic_i"
       tablehead="ferr_ap_mosaic_i"
@@ -3520,30 +3367,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_mosaic_i."
+      description="Uncertainty on m_mosaic_i."
       verbLevel="1" />
     <column name="m_ap_mosaic_i"
       tablehead="m_ap_mosaic_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="merr_ap_mosaic_i"
       tablehead="merr_ap_mosaic_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_mosaic_i"
+      description="Uncertainty on m_ap_mosaic_i"
       verbLevel="1" />
     <column name="flag_mosaic_i"
       tablehead="flag_mosaic_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the mosaic_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mosaic_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3566,8 +3411,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mosaic_r"
       tablehead="ferr_ap_mosaic_r"
@@ -3588,30 +3432,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_mosaic_r."
+      description="Uncertainty on m_mosaic_r."
       verbLevel="1" />
     <column name="m_ap_mosaic_r"
       tablehead="m_ap_mosaic_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="merr_ap_mosaic_r"
       tablehead="merr_ap_mosaic_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_mosaic_r"
+      description="Uncertainty on m_ap_mosaic_r"
       verbLevel="1" />
     <column name="flag_mosaic_r"
       tablehead="flag_mosaic_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the mosaic_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mosaic_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3634,8 +3476,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mosaic_u"
       tablehead="ferr_ap_mosaic_u"
@@ -3656,30 +3497,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_mosaic_u."
+      description="Uncertainty on m_mosaic_u."
       verbLevel="1" />
     <column name="m_ap_mosaic_u"
       tablehead="m_ap_mosaic_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="merr_ap_mosaic_u"
       tablehead="merr_ap_mosaic_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_mosaic_u"
+      description="Uncertainty on m_ap_mosaic_u"
       verbLevel="1" />
     <column name="flag_mosaic_u"
       tablehead="flag_mosaic_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the mosaic_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mosaic_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3702,8 +3541,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="ferr_ap_mosaic_z"
       tablehead="ferr_ap_mosaic_z"
@@ -3724,30 +3562,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_mosaic_z."
+      description="Uncertainty on m_mosaic_z."
       verbLevel="1" />
     <column name="m_ap_mosaic_z"
       tablehead="m_ap_mosaic_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Mosaic-3 Wide Field Imager on The Kitt Peak National Observatory."
       verbLevel="1" />
     <column name="merr_ap_mosaic_z"
       tablehead="merr_ap_mosaic_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_mosaic_z"
+      description="Uncertainty on m_ap_mosaic_z"
       verbLevel="1" />
     <column name="flag_mosaic_z"
       tablehead="flag_mosaic_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the mosaic_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the mosaic_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3770,8 +3606,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_h"
       tablehead="ferr_ap_newfirm_h"
@@ -3792,30 +3627,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_newfirm_h."
+      description="Uncertainty on m_newfirm_h."
       verbLevel="1" />
     <column name="m_ap_newfirm_h"
       tablehead="m_ap_newfirm_h"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_h"
       tablehead="merr_ap_newfirm_h"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_newfirm_h"
+      description="Uncertainty on m_ap_newfirm_h"
       verbLevel="1" />
     <column name="flag_newfirm_h"
       tablehead="flag_newfirm_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_h aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3838,8 +3671,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_h1"
       tablehead="ferr_ap_newfirm_h1"
@@ -3860,30 +3692,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_newfirm_h1."
+      description="Uncertainty on m_newfirm_h1."
       verbLevel="1" />
     <column name="m_ap_newfirm_h1"
       tablehead="m_ap_newfirm_h1"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_h1"
       tablehead="merr_ap_newfirm_h1"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_newfirm_h1"
+      description="Uncertainty on m_ap_newfirm_h1"
       verbLevel="1" />
     <column name="flag_newfirm_h1"
       tablehead="flag_newfirm_h1"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_h1 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_h1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3906,8 +3736,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_h2"
       tablehead="ferr_ap_newfirm_h2"
@@ -3928,30 +3757,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_newfirm_h2."
+      description="Uncertainty on m_newfirm_h2."
       verbLevel="1" />
     <column name="m_ap_newfirm_h2"
       tablehead="m_ap_newfirm_h2"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_h2"
       tablehead="merr_ap_newfirm_h2"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_newfirm_h2"
+      description="Uncertainty on m_ap_newfirm_h2"
       verbLevel="1" />
     <column name="flag_newfirm_h2"
       tablehead="flag_newfirm_h2"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_h2 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_h2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -3974,8 +3801,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_j"
       tablehead="ferr_ap_newfirm_j"
@@ -3996,30 +3822,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_newfirm_j."
+      description="Uncertainty on m_newfirm_j."
       verbLevel="1" />
     <column name="m_ap_newfirm_j"
       tablehead="m_ap_newfirm_j"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_j"
       tablehead="merr_ap_newfirm_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_newfirm_j"
+      description="Uncertainty on m_ap_newfirm_j"
       verbLevel="1" />
     <column name="flag_newfirm_j"
       tablehead="flag_newfirm_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4042,8 +3866,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_j1"
       tablehead="ferr_ap_newfirm_j1"
@@ -4064,30 +3887,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_newfirm_j1."
+      description="Uncertainty on m_newfirm_j1."
       verbLevel="1" />
     <column name="m_ap_newfirm_j1"
       tablehead="m_ap_newfirm_j1"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_j1"
       tablehead="merr_ap_newfirm_j1"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_newfirm_j1"
+      description="Uncertainty on m_ap_newfirm_j1"
       verbLevel="1" />
     <column name="flag_newfirm_j1"
       tablehead="flag_newfirm_j1"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_j1 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_j1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4110,8 +3931,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_j2"
       tablehead="ferr_ap_newfirm_j2"
@@ -4132,30 +3952,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_newfirm_j2."
+      description="Uncertainty on m_newfirm_j2."
       verbLevel="1" />
     <column name="m_ap_newfirm_j2"
       tablehead="m_ap_newfirm_j2"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_j2"
       tablehead="merr_ap_newfirm_j2"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_newfirm_j2"
+      description="Uncertainty on m_ap_newfirm_j2"
       verbLevel="1" />
     <column name="flag_newfirm_j2"
       tablehead="flag_newfirm_j2"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_j2 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_j2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4178,8 +3996,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_j3"
       tablehead="ferr_ap_newfirm_j3"
@@ -4200,30 +4017,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_newfirm_j3."
+      description="Uncertainty on m_newfirm_j3."
       verbLevel="1" />
     <column name="m_ap_newfirm_j3"
       tablehead="m_ap_newfirm_j3"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_j3"
       tablehead="merr_ap_newfirm_j3"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_newfirm_j3"
+      description="Uncertainty on m_ap_newfirm_j3"
       verbLevel="1" />
     <column name="flag_newfirm_j3"
       tablehead="flag_newfirm_j3"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_j3 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_j3 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4246,8 +4061,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="ferr_ap_newfirm_k"
       tablehead="ferr_ap_newfirm_k"
@@ -4268,30 +4082,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_newfirm_k."
+      description="Uncertainty on m_newfirm_k."
       verbLevel="1" />
     <column name="m_ap_newfirm_k"
       tablehead="m_ap_newfirm_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Imager (NEWFIRM) on National Optical Astronomy Observatory (NOAO) Gemini Observatory."
       verbLevel="1" />
     <column name="merr_ap_newfirm_k"
       tablehead="merr_ap_newfirm_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_newfirm_k"
+      description="Uncertainty on m_ap_newfirm_k"
       verbLevel="1" />
     <column name="flag_newfirm_k"
       tablehead="flag_newfirm_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the newfirm_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the newfirm_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4314,8 +4126,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_nicmos_f110w"
       tablehead="ferr_ap_nicmos_f110w"
@@ -4336,30 +4147,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_nicmos_f110w."
+      description="Uncertainty on m_nicmos_f110w."
       verbLevel="1" />
     <column name="m_ap_nicmos_f110w"
       tablehead="m_ap_nicmos_f110w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_nicmos_f110w"
       tablehead="merr_ap_nicmos_f110w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_nicmos_f110w"
+      description="Uncertainty on m_ap_nicmos_f110w"
       verbLevel="1" />
     <column name="flag_nicmos_f110w"
       tablehead="flag_nicmos_f110w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the nicmos_f110w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the nicmos_f110w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4382,8 +4191,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_nicmos_f160w"
       tablehead="ferr_ap_nicmos_f160w"
@@ -4404,30 +4212,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_nicmos_f160w."
+      description="Uncertainty on m_nicmos_f160w."
       verbLevel="1" />
     <column name="m_ap_nicmos_f160w"
       tablehead="m_ap_nicmos_f160w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Near Infrared Camera and Multi-Object Spectrometer (NICMOS) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_nicmos_f160w"
       tablehead="merr_ap_nicmos_f160w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_nicmos_f160w"
+      description="Uncertainty on m_ap_nicmos_f160w"
       verbLevel="1" />
     <column name="flag_nicmos_f160w"
       tablehead="flag_nicmos_f160w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the nicmos_f160w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the nicmos_f160w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4450,8 +4256,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
       verbLevel="1" />
     <column name="ferr_ap_omega2000_j"
       tablehead="ferr_ap_omega2000_j"
@@ -4472,30 +4277,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.J"
       unit="mag"
-      description="Mean error on m_omega2000_j."
+      description="Uncertainty on m_omega2000_j."
       verbLevel="1" />
     <column name="m_ap_omega2000_j"
       tablehead="m_ap_omega2000_j"
       type="double precision"
       ucd="phot.mag;em.opt.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
       verbLevel="1" />
     <column name="merr_ap_omega2000_j"
       tablehead="merr_ap_omega2000_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.J"
       unit="mag"
-      description="Mean error on m_ap_omega2000_j"
+      description="Uncertainty on m_ap_omega2000_j"
       verbLevel="1" />
     <column name="flag_omega2000_j"
       tablehead="flag_omega2000_j"
       type="boolean"
       ucd="meta.code.qual;em.opt.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the omega2000_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omega2000_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4518,8 +4321,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
       verbLevel="1" />
     <column name="ferr_ap_omega2000_ks"
       tablehead="ferr_ap_omega2000_ks"
@@ -4540,30 +4342,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_omega2000_ks."
+      description="Uncertainty on m_omega2000_ks."
       verbLevel="1" />
     <column name="m_ap_omega2000_ks"
       tablehead="m_ap_omega2000_ks"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Infrared Wide-Field Camera OMEGA2000 on The 3.5m telescope at Calar Alto."
       verbLevel="1" />
     <column name="merr_ap_omega2000_ks"
       tablehead="merr_ap_omega2000_ks"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_omega2000_ks"
+      description="Uncertainty on m_ap_omega2000_ks"
       verbLevel="1" />
     <column name="flag_omega2000_ks"
       tablehead="flag_omega2000_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the omega2000_ks aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omega2000_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4586,8 +4386,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_omegacam_g"
       tablehead="ferr_ap_omegacam_g"
@@ -4608,30 +4407,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_omegacam_g."
+      description="Uncertainty on m_omegacam_g."
       verbLevel="1" />
     <column name="m_ap_omegacam_g"
       tablehead="m_ap_omegacam_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_omegacam_g"
       tablehead="merr_ap_omegacam_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_omegacam_g"
+      description="Uncertainty on m_ap_omegacam_g"
       verbLevel="1" />
     <column name="flag_omegacam_g"
       tablehead="flag_omegacam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the omegacam_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omegacam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4654,8 +4451,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_omegacam_i"
       tablehead="ferr_ap_omegacam_i"
@@ -4676,30 +4472,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_omegacam_i."
+      description="Uncertainty on m_omegacam_i."
       verbLevel="1" />
     <column name="m_ap_omegacam_i"
       tablehead="m_ap_omegacam_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_omegacam_i"
       tablehead="merr_ap_omegacam_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_omegacam_i"
+      description="Uncertainty on m_ap_omegacam_i"
       verbLevel="1" />
     <column name="flag_omegacam_i"
       tablehead="flag_omegacam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the omegacam_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omegacam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4722,8 +4516,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_omegacam_r"
       tablehead="ferr_ap_omegacam_r"
@@ -4744,30 +4537,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_omegacam_r."
+      description="Uncertainty on m_omegacam_r."
       verbLevel="1" />
     <column name="m_ap_omegacam_r"
       tablehead="m_ap_omegacam_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_omegacam_r"
       tablehead="merr_ap_omegacam_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_omegacam_r"
+      description="Uncertainty on m_ap_omegacam_r"
       verbLevel="1" />
     <column name="flag_omegacam_r"
       tablehead="flag_omegacam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the omegacam_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omegacam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4790,8 +4581,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_omegacam_u"
       tablehead="ferr_ap_omegacam_u"
@@ -4812,30 +4602,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_omegacam_u."
+      description="Uncertainty on m_omegacam_u."
       verbLevel="1" />
     <column name="m_ap_omegacam_u"
       tablehead="m_ap_omegacam_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_omegacam_u"
       tablehead="merr_ap_omegacam_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_omegacam_u"
+      description="Uncertainty on m_ap_omegacam_u"
       verbLevel="1" />
     <column name="flag_omegacam_u"
       tablehead="flag_omegacam_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the omegacam_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omegacam_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4858,8 +4646,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="ferr_ap_omegacam_z"
       tablehead="ferr_ap_omegacam_z"
@@ -4880,30 +4667,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_omegacam_z."
+      description="Uncertainty on m_omegacam_z."
       verbLevel="1" />
     <column name="m_ap_omegacam_z"
       tablehead="m_ap_omegacam_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of OmegaCAM on The Very Large Telescope (VLT) Survey Telescope (VST) at Paranal."
       verbLevel="1" />
     <column name="merr_ap_omegacam_z"
       tablehead="merr_ap_omegacam_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_omegacam_z"
+      description="Uncertainty on m_ap_omegacam_z"
       verbLevel="1" />
     <column name="flag_omegacam_z"
       tablehead="flag_omegacam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the omegacam_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the omegacam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4926,8 +4711,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.60-100um"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 60-100um band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 60-100um band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_pacs_green"
       tablehead="ferr_ap_pacs_green"
@@ -4948,30 +4732,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.60-100um"
       unit="mag"
-      description="Mean error on m_pacs_green."
+      description="Uncertainty on m_pacs_green."
       verbLevel="1" />
     <column name="m_ap_pacs_green"
       tablehead="m_ap_pacs_green"
       type="double precision"
       ucd="phot.mag;em.IR.60-100um"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 60-100um band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 60-100um band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_pacs_green"
       tablehead="merr_ap_pacs_green"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.60-100um"
       unit="mag"
-      description="Mean error on m_ap_pacs_green"
+      description="Uncertainty on m_ap_pacs_green"
       verbLevel="1" />
     <column name="flag_pacs_green"
       tablehead="flag_pacs_green"
       type="boolean"
       ucd="meta.code.qual;em.IR.60-100um"
       unit="mag"
-      description="Flag set to true for sources for which niether the pacs_green aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the pacs_green aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -4994,8 +4776,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.1500-3000GHz"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 1500-3000GHz band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 1500-3000GHz band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_pacs_red"
       tablehead="ferr_ap_pacs_red"
@@ -5016,30 +4797,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.1500-3000GHz"
       unit="mag"
-      description="Mean error on m_pacs_red."
+      description="Uncertainty on m_pacs_red."
       verbLevel="1" />
     <column name="m_ap_pacs_red"
       tablehead="m_ap_pacs_red"
       type="double precision"
       ucd="phot.mag;em.IR.1500-3000GHz"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 1500-3000GHz band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 1500-3000GHz band of Photoconductor Array Camera and Spectrometer (PACS) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_pacs_red"
       tablehead="merr_ap_pacs_red"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.1500-3000GHz"
       unit="mag"
-      description="Mean error on m_ap_pacs_red"
+      description="Uncertainty on m_ap_pacs_red"
       verbLevel="1" />
     <column name="flag_pacs_red"
       tablehead="flag_pacs_red"
       type="boolean"
       ucd="meta.code.qual;em.IR.1500-3000GHz"
       unit="mag"
-      description="Flag set to true for sources for which niether the pacs_red aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the pacs_red aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5062,8 +4841,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of The Quick Near-Infrared Camera on The University of Hawaii 2.2m telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of The Quick Near-Infrared Camera on The University of Hawaii 2.2m telescope."
       verbLevel="1" />
     <column name="ferr_ap_quirc_hk"
       tablehead="ferr_ap_quirc_hk"
@@ -5084,30 +4862,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_quirc_hk."
+      description="Uncertainty on m_quirc_hk."
       verbLevel="1" />
     <column name="m_ap_quirc_hk"
       tablehead="m_ap_quirc_hk"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of The Quick Near-Infrared Camera on The University of Hawaii 2.2m telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of The Quick Near-Infrared Camera on The University of Hawaii 2.2m telescope."
       verbLevel="1" />
     <column name="merr_ap_quirc_hk"
       tablehead="merr_ap_quirc_hk"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_quirc_hk"
+      description="Uncertainty on m_ap_quirc_hk"
       verbLevel="1" />
     <column name="flag_quirc_hk"
       tablehead="flag_quirc_hk"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the quirc_hk aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the quirc_hk aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5130,8 +4906,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="ferr_ap_sdss_g"
       tablehead="ferr_ap_sdss_g"
@@ -5152,30 +4927,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_sdss_g."
+      description="Uncertainty on m_sdss_g."
       verbLevel="1" />
     <column name="m_ap_sdss_g"
       tablehead="m_ap_sdss_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="merr_ap_sdss_g"
       tablehead="merr_ap_sdss_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_sdss_g"
+      description="Uncertainty on m_ap_sdss_g"
       verbLevel="1" />
     <column name="flag_sdss_g"
       tablehead="flag_sdss_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the sdss_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the sdss_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5198,8 +4971,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="ferr_ap_sdss_i"
       tablehead="ferr_ap_sdss_i"
@@ -5220,30 +4992,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_sdss_i."
+      description="Uncertainty on m_sdss_i."
       verbLevel="1" />
     <column name="m_ap_sdss_i"
       tablehead="m_ap_sdss_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="merr_ap_sdss_i"
       tablehead="merr_ap_sdss_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_sdss_i"
+      description="Uncertainty on m_ap_sdss_i"
       verbLevel="1" />
     <column name="flag_sdss_i"
       tablehead="flag_sdss_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the sdss_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the sdss_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5266,8 +5036,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="ferr_ap_sdss_r"
       tablehead="ferr_ap_sdss_r"
@@ -5288,30 +5057,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_sdss_r."
+      description="Uncertainty on m_sdss_r."
       verbLevel="1" />
     <column name="m_ap_sdss_r"
       tablehead="m_ap_sdss_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="merr_ap_sdss_r"
       tablehead="merr_ap_sdss_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_sdss_r"
+      description="Uncertainty on m_ap_sdss_r"
       verbLevel="1" />
     <column name="flag_sdss_r"
       tablehead="flag_sdss_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the sdss_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the sdss_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5334,8 +5101,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="ferr_ap_sdss_u"
       tablehead="ferr_ap_sdss_u"
@@ -5356,30 +5122,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_sdss_u."
+      description="Uncertainty on m_sdss_u."
       verbLevel="1" />
     <column name="m_ap_sdss_u"
       tablehead="m_ap_sdss_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="merr_ap_sdss_u"
       tablehead="merr_ap_sdss_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_sdss_u"
+      description="Uncertainty on m_ap_sdss_u"
       verbLevel="1" />
     <column name="flag_sdss_u"
       tablehead="flag_sdss_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the sdss_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the sdss_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5402,8 +5166,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="ferr_ap_sdss_z"
       tablehead="ferr_ap_sdss_z"
@@ -5424,30 +5187,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_sdss_z."
+      description="Uncertainty on m_sdss_z."
       verbLevel="1" />
     <column name="m_ap_sdss_z"
       tablehead="m_ap_sdss_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Sloan Digital Sky Survey (SDSS) standard camera on The Sloan Digital Sky Survey (SDSS) dedicated telescope at Apache Point Observatory."
       verbLevel="1" />
     <column name="merr_ap_sdss_z"
       tablehead="merr_ap_sdss_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_sdss_z"
+      description="Uncertainty on m_ap_sdss_z"
       verbLevel="1" />
     <column name="flag_sdss_z"
       tablehead="flag_sdss_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the sdss_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the sdss_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5470,8 +5231,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.750-1500GHz"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_spire_250"
       tablehead="ferr_ap_spire_250"
@@ -5492,30 +5252,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Mean error on m_spire_250."
+      description="Uncertainty on m_spire_250."
       verbLevel="1" />
     <column name="m_ap_spire_250"
       tablehead="m_ap_spire_250"
       type="double precision"
       ucd="phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_spire_250"
       tablehead="merr_ap_spire_250"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Mean error on m_ap_spire_250"
+      description="Uncertainty on m_ap_spire_250"
       verbLevel="1" />
     <column name="flag_spire_250"
       tablehead="flag_spire_250"
       type="boolean"
       ucd="meta.code.qual;em.IR.750-1500GHz"
       unit="mag"
-      description="Flag set to true for sources for which niether the spire_250 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the spire_250 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5538,8 +5296,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.750-1500GHz"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_spire_350"
       tablehead="ferr_ap_spire_350"
@@ -5560,30 +5317,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Mean error on m_spire_350."
+      description="Uncertainty on m_spire_350."
       verbLevel="1" />
     <column name="m_ap_spire_350"
       tablehead="m_ap_spire_350"
       type="double precision"
       ucd="phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 750-1500GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_spire_350"
       tablehead="merr_ap_spire_350"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.750-1500GHz"
       unit="mag"
-      description="Mean error on m_ap_spire_350"
+      description="Uncertainty on m_ap_spire_350"
       verbLevel="1" />
     <column name="flag_spire_350"
       tablehead="flag_spire_350"
       type="boolean"
       ucd="meta.code.qual;em.IR.750-1500GHz"
       unit="mag"
-      description="Flag set to true for sources for which niether the spire_350 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the spire_350 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5606,8 +5361,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.400-750GHz"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 400-750GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 400-750GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="ferr_ap_spire_500"
       tablehead="ferr_ap_spire_500"
@@ -5628,30 +5382,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.400-750GHz"
       unit="mag"
-      description="Mean error on m_spire_500."
+      description="Uncertainty on m_spire_500."
       verbLevel="1" />
     <column name="m_ap_spire_500"
       tablehead="m_ap_spire_500"
       type="double precision"
       ucd="phot.mag;em.IR.400-750GHz"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 400-750GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 400-750GHz band of The Spectral and Photometric Imaging Reciever (SPIRE) on The Herschel Space Telescope."
       verbLevel="1" />
     <column name="merr_ap_spire_500"
       tablehead="merr_ap_spire_500"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.400-750GHz"
       unit="mag"
-      description="Mean error on m_ap_spire_500"
+      description="Uncertainty on m_ap_spire_500"
       verbLevel="1" />
     <column name="flag_spire_500"
       tablehead="flag_spire_500"
       type="boolean"
       ucd="meta.code.qual;em.IR.400-750GHz"
       unit="mag"
-      description="Flag set to true for sources for which niether the spire_500 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the spire_500 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5674,8 +5426,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_b"
       tablehead="ferr_ap_suprime_b"
@@ -5696,30 +5447,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_suprime_b."
+      description="Uncertainty on m_suprime_b."
       verbLevel="1" />
     <column name="m_ap_suprime_b"
       tablehead="m_ap_suprime_b"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_b"
       tablehead="merr_ap_suprime_b"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_suprime_b"
+      description="Uncertainty on m_ap_suprime_b"
       verbLevel="1" />
     <column name="flag_suprime_b"
       tablehead="flag_suprime_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_b aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5742,8 +5491,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_g"
       tablehead="ferr_ap_suprime_g"
@@ -5764,30 +5512,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_suprime_g."
+      description="Uncertainty on m_suprime_g."
       verbLevel="1" />
     <column name="m_ap_suprime_g"
       tablehead="m_ap_suprime_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_g"
       tablehead="merr_ap_suprime_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_suprime_g"
+      description="Uncertainty on m_ap_suprime_g"
       verbLevel="1" />
     <column name="flag_suprime_g"
       tablehead="flag_suprime_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5810,8 +5556,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_i"
       tablehead="ferr_ap_suprime_i"
@@ -5832,30 +5577,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_i."
+      description="Uncertainty on m_suprime_i."
       verbLevel="1" />
     <column name="m_ap_suprime_i"
       tablehead="m_ap_suprime_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_i"
       tablehead="merr_ap_suprime_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_i"
+      description="Uncertainty on m_ap_suprime_i"
       verbLevel="1" />
     <column name="flag_suprime_i"
       tablehead="flag_suprime_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5878,8 +5621,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia484"
       tablehead="ferr_ap_suprime_ia484"
@@ -5900,30 +5642,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_suprime_ia484."
+      description="Uncertainty on m_suprime_ia484."
       verbLevel="1" />
     <column name="m_ap_suprime_ia484"
       tablehead="m_ap_suprime_ia484"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia484"
       tablehead="merr_ap_suprime_ia484"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia484"
+      description="Uncertainty on m_ap_suprime_ia484"
       verbLevel="1" />
     <column name="flag_suprime_ia484"
       tablehead="flag_suprime_ia484"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia484 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia484 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -5946,8 +5686,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia527"
       tablehead="ferr_ap_suprime_ia527"
@@ -5968,30 +5707,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_suprime_ia527."
+      description="Uncertainty on m_suprime_ia527."
       verbLevel="1" />
     <column name="m_ap_suprime_ia527"
       tablehead="m_ap_suprime_ia527"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia527"
       tablehead="merr_ap_suprime_ia527"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia527"
+      description="Uncertainty on m_ap_suprime_ia527"
       verbLevel="1" />
     <column name="flag_suprime_ia527"
       tablehead="flag_suprime_ia527"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia527 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia527 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6014,8 +5751,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia624"
       tablehead="ferr_ap_suprime_ia624"
@@ -6036,30 +5772,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_ia624."
+      description="Uncertainty on m_suprime_ia624."
       verbLevel="1" />
     <column name="m_ap_suprime_ia624"
       tablehead="m_ap_suprime_ia624"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia624"
       tablehead="merr_ap_suprime_ia624"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia624"
+      description="Uncertainty on m_ap_suprime_ia624"
       verbLevel="1" />
     <column name="flag_suprime_ia624"
       tablehead="flag_suprime_ia624"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia624 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia624 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6082,8 +5816,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia679"
       tablehead="ferr_ap_suprime_ia679"
@@ -6104,30 +5837,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_ia679."
+      description="Uncertainty on m_suprime_ia679."
       verbLevel="1" />
     <column name="m_ap_suprime_ia679"
       tablehead="m_ap_suprime_ia679"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia679"
       tablehead="merr_ap_suprime_ia679"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia679"
+      description="Uncertainty on m_ap_suprime_ia679"
       verbLevel="1" />
     <column name="flag_suprime_ia679"
       tablehead="flag_suprime_ia679"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia679 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia679 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6150,8 +5881,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia738"
       tablehead="ferr_ap_suprime_ia738"
@@ -6172,30 +5902,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_ia738."
+      description="Uncertainty on m_suprime_ia738."
       verbLevel="1" />
     <column name="m_ap_suprime_ia738"
       tablehead="m_ap_suprime_ia738"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia738"
       tablehead="merr_ap_suprime_ia738"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia738"
+      description="Uncertainty on m_ap_suprime_ia738"
       verbLevel="1" />
     <column name="flag_suprime_ia738"
       tablehead="flag_suprime_ia738"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia738 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia738 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6218,8 +5946,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ia767"
       tablehead="ferr_ap_suprime_ia767"
@@ -6240,30 +5967,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_ia767."
+      description="Uncertainty on m_suprime_ia767."
       verbLevel="1" />
     <column name="m_ap_suprime_ia767"
       tablehead="m_ap_suprime_ia767"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ia767"
       tablehead="merr_ap_suprime_ia767"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_ia767"
+      description="Uncertainty on m_ap_suprime_ia767"
       verbLevel="1" />
     <column name="flag_suprime_ia767"
       tablehead="flag_suprime_ia767"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ia767 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ia767 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6286,8 +6011,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib427"
       tablehead="ferr_ap_suprime_ib427"
@@ -6308,30 +6032,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_suprime_ib427."
+      description="Uncertainty on m_suprime_ib427."
       verbLevel="1" />
     <column name="m_ap_suprime_ib427"
       tablehead="m_ap_suprime_ib427"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib427"
       tablehead="merr_ap_suprime_ib427"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib427"
+      description="Uncertainty on m_ap_suprime_ib427"
       verbLevel="1" />
     <column name="flag_suprime_ib427"
       tablehead="flag_suprime_ib427"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib427 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib427 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6354,8 +6076,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib464"
       tablehead="ferr_ap_suprime_ib464"
@@ -6376,30 +6097,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_suprime_ib464."
+      description="Uncertainty on m_suprime_ib464."
       verbLevel="1" />
     <column name="m_ap_suprime_ib464"
       tablehead="m_ap_suprime_ib464"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib464"
       tablehead="merr_ap_suprime_ib464"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib464"
+      description="Uncertainty on m_ap_suprime_ib464"
       verbLevel="1" />
     <column name="flag_suprime_ib464"
       tablehead="flag_suprime_ib464"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib464 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib464 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6422,8 +6141,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib505"
       tablehead="ferr_ap_suprime_ib505"
@@ -6444,30 +6162,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_suprime_ib505."
+      description="Uncertainty on m_suprime_ib505."
       verbLevel="1" />
     <column name="m_ap_suprime_ib505"
       tablehead="m_ap_suprime_ib505"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib505"
       tablehead="merr_ap_suprime_ib505"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib505"
+      description="Uncertainty on m_ap_suprime_ib505"
       verbLevel="1" />
     <column name="flag_suprime_ib505"
       tablehead="flag_suprime_ib505"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib505 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib505 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6490,8 +6206,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib574"
       tablehead="ferr_ap_suprime_ib574"
@@ -6512,30 +6227,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_suprime_ib574."
+      description="Uncertainty on m_suprime_ib574."
       verbLevel="1" />
     <column name="m_ap_suprime_ib574"
       tablehead="m_ap_suprime_ib574"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib574"
       tablehead="merr_ap_suprime_ib574"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib574"
+      description="Uncertainty on m_ap_suprime_ib574"
       verbLevel="1" />
     <column name="flag_suprime_ib574"
       tablehead="flag_suprime_ib574"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib574 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib574 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6558,8 +6271,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib709"
       tablehead="ferr_ap_suprime_ib709"
@@ -6580,30 +6292,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_ib709."
+      description="Uncertainty on m_suprime_ib709."
       verbLevel="1" />
     <column name="m_ap_suprime_ib709"
       tablehead="m_ap_suprime_ib709"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib709"
       tablehead="merr_ap_suprime_ib709"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib709"
+      description="Uncertainty on m_ap_suprime_ib709"
       verbLevel="1" />
     <column name="flag_suprime_ib709"
       tablehead="flag_suprime_ib709"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib709 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib709 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6626,8 +6336,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ib827"
       tablehead="ferr_ap_suprime_ib827"
@@ -6648,30 +6357,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_ib827."
+      description="Uncertainty on m_suprime_ib827."
       verbLevel="1" />
     <column name="m_ap_suprime_ib827"
       tablehead="m_ap_suprime_ib827"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ib827"
       tablehead="merr_ap_suprime_ib827"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_ib827"
+      description="Uncertainty on m_ap_suprime_ib827"
       verbLevel="1" />
     <column name="flag_suprime_ib827"
       tablehead="flag_suprime_ib827"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ib827 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ib827 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6694,8 +6401,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_ip"
       tablehead="ferr_ap_suprime_ip"
@@ -6716,30 +6422,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_ip."
+      description="Uncertainty on m_suprime_ip."
       verbLevel="1" />
     <column name="m_ap_suprime_ip"
       tablehead="m_ap_suprime_ip"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_ip"
       tablehead="merr_ap_suprime_ip"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_ip"
+      description="Uncertainty on m_ap_suprime_ip"
       verbLevel="1" />
     <column name="flag_suprime_ip"
       tablehead="flag_suprime_ip"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_ip aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_ip aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6762,8 +6466,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_n816"
       tablehead="ferr_ap_suprime_n816"
@@ -6784,30 +6487,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_n816."
+      description="Uncertainty on m_suprime_n816."
       verbLevel="1" />
     <column name="m_ap_suprime_n816"
       tablehead="m_ap_suprime_n816"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_n816"
       tablehead="merr_ap_suprime_n816"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_n816"
+      description="Uncertainty on m_ap_suprime_n816"
       verbLevel="1" />
     <column name="flag_suprime_n816"
       tablehead="flag_suprime_n816"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_n816 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_n816 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6830,8 +6531,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_n921"
       tablehead="ferr_ap_suprime_n921"
@@ -6852,30 +6552,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_n921."
+      description="Uncertainty on m_suprime_n921."
       verbLevel="1" />
     <column name="m_ap_suprime_n921"
       tablehead="m_ap_suprime_n921"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_n921"
       tablehead="merr_ap_suprime_n921"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_n921"
+      description="Uncertainty on m_ap_suprime_n921"
       verbLevel="1" />
     <column name="flag_suprime_n921"
       tablehead="flag_suprime_n921"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_n921 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_n921 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6898,8 +6596,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_nb711"
       tablehead="ferr_ap_suprime_nb711"
@@ -6920,30 +6617,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_nb711."
+      description="Uncertainty on m_suprime_nb711."
       verbLevel="1" />
     <column name="m_ap_suprime_nb711"
       tablehead="m_ap_suprime_nb711"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_nb711"
       tablehead="merr_ap_suprime_nb711"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_nb711"
+      description="Uncertainty on m_ap_suprime_nb711"
       verbLevel="1" />
     <column name="flag_suprime_nb711"
       tablehead="flag_suprime_nb711"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_nb711 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_nb711 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -6966,8 +6661,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_nb816"
       tablehead="ferr_ap_suprime_nb816"
@@ -6988,30 +6682,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_nb816."
+      description="Uncertainty on m_suprime_nb816."
       verbLevel="1" />
     <column name="m_ap_suprime_nb816"
       tablehead="m_ap_suprime_nb816"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_nb816"
       tablehead="merr_ap_suprime_nb816"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_nb816"
+      description="Uncertainty on m_ap_suprime_nb816"
       verbLevel="1" />
     <column name="flag_suprime_nb816"
       tablehead="flag_suprime_nb816"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_nb816 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_nb816 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7034,8 +6726,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_r"
       tablehead="ferr_ap_suprime_r"
@@ -7056,30 +6747,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_r."
+      description="Uncertainty on m_suprime_r."
       verbLevel="1" />
     <column name="m_ap_suprime_r"
       tablehead="m_ap_suprime_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_r"
       tablehead="merr_ap_suprime_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_r"
+      description="Uncertainty on m_ap_suprime_r"
       verbLevel="1" />
     <column name="flag_suprime_r"
       tablehead="flag_suprime_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7102,8 +6791,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_rc"
       tablehead="ferr_ap_suprime_rc"
@@ -7124,30 +6812,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_rc."
+      description="Uncertainty on m_suprime_rc."
       verbLevel="1" />
     <column name="m_ap_suprime_rc"
       tablehead="m_ap_suprime_rc"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_rc"
       tablehead="merr_ap_suprime_rc"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_rc"
+      description="Uncertainty on m_ap_suprime_rc"
       verbLevel="1" />
     <column name="flag_suprime_rc"
       tablehead="flag_suprime_rc"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_rc aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_rc aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7170,8 +6856,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_rp"
       tablehead="ferr_ap_suprime_rp"
@@ -7192,30 +6877,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_suprime_rp."
+      description="Uncertainty on m_suprime_rp."
       verbLevel="1" />
     <column name="m_ap_suprime_rp"
       tablehead="m_ap_suprime_rp"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_rp"
       tablehead="merr_ap_suprime_rp"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_suprime_rp"
+      description="Uncertainty on m_ap_suprime_rp"
       verbLevel="1" />
     <column name="flag_suprime_rp"
       tablehead="flag_suprime_rp"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_rp aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_rp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7238,8 +6921,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_v"
       tablehead="ferr_ap_suprime_v"
@@ -7260,30 +6942,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_suprime_v."
+      description="Uncertainty on m_suprime_v."
       verbLevel="1" />
     <column name="m_ap_suprime_v"
       tablehead="m_ap_suprime_v"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_v"
       tablehead="merr_ap_suprime_v"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_suprime_v"
+      description="Uncertainty on m_ap_suprime_v"
       verbLevel="1" />
     <column name="flag_suprime_v"
       tablehead="flag_suprime_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_v aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7306,8 +6986,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_y"
       tablehead="ferr_ap_suprime_y"
@@ -7328,30 +7007,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_y."
+      description="Uncertainty on m_suprime_y."
       verbLevel="1" />
     <column name="m_ap_suprime_y"
       tablehead="m_ap_suprime_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_y"
       tablehead="merr_ap_suprime_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_y"
+      description="Uncertainty on m_ap_suprime_y"
       verbLevel="1" />
     <column name="flag_suprime_y"
       tablehead="flag_suprime_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7374,8 +7051,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_z"
       tablehead="ferr_ap_suprime_z"
@@ -7396,30 +7072,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_z."
+      description="Uncertainty on m_suprime_z."
       verbLevel="1" />
     <column name="m_ap_suprime_z"
       tablehead="m_ap_suprime_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of HyperSuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_z"
       tablehead="merr_ap_suprime_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_z"
+      description="Uncertainty on m_ap_suprime_z"
       verbLevel="1" />
     <column name="flag_suprime_z"
       tablehead="flag_suprime_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7442,8 +7116,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_zp"
       tablehead="ferr_ap_suprime_zp"
@@ -7464,30 +7137,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_zp."
+      description="Uncertainty on m_suprime_zp."
       verbLevel="1" />
     <column name="m_ap_suprime_zp"
       tablehead="m_ap_suprime_zp"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_zp"
       tablehead="merr_ap_suprime_zp"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_zp"
+      description="Uncertainty on m_ap_suprime_zp"
       verbLevel="1" />
     <column name="flag_suprime_zp"
       tablehead="flag_suprime_zp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_zp aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_zp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7510,8 +7181,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="ferr_ap_suprime_zpp"
       tablehead="ferr_ap_suprime_zpp"
@@ -7532,30 +7202,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_suprime_zpp."
+      description="Uncertainty on m_suprime_zpp."
       verbLevel="1" />
     <column name="m_ap_suprime_zpp"
       tablehead="m_ap_suprime_zpp"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of SuprimeCam on The Subaru telescope."
       verbLevel="1" />
     <column name="merr_ap_suprime_zpp"
       tablehead="merr_ap_suprime_zpp"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_suprime_zpp"
+      description="Uncertainty on m_ap_suprime_zpp"
       verbLevel="1" />
     <column name="flag_suprime_zpp"
       tablehead="flag_suprime_zpp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the suprime_zpp aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the suprime_zpp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7578,8 +7246,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Instrument Formerly Known as Mosaic (TIFKAM) on The Michigan Dartmouth MIT (MDM) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Instrument Formerly Known as Mosaic (TIFKAM) on The Michigan Dartmouth MIT (MDM) Observatory."
       verbLevel="1" />
     <column name="ferr_ap_tifkam_ks"
       tablehead="ferr_ap_tifkam_ks"
@@ -7600,30 +7267,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_tifkam_ks."
+      description="Uncertainty on m_tifkam_ks."
       verbLevel="1" />
     <column name="m_ap_tifkam_ks"
       tablehead="m_ap_tifkam_ks"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Instrument Formerly Known as Mosaic (TIFKAM) on The Michigan Dartmouth MIT (MDM) Observatory."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Instrument Formerly Known as Mosaic (TIFKAM) on The Michigan Dartmouth MIT (MDM) Observatory."
       verbLevel="1" />
     <column name="merr_ap_tifkam_ks"
       tablehead="merr_ap_tifkam_ks"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_tifkam_ks"
+      description="Uncertainty on m_ap_tifkam_ks"
       verbLevel="1" />
     <column name="flag_tifkam_ks"
       tablehead="flag_tifkam_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the tifkam_ks aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the tifkam_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7646,8 +7311,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="ferr_ap_ukidss_h"
       tablehead="ferr_ap_ukidss_h"
@@ -7668,30 +7332,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ukidss_h."
+      description="Uncertainty on m_ukidss_h."
       verbLevel="1" />
     <column name="m_ap_ukidss_h"
       tablehead="m_ap_ukidss_h"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="merr_ap_ukidss_h"
       tablehead="merr_ap_ukidss_h"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_ukidss_h"
+      description="Uncertainty on m_ap_ukidss_h"
       verbLevel="1" />
     <column name="flag_ukidss_h"
       tablehead="flag_ukidss_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the ukidss_h aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the ukidss_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7714,8 +7376,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="ferr_ap_ukidss_j"
       tablehead="ferr_ap_ukidss_j"
@@ -7736,30 +7397,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ukidss_j."
+      description="Uncertainty on m_ukidss_j."
       verbLevel="1" />
     <column name="m_ap_ukidss_j"
       tablehead="m_ap_ukidss_j"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="merr_ap_ukidss_j"
       tablehead="merr_ap_ukidss_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_ukidss_j"
+      description="Uncertainty on m_ap_ukidss_j"
       verbLevel="1" />
     <column name="flag_ukidss_j"
       tablehead="flag_ukidss_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the ukidss_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the ukidss_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7782,8 +7441,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="ferr_ap_ukidss_k"
       tablehead="ferr_ap_ukidss_k"
@@ -7804,30 +7462,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ukidss_k."
+      description="Uncertainty on m_ukidss_k."
       verbLevel="1" />
     <column name="m_ap_ukidss_k"
       tablehead="m_ap_ukidss_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="merr_ap_ukidss_k"
       tablehead="merr_ap_ukidss_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_ukidss_k"
+      description="Uncertainty on m_ap_ukidss_k"
       verbLevel="1" />
     <column name="flag_ukidss_k"
       tablehead="flag_ukidss_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the ukidss_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the ukidss_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7850,8 +7506,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="ferr_ap_ukidss_y"
       tablehead="ferr_ap_ukidss_y"
@@ -7872,30 +7527,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ukidss_y."
+      description="Uncertainty on m_ukidss_y."
       verbLevel="1" />
     <column name="m_ap_ukidss_y"
       tablehead="m_ap_ukidss_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Camera (WFCAM) on The United Kingdom Infrared Telescope (UKIRT)."
       verbLevel="1" />
     <column name="merr_ap_ukidss_y"
       tablehead="merr_ap_ukidss_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_ukidss_y"
+      description="Uncertainty on m_ap_ukidss_y"
       verbLevel="1" />
     <column name="flag_ukidss_y"
       tablehead="flag_ukidss_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the ukidss_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the ukidss_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7918,8 +7571,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="ferr_ap_vista_h"
       tablehead="ferr_ap_vista_h"
@@ -7940,30 +7592,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_vista_h."
+      description="Uncertainty on m_vista_h."
       verbLevel="1" />
     <column name="m_ap_vista_h"
       tablehead="m_ap_vista_h"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="merr_ap_vista_h"
       tablehead="merr_ap_vista_h"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_vista_h"
+      description="Uncertainty on m_ap_vista_h"
       verbLevel="1" />
     <column name="flag_vista_h"
       tablehead="flag_vista_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the vista_h aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the vista_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -7986,8 +7636,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="ferr_ap_vista_j"
       tablehead="ferr_ap_vista_j"
@@ -8008,30 +7657,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_vista_j."
+      description="Uncertainty on m_vista_j."
       verbLevel="1" />
     <column name="m_ap_vista_j"
       tablehead="m_ap_vista_j"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="merr_ap_vista_j"
       tablehead="merr_ap_vista_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_vista_j"
+      description="Uncertainty on m_ap_vista_j"
       verbLevel="1" />
     <column name="flag_vista_j"
       tablehead="flag_vista_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the vista_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the vista_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8054,8 +7701,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="ferr_ap_vista_ks"
       tablehead="ferr_ap_vista_ks"
@@ -8076,30 +7722,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_vista_ks."
+      description="Uncertainty on m_vista_ks."
       verbLevel="1" />
     <column name="m_ap_vista_ks"
       tablehead="m_ap_vista_ks"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="merr_ap_vista_ks"
       tablehead="merr_ap_vista_ks"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_vista_ks"
+      description="Uncertainty on m_ap_vista_ks"
       verbLevel="1" />
     <column name="flag_vista_ks"
       tablehead="flag_vista_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the vista_ks aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the vista_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8122,8 +7766,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="ferr_ap_vista_y"
       tablehead="ferr_ap_vista_y"
@@ -8144,30 +7787,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_vista_y."
+      description="Uncertainty on m_vista_y."
       verbLevel="1" />
     <column name="m_ap_vista_y"
       tablehead="m_ap_vista_y"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="merr_ap_vista_y"
       tablehead="merr_ap_vista_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_vista_y"
+      description="Uncertainty on m_ap_vista_y"
       verbLevel="1" />
     <column name="flag_vista_y"
       tablehead="flag_vista_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the vista_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the vista_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8190,8 +7831,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="ferr_ap_vista_z"
       tablehead="ferr_ap_vista_z"
@@ -8212,30 +7852,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_vista_z."
+      description="Uncertainty on m_vista_z."
       verbLevel="1" />
     <column name="m_ap_vista_z"
       tablehead="m_ap_vista_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The VISTA InfraRed CAMera (VIRCAM) on The 4.1m Visible and Infrared Survey Telescope for Astronomy (VISTA)."
       verbLevel="1" />
     <column name="merr_ap_vista_z"
       tablehead="merr_ap_vista_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_vista_z"
+      description="Uncertainty on m_ap_vista_z"
       verbLevel="1" />
     <column name="flag_vista_z"
       tablehead="flag_vista_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the vista_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the vista_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8258,8 +7896,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.50-100nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 50-100nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 50-100nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_wfc3_f098m"
       tablehead="ferr_ap_wfc3_f098m"
@@ -8280,30 +7917,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.50-100nm"
       unit="mag"
-      description="Mean error on m_wfc3_f098m."
+      description="Uncertainty on m_wfc3_f098m."
       verbLevel="1" />
     <column name="m_ap_wfc3_f098m"
       tablehead="m_ap_wfc3_f098m"
       type="double precision"
       ucd="phot.mag;em.opt.50-100nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 50-100nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 50-100nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_wfc3_f098m"
       tablehead="merr_ap_wfc3_f098m"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.50-100nm"
       unit="mag"
-      description="Mean error on m_ap_wfc3_f098m"
+      description="Uncertainty on m_ap_wfc3_f098m"
       verbLevel="1" />
     <column name="flag_wfc3_f098m"
       tablehead="flag_wfc3_f098m"
       type="boolean"
       ucd="meta.code.qual;em.opt.50-100nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc3_f098m aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc3_f098m aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8326,8 +7961,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_wfc3_f105w"
       tablehead="ferr_ap_wfc3_f105w"
@@ -8348,30 +7982,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_wfc3_f105w."
+      description="Uncertainty on m_wfc3_f105w."
       verbLevel="1" />
     <column name="m_ap_wfc3_f105w"
       tablehead="m_ap_wfc3_f105w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_wfc3_f105w"
       tablehead="merr_ap_wfc3_f105w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_wfc3_f105w"
+      description="Uncertainty on m_ap_wfc3_f105w"
       verbLevel="1" />
     <column name="flag_wfc3_f105w"
       tablehead="flag_wfc3_f105w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc3_f105w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc3_f105w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8394,8 +8026,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_wfc3_f125w"
       tablehead="ferr_ap_wfc3_f125w"
@@ -8416,30 +8047,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_wfc3_f125w."
+      description="Uncertainty on m_wfc3_f125w."
       verbLevel="1" />
     <column name="m_ap_wfc3_f125w"
       tablehead="m_ap_wfc3_f125w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_wfc3_f125w"
       tablehead="merr_ap_wfc3_f125w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_wfc3_f125w"
+      description="Uncertainty on m_ap_wfc3_f125w"
       verbLevel="1" />
     <column name="flag_wfc3_f125w"
       tablehead="flag_wfc3_f125w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc3_f125w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc3_f125w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8462,8 +8091,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_wfc3_f140w"
       tablehead="ferr_ap_wfc3_f140w"
@@ -8484,30 +8112,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_wfc3_f140w."
+      description="Uncertainty on m_wfc3_f140w."
       verbLevel="1" />
     <column name="m_ap_wfc3_f140w"
       tablehead="m_ap_wfc3_f140w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_wfc3_f140w"
       tablehead="merr_ap_wfc3_f140w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_wfc3_f140w"
+      description="Uncertainty on m_ap_wfc3_f140w"
       verbLevel="1" />
     <column name="flag_wfc3_f140w"
       tablehead="flag_wfc3_f140w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc3_f140w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc3_f140w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8530,8 +8156,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.100-200nm"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="ferr_ap_wfc3_f160w"
       tablehead="ferr_ap_wfc3_f160w"
@@ -8552,30 +8177,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_wfc3_f160w."
+      description="Uncertainty on m_wfc3_f160w."
       verbLevel="1" />
     <column name="m_ap_wfc3_f160w"
       tablehead="m_ap_wfc3_f160w"
       type="double precision"
       ucd="phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the 100-200nm band of The Wide Field Camera 3 (WFC3) on Hubble Space Telescope (HST)."
       verbLevel="1" />
     <column name="merr_ap_wfc3_f160w"
       tablehead="merr_ap_wfc3_f160w"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.100-200nm"
       unit="mag"
-      description="Mean error on m_ap_wfc3_f160w"
+      description="Uncertainty on m_ap_wfc3_f160w"
       verbLevel="1" />
     <column name="flag_wfc3_f160w"
       tablehead="flag_wfc3_f160w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc3_f160w aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc3_f160w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8598,8 +8221,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="ferr_ap_wfc_g"
       tablehead="ferr_ap_wfc_g"
@@ -8620,30 +8242,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfc_g."
+      description="Uncertainty on m_wfc_g."
       verbLevel="1" />
     <column name="m_ap_wfc_g"
       tablehead="m_ap_wfc_g"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="merr_ap_wfc_g"
       tablehead="merr_ap_wfc_g"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfc_g"
+      description="Uncertainty on m_ap_wfc_g"
       verbLevel="1" />
     <column name="flag_wfc_g"
       tablehead="flag_wfc_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc_g aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8666,8 +8286,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="ferr_ap_wfc_i"
       tablehead="ferr_ap_wfc_i"
@@ -8688,30 +8307,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfc_i."
+      description="Uncertainty on m_wfc_i."
       verbLevel="1" />
     <column name="m_ap_wfc_i"
       tablehead="m_ap_wfc_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="merr_ap_wfc_i"
       tablehead="merr_ap_wfc_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfc_i"
+      description="Uncertainty on m_ap_wfc_i"
       verbLevel="1" />
     <column name="flag_wfc_i"
       tablehead="flag_wfc_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8734,8 +8351,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="ferr_ap_wfc_r"
       tablehead="ferr_ap_wfc_r"
@@ -8756,30 +8372,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_wfc_r."
+      description="Uncertainty on m_wfc_r."
       verbLevel="1" />
     <column name="m_ap_wfc_r"
       tablehead="m_ap_wfc_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="merr_ap_wfc_r"
       tablehead="merr_ap_wfc_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_wfc_r"
+      description="Uncertainty on m_ap_wfc_r"
       verbLevel="1" />
     <column name="flag_wfc_r"
       tablehead="flag_wfc_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8802,8 +8416,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="ferr_ap_wfc_u"
       tablehead="ferr_ap_wfc_u"
@@ -8824,30 +8437,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_wfc_u."
+      description="Uncertainty on m_wfc_u."
       verbLevel="1" />
     <column name="m_ap_wfc_u"
       tablehead="m_ap_wfc_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="merr_ap_wfc_u"
       tablehead="merr_ap_wfc_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_wfc_u"
+      description="Uncertainty on m_ap_wfc_u"
       verbLevel="1" />
     <column name="flag_wfc_u"
       tablehead="flag_wfc_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8870,8 +8481,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="ferr_ap_wfc_z"
       tablehead="ferr_ap_wfc_z"
@@ -8892,30 +8502,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfc_z."
+      description="Uncertainty on m_wfc_z."
       verbLevel="1" />
     <column name="m_ap_wfc_z"
       tablehead="m_ap_wfc_z"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Camera (WFC) on Isaac Newton Telescope (INT)."
       verbLevel="1" />
     <column name="merr_ap_wfc_z"
       tablehead="merr_ap_wfc_z"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfc_z"
+      description="Uncertainty on m_ap_wfc_z"
       verbLevel="1" />
     <column name="flag_wfc_z"
       tablehead="flag_wfc_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfc_z aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfc_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -8938,8 +8546,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_416nm"
       tablehead="ferr_ap_wfi_416nm"
@@ -8960,30 +8567,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfi_416nm."
+      description="Uncertainty on m_wfi_416nm."
       verbLevel="1" />
     <column name="m_ap_wfi_416nm"
       tablehead="m_ap_wfi_416nm"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_416nm"
       tablehead="merr_ap_wfi_416nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfi_416nm"
+      description="Uncertainty on m_ap_wfi_416nm"
       verbLevel="1" />
     <column name="flag_wfi_416nm"
       tablehead="flag_wfi_416nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_416nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_416nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9006,8 +8611,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_461nm"
       tablehead="ferr_ap_wfi_461nm"
@@ -9028,30 +8632,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfi_461nm."
+      description="Uncertainty on m_wfi_461nm."
       verbLevel="1" />
     <column name="m_ap_wfi_461nm"
       tablehead="m_ap_wfi_461nm"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_461nm"
       tablehead="merr_ap_wfi_461nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfi_461nm"
+      description="Uncertainty on m_ap_wfi_461nm"
       verbLevel="1" />
     <column name="flag_wfi_461nm"
       tablehead="flag_wfi_461nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_461nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_461nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9074,8 +8676,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_485nm"
       tablehead="ferr_ap_wfi_485nm"
@@ -9096,30 +8697,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfi_485nm."
+      description="Uncertainty on m_wfi_485nm."
       verbLevel="1" />
     <column name="m_ap_wfi_485nm"
       tablehead="m_ap_wfi_485nm"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_485nm"
       tablehead="merr_ap_wfi_485nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfi_485nm"
+      description="Uncertainty on m_ap_wfi_485nm"
       verbLevel="1" />
     <column name="flag_wfi_485nm"
       tablehead="flag_wfi_485nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_485nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_485nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9142,8 +8741,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_518nm"
       tablehead="ferr_ap_wfi_518nm"
@@ -9164,30 +8762,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_wfi_518nm."
+      description="Uncertainty on m_wfi_518nm."
       verbLevel="1" />
     <column name="m_ap_wfi_518nm"
       tablehead="m_ap_wfi_518nm"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_518nm"
       tablehead="merr_ap_wfi_518nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_wfi_518nm"
+      description="Uncertainty on m_ap_wfi_518nm"
       verbLevel="1" />
     <column name="flag_wfi_518nm"
       tablehead="flag_wfi_518nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_518nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_518nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9210,8 +8806,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_571nm"
       tablehead="ferr_ap_wfi_571nm"
@@ -9232,30 +8827,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_wfi_571nm."
+      description="Uncertainty on m_wfi_571nm."
       verbLevel="1" />
     <column name="m_ap_wfi_571nm"
       tablehead="m_ap_wfi_571nm"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_571nm"
       tablehead="merr_ap_wfi_571nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_wfi_571nm"
+      description="Uncertainty on m_ap_wfi_571nm"
       verbLevel="1" />
     <column name="flag_wfi_571nm"
       tablehead="flag_wfi_571nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_571nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_571nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9278,8 +8871,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_604nm"
       tablehead="ferr_ap_wfi_604nm"
@@ -9300,30 +8892,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_wfi_604nm."
+      description="Uncertainty on m_wfi_604nm."
       verbLevel="1" />
     <column name="m_ap_wfi_604nm"
       tablehead="m_ap_wfi_604nm"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_604nm"
       tablehead="merr_ap_wfi_604nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_wfi_604nm"
+      description="Uncertainty on m_ap_wfi_604nm"
       verbLevel="1" />
     <column name="flag_wfi_604nm"
       tablehead="flag_wfi_604nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_604nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_604nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9346,8 +8936,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_646nm"
       tablehead="ferr_ap_wfi_646nm"
@@ -9368,30 +8957,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_wfi_646nm."
+      description="Uncertainty on m_wfi_646nm."
       verbLevel="1" />
     <column name="m_ap_wfi_646nm"
       tablehead="m_ap_wfi_646nm"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_646nm"
       tablehead="merr_ap_wfi_646nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_wfi_646nm"
+      description="Uncertainty on m_ap_wfi_646nm"
       verbLevel="1" />
     <column name="flag_wfi_646nm"
       tablehead="flag_wfi_646nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_646nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_646nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9414,8 +9001,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_696nm"
       tablehead="ferr_ap_wfi_696nm"
@@ -9436,30 +9022,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_wfi_696nm."
+      description="Uncertainty on m_wfi_696nm."
       verbLevel="1" />
     <column name="m_ap_wfi_696nm"
       tablehead="m_ap_wfi_696nm"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_696nm"
       tablehead="merr_ap_wfi_696nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_wfi_696nm"
+      description="Uncertainty on m_ap_wfi_696nm"
       verbLevel="1" />
     <column name="flag_wfi_696nm"
       tablehead="flag_wfi_696nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_696nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_696nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9482,8 +9066,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_753nm"
       tablehead="ferr_ap_wfi_753nm"
@@ -9504,30 +9087,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfi_753nm."
+      description="Uncertainty on m_wfi_753nm."
       verbLevel="1" />
     <column name="m_ap_wfi_753nm"
       tablehead="m_ap_wfi_753nm"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_753nm"
       tablehead="merr_ap_wfi_753nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfi_753nm"
+      description="Uncertainty on m_ap_wfi_753nm"
       verbLevel="1" />
     <column name="flag_wfi_753nm"
       tablehead="flag_wfi_753nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_753nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_753nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9550,8 +9131,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_815nm"
       tablehead="ferr_ap_wfi_815nm"
@@ -9572,30 +9152,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfi_815nm."
+      description="Uncertainty on m_wfi_815nm."
       verbLevel="1" />
     <column name="m_ap_wfi_815nm"
       tablehead="m_ap_wfi_815nm"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_815nm"
       tablehead="merr_ap_wfi_815nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfi_815nm"
+      description="Uncertainty on m_ap_wfi_815nm"
       verbLevel="1" />
     <column name="flag_wfi_815nm"
       tablehead="flag_wfi_815nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_815nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_815nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9618,8 +9196,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_856nm"
       tablehead="ferr_ap_wfi_856nm"
@@ -9640,30 +9217,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfi_856nm."
+      description="Uncertainty on m_wfi_856nm."
       verbLevel="1" />
     <column name="m_ap_wfi_856nm"
       tablehead="m_ap_wfi_856nm"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_856nm"
       tablehead="merr_ap_wfi_856nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfi_856nm"
+      description="Uncertainty on m_ap_wfi_856nm"
       verbLevel="1" />
     <column name="flag_wfi_856nm"
       tablehead="flag_wfi_856nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_856nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_856nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9686,8 +9261,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_914nm"
       tablehead="ferr_ap_wfi_914nm"
@@ -9708,30 +9282,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfi_914nm."
+      description="Uncertainty on m_wfi_914nm."
       verbLevel="1" />
     <column name="m_ap_wfi_914nm"
       tablehead="m_ap_wfi_914nm"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_914nm"
       tablehead="merr_ap_wfi_914nm"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfi_914nm"
+      description="Uncertainty on m_ap_wfi_914nm"
       verbLevel="1" />
     <column name="flag_wfi_914nm"
       tablehead="flag_wfi_914nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_914nm aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_914nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9754,8 +9326,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_b"
       tablehead="ferr_ap_wfi_b"
@@ -9776,30 +9347,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfi_b."
+      description="Uncertainty on m_wfi_b."
       verbLevel="1" />
     <column name="m_ap_wfi_b"
       tablehead="m_ap_wfi_b"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_b"
       tablehead="merr_ap_wfi_b"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfi_b"
+      description="Uncertainty on m_ap_wfi_b"
       verbLevel="1" />
     <column name="flag_wfi_b"
       tablehead="flag_wfi_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_b aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9822,8 +9391,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.B"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_b123"
       tablehead="ferr_ap_wfi_b123"
@@ -9844,30 +9412,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_wfi_b123."
+      description="Uncertainty on m_wfi_b123."
       verbLevel="1" />
     <column name="m_ap_wfi_b123"
       tablehead="m_ap_wfi_b123"
       type="double precision"
       ucd="phot.mag;em.opt.B"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the B band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_b123"
       tablehead="merr_ap_wfi_b123"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.B"
       unit="mag"
-      description="Mean error on m_ap_wfi_b123"
+      description="Uncertainty on m_ap_wfi_b123"
       verbLevel="1" />
     <column name="flag_wfi_b123"
       tablehead="flag_wfi_b123"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_b123 aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_b123 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9890,8 +9456,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_i"
       tablehead="ferr_ap_wfi_i"
@@ -9912,30 +9477,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_wfi_i."
+      description="Uncertainty on m_wfi_i."
       verbLevel="1" />
     <column name="m_ap_wfi_i"
       tablehead="m_ap_wfi_i"
       type="double precision"
       ucd="phot.mag;em.opt.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_i"
       tablehead="merr_ap_wfi_i"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.I"
       unit="mag"
-      description="Mean error on m_ap_wfi_i"
+      description="Uncertainty on m_ap_wfi_i"
       verbLevel="1" />
     <column name="flag_wfi_i"
       tablehead="flag_wfi_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_i aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -9958,8 +9521,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.R"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_r"
       tablehead="ferr_ap_wfi_r"
@@ -9980,30 +9542,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_wfi_r."
+      description="Uncertainty on m_wfi_r."
       verbLevel="1" />
     <column name="m_ap_wfi_r"
       tablehead="m_ap_wfi_r"
       type="double precision"
       ucd="phot.mag;em.opt.R"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the R band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_r"
       tablehead="merr_ap_wfi_r"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.R"
       unit="mag"
-      description="Mean error on m_ap_wfi_r"
+      description="Uncertainty on m_ap_wfi_r"
       verbLevel="1" />
     <column name="flag_wfi_r"
       tablehead="flag_wfi_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_r aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10026,8 +9586,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.U"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the U band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the U band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_u"
       tablehead="ferr_ap_wfi_u"
@@ -10048,30 +9607,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_wfi_u."
+      description="Uncertainty on m_wfi_u."
       verbLevel="1" />
     <column name="m_ap_wfi_u"
       tablehead="m_ap_wfi_u"
       type="double precision"
       ucd="phot.mag;em.opt.U"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the U band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the U band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_u"
       tablehead="merr_ap_wfi_u"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.U"
       unit="mag"
-      description="Mean error on m_ap_wfi_u"
+      description="Uncertainty on m_ap_wfi_u"
       verbLevel="1" />
     <column name="flag_wfi_u"
       tablehead="flag_wfi_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_u aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10094,8 +9651,7 @@
       type="double precision"
       ucd="phot.flux;em.opt.V"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="ferr_ap_wfi_v"
       tablehead="ferr_ap_wfi_v"
@@ -10116,30 +9672,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_wfi_v."
+      description="Uncertainty on m_wfi_v."
       verbLevel="1" />
     <column name="m_ap_wfi_v"
       tablehead="m_ap_wfi_v"
       type="double precision"
       ucd="phot.mag;em.opt.V"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the V band of The Wide Field Imager (WFI) on The Max Planck Gesellschaft (MPG) telescope."
       verbLevel="1" />
     <column name="merr_ap_wfi_v"
       tablehead="merr_ap_wfi_v"
       type="double precision"
       ucd="stat.error;phot.mag;em.opt.V"
       unit="mag"
-      description="Mean error on m_ap_wfi_v"
+      description="Uncertainty on m_ap_wfi_v"
       verbLevel="1" />
     <column name="flag_wfi_v"
       tablehead="flag_wfi_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
       unit="mag"
-      description="Flag set to true for sources for which niether the wfi_v aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wfi_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10162,8 +9716,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.H"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the H band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the H band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_wircam_h"
       tablehead="ferr_ap_wircam_h"
@@ -10184,30 +9737,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_wircam_h."
+      description="Uncertainty on m_wircam_h."
       verbLevel="1" />
     <column name="m_ap_wircam_h"
       tablehead="m_ap_wircam_h"
       type="double precision"
       ucd="phot.mag;em.IR.H"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the H band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the H band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_wircam_h"
       tablehead="merr_ap_wircam_h"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.H"
       unit="mag"
-      description="Mean error on m_ap_wircam_h"
+      description="Uncertainty on m_ap_wircam_h"
       verbLevel="1" />
     <column name="flag_wircam_h"
       tablehead="flag_wircam_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircam_h aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircam_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10230,8 +9781,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_wircam_j"
       tablehead="ferr_ap_wircam_j"
@@ -10252,30 +9802,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_wircam_j."
+      description="Uncertainty on m_wircam_j."
       verbLevel="1" />
     <column name="m_ap_wircam_j"
       tablehead="m_ap_wircam_j"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_wircam_j"
       tablehead="merr_ap_wircam_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_wircam_j"
+      description="Uncertainty on m_ap_wircam_j"
       verbLevel="1" />
     <column name="flag_wircam_j"
       tablehead="flag_wircam_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircam_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircam_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10298,8 +9846,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_wircam_ks"
       tablehead="ferr_ap_wircam_ks"
@@ -10320,30 +9867,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_wircam_ks."
+      description="Uncertainty on m_wircam_ks."
       verbLevel="1" />
     <column name="m_ap_wircam_ks"
       tablehead="m_ap_wircam_ks"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_wircam_ks"
       tablehead="merr_ap_wircam_ks"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_wircam_ks"
+      description="Uncertainty on m_ap_wircam_ks"
       verbLevel="1" />
     <column name="flag_wircam_ks"
       tablehead="flag_wircam_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircam_ks aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircam_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10366,8 +9911,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.I"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the I band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the I band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="ferr_ap_wircam_y"
       tablehead="ferr_ap_wircam_y"
@@ -10388,30 +9932,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.I"
       unit="mag"
-      description="Mean error on m_wircam_y."
+      description="Uncertainty on m_wircam_y."
       verbLevel="1" />
     <column name="m_ap_wircam_y"
       tablehead="m_ap_wircam_y"
       type="double precision"
       ucd="phot.mag;em.IR.I"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the I band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the I band of Wide-field InfraRed Camera (WIRCam) on Canada France Hawaii Telescope (CFHT)."
       verbLevel="1" />
     <column name="merr_ap_wircam_y"
       tablehead="merr_ap_wircam_y"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.I"
       unit="mag"
-      description="Mean error on m_ap_wircam_y"
+      description="Uncertainty on m_ap_wircam_y"
       verbLevel="1" />
     <column name="flag_wircam_y"
       tablehead="flag_wircam_y"
       type="boolean"
       ucd="meta.code.qual;em.IR.I"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircam_y aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10434,8 +9976,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.J"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the J band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the J band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
       verbLevel="1" />
     <column name="ferr_ap_wircs_j"
       tablehead="ferr_ap_wircs_j"
@@ -10456,30 +9997,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_wircs_j."
+      description="Uncertainty on m_wircs_j."
       verbLevel="1" />
     <column name="m_ap_wircs_j"
       tablehead="m_ap_wircs_j"
       type="double precision"
       ucd="phot.mag;em.IR.J"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the J band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the J band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
       verbLevel="1" />
     <column name="merr_ap_wircs_j"
       tablehead="merr_ap_wircs_j"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.J"
       unit="mag"
-      description="Mean error on m_ap_wircs_j"
+      description="Uncertainty on m_ap_wircs_j"
       verbLevel="1" />
     <column name="flag_wircs_j"
       tablehead="flag_wircs_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircs_j aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircs_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10502,8 +10041,7 @@
       type="double precision"
       ucd="phot.flux;em.IR.K"
       unit="uJy"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) flux density in the K band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) flux density in the K band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
       verbLevel="1" />
     <column name="ferr_ap_wircs_k"
       tablehead="ferr_ap_wircs_k"
@@ -10524,30 +10062,28 @@
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_wircs_k."
+      description="Uncertainty on m_wircs_k."
       verbLevel="1" />
     <column name="m_ap_wircs_k"
       tablehead="m_ap_wircs_k"
       type="double precision"
       ucd="phot.mag;em.IR.K"
       unit="mag"
-      description="Aperture (nearest aperture to 2 arcsec, aperture correction
-      applied) AB magnitude in the K band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
+      description="Aperture (nearest aperture to 2 arcsec, aperture correction applied) AB magnitude in the K band of Wide Infrared Camera (WIRC) on Palomar 200-inch Hale Telescope (P200)."
       verbLevel="1" />
     <column name="merr_ap_wircs_k"
       tablehead="merr_ap_wircs_k"
       type="double precision"
       ucd="stat.error;phot.mag;em.IR.K"
       unit="mag"
-      description="Mean error on m_ap_wircs_k"
+      description="Uncertainty on m_ap_wircs_k"
       verbLevel="1" />
     <column name="flag_wircs_k"
       tablehead="flag_wircs_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
       unit="mag"
-      description="Flag set to true for sources for which niether the wircs_k aperture nor total flux should
-      not be used for SED fitting (see documentation)."
+      description="Flag set to true for sources for which niether the wircs_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10584,8 +10120,7 @@
       type="double precision"
       ucd="phys.dust;phys.luminosity"
       unit="W"
-      description="Dust luminosity estimated by SED fitting with CIGALE using
-      both optical and infra-red information."
+      description="Dust luminosity estimated by SED fitting with CIGALE using both optical and infra-red information."
       verbLevel="1" />
     <column name="cigale_dustlumin_err"
       tablehead="CIGALE_DustLumin_err"
@@ -10599,8 +10134,7 @@
       type="double precision"
       ucd="phys.dust;phys.luminosity"
       unit="W"
-      description="Dust luminosity estimated by SED fitting with CIGALE using
-      only the infra-red information."
+      description="Dust luminosity estimated by SED fitting with CIGALE using only the infra-red information."
       verbLevel="1" />
     <column name="cigale_dustlumin_ironly_err"
       tablehead="CIGALE_DustLumin_IRonly_err"
@@ -10613,8 +10147,7 @@
       tablehead="Flag_CIGALE"
       type="smallint"
       ucd="meta.code.qual"
-      description="Flag qualifying the global fitting with CIGALE: 1 for a good
-      fit, 0 for a bad fit, -1 if the source was not fitted."
+      description="Flag qualifying the global fitting with CIGALE: 1 for a good fit, 0 for a bad fit, -1 if the source was not fitted."
       verbLevel="1">
         <values nullLiteral="-1" />
     </column>
@@ -10622,9 +10155,7 @@
       tablehead="Flag_CIGALE_Opt"
       type="smallint"
       ucd="meta.code.qual"
-      description="Flag qualifying the fitting of the optical part of the
-      spectrum during the global fit with CIGALE: 1 for a good fit, 0 for a bad
-      fit, -1 if the source was not fitted."
+      description="Flag qualifying the fitting of the optical part of the spectrum during the global fit with CIGALE: 1 for a good fit, 0 for a bad fit, -1 if the source was not fitted."
       verbLevel="1">
         <values nullLiteral="-1" />
     </column>
@@ -10632,9 +10163,7 @@
       tablehead="Flag_CIGALE_IR"
       type="smallint"
       ucd="meta.code.qual"
-      description="Flag qualifying the fitting of the infra-red part of the
-      spectrum during the global fit with CIGALE: 1 for a good fit, 0 for a bad
-      fit, -1 if the source was not fitted."
+      description="Flag qualifying the fitting of the infra-red part of the spectrum during the global fit with CIGALE: 1 for a good fit, 0 for a bad fit, -1 if the source was not fitted."
       verbLevel="1">
         <values nullLiteral="-1" />
     </column>
@@ -10642,9 +10171,7 @@
       tablehead="Flag_CIGALE_IRonly"
       type="smallint"
       ucd="meta.code.qual"
-      description="Flag qualifying the fitting using only infra-red data with
-      CIGALE: 1 for a good fit, 0 for a bad fit, -1 if the source was not
-      fitted."
+      description="Flag qualifying the fitting using only infra-red data with CIGALE: 1 for a good fit, 0 for a bad fit, -1 if the source was not fitted."
       verbLevel="1">
         <values nullLiteral="-1" />
     </column>
@@ -10653,8 +10180,7 @@
       tablehead="Flag_Gaia"
       type="smallint"
       ucd="meta.code"
-      description="Flag indicating the increasing probability of the source
-      being a Gaia object (see note)."
+      description="Flag indicating the increasing probability of the source being a Gaia object (see note)."
       note="1"
       verbLevel="1">
         <values nullLiteral="-1" />
@@ -10663,8 +10189,7 @@
       tablehead="Flag_Cleaned"
       type="boolean"
       ucd="meta.code"
-      description="Boolean flag denoting that the source was associated to
-      really near object that were removed during the cleaning procedure."
+      description="Boolean flag denoting that the source was associated to really near object that were removed during the cleaning procedure."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10672,8 +10197,7 @@
       tablehead="Flag_Merged"
       type="boolean"
       ucd="meta.code"
-      description="Boolean flag denoting a possible mis-association during the
-      cross-matching of the various catalogues."
+      description="Boolean flag denoting a possible mis-association during the cross-matching of the various catalogues."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -10681,8 +10205,7 @@
       tablehead="Flag_OptNIR_Obs"
       type="smallint"
       ucd="meta.code"
-      description="Flag indicating in which wavelength regimes the source was
-      observed (see note)."
+      description="Flag indicating in which wavelength regimes the source was observed (see note)."
       note="2"
       verbLevel="1">
         <values nullLiteral="-1" />
@@ -10691,8 +10214,7 @@
       tablehead="Flag_OptNIR_Det"
       type="smallint"
       ucd="meta.code"
-      description="Flag indicating in which wavelength regimes the source was
-      detected (see note)."
+      description="Flag indicating in which wavelength regimes the source was detected (see note)."
       note="2"
       verbLevel="1">
         <values nullLiteral="-1" />

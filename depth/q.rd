@@ -1,6 +1,6 @@
 <resource schema="depth">
   <meta name="title">HELP depth values</meta>
-  <meta name="creationDate">20180503</meta>
+  <meta name="creationDate">20180619</meta>
   <meta name="description">
     HELP depth values in various bands associated to HEALPix cells.
   </meta>
@@ -37,8 +37,9 @@
 
   <table id="main" onDisk="True" adql="True">
 
-    <index columns="hp_idx_O_13" />
-    <index columns="hp_idx_O_10" />
+    <index columns="band" />
+    <index columns="healpix_order" />
+    <index columns="depth" />
 
     <column name="hp_idx_O_13"
       tablehead="HEALPix_Npix_O13"
