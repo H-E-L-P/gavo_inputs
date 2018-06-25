@@ -1,6 +1,6 @@
 <resource schema="depth">
   <meta name="title">HELP depth values</meta>
-  <meta name="creationDate">20180620</meta>
+  <meta name="creationDate">20180625</meta>
   <meta name="description">
     HELP depth values in various bands associated to HEALPix cells.
   </meta>
@@ -36,9 +36,452 @@
   ]]> </meta>
 
   <table id="main" onDisk="True" adql="True">
+  
 
     <index columns="hp_idx_O_13" />
     <index columns="hp_idx_O_10" />
+
+    <index columns="ferr_90prime_g_mean" />
+    <index columns="ferr_ap_90prime_g_mean" />
+
+    <index columns="ferr_90prime_r_mean" />
+    <index columns="ferr_ap_90prime_r_mean" />
+
+    <index columns="ferr_90prime_z_mean" />
+    <index columns="ferr_ap_90prime_z_mean" />
+
+    <index columns="ferr_acs_f435w_mean" />
+    <index columns="ferr_ap_acs_f435w_mean" />
+
+    <index columns="ferr_acs_f606w_mean" />
+    <index columns="ferr_ap_acs_f606w_mean" />
+
+    <index columns="ferr_acs_f775w_mean" />
+    <index columns="ferr_ap_acs_f775w_mean" />
+
+    <index columns="ferr_acs_f814w_mean" />
+    <index columns="ferr_ap_acs_f814w_mean" />
+
+    <index columns="ferr_acs_f850lp_mean" />
+    <index columns="ferr_ap_acs_f850lp_mean" />
+
+    <index columns="ferr_bessell_b_mean" />
+    <index columns="ferr_ap_bessell_b_mean" />
+
+    <index columns="ferr_bessell_i_mean" />
+    <index columns="ferr_ap_bessell_i_mean" />
+
+    <index columns="ferr_bessell_r_mean" />
+    <index columns="ferr_ap_bessell_r_mean" />
+
+    <index columns="ferr_bessell_u_mean" />
+    <index columns="ferr_ap_bessell_u_mean" />
+
+    <index columns="ferr_bessell_v_mean" />
+    <index columns="ferr_ap_bessell_v_mean" />
+
+    <index columns="ferr_cfht12k_b_mean" />
+    <index columns="ferr_ap_cfht12k_b_mean" />
+
+    <index columns="ferr_cfht12k_i_mean" />
+    <index columns="ferr_ap_cfht12k_i_mean" />
+
+    <index columns="ferr_cfht12k_r_mean" />
+    <index columns="ferr_ap_cfht12k_r_mean" />
+
+    <index columns="ferr_decam_g_mean" />
+    <index columns="ferr_ap_decam_g_mean" />
+
+    <index columns="ferr_decam_i_mean" />
+    <index columns="ferr_ap_decam_i_mean" />
+
+    <index columns="ferr_decam_r_mean" />
+    <index columns="ferr_ap_decam_r_mean" />
+
+    <index columns="ferr_decam_y_mean" />
+    <index columns="ferr_ap_decam_y_mean" />
+
+    <index columns="ferr_decam_z_mean" />
+    <index columns="ferr_ap_decam_z_mean" />
+
+    <index columns="ferr_galex_fuv_mean" />
+    <index columns="ferr_ap_galex_fuv_mean" />
+
+    <index columns="ferr_galex_nuv_mean" />
+    <index columns="ferr_ap_galex_nuv_mean" />
+
+    <index columns="ferr_gpc1_g_mean" />
+    <index columns="ferr_ap_gpc1_g_mean" />
+
+    <index columns="ferr_gpc1_i_mean" />
+    <index columns="ferr_ap_gpc1_i_mean" />
+
+    <index columns="ferr_gpc1_r_mean" />
+    <index columns="ferr_ap_gpc1_r_mean" />
+
+    <index columns="ferr_gpc1_y_mean" />
+    <index columns="ferr_ap_gpc1_y_mean" />
+
+    <index columns="ferr_gpc1_z_mean" />
+    <index columns="ferr_ap_gpc1_z_mean" />
+
+    <index columns="ferr_hawki_k_mean" />
+    <index columns="ferr_ap_hawki_k_mean" />
+
+    <index columns="ferr_irac_i1_mean" />
+    <index columns="ferr_ap_irac_i1_mean" />
+
+    <index columns="ferr_irac_i2_mean" />
+    <index columns="ferr_ap_irac_i2_mean" />
+
+    <index columns="ferr_irac_i3_mean" />
+    <index columns="ferr_ap_irac_i3_mean" />
+
+    <index columns="ferr_irac_i4_mean" />
+    <index columns="ferr_ap_irac_i4_mean" />
+
+    <index columns="ferr_isaac_k_mean" />
+    <index columns="ferr_ap_isaac_k_mean" />
+
+    <index columns="ferr_megacam_g_mean" />
+    <index columns="ferr_ap_megacam_g_mean" />
+
+    <index columns="ferr_megacam_i_mean" />
+    <index columns="ferr_ap_megacam_i_mean" />
+
+    <index columns="ferr_megacam_r_mean" />
+    <index columns="ferr_ap_megacam_r_mean" />
+
+    <index columns="ferr_megacam_u_mean" />
+    <index columns="ferr_ap_megacam_u_mean" />
+
+    <index columns="ferr_megacam_y_mean" />
+    <index columns="ferr_ap_megacam_y_mean" />
+
+    <index columns="ferr_megacam_z_mean" />
+    <index columns="ferr_ap_megacam_z_mean" />
+
+    <index columns="ferr_mmt_g_mean" />
+    <index columns="ferr_ap_mmt_g_mean" />
+
+    <index columns="ferr_mmt_i_mean" />
+    <index columns="ferr_ap_mmt_i_mean" />
+
+    <index columns="ferr_mmt_r_mean" />
+    <index columns="ferr_ap_mmt_r_mean" />
+
+    <index columns="ferr_mmt_u_mean" />
+    <index columns="ferr_ap_mmt_u_mean" />
+
+    <index columns="ferr_mmt_z_mean" />
+    <index columns="ferr_ap_mmt_z_mean" />
+
+    <index columns="ferr_moircs_k_mean" />
+    <index columns="ferr_ap_moircs_k_mean" />
+
+    <index columns="ferr_moircs_ks_mean" />
+    <index columns="ferr_ap_moircs_ks_mean" />
+
+    <index columns="ferr_mosaic_b_mean" />
+    <index columns="ferr_ap_mosaic_b_mean" />
+
+    <index columns="ferr_mosaic_i_mean" />
+    <index columns="ferr_ap_mosaic_i_mean" />
+
+    <index columns="ferr_mosaic_r_mean" />
+    <index columns="ferr_ap_mosaic_r_mean" />
+
+    <index columns="ferr_mosaic_u_mean" />
+    <index columns="ferr_ap_mosaic_u_mean" />
+
+    <index columns="ferr_mosaic_z_mean" />
+    <index columns="ferr_ap_mosaic_z_mean" />
+
+    <index columns="ferr_newfirm_h_mean" />
+    <index columns="ferr_ap_newfirm_h_mean" />
+
+    <index columns="ferr_newfirm_h1_mean" />
+    <index columns="ferr_ap_newfirm_h1_mean" />
+
+    <index columns="ferr_newfirm_h2_mean" />
+    <index columns="ferr_ap_newfirm_h2_mean" />
+
+    <index columns="ferr_newfirm_j_mean" />
+    <index columns="ferr_ap_newfirm_j_mean" />
+
+    <index columns="ferr_newfirm_j1_mean" />
+    <index columns="ferr_ap_newfirm_j1_mean" />
+
+    <index columns="ferr_newfirm_j2_mean" />
+    <index columns="ferr_ap_newfirm_j2_mean" />
+
+    <index columns="ferr_newfirm_j3_mean" />
+    <index columns="ferr_ap_newfirm_j3_mean" />
+
+    <index columns="ferr_newfirm_k_mean" />
+    <index columns="ferr_ap_newfirm_k_mean" />
+
+    <index columns="ferr_nicmos_f110w_mean" />
+    <index columns="ferr_ap_nicmos_f110w_mean" />
+
+    <index columns="ferr_nicmos_f160w_mean" />
+    <index columns="ferr_ap_nicmos_f160w_mean" />
+
+    <index columns="ferr_omega2000_j_mean" />
+    <index columns="ferr_ap_omega2000_j_mean" />
+
+    <index columns="ferr_omega2000_ks_mean" />
+    <index columns="ferr_ap_omega2000_ks_mean" />
+
+    <index columns="ferr_omegacam_g_mean" />
+    <index columns="ferr_ap_omegacam_g_mean" />
+
+    <index columns="ferr_omegacam_i_mean" />
+    <index columns="ferr_ap_omegacam_i_mean" />
+
+    <index columns="ferr_omegacam_r_mean" />
+    <index columns="ferr_ap_omegacam_r_mean" />
+
+    <index columns="ferr_omegacam_u_mean" />
+    <index columns="ferr_ap_omegacam_u_mean" />
+
+    <index columns="ferr_omegacam_z_mean" />
+    <index columns="ferr_ap_omegacam_z_mean" />
+
+    <index columns="ferr_quirc_hk_mean" />
+    <index columns="ferr_ap_quirc_hk_mean" />
+
+    <index columns="ferr_sdss_g_mean" />
+    <index columns="ferr_ap_sdss_g_mean" />
+
+    <index columns="ferr_sdss_i_mean" />
+    <index columns="ferr_ap_sdss_i_mean" />
+
+    <index columns="ferr_sdss_r_mean" />
+    <index columns="ferr_ap_sdss_r_mean" />
+
+    <index columns="ferr_sdss_u_mean" />
+    <index columns="ferr_ap_sdss_u_mean" />
+
+    <index columns="ferr_sdss_z_mean" />
+    <index columns="ferr_ap_sdss_z_mean" />
+
+    <index columns="ferr_suprime_b_mean" />
+    <index columns="ferr_ap_suprime_b_mean" />
+
+    <index columns="ferr_suprime_g_mean" />
+    <index columns="ferr_ap_suprime_g_mean" />
+
+    <index columns="ferr_suprime_i_mean" />
+    <index columns="ferr_ap_suprime_i_mean" />
+
+    <index columns="ferr_suprime_ia484_mean" />
+    <index columns="ferr_ap_suprime_ia484_mean" />
+
+    <index columns="ferr_suprime_ia527_mean" />
+    <index columns="ferr_ap_suprime_ia527_mean" />
+
+    <index columns="ferr_suprime_ia624_mean" />
+    <index columns="ferr_ap_suprime_ia624_mean" />
+
+    <index columns="ferr_suprime_ia679_mean" />
+    <index columns="ferr_ap_suprime_ia679_mean" />
+
+    <index columns="ferr_suprime_ia738_mean" />
+    <index columns="ferr_ap_suprime_ia738_mean" />
+
+    <index columns="ferr_suprime_ia767_mean" />
+    <index columns="ferr_ap_suprime_ia767_mean" />
+
+    <index columns="ferr_suprime_ib427_mean" />
+    <index columns="ferr_ap_suprime_ib427_mean" />
+
+    <index columns="ferr_suprime_ib464_mean" />
+    <index columns="ferr_ap_suprime_ib464_mean" />
+
+    <index columns="ferr_suprime_ib505_mean" />
+    <index columns="ferr_ap_suprime_ib505_mean" />
+
+    <index columns="ferr_suprime_ib574_mean" />
+    <index columns="ferr_ap_suprime_ib574_mean" />
+
+    <index columns="ferr_suprime_ib709_mean" />
+    <index columns="ferr_ap_suprime_ib709_mean" />
+
+    <index columns="ferr_suprime_ib827_mean" />
+    <index columns="ferr_ap_suprime_ib827_mean" />
+
+    <index columns="ferr_suprime_ip_mean" />
+    <index columns="ferr_ap_suprime_ip_mean" />
+
+    <index columns="ferr_suprime_n816_mean" />
+    <index columns="ferr_ap_suprime_n816_mean" />
+
+    <index columns="ferr_suprime_n921_mean" />
+    <index columns="ferr_ap_suprime_n921_mean" />
+
+    <index columns="ferr_suprime_nb711_mean" />
+    <index columns="ferr_ap_suprime_nb711_mean" />
+
+    <index columns="ferr_suprime_nb816_mean" />
+    <index columns="ferr_ap_suprime_nb816_mean" />
+
+    <index columns="ferr_suprime_r_mean" />
+    <index columns="ferr_ap_suprime_r_mean" />
+
+    <index columns="ferr_suprime_rc_mean" />
+    <index columns="ferr_ap_suprime_rc_mean" />
+
+    <index columns="ferr_suprime_rp_mean" />
+    <index columns="ferr_ap_suprime_rp_mean" />
+
+    <index columns="ferr_suprime_v_mean" />
+    <index columns="ferr_ap_suprime_v_mean" />
+
+    <index columns="ferr_suprime_y_mean" />
+    <index columns="ferr_ap_suprime_y_mean" />
+
+    <index columns="ferr_suprime_z_mean" />
+    <index columns="ferr_ap_suprime_z_mean" />
+
+    <index columns="ferr_suprime_zp_mean" />
+    <index columns="ferr_ap_suprime_zp_mean" />
+
+    <index columns="ferr_suprime_zpp_mean" />
+    <index columns="ferr_ap_suprime_zpp_mean" />
+
+    <index columns="ferr_tifkam_ks_mean" />
+    <index columns="ferr_ap_tifkam_ks_mean" />
+
+    <index columns="ferr_ukidss_h_mean" />
+    <index columns="ferr_ap_ukidss_h_mean" />
+
+    <index columns="ferr_ukidss_j_mean" />
+    <index columns="ferr_ap_ukidss_j_mean" />
+
+    <index columns="ferr_ukidss_k_mean" />
+    <index columns="ferr_ap_ukidss_k_mean" />
+
+    <index columns="ferr_ukidss_y_mean" />
+    <index columns="ferr_ap_ukidss_y_mean" />
+
+    <index columns="ferr_vista_h_mean" />
+    <index columns="ferr_ap_vista_h_mean" />
+
+    <index columns="ferr_vista_j_mean" />
+    <index columns="ferr_ap_vista_j_mean" />
+
+    <index columns="ferr_vista_ks_mean" />
+    <index columns="ferr_ap_vista_ks_mean" />
+
+    <index columns="ferr_vista_y_mean" />
+    <index columns="ferr_ap_vista_y_mean" />
+
+    <index columns="ferr_vista_z_mean" />
+    <index columns="ferr_ap_vista_z_mean" />
+
+    <index columns="ferr_wfc3_f098m_mean" />
+    <index columns="ferr_ap_wfc3_f098m_mean" />
+
+    <index columns="ferr_wfc3_f105w_mean" />
+    <index columns="ferr_ap_wfc3_f105w_mean" />
+
+    <index columns="ferr_wfc3_f125w_mean" />
+    <index columns="ferr_ap_wfc3_f125w_mean" />
+
+    <index columns="ferr_wfc3_f140w_mean" />
+    <index columns="ferr_ap_wfc3_f140w_mean" />
+
+    <index columns="ferr_wfc3_f160w_mean" />
+    <index columns="ferr_ap_wfc3_f160w_mean" />
+
+    <index columns="ferr_wfc_g_mean" />
+    <index columns="ferr_ap_wfc_g_mean" />
+
+    <index columns="ferr_wfc_i_mean" />
+    <index columns="ferr_ap_wfc_i_mean" />
+
+    <index columns="ferr_wfc_r_mean" />
+    <index columns="ferr_ap_wfc_r_mean" />
+
+    <index columns="ferr_wfc_u_mean" />
+    <index columns="ferr_ap_wfc_u_mean" />
+
+    <index columns="ferr_wfc_z_mean" />
+    <index columns="ferr_ap_wfc_z_mean" />
+
+    <index columns="ferr_wfi_416nm_mean" />
+    <index columns="ferr_ap_wfi_416nm_mean" />
+
+    <index columns="ferr_wfi_461nm_mean" />
+    <index columns="ferr_ap_wfi_461nm_mean" />
+
+    <index columns="ferr_wfi_485nm_mean" />
+    <index columns="ferr_ap_wfi_485nm_mean" />
+
+    <index columns="ferr_wfi_518nm_mean" />
+    <index columns="ferr_ap_wfi_518nm_mean" />
+
+    <index columns="ferr_wfi_571nm_mean" />
+    <index columns="ferr_ap_wfi_571nm_mean" />
+
+    <index columns="ferr_wfi_604nm_mean" />
+    <index columns="ferr_ap_wfi_604nm_mean" />
+
+    <index columns="ferr_wfi_646nm_mean" />
+    <index columns="ferr_ap_wfi_646nm_mean" />
+
+    <index columns="ferr_wfi_696nm_mean" />
+    <index columns="ferr_ap_wfi_696nm_mean" />
+
+    <index columns="ferr_wfi_753nm_mean" />
+    <index columns="ferr_ap_wfi_753nm_mean" />
+
+    <index columns="ferr_wfi_815nm_mean" />
+    <index columns="ferr_ap_wfi_815nm_mean" />
+
+    <index columns="ferr_wfi_856nm_mean" />
+    <index columns="ferr_ap_wfi_856nm_mean" />
+
+    <index columns="ferr_wfi_914nm_mean" />
+    <index columns="ferr_ap_wfi_914nm_mean" />
+
+    <index columns="ferr_wfi_b_mean" />
+    <index columns="ferr_ap_wfi_b_mean" />
+
+    <index columns="ferr_wfi_b123_mean" />
+    <index columns="ferr_ap_wfi_b123_mean" />
+
+    <index columns="ferr_wfi_i_mean" />
+    <index columns="ferr_ap_wfi_i_mean" />
+
+    <index columns="ferr_wfi_r_mean" />
+    <index columns="ferr_ap_wfi_r_mean" />
+
+    <index columns="ferr_wfi_u_mean" />
+    <index columns="ferr_ap_wfi_u_mean" />
+
+    <index columns="ferr_wfi_v_mean" />
+    <index columns="ferr_ap_wfi_v_mean" />
+
+    <index columns="ferr_wircam_h_mean" />
+    <index columns="ferr_ap_wircam_h_mean" />
+
+    <index columns="ferr_wircam_j_mean" />
+    <index columns="ferr_ap_wircam_j_mean" />
+
+    <index columns="ferr_wircam_ks_mean" />
+    <index columns="ferr_ap_wircam_ks_mean" />
+
+    <index columns="ferr_wircam_y_mean" />
+    <index columns="ferr_ap_wircam_y_mean" />
+
+    <index columns="ferr_wircs_j_mean" />
+    <index columns="ferr_ap_wircs_j_mean" />
+
+    <index columns="ferr_wircs_k_mean" />
+    <index columns="ferr_ap_wircs_k_mean" />
+
     
 
     <column name="hp_idx_O_13"
@@ -55,7 +498,6 @@
       description="HEALPix cell index at order 10. This was the pixel order used to compute the means"
       required="True"
       verbLevel="1" />
-      
     <column name="ferr_90prime_g_mean"
       tablehead="ferr_90prime_g_mean"
       type="double precision"
@@ -656,21 +1098,6 @@
       description="The mean uncertainty on f_ap_megacam_z for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
       verbLevel="1" />
 
-    <column name="ferr_mips_24_mean"
-      tablehead="ferr_mips_24_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.15-30um"
-      unit="uJy"
-      description="The mean uncertainty on ferr_mips_24 in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_mips_24_mean"
-      tablehead="ferr_mips_24_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.15-30um"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_mips_24 for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
     <column name="ferr_mmt_g_mean"
       tablehead="ferr_mmt_g_mean"
       type="double precision"
@@ -1106,36 +1533,6 @@
       description="The mean uncertainty on f_ap_omegacam_z for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
       verbLevel="1" />
 
-    <column name="ferr_pacs_green_mean"
-      tablehead="ferr_pacs_green_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.60-100um"
-      unit="uJy"
-      description="The mean uncertainty on ferr_pacs_green in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_pacs_green_mean"
-      tablehead="ferr_pacs_green_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.60-100um"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_pacs_green for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
-    <column name="ferr_pacs_red_mean"
-      tablehead="ferr_pacs_red_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.1500-3000GHz"
-      unit="uJy"
-      description="The mean uncertainty on ferr_pacs_red in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_pacs_red_mean"
-      tablehead="ferr_pacs_red_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.1500-3000GHz"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_pacs_red for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
     <column name="ferr_quirc_hk_mean"
       tablehead="ferr_quirc_hk_mean"
       type="double precision"
@@ -1224,51 +1621,6 @@
       ucd="stat.error;phot.flux;em.opt.I"
       unit="uJy"
       description="The mean uncertainty on f_ap_sdss_z for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
-    <column name="ferr_spire_250_mean"
-      tablehead="ferr_spire_250_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
-      unit="uJy"
-      description="The mean uncertainty on ferr_spire_250 in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_spire_250_mean"
-      tablehead="ferr_spire_250_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_spire_250 for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
-    <column name="ferr_spire_350_mean"
-      tablehead="ferr_spire_350_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
-      unit="uJy"
-      description="The mean uncertainty on ferr_spire_350 in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_spire_350_mean"
-      tablehead="ferr_spire_350_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_spire_350 for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
-      verbLevel="1" />
-
-    <column name="ferr_spire_500_mean"
-      tablehead="ferr_spire_500_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.400-750GHz"
-      unit="uJy"
-      description="The mean uncertainty on ferr_spire_500 in the order 10 healpix pixel that contains this order 13 healpix pixel."
-      verbLevel="1" />
-    <column name="ferr_ap_spire_500_mean"
-      tablehead="ferr_spire_500_mean"
-      type="double precision"
-      ucd="stat.error;phot.flux;em.IR.400-750GHz"
-      unit="uJy"
-      description="The mean uncertainty on f_ap_spire_500 for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
       verbLevel="1" />
 
     <column name="ferr_suprime_b_mean"
