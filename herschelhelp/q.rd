@@ -1,6 +1,6 @@
 <resource schema="herschelhelp">
   <meta name="title">Herschel Extragalactic Legacy Programme (HELP)</meta>
-  <meta name="creationDate">20180619</meta>
+  <meta name="creationDate">20180627</meta>
   <meta name="description">
     HELP master catalogue.
   </meta>
@@ -54,6 +54,10 @@
     </stc>
 
     <index columns="field" />
+    <index columns="help_id" />
+    <index columns="ra" />
+    <index columns="dec" />
+    <index columns="hp_idx" />
 
     <column name="field"
       tablehead="Field"
@@ -96,8 +100,7 @@
       tablehead="EBV"
       type="double precision"
       ucd="phot.color.excess"
-      description="Galactic extinction (Schlegel et al. 1998) at the object
-      position"
+      description="Galactic extinction (Schlegel et al. 1998) at the object position"
       verbLevel="1" />
     <column name="redshift"
       tablehead="Redshift"
@@ -123,8 +126,7 @@
       tablehead="zSpec_Association_Flag"
       type="boolean"
       ucd="meta.code;src.redshift"
-      description="Boolean flag set to true when the association of a source to
-      it's redshift may be problematic (possible mis-cross-association)."
+      description="Boolean flag set to true when the association of a source to it's redshift may be problematic (possible mis-cross-association)."
       verbLevel="1">
         <values nullLiteral="False" />
     </column>
@@ -132,8 +134,7 @@
       tablehead="stellarity"
       type="real"
       ucd="src.class.starGalaxy"
-      description="Index evaluation is the source is point-source: for 0 (not
-      point source) to 1 (point source). Generally name stellarity index."
+      description="Index evaluation is the source is point-source: for 0 (not point source) to 1 (point source). Generally name stellarity index."
       verbLevel="1" />
     <column name="stellarity_origin"
       tablehead="stellarity_origin"
@@ -202,7 +203,6 @@
       tablehead="flag_90prime_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the 90prime_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -267,7 +267,6 @@
       tablehead="flag_90prime_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the 90prime_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -332,7 +331,6 @@
       tablehead="flag_90prime_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the 90prime_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -397,7 +395,6 @@
       tablehead="flag_acs_f435w"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the acs_f435w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -462,7 +459,6 @@
       tablehead="flag_acs_f606w"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the acs_f606w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -527,7 +523,6 @@
       tablehead="flag_acs_f775w"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the acs_f775w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -592,7 +587,6 @@
       tablehead="flag_acs_f814w"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the acs_f814w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -657,7 +651,6 @@
       tablehead="flag_acs_f850lp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the acs_f850lp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -722,7 +715,6 @@
       tablehead="flag_bessell_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the bessell_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -787,7 +779,6 @@
       tablehead="flag_bessell_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the bessell_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -852,7 +843,6 @@
       tablehead="flag_bessell_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the bessell_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -917,7 +907,6 @@
       tablehead="flag_bessell_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the bessell_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -982,7 +971,6 @@
       tablehead="flag_bessell_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the bessell_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1047,7 +1035,6 @@
       tablehead="flag_cfht12k_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the cfht12k_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1112,7 +1099,6 @@
       tablehead="flag_cfht12k_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the cfht12k_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1177,7 +1163,6 @@
       tablehead="flag_cfht12k_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the cfht12k_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1242,7 +1227,6 @@
       tablehead="flag_decam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the decam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1307,7 +1291,6 @@
       tablehead="flag_decam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the decam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1372,7 +1355,6 @@
       tablehead="flag_decam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the decam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1437,7 +1419,6 @@
       tablehead="flag_decam_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the decam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1502,7 +1483,6 @@
       tablehead="flag_decam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the decam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1567,7 +1547,6 @@
       tablehead="flag_galex_fuv"
       type="boolean"
       ucd="meta.code.qual;em.UV.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the galex_fuv aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1632,7 +1611,6 @@
       tablehead="flag_galex_nuv"
       type="boolean"
       ucd="meta.code.qual;em.UV.200-300nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the galex_nuv aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1697,7 +1675,6 @@
       tablehead="flag_gpc1_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the gpc1_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1762,7 +1739,6 @@
       tablehead="flag_gpc1_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the gpc1_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1827,7 +1803,6 @@
       tablehead="flag_gpc1_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the gpc1_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1892,7 +1867,6 @@
       tablehead="flag_gpc1_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the gpc1_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -1957,7 +1931,6 @@
       tablehead="flag_gpc1_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the gpc1_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2022,7 +1995,6 @@
       tablehead="flag_hawki_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the hawki_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2087,7 +2059,6 @@
       tablehead="flag_irac_i1"
       type="boolean"
       ucd="meta.code.qual;em.IR.3-4um"
-      unit="mag"
       description="Flag set to true for sources for which niether the irac_i1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2152,7 +2123,6 @@
       tablehead="flag_irac_i2"
       type="boolean"
       ucd="meta.code.qual;em.IR.4-8um"
-      unit="mag"
       description="Flag set to true for sources for which niether the irac_i2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2217,7 +2187,6 @@
       tablehead="flag_irac_i3"
       type="boolean"
       ucd="meta.code.qual;em.IR.4-8um"
-      unit="mag"
       description="Flag set to true for sources for which niether the irac_i3 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2282,7 +2251,6 @@
       tablehead="flag_irac_i4"
       type="boolean"
       ucd="meta.code.qual;em.IR.8-15um"
-      unit="mag"
       description="Flag set to true for sources for which niether the irac_i4 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2347,7 +2315,6 @@
       tablehead="flag_isaac_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the isaac_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2412,7 +2379,6 @@
       tablehead="flag_megacam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2477,7 +2443,6 @@
       tablehead="flag_megacam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2542,7 +2507,6 @@
       tablehead="flag_megacam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2607,7 +2571,6 @@
       tablehead="flag_megacam_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2672,7 +2635,6 @@
       tablehead="flag_megacam_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2737,7 +2699,6 @@
       tablehead="flag_megacam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the megacam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2802,7 +2763,6 @@
       tablehead="flag_mips_24"
       type="boolean"
       ucd="meta.code.qual;em.IR.15-30um"
-      unit="mag"
       description="Flag set to true for sources for which niether the mips_24 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2867,7 +2827,6 @@
       tablehead="flag_mmt_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the mmt_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2932,7 +2891,6 @@
       tablehead="flag_mmt_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the mmt_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -2997,7 +2955,6 @@
       tablehead="flag_mmt_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the mmt_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3062,7 +3019,6 @@
       tablehead="flag_mmt_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the mmt_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3127,7 +3083,6 @@
       tablehead="flag_mmt_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the mmt_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3192,7 +3147,6 @@
       tablehead="flag_moircs_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the moircs_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3257,7 +3211,6 @@
       tablehead="flag_moircs_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the moircs_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3322,7 +3275,6 @@
       tablehead="flag_mosaic_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the mosaic_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3387,7 +3339,6 @@
       tablehead="flag_mosaic_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the mosaic_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3452,7 +3403,6 @@
       tablehead="flag_mosaic_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the mosaic_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3517,7 +3467,6 @@
       tablehead="flag_mosaic_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the mosaic_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3582,7 +3531,6 @@
       tablehead="flag_mosaic_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the mosaic_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3647,7 +3595,6 @@
       tablehead="flag_newfirm_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3712,7 +3659,6 @@
       tablehead="flag_newfirm_h1"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_h1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3777,7 +3723,6 @@
       tablehead="flag_newfirm_h2"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_h2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3842,7 +3787,6 @@
       tablehead="flag_newfirm_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3907,7 +3851,6 @@
       tablehead="flag_newfirm_j1"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_j1 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -3972,7 +3915,6 @@
       tablehead="flag_newfirm_j2"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_j2 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4037,7 +3979,6 @@
       tablehead="flag_newfirm_j3"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_j3 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4102,7 +4043,6 @@
       tablehead="flag_newfirm_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the newfirm_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4167,7 +4107,6 @@
       tablehead="flag_nicmos_f110w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the nicmos_f110w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4232,7 +4171,6 @@
       tablehead="flag_nicmos_f160w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the nicmos_f160w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4297,7 +4235,6 @@
       tablehead="flag_omega2000_j"
       type="boolean"
       ucd="meta.code.qual;em.opt.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the omega2000_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4362,7 +4299,6 @@
       tablehead="flag_omega2000_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the omega2000_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4427,7 +4363,6 @@
       tablehead="flag_omegacam_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the omegacam_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4492,7 +4427,6 @@
       tablehead="flag_omegacam_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the omegacam_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4557,7 +4491,6 @@
       tablehead="flag_omegacam_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the omegacam_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4622,7 +4555,6 @@
       tablehead="flag_omegacam_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the omegacam_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4687,7 +4619,6 @@
       tablehead="flag_omegacam_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the omegacam_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4752,7 +4683,6 @@
       tablehead="flag_pacs_green"
       type="boolean"
       ucd="meta.code.qual;em.IR.60-100um"
-      unit="mag"
       description="Flag set to true for sources for which niether the pacs_green aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4817,7 +4747,6 @@
       tablehead="flag_pacs_red"
       type="boolean"
       ucd="meta.code.qual;em.IR.1500-3000GHz"
-      unit="mag"
       description="Flag set to true for sources for which niether the pacs_red aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4882,7 +4811,6 @@
       tablehead="flag_quirc_hk"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the quirc_hk aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -4947,7 +4875,6 @@
       tablehead="flag_sdss_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the sdss_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5012,7 +4939,6 @@
       tablehead="flag_sdss_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the sdss_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5077,7 +5003,6 @@
       tablehead="flag_sdss_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the sdss_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5142,7 +5067,6 @@
       tablehead="flag_sdss_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the sdss_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5207,7 +5131,6 @@
       tablehead="flag_sdss_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the sdss_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5272,7 +5195,6 @@
       tablehead="flag_spire_250"
       type="boolean"
       ucd="meta.code.qual;em.IR.750-1500GHz"
-      unit="mag"
       description="Flag set to true for sources for which niether the spire_250 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5337,7 +5259,6 @@
       tablehead="flag_spire_350"
       type="boolean"
       ucd="meta.code.qual;em.IR.750-1500GHz"
-      unit="mag"
       description="Flag set to true for sources for which niether the spire_350 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5402,7 +5323,6 @@
       tablehead="flag_spire_500"
       type="boolean"
       ucd="meta.code.qual;em.IR.400-750GHz"
-      unit="mag"
       description="Flag set to true for sources for which niether the spire_500 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5467,7 +5387,6 @@
       tablehead="flag_suprime_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5532,7 +5451,6 @@
       tablehead="flag_suprime_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5597,7 +5515,6 @@
       tablehead="flag_suprime_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5662,7 +5579,6 @@
       tablehead="flag_suprime_ia484"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia484 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5727,7 +5643,6 @@
       tablehead="flag_suprime_ia527"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia527 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5792,7 +5707,6 @@
       tablehead="flag_suprime_ia624"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia624 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5857,7 +5771,6 @@
       tablehead="flag_suprime_ia679"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia679 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5922,7 +5835,6 @@
       tablehead="flag_suprime_ia738"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia738 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -5987,7 +5899,6 @@
       tablehead="flag_suprime_ia767"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ia767 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6052,7 +5963,6 @@
       tablehead="flag_suprime_ib427"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib427 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6117,7 +6027,6 @@
       tablehead="flag_suprime_ib464"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib464 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6182,7 +6091,6 @@
       tablehead="flag_suprime_ib505"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib505 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6247,7 +6155,6 @@
       tablehead="flag_suprime_ib574"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib574 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6312,7 +6219,6 @@
       tablehead="flag_suprime_ib709"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib709 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6377,7 +6283,6 @@
       tablehead="flag_suprime_ib827"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ib827 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6442,7 +6347,6 @@
       tablehead="flag_suprime_ip"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_ip aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6507,7 +6411,6 @@
       tablehead="flag_suprime_n816"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_n816 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6572,7 +6475,6 @@
       tablehead="flag_suprime_n921"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_n921 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6637,7 +6539,6 @@
       tablehead="flag_suprime_nb711"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_nb711 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6702,7 +6603,6 @@
       tablehead="flag_suprime_nb816"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_nb816 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6767,7 +6667,6 @@
       tablehead="flag_suprime_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6832,7 +6731,6 @@
       tablehead="flag_suprime_rc"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_rc aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6897,7 +6795,6 @@
       tablehead="flag_suprime_rp"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_rp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -6962,7 +6859,6 @@
       tablehead="flag_suprime_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7027,7 +6923,6 @@
       tablehead="flag_suprime_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7092,7 +6987,6 @@
       tablehead="flag_suprime_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7157,7 +7051,6 @@
       tablehead="flag_suprime_zp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_zp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7222,7 +7115,6 @@
       tablehead="flag_suprime_zpp"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the suprime_zpp aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7287,7 +7179,6 @@
       tablehead="flag_tifkam_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the tifkam_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7352,7 +7243,6 @@
       tablehead="flag_ukidss_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the ukidss_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7417,7 +7307,6 @@
       tablehead="flag_ukidss_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the ukidss_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7482,7 +7371,6 @@
       tablehead="flag_ukidss_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the ukidss_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7547,7 +7435,6 @@
       tablehead="flag_ukidss_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the ukidss_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7612,7 +7499,6 @@
       tablehead="flag_vista_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the vista_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7677,7 +7563,6 @@
       tablehead="flag_vista_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the vista_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7742,7 +7627,6 @@
       tablehead="flag_vista_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the vista_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7807,7 +7691,6 @@
       tablehead="flag_vista_y"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the vista_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7872,7 +7755,6 @@
       tablehead="flag_vista_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the vista_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -7937,7 +7819,6 @@
       tablehead="flag_wfc3_f098m"
       type="boolean"
       ucd="meta.code.qual;em.opt.50-100nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc3_f098m aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8002,7 +7883,6 @@
       tablehead="flag_wfc3_f105w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc3_f105w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8067,7 +7947,6 @@
       tablehead="flag_wfc3_f125w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc3_f125w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8132,7 +8011,6 @@
       tablehead="flag_wfc3_f140w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc3_f140w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8197,7 +8075,6 @@
       tablehead="flag_wfc3_f160w"
       type="boolean"
       ucd="meta.code.qual;em.opt.100-200nm"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc3_f160w aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8262,7 +8139,6 @@
       tablehead="flag_wfc_g"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc_g aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8327,7 +8203,6 @@
       tablehead="flag_wfc_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8392,7 +8267,6 @@
       tablehead="flag_wfc_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8457,7 +8331,6 @@
       tablehead="flag_wfc_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8522,7 +8395,6 @@
       tablehead="flag_wfc_z"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfc_z aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8587,7 +8459,6 @@
       tablehead="flag_wfi_416nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_416nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8652,7 +8523,6 @@
       tablehead="flag_wfi_461nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_461nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8717,7 +8587,6 @@
       tablehead="flag_wfi_485nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_485nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8782,7 +8651,6 @@
       tablehead="flag_wfi_518nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_518nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8847,7 +8715,6 @@
       tablehead="flag_wfi_571nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_571nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8912,7 +8779,6 @@
       tablehead="flag_wfi_604nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_604nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -8977,7 +8843,6 @@
       tablehead="flag_wfi_646nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_646nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9042,7 +8907,6 @@
       tablehead="flag_wfi_696nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_696nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9107,7 +8971,6 @@
       tablehead="flag_wfi_753nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_753nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9172,7 +9035,6 @@
       tablehead="flag_wfi_815nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_815nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9237,7 +9099,6 @@
       tablehead="flag_wfi_856nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_856nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9302,7 +9163,6 @@
       tablehead="flag_wfi_914nm"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_914nm aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9367,7 +9227,6 @@
       tablehead="flag_wfi_b"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_b aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9432,7 +9291,6 @@
       tablehead="flag_wfi_b123"
       type="boolean"
       ucd="meta.code.qual;em.opt.B"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_b123 aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9497,7 +9355,6 @@
       tablehead="flag_wfi_i"
       type="boolean"
       ucd="meta.code.qual;em.opt.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_i aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9562,7 +9419,6 @@
       tablehead="flag_wfi_r"
       type="boolean"
       ucd="meta.code.qual;em.opt.R"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_r aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9627,7 +9483,6 @@
       tablehead="flag_wfi_u"
       type="boolean"
       ucd="meta.code.qual;em.opt.U"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_u aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9692,7 +9547,6 @@
       tablehead="flag_wfi_v"
       type="boolean"
       ucd="meta.code.qual;em.opt.V"
-      unit="mag"
       description="Flag set to true for sources for which niether the wfi_v aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9757,7 +9611,6 @@
       tablehead="flag_wircam_h"
       type="boolean"
       ucd="meta.code.qual;em.IR.H"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircam_h aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9822,7 +9675,6 @@
       tablehead="flag_wircam_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircam_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9887,7 +9739,6 @@
       tablehead="flag_wircam_ks"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircam_ks aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -9952,7 +9803,6 @@
       tablehead="flag_wircam_y"
       type="boolean"
       ucd="meta.code.qual;em.IR.I"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircam_y aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -10017,7 +9867,6 @@
       tablehead="flag_wircs_j"
       type="boolean"
       ucd="meta.code.qual;em.IR.J"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircs_j aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
@@ -10082,7 +9931,6 @@
       tablehead="flag_wircs_k"
       type="boolean"
       ucd="meta.code.qual;em.IR.K"
-      unit="mag"
       description="Flag set to true for sources for which niether the wircs_k aperture nor total flux should be used for SED fitting (see documentation)."
       verbLevel="1">
         <values nullLiteral="False" />
