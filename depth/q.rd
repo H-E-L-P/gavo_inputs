@@ -2714,6 +2714,23 @@
     </make>
   </data>
 
+
+  <service id="depth" allowed="scs.xml,form">
+    <meta name="title">HELP depth maps</meta>
+    <meta name="shortName">Depth maps</meta>
+
+    <dbCore queriedTable="main">
+      <FEED source="//scs#coreDescs"/>
+      <condDesc buildFrom="hp_idx_O_13" />
+      <condDesc buildFrom="hp_idx_O_10" />
+    </dbCore>
+
+    <publish render="scs.xml" sets="ivo_managed"/>
+    <publish render="form" sets="ivo_managed,local"/>
+    <outputTable verbLevel="20"/>
+  </service>
+
+
 </resource>
 
 <!--
