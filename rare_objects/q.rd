@@ -108,10 +108,10 @@
       verbLevel="1" />
       
      <column name="mu_lens"
-      tablehead="Redshift"
+      tablehead="mu_lens"
       type="real"
-      ucd="src.redshift.phot"
-      description="Redshift obtained manually from either photometric or spectrographic methods."
+      ucd="phys"
+      description="The lensing mu value if the object is lensed."
       verbLevel="1" />
 
 
