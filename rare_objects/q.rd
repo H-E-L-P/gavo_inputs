@@ -113,7 +113,13 @@
       ucd="phys"
       description="The lensing mu value if the object is lensed."
       verbLevel="1" />
-
+     <column name="sfr"
+      tablehead="SFR"
+      type="double precision"
+      ucd="phys.SFR"
+      unit="Msun/yr"
+      description="Star Formation Rate."
+      verbLevel="1" />
 
 
   </table>
