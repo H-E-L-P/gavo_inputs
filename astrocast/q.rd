@@ -6,21 +6,29 @@
   </meta>
   <meta name="creator.name">Andrew Bowell</meta>
 
-  <meta name="source"></meta>
-
-  <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
-      primary="Time">
 
 
+  <table id="main" onDisk="True" adql="True">
+  
 
-    <index columns="Time" />
+
+    <index columns="astrocast_id" />
+    <index columns="astrocast_time" />
     <index columns="VCI" />
     <index columns="VCI3M" /> 
     <index columns="LocationKey" />
 
-    <column name="Time"
-      tablehead="Time"
-      type="smallint"
+    <column name="astrocast_id"
+      tablehead="astrocast_id"
+      type="bigint"
+      ucd="meta.id;meta.main"
+      description="Astrocast ID"
+      required="True"
+      verbLevel="1" />
+
+    <column name="astrocast_time"
+      tablehead="astrocast_time"
+      type="double precision"
       description="Julian Time since 01/01/2001"
       required="True"
       verbLevel="1" />
@@ -38,10 +46,12 @@
       verbLevel="1" />
     <column name="LocationKey"
       tablehead="LocationKey"
-      type="smallint"
+      type="bigint"
       description="The Number Key relating to the location"
       required="True"
       verbLevel="1" />
+
+</table>
 
   <data id="import">
     <sources>
@@ -55,7 +65,7 @@
     </make>
   </data>
 
-</table>
+
 
 </resource>
 
