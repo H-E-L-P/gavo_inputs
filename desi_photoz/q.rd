@@ -40,7 +40,7 @@
   ]]> </meta>
 
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
-      primary="help_id">
+      primary="ID">
     <stc>
       Position ICRS Epoch J2000.0 "RA" "DEC"
     </stc>
