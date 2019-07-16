@@ -465,8 +465,8 @@
     <meta name="title">DESI DR6 DR7</meta>
     <meta name="shortName">DESI</meta>
     <meta name="testQuery">
-      <meta name="ra">150.1</meta>
-      <meta name="dec">2.218</meta>
+      <meta name="RA">150.1</meta>
+      <meta name="DEC">2.218</meta>
       <meta name="sr">1.0</meta>
     </meta>
 
@@ -477,7 +477,7 @@
     <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
-      <condDesc buildFrom="desi_id" />
+      <condDesc buildFrom="ID" />
     </dbCore>
 
     <publish render="scs.xml" sets="ivo_managed"/>
