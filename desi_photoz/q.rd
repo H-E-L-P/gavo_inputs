@@ -169,7 +169,7 @@
             verbLevel="1" /> 
     <column name="TYPE"
             tablehead="TYPE"
-            type="?"
+            type="text"
             description="Tractor Type"
             verbLevel="1" />  
     <column name="FRACFLUX_G"
@@ -229,17 +229,17 @@
             verbLevel="1" /> 
     <column name="ANYMASK_G"
             tablehead="ANYMASK_G"
-            type="?"
+            type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in g"
             verbLevel="1" /> 
     <column name="ANYMASK_R"
             tablehead="ANYMASK_R"
-            type="?"
+            type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in r"
             verbLevel="1" /> 
     <column name="ANYMASK_Z"
             tablehead="ANYMASK_Z"
-            type="?"
+            type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in z"
             verbLevel="1" /> 
 
@@ -290,7 +290,7 @@
             verbLevel="1" /> 
     <column name="MOD_BEST"
             tablehead="MOD_BEST"
-            type="?"
+            type="bigint"
             description="ID of BC03 model spectra"
             verbLevel="1" /> 
     <column name="EBV_BEST"
