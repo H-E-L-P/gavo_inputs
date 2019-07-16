@@ -46,9 +46,9 @@
     </stc>
 
     <index columns="field" />
-    <index columns="desi_id" />
-    <index columns="ra" />
-    <index columns="dec" />
+    <index columns="ID" />
+    <index columns="RA" />
+    <index columns="DEC" />
     <index columns="hp_idx" />
 
     <column name="field"
