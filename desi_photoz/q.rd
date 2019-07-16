@@ -231,28 +231,38 @@
             tablehead="ANYMASK_G"
             type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in g"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column>
     <column name="ANYMASK_R"
             tablehead="ANYMASK_R"
             type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in r"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column>
     <column name="ANYMASK_Z"
             tablehead="ANYMASK_Z"
             type="bigint"
             description="Bitwise mask set if the central pixel from any image satisfies each condition in z"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column> 
 
     <column name="n_neighbour"
             tablehead="n_neighbour"
             type="bigint"
             description="number of neighbours"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column> 
     <column name="n_filter"
             tablehead="n_filter"
             type="bigint"
             description="number of filters having colors in color cuts"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column>
     <column name="photo_z"
             tablehead="photo_z"
             type="double precision"
@@ -292,7 +302,9 @@
             tablehead="MOD_BEST"
             type="bigint"
             description="ID of BC03 model spectra"
-            verbLevel="1" /> 
+            verbLevel="1" >
+        <values nullLiteral="-1" />
+    </column>
     <column name="EBV_BEST"
             tablehead="EBV_BEST"
             type="double precision"
