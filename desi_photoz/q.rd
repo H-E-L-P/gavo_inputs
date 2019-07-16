@@ -312,7 +312,7 @@
             verbLevel="1" /> 
     <column name="SCALE_BEST"
             tablehead="SCALE_BEST"
-            type="?"
+            type="double precision"
             description="Scale factor between observed SED and model SED"
             verbLevel="1" /> 
     <column name="MAG_ABS_G"
