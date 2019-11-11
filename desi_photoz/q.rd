@@ -2,7 +2,7 @@
   <meta name="title">DESI photometric redshifts</meta>
   <meta name="creationDate">20190710</meta>
   <meta name="description">
-    DESI photometric redshifts from DR6 and DR7. Info at http://batc.bao.ac.cn/~zouhu/online-data/desi_photoz/
+    DESI photometric redshifts from Legacy Survey DR8. Info at http://batc.bao.ac.cn/~zouhu/online-data/desi_photoz/
   </meta>
   <meta name="creator.name">Shirley, R.</meta>
 
@@ -16,10 +16,14 @@
   </meta>
 
   <meta name="_longdoc" format="rst"> <![CDATA[
-    This resource contains photometric redshifts from DESI Legacy survey DR6 and DR7.
+    This resource contains photometric redshifts from DESI Legacy survey DR8.
     
     History
     -------
+
+    ======== ============================================
+    20191101 Update from DR6 and DR7 to DR8
+    ======== ============================================
 
     ======== ============================================
     20190710 First publication
