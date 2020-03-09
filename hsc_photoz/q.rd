@@ -40,7 +40,7 @@
   ]]> </meta>
 
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
-      primary="ID">
+      primary="object_id">
     <stc>
       Position ICRS Epoch J2000.0 "ra" "dec"
     </stc>
@@ -62,7 +62,7 @@
       tablehead="object_id"
       type="text"
       ucd="meta.id;meta.main"
-      description="DESI ID = RELEASE*10^12 + BRICKID*10^6 + OBJID"
+      description="Unique ID in 64bit integer. Be careful not to have it converted to a 32bit integer or 64bit floating point."
       required="True"
       verbLevel="1" />
     <column name="ra"
@@ -233,7 +233,7 @@
     <dbCore queriedTable="main">
       <FEED source="//scs#coreDescs"/>
       <condDesc buildFrom="field" />
-      <condDesc buildFrom="ID" />
+      <condDesc buildFrom="object_id" />
     </dbCore>
 
     <publish render="scs.xml" sets="ivo_managed"/>
