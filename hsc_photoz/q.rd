@@ -218,8 +218,8 @@
   </data>
 
   <service id="cone" allowed="scs.xml,form,static">
-    <meta name="title">DESI DR6 DR7</meta>
-    <meta name="shortName">DESI</meta>
+    <meta name="title">HSC PDR2 photoz</meta>
+    <meta name="shortName">HSC</meta>
     <meta name="testQuery">
       <meta name="RA">150.1</meta>
       <meta name="DEC">2.218</meta>
