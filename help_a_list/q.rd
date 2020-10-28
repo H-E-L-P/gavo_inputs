@@ -1,5 +1,5 @@
-<resource schema="herschelhelp">
-  <meta name="title">Herschel Extragalactic Legacy Programme (HELP)</meta>
+<resource schema="help_a_list">
+  <meta name="title">Herschel Extragalactic Legacy Project (HELP) A list</meta>
   <meta name="creationDate">20201027</meta>
   <meta name="description">
     HELP A List catalogue.
@@ -17,7 +17,7 @@
 
   <meta name="_longdoc" format="rst"> <![CDATA[
     This resource contains the A list catalogue from the Herschel Extragalactic
-    Legacy Programme (HELP). These are all objects which have an XID+ flux.
+    Legacy Project (HELP). These are all objects which have an XID+ flux.
     
     History
     -------
