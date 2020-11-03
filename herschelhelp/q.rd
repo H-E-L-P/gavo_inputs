@@ -137,7 +137,7 @@
     </column>
     <column name="stellarity"
       tablehead="stellarity"
-      type="real"
+      type="double precision"
       ucd="src.class.starGalaxy"
       description="Index evaluation is the source is point-source: for 0 (not point source) to 1 (point source). Generally name stellarity index."
       verbLevel="1" />
