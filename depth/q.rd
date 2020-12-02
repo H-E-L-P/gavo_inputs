@@ -503,6 +503,13 @@
     <index columns="ferr_ks_mean" />
     <index columns="ferr_ap_ks_mean" />
 
+    <index columns="ferr_mips_24_mean" />
+    <index columns="ferr_pacs_green_mean" />
+    <index columns="ferr_pacs_red_mean" />
+    <index columns="ferr_spire_250_mean" />
+    <index columns="ferr_spire_250_mean" />
+    <index columns="ferr_spire_500_mean" />
+
     
 
     <column name="hp_idx_O_13"
@@ -2865,6 +2872,50 @@
       unit="uJy"
       description="The mean uncertainty on f_ap_best_ks for all objects in the order 10 healpix pixel that contains this order 13 healpic pixel."
       verbLevel="1" />
+      
+    <column name="ferr_mips_24_mean"
+      tablehead="ferr_mips_24_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.15-30um"
+      unit="uJy"
+      description="The mean uncertainty on f_mips_24 in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+    <column name="ferr_pacs_green_mean"
+      tablehead="ferr_pacs_green_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.60-100um"
+      unit="uJy"
+      description="The mean uncertainty on f_pacs_green in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+    <column name="ferr_pacs_red_mean"
+      tablehead="ferr_pacs_red_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.1500-3000GHz"
+      unit="uJy"
+      description="The mean uncertainty on f_pacs_red in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+    <column name="ferr_spire_250_mean"
+      tablehead="ferr_spire_250_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
+      unit="uJy"
+      description="The mean uncertainty on f_best_ks in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+    <column name="ferr_spire_350_mean"
+      tablehead="ferr_spire_350_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.750-1500GHz"
+      unit="uJy"
+      description="The mean uncertainty on f_spire_350 in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+    <column name="ferr_spire_500_mean"
+      tablehead="ferr_spire_500_mean"
+      type="double precision"
+      ucd="stat.error;phot.flux;em.IR.400-750GHz"
+      unit="uJy"
+      description="The mean uncertainty on f_spire_500 in the order 10 healpix pixel that contains this order 13 healpix pixel."
+      verbLevel="1" />
+
 
   </table>
   <data id="import">
