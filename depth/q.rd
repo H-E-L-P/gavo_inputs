@@ -2753,8 +2753,8 @@
       unit="uJy"
       description="The mean uncertainty on f_best_g in the order 10 healpix pixel that contains this order 13 healpix pixel."
       verbLevel="1" />
-    <column name="ferr_ap_u_mean"
-      tablehead="ferr_ap_u_mean"
+    <column name="ferr_ap_g_mean"
+      tablehead="ferr_ap_g_mean"
       type="double precision"
       ucd="stat.error;phot.flux;em.opt.B"
       unit="uJy"
