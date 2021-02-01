@@ -41,7 +41,7 @@
   <table id="main" onDisk="True" adql="True" mixin="//scs#q3cindex"
       primary="XCSNAME">
     <stc>
-      Position ICRS Epoch J2000.0 "ra" "dec"
+      Position ICRS Epoch J2000.0 "RA" "DEC"
     </stc>
 
 <index columns="XCSNAME" />
