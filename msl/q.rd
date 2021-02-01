@@ -239,8 +239,8 @@
     <meta name="title">MSL</meta>
     <meta name="shortName">MSL</meta>
     <meta name="testQuery">
-      <meta name="ra">64.7</meta>
-      <meta name="dec">55.4</meta>
+      <meta name="RA">64.7</meta>
+      <meta name="DEC">55.4</meta>
       <meta name="sr">1.0</meta>
     </meta>
 
