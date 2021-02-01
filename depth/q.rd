@@ -507,7 +507,7 @@
     <index columns="ferr_pacs_green_mean" />
     <index columns="ferr_pacs_red_mean" />
     <index columns="ferr_spire_250_mean" />
-    <index columns="ferr_spire_250_mean" />
+    <index columns="ferr_spire_350_mean" />
     <index columns="ferr_spire_500_mean" />
 
     
