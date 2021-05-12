@@ -4,7 +4,7 @@
   <meta name="description">
     Image maps from the Herschel Space Observatory.
   </meta>
-  <meta name="creator.name">Roehlly, Y.; et al</meta>
+  <meta name="creator.name">Roehlly, Y. and Shirley, R.</meta>
 
   <meta name="subject">Infrared</meta>
   <meta name="subject">Herschel</meta>
@@ -27,6 +27,9 @@
 
     History
     -------
+    ======== ============================================
+    20210512 Ingestion of HELP reprocessed maps for DR1
+    ======== ============================================
 
     ======== ============================================
     20161202 First ingestion of the maps
@@ -57,12 +60,13 @@
       tablehead="Type"
       type="text"
       ucd="meta.code"
-      description="Type of image: image, error, or exposure."
+      description="Type of image: image, error, nebfilt, or exposure."
       verbLevel="1">
       <values>
         <option>image</option>
         <option>error</option>
         <option>exposure</option>
+        <option>nebfilt</option>
       </values>
     </column>
   </table>
