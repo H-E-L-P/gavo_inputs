@@ -1,6 +1,6 @@
 <resource schema="herschel_maps">
   <meta name="title">Herschel maps</meta>
-  <meta name="creationDate">2016-12-02</meta>
+  <meta name="creationDate">2016-12-02T00:00:00</meta>
   <meta name="description">
     Image maps from the Herschel Space Observatory.
   </meta>
@@ -87,7 +87,7 @@
         <bind key="accref">\inputRelativePath{True}</bind>
         <bind name="preview_mime">"image/png"</bind>
         <bind name="preview">\inputRelativePath.replace("data/",
-          "data/previews/").replace(".fits", ".png")</bind>
+          "data/previews/").replace(".fits", ".fits.png")</bind>
       </rowfilter>
     </fitsProdGrammar>
 

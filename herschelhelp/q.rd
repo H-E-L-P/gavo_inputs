@@ -1,6 +1,6 @@
 <resource schema="herschelhelp">
   <meta name="title">Herschel Extragalactic Legacy Programme (HELP)</meta>
-  <meta name="creationDate">20201027</meta>
+  <meta name="creationDate">2020-10-27T00:00:00</meta>
   <meta name="description">
     HELP master catalogue.
   </meta>

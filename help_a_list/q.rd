@@ -1,6 +1,6 @@
 <resource schema="help_a_list">
   <meta name="title">Herschel Extragalactic Legacy Project (HELP) A list</meta>
-  <meta name="creationDate">20201027</meta>
+  <meta name="creationDate">2020-10-27T00:00:00</meta>
   <meta name="description">
     HELP A List catalogue.
   </meta>

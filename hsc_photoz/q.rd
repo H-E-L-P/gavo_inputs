@@ -1,6 +1,6 @@
 <resource schema="hsc_photoz">
   <meta name="title">HSC PDR2 photometric redshifts</meta>
-  <meta name="creationDate">20190710</meta>
+  <meta name="creationDate">2019-07-10T00:00:00</meta>
   <meta name="description">
     HSC Bayesian photometric redshifts from PDR2. Info at https://hsc-release.mtk.nao.ac.jp/doc/index.php/photometric-redshifts-pdr2/
   </meta>
@@ -221,8 +221,8 @@
     <meta name="title">HSC PDR2 photoz</meta>
     <meta name="shortName">HSC</meta>
     <meta name="testQuery">
-      <meta name="RA">150.1</meta>
-      <meta name="DEC">2.218</meta>
+      <meta name="ra">150.1</meta>
+      <meta name="dec">2.218</meta>
       <meta name="sr">1.0</meta>
     </meta>
 
