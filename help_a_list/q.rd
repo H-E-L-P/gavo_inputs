@@ -1100,8 +1100,8 @@
   </data>
 
   <service id="cone" allowed="scs.xml,form,static">
-    <meta name="title">HELP main catalogue</meta>
-    <meta name="shortName">HELP main</meta>
+    <meta name="title">HELP A list catalogue</meta>
+    <meta name="shortName">HELP A list</meta>
     <meta name="testQuery">
       <meta name="ra">150.1</meta>
       <meta name="dec">2.218</meta>
